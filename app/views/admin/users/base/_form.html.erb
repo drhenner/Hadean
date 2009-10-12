@@ -1,0 +1,24 @@
+
+<% semantic_form_for @user do |form| %><%# , @name, @email %>
+  <% form.inputs do %>
+	<% form.semantic_fields_for :names, @name do |name_form| %>
+		<% name_form.inputs :name => "Name", :id => "user_name" do %>
+		    <%= name_form.input :first %>
+		    <%= name_form.input :last %>
+		    <%= name_form.input :middle %>
+		    <%= name_form.input :suffix %>
+		    <%= name_form.input :nickname %>
+		    <%= name_form.input :title %>
+		<% end %>
+	<% end %>
+    <%= form.input :username %>
+	<% form.semantic_fields_for :emails, @email do |email_form| %>
+    	<%= email_form.input :address, :title => "Email Address" %>
+	<% end %>
+    <%= form.input :password %>
+    <%= form.input :password_confirmation %>
+  <% end %>
+  <% form.buttons do %>
+    <%= form.commit_button %>
+  <% end %>
+<% end %>
