@@ -1,0 +1,16 @@
+
+#new-user-form-container {
+  padding: 20px;
+}
+
+#new-user-form-container label {
+  display: block;
+  padding-right: 20px;
+  float: left;
+  width: 100px;
+  text-align: right;
+}
+
+#new-user-form-container input, #new-user-form-container select {
+  width: 200px;
+}

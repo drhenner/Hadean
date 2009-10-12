@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   acts_as_authentic
-  attr_accessible :password, :salt
+  attr_accessible :password, :password_salt, :password_confirmation, :login
 
-  has_many :names
-  has_many :emails
+  has_many :names, :as => :nameable
+  has_many :emails, :as => :emailable
   accepts_nested_attributes_for :names
   attr_accessible :names_attributes
   accepts_nested_attributes_for :emails

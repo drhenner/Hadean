@@ -10,9 +10,9 @@ class CreateNames < ActiveRecord::Migration
       t.integer   :nameable_id
       t.string    :nameable_type
       t.boolean   :active, :default => true
-      t.datatime  :inactive_at
+      t.datetime  :inactive_at
+      t.datetime  :effective_at
       t.datetime  :deleted_at
-      t.datatime  :effective_at
       t.timestamps
     end
   end

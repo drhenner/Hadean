@@ -17,6 +17,8 @@ class Admin::Users::BaseController < ApplicationController
       flash[:notice] = "Successfully created user."
       redirect_to root_url
     else
+      @name   = @user.active_name
+      @email  = @user.active_email
       render :action => 'new'
     end
   end
