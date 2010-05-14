@@ -1,2 +1,0 @@
-module Login::UserSessionsHelper
-end

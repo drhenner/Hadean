@@ -1,9 +1,0 @@
-one:
-
-  password: MyString
-  salt: MyString
-
-two:
-
-  password: MyString
-  salt: MyString
