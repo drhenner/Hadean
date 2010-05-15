@@ -1,0 +1,1227 @@
+  [1m[36mSQL (15.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (70.3ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (210.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (107.4ms)[0m  DROP DATABASE IF EXISTS `hadean_test`
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE DATABASE `hadean_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (10.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.8ms)[0m  DROP DATABASE IF EXISTS `hadean_test`
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE DATABASE `hadean_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (55.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (170.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (22.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [1m[36mSQL (37.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (64.4ms)[0m  DROP DATABASE IF EXISTS `hadean_test`
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE DATABASE `hadean_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (74.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (233.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (38.8ms)[0m  DROP DATABASE IF EXISTS `hadean_test`
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE DATABASE `hadean_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (60.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (190.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+  [1m[36mSQL (17.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20100514042346)
+  [1m[35mSQL (103.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (186.1ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (129.1ms)[0m  CREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)
+  [1m[36mSQL (133.9ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[35mSQL (1.5ms)[0m  describe `schema_migrations`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100514042346')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (2.2ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20100514042346)
+  [1m[35mSQL (21.2ms)[0m  DROP TABLE `users`
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20100514042346'[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2010-05-13 22:12:34
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2010-05-13 22:12:46
+
+ActionController::RoutingError (No route matches "/user/sign_up"):
+/Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:55:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 22:12:52
+  Processing by Devise::RegistrationsController#new as HTML
+Completed   in 80ms
+
+Mysql::Error (Table 'hadean_development.users' doesn't exist):
+/Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:326:in `query'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:326:in `execute'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:477:in `columns'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/base.rb:758:in `columns'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/persistence.rb:224:in `attributes_from_column_definition'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/locking/optimistic.rb:62:in `attributes_from_column_definition'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/base.rb:1424:in `initialize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/devise-1.1.rc1/lib/devise/controllers/internal_helpers.rb:69:in `new'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/devise-1.1.rc1/lib/devise/controllers/internal_helpers.rb:69:in `build_resource'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/devise-1.1.rc1/app/controllers/devise/registrations_controller.rb:8:in `new'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/base.rb:144:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `__send__'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/callbacks.rb:18:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:443:in `_run__1732029701__process_action__943997142__callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:404:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:404:in `_run_process_action_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/base.rb:113:in `process'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/rendering.rb:39:in `process'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal.rb:84:in `dispatch'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal.rb:124
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/routing/route_set.rb:26:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/routing/route_set.rb:26:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/route_set.rb:148:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/code_generation.rb:89:in `recognize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/code_generation.rb:66:in `optimized_each'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/route_set.rb:139:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/routing/route_set.rb:454:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/warden-0.10.4/lib/warden/manager.rb:37:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/warden-0.10.4/lib/warden/manager.rb:36:in `catch'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/warden-0.10.4/lib/warden/manager.rb:36:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/flash.rb:167:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb:107:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/cookies.rb:202:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/query_cache.rb:31:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/query_cache.rb:11:in `cache'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/query_cache.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:410:in `_run_call_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (149.4ms)
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (176.9ms)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20100514042346)
+  [1m[35mSQL (76.2ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `password_salt` varchar(255) DEFAULT '' NOT NULL, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `reset_password_token` varchar(255), `remember_token` varchar(255), `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (161.0ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (128.8ms)[0m  CREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)
+  [1m[36mSQL (135.0ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[35mSQL (0.9ms)[0m  describe `schema_migrations`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100514042346')[0m
+Migrating to CreateRegistrationInfos (20100514044816)
+  [1m[35mSQL (124.6ms)[0m  CREATE TABLE `registration_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `birthdate` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20100514044816')[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (3.9ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `registration_infos`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 22:14:33
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/registrations/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 91ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2010-05-13 22:14:45
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/passwords/new.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 57ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:22:13
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.4ms)
+Rendered devise/registrations/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 70ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/compiled/print.css" for 127.0.0.1 at 2010-05-13 23:22:13
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/print.css"):
+/Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:55:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/compiled/screen.css" for 127.0.0.1 at 2010-05-13 23:22:13
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/screen.css"):
+/Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:55:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:23:03
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.4ms)
+Rendered devise/registrations/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 38ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/compiled/screen.css" for 127.0.0.1 at 2010-05-13 23:23:03
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/screen.css"):
+/Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:55:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/stylesheets/compiled/print.css" for 127.0.0.1 at 2010-05-13 23:23:03
+
+ActionController::RoutingError (No route matches "/stylesheets/compiled/print.css"):
+/Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:55:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.0/lib/compass/configuration/serialization.rb:44)
+DEPRECATION WARNING: config.cookie_secret= is deprecated, please use config.secret_token= instead. (called from /Users/davidhenner/projects/myhadean/Hadean/config/initializers/cookie_verification_secret.rb:1)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:24:01
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/registrations/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:24:12
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/registrations/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 43ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:24:13
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 39ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:28:01
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 43ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:30:11
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (3.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 55ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:34:58
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/registrations/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 40ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:36:09
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (81.2ms)
+Completed   in 101ms
+
+ActionView::Template::Error (undefined local variable or method `success' for #<#<Class:0x108f4d978>:0x108f4a7f0>):
+    11:   <%= csrf_meta_tag %>
+    12: </head>
+    13: <body class="bp">
+    14:   <p class="success"><%= success %></p>
+    15:   <p class="notice"><%= notice %></p>
+    16:   <p class="alert error"><%= alert %></p>
+    17:   <div class="container">
+/Users/davidhenner/projects/myhadean/Hadean/app/views/layouts/application.html.erb:14:in `_render_template_1051175233_2222604140_0'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/template.rb:46:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/template.rb:46:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `__send__'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/template.rb:44:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/render/layouts.rb:84:in `_render_layout'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/render/rendering.rb:61:in `_render_template'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `__send__'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/render/rendering.rb:55:in `_render_template'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_view/render/rendering.rb:25:in `render_without_haml'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/haml-3.0.2/lib/haml/helpers/action_view_mods.rb:13:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/rendering.rb:113:in `_render_template'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/rendering.rb:107:in `render_to_body'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/rendering.rb:100:in `render_to_string'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/rendering.rb:91:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rendering.rb:17:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:39:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:77:in `cleanup_view_runtime'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:38:in `render'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/devise-1.1.rc1/lib/devise/controllers/scoped_views.rb:30:in `render_with_scope'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/devise-1.1.rc1/app/controllers/devise/registrations_controller.rb:9:in `new'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/base.rb:144:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `__send__'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/notifications.rb:48:in `instrument'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/callbacks.rb:18:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:443:in `_run__1732029701__process_action__943997142__callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:404:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:404:in `_run_process_action_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/base.rb:113:in `process'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/abstract_controller/rendering.rb:39:in `process'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal.rb:84:in `dispatch'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_controller/metal.rb:124
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/haml-3.0.2/lib/sass/plugin/rack.rb:41:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/haml-3.0.2/lib/sass/plugin/rack.rb:41:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/routing/route_set.rb:26:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/route_set.rb:148:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/code_generation.rb:89:in `recognize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/code_generation.rb:66:in `optimized_each'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-mount-0.6.3/lib/rack/mount/route_set.rb:139:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/routing/route_set.rb:454:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/warden-0.10.4/lib/warden/manager.rb:37:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/warden-0.10.4/lib/warden/manager.rb:36:in `catch'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/warden-0.10.4/lib/warden/manager.rb:36:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/flash.rb:167:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb:107:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/cookies.rb:202:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/query_cache.rb:31:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/query_cache.rb:11:in `cache'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/query_cache.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:410:in `_run_call_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/logger.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:132:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `send'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/application.rb:81:in `method_missing'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/rack/log_tailer.rb:15:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhenner/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/rack-1.1.0/lib/rack/server.rb:155:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands/server.rb:62:in `start'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:30
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27:in `tap'
+  /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/railties/lib/rails/commands.rb:27
+  script/rails:9:in `require'
+  script/rails:9
+
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (76.4ms)
+Rendered /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-master/actionpack/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (85.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:36:50
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/registrations/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 41ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-13 23:43:06
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.2ms)
+Rendered devise/registrations/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 42ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-14 00:18:00
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.1ms)
+Rendered devise/registrations/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 43ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2010-05-14 00:18:02
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/registrations/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 40ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.0.pre9/lib/compass/configuration/serialization.rb:44)
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.0.pre9/lib/compass/configuration/serialization.rb:44)
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (68.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (28.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20100514042346)
+Migrating to CreateRegistrationInfos (20100514044816)
+Migrating to CreateStates (20100515070956)
+  [1m[35mSQL (103.4ms)[0m  CREATE TABLE `states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abbreviation` varchar(5), `described_as` varchar(255), `country_id` int(11)) ENGINE=InnoDB
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100515070956')
+Migrating to CreateCountries (20100515080419)
+  [1m[36mSQL (181.9ms)[0m  [1mCREATE TABLE `countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `abbreviation` varchar(5)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100515080419')
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.1ms)[0m  describe `countries`
+  [1m[36mSQL (18.7ms)[0m  [1mSHOW KEYS FROM `countries`[0m
+  [1m[35mSQL (1.1ms)[0m  describe `registration_infos`
+  [1m[36mSQL (20.2ms)[0m  [1mSHOW KEYS FROM `registration_infos`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `states`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `states`[0m
+  [1m[35mSQL (1.9ms)[0m  describe `users`
+  [1m[36mSQL (54.1ms)[0m  [1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.8ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `countries`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `countries` (`abbreviation`, `name`) VALUES ('USA', 'United States')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.6ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (2.7ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (1.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.6ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (2.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (4.9ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.6ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.5ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (2.0ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (2.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (1.6ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.7ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.8ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.5ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (22.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.6ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.5ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1[0m
+  [1m[35mState Load (0.7ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'IA') LIMIT 1
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `states`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('IA', 1, 'State', 'Iowa')[0m
+  [1m[35mSQL (20.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'PR') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('PR', 1, 'Territory', 'PUERTO RICO')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NU') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NU', 2, 'Territory', 'Nunavut')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'ID') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('ID', 1, 'State', 'Idaho')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (1.0ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'OR') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('OR', 1, 'State', 'Oregon')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NT') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NT', 2, 'Territory', 'Northwest Territories')[0m
+  [1m[35mSQL (1.2ms)[0m  COMMIT
+  [1m[36mState Load (0.8ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'IL') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('IL', 1, 'State', 'Illinois')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'OH') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('OH', 1, 'State', 'Ohio')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'IN') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('IN', 1, 'State', 'Indiana')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NV') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NV', 1, 'State', 'Nevada')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AB') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('AB', 2, 'Province', 'Alberta')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'KS') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('KS', 1, 'State', 'Kansas')[0m
+  [1m[35mSQL (16.3ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NJ') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NJ', 1, 'State', 'New Jersey')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'PE') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('PE', 2, 'Province', 'Prince Edward Island')[0m
+  [1m[35mSQL (1.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'VT') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('VT', 1, 'State', 'Vermont')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NE') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NE', 1, 'State', 'Nebraska')[0m
+  [1m[35mSQL (1.1ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'KY') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('KY', 1, 'State', 'Kentucky')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MB') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MB', 2, 'Province', 'Manitoba')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'VA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('VA', 1, 'State', 'Virginia')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AK') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('AK', 1, 'State', 'Alaska')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'LA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('LA', 1, 'State', 'Louisiana')[0m
+  [1m[35mSQL (20.0ms)[0m  COMMIT
+  [1m[36mState Load (1.0ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'TX') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('TX', 1, 'State', 'Texas')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AL') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('AL', 1, 'State', 'Alabama')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NC') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NC', 1, 'State', 'North Carolina')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.9ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NS') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NS', 2, 'Province', 'Nova Scotia')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'SD') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('SD', 1, 'State', 'South Dakota')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AR') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('AR', 1, 'State', 'Arkansas')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MS') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MS', 1, 'State', 'Mississippi')[0m
+  [1m[35mSQL (1.6ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 1) LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES (1, 2, 'Province', 'Ontario')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MA', 1, 'State', 'Massachusetts')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'RI') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('RI', 1, 'State', 'Rhode Island')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MO') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MO', 1, 'State', 'Missouri')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AS') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('AS', 1, 'Territory', 'American Samoa')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WV') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('WV', 1, 'State', 'West Virginia')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MD') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MD', 1, 'State', 'Maryland')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('WA', 1, 'State', 'Washington')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AZ') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('AZ', 1, 'State', 'Arizona')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'ME') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('ME', 1, 'State', 'Maine')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'CA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('CA', 1, 'State', 'California')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MI') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MI', 1, 'State', 'Michigan')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'PA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('PA', 1, 'State', 'Pennsylvania')[0m
+  [1m[35mSQL (1.1ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'YT') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('YT', 2, 'Territory', 'Yukon')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.8ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'CO') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('CO', 1, 'State', 'Colorado')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MN') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MN', 1, 'State', 'Minnesota')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'OK') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('OK', 1, 'State', 'Oklahoma')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'CT') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('CT', 1, 'State', 'Connecticut')[0m
+  [1m[35mSQL (19.8ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NY') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NY', 1, 'State', 'New York')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NL') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NL', 2, 'Province', 'Newfoundland and Labrador')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'DC') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('DC', 1, 'State', 'District of Columbia')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NM') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.8ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NM', 1, 'State', 'New Mexico')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'SK') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('SK', 2, 'Province', 'Saskatchewan')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'DE') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('DE', 1, 'State', 'Delaware')[0m
+  [1m[35mSQL (146.3ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NH') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NH', 1, 'State', 'New Hampshire')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mState Load (1.0ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'BC') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('BC', 2, 'Province', 'British Columbia')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'VI') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('VI', 1, 'Territory', 'Virgin Islands')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NB') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('NB', 2, 'Province', 'New Brunswick')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'UT') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('UT', 1, 'State', 'Utah')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'FL') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('FL', 1, 'State', 'Florida')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mState Load (1.1ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'ND') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('ND', 1, 'State', 'North Dakota')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'TN') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('TN', 1, 'State', 'Tennesse')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MT') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MT', 1, 'State', 'Montana')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'GA') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('GA', 1, 'State', 'Georgia')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'QC') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('QC', 2, 'Province', 'Quebec')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'SC') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('SC', 1, 'State', 'South Carolina')[0m
+  [1m[35mSQL (0.9ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MP') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('MP', 1, 'Territory', 'Mariana Islands')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WY') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('WY', 1, 'State', 'Wyoming')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'GU') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('GU', 1, 'Territory', 'Guam')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WI') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('WI', 1, 'State', 'Wisconsin')[0m
+  [1m[35mSQL (1.3ms)[0m  COMMIT
+  [1m[36mState Load (0.8ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'HI') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `states` (`abbreviation`, `country_id`, `described_as`, `name`) VALUES ('HI', 1, 'State', 'Hawaii')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+DEPRECATION WARNING: RAILS_ROOT is deprecated! Use Rails.root instead. (called from parse_string at /Users/davidhenner/.rvm/gems/ruby-1.8.7-p249@my_app/gems/compass-0.10.1/lib/compass/configuration/serialization.rb:44)
+  [1m[36mSQL (22.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCountry Load (0.5ms)[0m  SELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'USA') LIMIT 1
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT `countries`.* FROM `countries` WHERE (`countries`.`abbreviation` = 'CAN') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `countries`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `countries` (`abbreviation`, `name`) VALUES ('CAN', 'Canada')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'IA') LIMIT 1
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'PR') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NU') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'ID') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'OR') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NT') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'IL') LIMIT 1
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'OH') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'IN') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NV') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AB') LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'KS') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NJ') LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'PE') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'VT') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NE') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'KY') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MB') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'VA') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AK') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'LA') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'TX') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AL') LIMIT 1
+  [1m[36mState Load (0.8ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NC') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NS') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'SD') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AR') LIMIT 1
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MS') LIMIT 1[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 1) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MA') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'RI') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MO') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AS') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WV') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MD') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WA') LIMIT 1[0m
+  [1m[35mState Load (0.5ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'AZ') LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'ME') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'CA') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MI') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'PA') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'YT') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'CO') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MN') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'OK') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'CT') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NY') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NL') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'DC') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NM') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'SK') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'DE') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NH') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'BC') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'VI') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'NB') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'UT') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'FL') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'ND') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'TN') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MT') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'GA') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'QC') LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'SC') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'MP') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WY') LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'GU') LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'WI') LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`abbreviation` = 'HI') LIMIT 1
