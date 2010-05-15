@@ -21,3 +21,11 @@ states_list.each_pair do |key,state|
   State.create(state['attributes']) unless s
 end 
 
+roles = Role::NAMES 
+roles.each do |role|
+  Role.find_or_create_by_name(role)
+end
+
+AddressType::NAMES.each do |address_type|
+  AddressType.find_or_create_by_name(address_type)
+end

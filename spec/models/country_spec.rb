@@ -1,5 +1,13 @@
 require 'spec_helper'
 
 describe Country do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Valid Seed data" do
+    
+    Country.all do |country|
+      it "should be valid" do 
+        country.should be_valid
+      end
+    end
+    
+  end
 end

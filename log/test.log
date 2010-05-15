@@ -78,3 +78,1554 @@ Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.1ms)
   [1m[35mSQL (0.1ms)[0m  ROLLBACK
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (14.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (20.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (1.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (22.8ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 20:30:09', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 20:30:09', '89500-1769')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 1) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 20:31:19', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 20:31:19', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 2) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (36.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:13:48', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:13:48', '89500-1769')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 3) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:14:39', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:14:39', '89500-1769')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (10.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 4) LIMIT 1
+  [1m[36mState Load (1.9ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:14:55', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:14:55', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 5) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:15:07', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:15:07', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 6) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:15:22', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:15:22', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 7) LIMIT 1
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:15:45', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:15:45', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 8) LIMIT 1
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:15:59', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:15:59', '89500-1769')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 9) LIMIT 1
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (1.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:19:14', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:19:14', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 10) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:20:12', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:20:12', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 11) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:23:03', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:23:03', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 12) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:24:36', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:24:36', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 13) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (19.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:25:45', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:25:45', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 14) LIMIT 1
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:26:50', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:26:50', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 15) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:28:44', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:28:44', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 16) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `users`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:28:44', 'pcXxikyEzJyNQm7BABx3', NULL, '2010-05-15 22:28:44', NULL, NULL, 'aric.smith@kautzergoyette.name', '7e5068db1aa27b2e418a3ec5c435e4f18131bddef99acf02e90eb8343fc7b6585f08d152ed7e773fce916aa78be264b5049fabf20f0767c35cd04f268c609def', NULL, NULL, 'y-pt7qTcYMLjnfaLvhwO', NULL, NULL, NULL, 0, '2010-05-15 22:28:44')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.9ms)
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:30:47', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:30:47', '89500-1769')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 17) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `users`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:30:47', 'Ocey0IKHfLitdUcPOmiS', NULL, '2010-05-15 22:30:47', NULL, NULL, 'aric.smith@kautzergoyette.name', '98791636e0cd3502a70c92a28dcea0a219267da0bc83d2cefe8c27e2a41e63046693edef370b5dcc9fd1c0c8f823c717106b4bb4862f36e5d292e74538737b2e', NULL, NULL, 'gb55YuvssLcm0-4jZMGb', NULL, NULL, NULL, 0, '2010-05-15 22:30:47')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (23ms)
+Date: Sat, 15 May 2010 15:30:47 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef20976ce1b_97cd800db1ac9558@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=Ocey0IKHfLitdUcPOmiS">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 2) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:39:34', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:39:34', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:39:34', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:39:34', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 1) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (2.9ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:39:34', 'wKDLa4ezT4bBlR-tTI2U', NULL, '2010-05-15 22:39:34', NULL, NULL, 'aric.smith@kautzergoyette.name', 'b6f068fe8577f9c4abaffb9141192f5c3faa7bab2458fd977649dc3cf7e792fec7b15861afc3df8612683eef6901dac87edbcdbbd975777f5e5f903de1be4d3d', NULL, NULL, 'LbzXKH1OP3oa-nu5oigE', NULL, NULL, NULL, 0, '2010-05-15 22:39:34')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (18ms)
+Date: Sat, 15 May 2010 15:39:34 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef22a6846d0_97ed800db1ac873f2@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=wKDLa4ezT4bBlR-tTI2U">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:40:46', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:40:46', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  describe `addresses`
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:40:46', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:40:46', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 2) LIMIT 1[0m
+  [1m[35mState Load (0.8ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:40:46', 'DBz_uxN2GKpvUe7ex-mR', NULL, '2010-05-15 22:40:46', NULL, NULL, 'aric.smith@kautzergoyette.name', '157fbe568dc262982d6d8dfe262b48bcfa1e61b00a95c6395258607d4520ac33337c4a88d485a4e8db920f9699892d17bc6332dd209a56441b9ddb690bb271da', NULL, NULL, 'Mg1lJuH0xm5350-Fjj-D', NULL, NULL, NULL, 0, '2010-05-15 22:40:46')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to aric.smith@kautzergoyette.name (21ms)
+Date: Sat, 15 May 2010 15:40:46 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef22ee76771_97f2800db1ac8668d@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=DBz_uxN2GKpvUe7ex-mR">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 2) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:42:11', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:42:11', NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.4ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 3) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.7ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (8.5ms)[0m  describe `addresses`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:42:11', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:42:11', '89500-1769')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 3) LIMIT 1[0m
+  [1m[35mState Load (1.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:42:11', '0PbgG6Pfjpf0iNLidIr7', NULL, '2010-05-15 22:42:11', NULL, NULL, 'aric.smith@kautzergoyette.name', '2ef28a3eed32fc2f41064ffd069ce968a195b9523bc8f0e3df0f5c59d69eaea02fc9e1c1b3eef048329bde29b48b8a6747afb0a7069b6513fcc4d62fb8a88f62', NULL, NULL, 'maJl1JLh9BGTYOSeAazN', NULL, NULL, NULL, 0, '2010-05-15 22:42:11')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.4ms)
+
+Sent mail to aric.smith@kautzergoyette.name (24ms)
+Date: Sat, 15 May 2010 15:42:11 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef23434ff77_97fe800db1ac538bc@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=0PbgG6Pfjpf0iNLidIr7">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 3) LIMIT 1[0m
+  [1m[35mSQL (17.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT `roles`.* FROM `roles`
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:44:52', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:44:52', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 4) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:44:52', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:44:52', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 4) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m  describe `users`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:44:52', 'Ta1RMzjHjS9_jJr-zLrN', NULL, '2010-05-15 22:44:52', NULL, NULL, 'aric.smith@kautzergoyette.name', '70314f717c4596af28e2da45e08601b0573a8500581cc1d9a79d06395ab3a0f71e1a9d74fee9645243dc49fa28040e469baf1cffab5ef8d808db9475a1cedbf0', NULL, NULL, 'EsIfNtrvcizdREBgocvu', NULL, NULL, NULL, 0, '2010-05-15 22:44:52')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (2.9ms)
+
+Sent mail to aric.smith@kautzergoyette.name (19ms)
+Date: Sat, 15 May 2010 15:44:52 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef23e42d1da_9806800db1ac757eb@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=Ta1RMzjHjS9_jJr-zLrN">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 4) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:45:32', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:45:32', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:45:32', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:45:32', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 5) LIMIT 1[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:45:32', 'NBSCEOVJzQoSHdgtnOik', NULL, '2010-05-15 22:45:32', NULL, NULL, 'aric.smith@kautzergoyette.name', 'a82a647aaffae292a17f3bac6a51536d4b0716a9719dd363cd43af36ff835010f5a9afc1563d6098b83686b51dd610fe77750c4dcb2049b2f5921a9c30651650', NULL, NULL, '5RolbM8rxwvYWPbuPLK5', NULL, NULL, NULL, 0, '2010-05-15 22:45:32')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.3ms)
+
+Sent mail to aric.smith@kautzergoyette.name (20ms)
+Date: Sat, 15 May 2010 15:45:32 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef240c94602_980c800db1ac7576f@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=NBSCEOVJzQoSHdgtnOik">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 5) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 5) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mState Load (0.5ms)[0m  SELECT `states`.* FROM `states`
+  [1m[36mSQL (7.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:46:46', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:46:46', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 6) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:46:46', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:46:46', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 6) LIMIT 1
+  [1m[36mState Load (1.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  describe `users`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:46:46', '58yI5fo-GhG57Fb70taA', NULL, '2010-05-15 22:46:46', NULL, NULL, 'aric.smith@kautzergoyette.name', '1aa55cb3c862c80885ba1b2132af1d136469958ba92086af39329067ecf0911fb6c84fb5744744abfa6cc5108ec3b5e135234347007bec3008b4bd35ac5a0318', NULL, NULL, '2Qild_03b3UtAfZZ2yJW', NULL, NULL, NULL, 0, '2010-05-15 22:46:46')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.4ms)
+
+Sent mail to aric.smith@kautzergoyette.name (34ms)
+Date: Sat, 15 May 2010 15:46:46 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef245686d8e_9812800db1ac8639f@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=58yI5fo-GhG57Fb70taA">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 6) LIMIT 1
+  [1m[36mSQL (6.7ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:47:32', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:47:32', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 7) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:47:32', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:47:32', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 7) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (31.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:47:32', 'w8T8_ijdkx7SPDNhujWK', NULL, '2010-05-15 22:47:32', NULL, NULL, 'aric.smith@kautzergoyette.name', '14c67414baf61280f8e55db7d4c6c3fb4175b56dd90151df4c5f735e2296c141e19bccc7214cbd738b15ce7bcbd6d79288c8ef4635453197b4a9a30dac524337', NULL, NULL, 'GaM3xs3HIBaWnWkXFzK4', NULL, NULL, NULL, 0, '2010-05-15 22:47:32')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to aric.smith@kautzergoyette.name (16ms)
+Date: Sat, 15 May 2010 15:47:32 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef24846a922_9818800db1ac22710@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=w8T8_ijdkx7SPDNhujWK">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 7) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 7) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.5ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:48:41', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:48:41', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 8) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:48:41', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:48:41', '89500-1769')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 8) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:48:41', 'SXVB-fGADa_dHDAbkhg5', NULL, '2010-05-15 22:48:41', NULL, NULL, 'aric.smith@kautzergoyette.name', '60adf1785fa2069a5afefaf5198fb495c643ac3b2fbc620d6910dfe31b92d34db8853733d330692bebf364594b4e5e43a1f95e6a822364eabd1d4aa5acd3c405', NULL, NULL, 'zGG_QTuWg1CTTpFVXZaR', NULL, NULL, NULL, 0, '2010-05-15 22:48:41')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (17ms)
+Date: Sat, 15 May 2010 15:48:41 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef24c963499_982e800db1ac9509b@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=SXVB-fGADa_dHDAbkhg5">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 8) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 8) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:49:49', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:49:49', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 9) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:49:49', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:49:49', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 9) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:49:49', 'Wv5SWTUT-lWyRxmOh-us', NULL, '2010-05-15 22:49:49', NULL, NULL, 'aric.smith@kautzergoyette.name', '253e18e11360f53d90c86daadc45b9a544321d936c4627b15c2b5b5aea5fe2542f98d21515cc8ddb48b62cffaffe1d482a3c3150e1706d9907b2c74ffc598d90', NULL, NULL, 'SVlQj-nXpa1lLS0xXffA', NULL, NULL, NULL, 0, '2010-05-15 22:49:49')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (17ms)
+Date: Sat, 15 May 2010 15:49:49 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef250dc648a_9836800db1ac25672@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=Wv5SWTUT-lWyRxmOh-us">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 9) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 9) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:50:17', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:50:17', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 10) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `addresses`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:50:17', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:50:17', '89500-1769')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 10) LIMIT 1[0m
+  [1m[35mState Load (2.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:50:17', 'NVC-3XJ0TL41Jz7xz2Q_', NULL, '2010-05-15 22:50:17', NULL, NULL, 'aric.smith@kautzergoyette.name', '2fd77d3ed7907de98339a0625a4cc6b15bb7cc6b28ca533a6fc7013dadd634fd1d8d237285bea679655b8e6c48172543fbf828dc8e266f7a23156ff21f179e18', NULL, NULL, '4gnlZ74_EalMoYfeu4Sx', NULL, NULL, NULL, 0, '2010-05-15 22:50:17')
+Rendered devise/mailer/confirmation_instructions.html.erb (2.0ms)
+
+Sent mail to aric.smith@kautzergoyette.name (22ms)
+Date: Sat, 15 May 2010 15:50:18 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef252a1d59_983c800db1ac60262@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=NVC-3XJ0TL41Jz7xz2Q_">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 10) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 10) LIMIT 1[0m
+  [1m[35mSQL (18.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.5ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (2.1ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:51:14', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:51:14', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 11) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.4ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:51:14', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:51:14', '89500-1769')[0m
+  [1m[35mSQL (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 11) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:51:14', 'kfelrJWZKkpDuI_Cdl2o', NULL, '2010-05-15 22:51:14', NULL, NULL, 'aric.smith@kautzergoyette.name', 'f23c634cd3791855f9e61b4ba5a83a3b720d1d49e5d15a6e8d504e4771052750bafc7fe0f6bd47597543fce76c9d3e699f62738a864d4cecb43ebdd7f7f04871', NULL, NULL, 'xmhkrX6aG3vSeLYWl2w5', NULL, NULL, NULL, 0, '2010-05-15 22:51:14')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (19ms)
+Date: Sat, 15 May 2010 15:51:14 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef2562ceacb_9841800db1ac7364c@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=kfelrJWZKkpDuI_Cdl2o">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 11) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 11) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:53:05', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:53:05', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.7ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 12) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:53:05', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:53:05', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 12) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:53:05', 'HuhCvMo77a63EVLlcjOk', NULL, '2010-05-15 22:53:05', NULL, NULL, 'aric.smith@kautzergoyette.name', '8913743ab72a34b9af66f0592e44c6ddcb87b6687e2a9d79cdd701a752291cac22ae5a2ce573edb91b31538c319e0a8810929b8dd80dfcd1ec74991ddf01488e', NULL, NULL, '1Sw5Qsm96UekqPSaKQkx', NULL, NULL, NULL, 0, '2010-05-15 22:53:05')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (18ms)
+Date: Sat, 15 May 2010 15:53:06 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef25d2d4c6_9847800db1ac79495@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=HuhCvMo77a63EVLlcjOk">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 12) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 12) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 22:53:06', 'WRewPLYpxG1bSJIro7fZ', NULL, '2010-05-15 22:53:06', NULL, NULL, 'aric.smith@kautzergoyette.name', 'd3108655b8d97d64eed349a37af7bc318228df3ac8e9c5be78cae14dee1c5ca6865168f34b5368e7c4182deb53bab85dbd3d1c834ecfa71d48b3a376f95aa435', NULL, NULL, '9-N9fHPKcn0K76YSfnqW', NULL, NULL, NULL, 0, '2010-05-15 22:53:06')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (7ms)
+Date: Sat, 15 May 2010 15:53:06 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef25d216a66_9847800db1ac795ce@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=WRewPLYpxG1bSJIro7fZ">Confirm my account</a></p>
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 13) LIMIT 1[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 22:55:08', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 22:55:08', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 13) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 22:55:08', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 22:55:08', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 13) LIMIT 1[0m
+  [1m[35mState Load (0.2ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.5ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.6ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `registration_infos`
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 23:00:27', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 23:00:27', NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.4ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (1.1ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  describe `addresses`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 23:00:27', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 23:00:27', '89500-1769')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 1) LIMIT 1[0m
+  [1m[35mState Load (0.5ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:00:27', 'IrGE0sDmkl1-XhdXLKQY', NULL, '2010-05-15 23:00:27', NULL, NULL, 'aric.smith@kautzergoyette.name', 'fb695a806906bab4d1b2d1503abd75f9cb94276665f977205c653d315ad5e20e8a47e29b5b93ccae7a92ba3e4811595a9ce9539c062e87ff416ae308571ed08d', NULL, NULL, 'F411QWDeHGaryQJOhTBI', NULL, NULL, NULL, 0, '2010-05-15 23:00:27')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (17ms)
+Date: Sat, 15 May 2010 16:00:27 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef278baa638_9864800db1ac67949@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=IrGE0sDmkl1-XhdXLKQY">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:00:27', 'QxOdO1xjeq5pwAwAx2Sx', NULL, '2010-05-15 23:00:27', NULL, NULL, 'aric.smith@kautzergoyette.name', '640876cb82f71757b3a6133871bf95b3852b52cab258e37057268da41d357b3ca66f7c02c1093631890dd3d9bb54d73f0a8bee5fa54e43ded90fed5e5ca2c458', NULL, NULL, '58pdaoHzNuNH-g9W7usb', NULL, NULL, NULL, 0, '2010-05-15 23:00:27')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (7ms)
+Date: Sat, 15 May 2010 16:00:27 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef278bb348d_9864800db1ac680df@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=QxOdO1xjeq5pwAwAx2Sx">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:00:27', 'RyBzw7klddBA9efXr9R2', NULL, '2010-05-15 23:00:27', NULL, NULL, 'aric.smith@kautzergoyette.name', '97fac791c490161a5450c9e44196d7ba8cda22044f6b3d1dc8fbcc1637fa815078e952f9aa6f0bc8c7abe5cad042a90999a873a3e5ca5fb3b86d872d853e0777', NULL, NULL, 'Xuj7uDLQ-XwMntlNPMoT', NULL, NULL, NULL, 0, '2010-05-15 23:00:27')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (7ms)
+Date: Sat, 15 May 2010 16:00:27 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef278bbae74_9864800db1ac6818c@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=RyBzw7klddBA9efXr9R2">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mSQL (19.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 23:01:15', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 23:01:15', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.5ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 23:01:15', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 23:01:15', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 2) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:01:15', 'Uzc9uApvcgu4q7UwTsME', NULL, '2010-05-15 23:01:15', NULL, NULL, 'aric.smith@kautzergoyette.name', 'db04a1290123bc851f3e521cf1baf69b1808d43eb39a9bc86a503a697904cf4ef1a74f1deca77ad07f1122104a0bffa853bd7ae43a02b9398d92b75ed4674222', NULL, NULL, 'EFzRKjrz4xk586-XMwRA', NULL, NULL, NULL, 0, '2010-05-15 23:01:15')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (18ms)
+Date: Sat, 15 May 2010 16:01:15 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef27bb77514_9869800db1ac7171d@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=Uzc9uApvcgu4q7UwTsME">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 4) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:01:15', 'zp1Jl9WL74A2f7t7wv-q', NULL, '2010-05-15 23:01:15', NULL, NULL, 'aric.smith@kautzergoyette.name', 'a57cb9cc5f477d0149cb3df31644921665953b692fc3b09fb9461b1fd2ac7460bc90f99984f74e3b601d99d4fa072b34c93e274f33913f9017c437e2b8cb9479', NULL, NULL, 'kJCsUYYFma70h87Fbi0z', NULL, NULL, NULL, 0, '2010-05-15 23:01:15')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (8ms)
+Date: Sat, 15 May 2010 16:01:15 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef27bb804cd_9869800db1ac718c2@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=zp1Jl9WL74A2f7t7wv-q">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `user_roles`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 5)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUserRole Load (0.3ms)[0m  [1mSELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:01:15', 'dDteTMYOeYHnWVNOTR3-', NULL, '2010-05-15 23:01:15', NULL, NULL, 'aric.smith@kautzergoyette.name', 'd67c82a85e67a7f094938607e09c973218ccebb7001a3d7c8ddfd4051defb9460d5ebbda442b0689abb76ace13003217e97a853021b9d4de03ddeae620918a8b', NULL, NULL, '1z2Hn4-zboqnQzRwmtcf', NULL, NULL, NULL, 0, '2010-05-15 23:01:15')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (8ms)
+Date: Sat, 15 May 2010 16:01:15 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef27bb89fe3_9869800db1ac71931@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=dDteTMYOeYHnWVNOTR3-">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 6) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 23:02:36', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 23:02:36', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 3) LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 23:02:36', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 23:02:36', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 3) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:02:36', 'uzvMWCW7bQ1BUp48--xh', NULL, '2010-05-15 23:02:36', NULL, NULL, 'aric.smith@kautzergoyette.name', '2efe4fe3e99ac7bf6d5571149eeaf5a40e3a5038bd256ad4bd61225fe61e59ddc31bb604fa1ca99480392798539f01cbdcef039e16f42244cf13be9621526ce4', NULL, NULL, '5Zs6RE2PuYuPoiUtGiFW', NULL, NULL, NULL, 0, '2010-05-15 23:02:36')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to aric.smith@kautzergoyette.name (19ms)
+Date: Sat, 15 May 2010 16:02:36 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef280c40658_9871800db1ac27379@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=uzvMWCW7bQ1BUp48--xh">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 7) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 7) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:02:36', '__J56rL-8oPSBVlAkimP', NULL, '2010-05-15 23:02:36', NULL, NULL, 'aric.smith@kautzergoyette.name', 'f6e2e49336e1f8c50fbc5d1a4c6cfc693f78ebc4907ef1ae2545a84161cebf61051f55417e4e8ab945d1256da281bbb9631e08a135ff9ed02ab8000a6cb69141', NULL, NULL, 'Yb8A2xQMg8kqkG0fdF-_', NULL, NULL, NULL, 0, '2010-05-15 23:02:36')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (8ms)
+Date: Sat, 15 May 2010 16:02:36 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef280c49ec7_9871800db1ac274b2@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=__J56rL-8oPSBVlAkimP">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 8) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `user_roles`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 8)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUserRole Load (0.2ms)[0m  [1mSELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (28.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:02:36', 'RCXpWVElXo5ujdBF_aOn', NULL, '2010-05-15 23:02:36', NULL, NULL, 'aric.smith@kautzergoyette.name', '29472673bb7a58213671018ae77c63bfc4207f7c1e1464f6cbb319235d825883e33973d58fcdec52ca3652d6eca042e120d8093bdc6d33b7e9ff11c72a695b4f', NULL, NULL, 'oNceUe4qcAShExeRcseL', NULL, NULL, NULL, 0, '2010-05-15 23:02:36')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (8ms)
+Date: Sat, 15 May 2010 16:02:36 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef280c5b24a_9871800db1ac275fb@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=RCXpWVElXo5ujdBF_aOn">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 9) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-15 23:11:18', 'Aric Smith', 'Eliseo Kautzer', '2010-05-15 23:11:18', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 4) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (8.0ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-15 23:11:18', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-15 23:11:18', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (1.1ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 4) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:11:18', 'pIANED-9Nm5yFZZcn_5s', NULL, '2010-05-15 23:11:18', NULL, NULL, 'aric.smith@kautzergoyette.name', 'd1de89c773ecbef2bdbe61d1fee3ca9f711c1864427ceea591bcab63bae820e17c5d902db8ecd6f0db058b96ad8df701b49f2fbd7b1561f93d570c851572a3c4', NULL, NULL, 'IwdJQgEizZCaZxX3Q4GM', NULL, NULL, NULL, 0, '2010-05-15 23:11:18')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (19ms)
+Date: Sat, 15 May 2010 16:11:18 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef2a16748c5_9880800db1ac886df@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=pIANED-9Nm5yFZZcn_5s">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 10) LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') AND (`users`.id <> 10) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-15 23:11:18', 'kr2TuPW-Sinb80ckVVKf', NULL, '2010-05-15 23:11:18', NULL, NULL, 'aric.smith@kautzergoyette.name', '1140dce57325cab58349e4eebcdd9746a3d3bfd8ee6de552d2ac66d6312470d0bcaa124dbf09a383f45dcd339b12cbc165199ece85e57697257258499bf6df4f', NULL, NULL, 'l57B-WmwMY7qqVJyYg2D', NULL, NULL, NULL, 0, '2010-05-15 23:11:18')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to aric.smith@kautzergoyette.name (8ms)
+Date: Sat, 15 May 2010 16:11:18 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bef2a167e211_9880800db1ac8871@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=kr2TuPW-Sinb80ckVVKf">Confirm my account</a></p>
+  [1m[36mSQL (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 11) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `user_roles`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 11)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUserRole Load (0.3ms)[0m  [1mSELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 3) LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  ROLLBACK

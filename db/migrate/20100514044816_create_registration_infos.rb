@@ -3,7 +3,7 @@ class CreateRegistrationInfos < ActiveRecord::Migration
     create_table :registration_infos do |t|
       t.string :first_name  
       t.string :last_name
-      t.date   :birthdate
+      t.date   :birth_date
       t.integer  :user_id
       t.timestamps
     end

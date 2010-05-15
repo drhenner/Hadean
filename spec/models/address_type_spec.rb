@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe State do
+describe AddressType do
   describe "Valid Seed data" do
     
-    State.all do |my_state|
+    AddressType.all do |add_type|
       it "should be valid" do 
-        my_state.should be_valid
+        add_type.should be_valid
       end
     end
     

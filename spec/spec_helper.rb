@@ -4,8 +4,11 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails)
 require 'rspec/rails'
 
+
 # Require for machinist
-require File.join(File.dirname(__FILE__), 'blueprint')
+require File.expand_path (File.dirname(__FILE__) + "/blueprint.rb")
+#require File.join(File.dirname(__FILE__), 'blueprint')
+Dir["#{File.dirname(__FILE__)}/blueprints/*.rb"].each {|f| require f}
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -20,8 +23,12 @@ Rspec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
   config.mock_with :rspec
-
+  
+  # MACHINIST stuff
+  config.before(:all)    { Sham.reset(:before_all)  }
+  config.before(:each)   { Sham.reset(:before_each) }
   # If you'd prefer not to run each of your examples within a transaction,
   # uncomment the following line.
   # config.use_transactional_examples = false
 end
+
