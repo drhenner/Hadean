@@ -1629,3 +1629,2365 @@ Content-Transfer-Encoding: 7bit
   [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36mUserRole Load (0.3ms)[0m  [1mSELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 3) LIMIT 1[0m
   [1m[35mSQL (1.1ms)[0m  ROLLBACK
+  [1m[36mSQL (25.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (26.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (24.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (24.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (15.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (11.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (1.1ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (22.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (80.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-16 08:41:05', 'Zsl7nMDJ68TY1ujamfF5', NULL, '2010-05-16 08:41:05', NULL, NULL, 'aric.smith@kautzergoyette.name', '70e35c39498ce65485ef6052a6bf1cf370bee856dceed6234ef0692fadc1af98520ee3c0ea801bc2475ccce5df12cc5b5c7e396992120dc231cdacda8553b2d2', NULL, NULL, 'pVFZEZQxGKe36UVZcKRe', NULL, NULL, NULL, 0, '2010-05-16 08:41:05')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to aric.smith@kautzergoyette.name (224ms)
+Date: Sun, 16 May 2010 01:41:06 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4befafa267344_9974800db1ac40495@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=Zsl7nMDJ68TY1ujamfF5">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 12) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'alysson@wittingcorwin.biz') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-16 08:41:06', 'OHkPBr1_UwM9mQBmfAia', NULL, '2010-05-16 08:41:06', NULL, NULL, 'alysson@wittingcorwin.biz', '7e573e93eba6120cf525ed16efe1b3730f4e1878eb14cb964d1146bea28adacdcdadc28b10bdd6987d71f1edc65aa278159f4bd7c88c3099db17ac9cc817bc8f', NULL, NULL, 'JKXlWOf-lxgYwhnd-IDT', NULL, NULL, NULL, 0, '2010-05-16 08:41:06')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.8ms)
+
+Sent mail to alysson@wittingcorwin.biz (8ms)
+Date: Sun, 16 May 2010 01:41:06 -0700
+From: please-change-me@config-initializers-devise.com
+To: alysson@wittingcorwin.biz
+Message-ID: <4befafa2713a0_9974800db1ac4054d@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome alysson@wittingcorwin.biz!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=OHkPBr1_UwM9mQBmfAia">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 13) LIMIT 1[0m
+  [1m[35mSQL (24.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-16 08:41:06', 'Aric Smith', 'Eliseo Kautzer', '2010-05-16 08:41:06', NULL)
+  [1m[36mSQL (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (37.8ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-16 08:41:06', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-16 08:41:06', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 5) LIMIT 1
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-16 08:41:06', 'L3ZmBLSRpdeOjRyGJQWo', NULL, '2010-05-16 08:41:06', NULL, NULL, 'aric.smith@kautzergoyette.name', '09b9e23ed998be4c2e740c4a43cb5c1230293ec31c965480668b256f4d4c3f36457bb70b343de91cc889b29b5099fdfb44600db5c60ea43d2c296292f721db37', NULL, NULL, 'n3bYqa-wYa9XSDIPMEKo', NULL, NULL, NULL, 0, '2010-05-16 08:41:06')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.5ms)
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-16 08:41:06', 'mLYLtgFio_PYKNMlI2dJ', NULL, '2010-05-16 08:41:06', NULL, NULL, 'aric.smith@kautzergoyette.name', '3a2143a9f9eed27451a700bd0fb6831af0253aa2fb0a369aff4ca691146da5afb36a5c40fa0ec688ad1bac76cf40c0f27f0be71d63c843a31092ebb2ec8df377', NULL, NULL, 'HxGfrq90VNF0bfz4i9uj', NULL, NULL, NULL, 0, '2010-05-16 08:41:06')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.4ms)
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (22.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:28:08', 'ZKaUpL0EpDTL_Xm-E6Sj', NULL, '2010-05-17 04:28:08', NULL, NULL, 'aric.smith@kautzergoyette.name', '1aba62a3202f9a7df19880935b2ebc3442d67156c47fdf84cf78f0717a630f5415af5aba726771af4dbf2b92706b97f0a53a87f420e4c9620f3e846611335cf2', NULL, NULL, 'LxLBTj83o_eJj_QS4Jg6', NULL, NULL, NULL, 0, '2010-05-17 04:28:08')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to aric.smith@kautzergoyette.name (19ms)
+Date: Sun, 16 May 2010 21:28:09 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bf0c5d8f31d5_9af4800db1ac207b9@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=ZKaUpL0EpDTL_Xm-E6Sj">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 16) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'alysson@wittingcorwin.biz') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:28:09', 'Xkz_MxdfFec4J74bNekv', NULL, '2010-05-17 04:28:09', NULL, NULL, 'alysson@wittingcorwin.biz', 'a29120017671a023738f12a53457e15293cded3e1948e208b0d351a8278986d45565f3b0caeffc2093c0867f2fb527321a1bbe3c1d4b89af0cc76087cecb700b', NULL, NULL, '7auBBWwPdzWgRIzktUVt', NULL, NULL, NULL, 0, '2010-05-17 04:28:09')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to alysson@wittingcorwin.biz (7ms)
+Date: Sun, 16 May 2010 21:28:09 -0700
+From: please-change-me@config-initializers-devise.com
+To: alysson@wittingcorwin.biz
+Message-ID: <4bf0c5d96504_9af4800db1ac20833@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome alysson@wittingcorwin.biz!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=Xkz_MxdfFec4J74bNekv">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 17) LIMIT 1[0m
+  [1m[35mSQL (24.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 04:28:09', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 04:28:09', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 6) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 04:28:09', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 04:28:09', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 6) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:28:09', '6DfGNnJgTkRpg7df6V-t', NULL, '2010-05-17 04:28:09', NULL, NULL, 'aric.smith@kautzergoyette.name', 'ee72c877bb21e3557317f43713421781b33167592c5465384c1807025de5a67f5d3059d33593725913595e1c8a859bbfbee7b626723e8d512c07021bb7e938af', NULL, NULL, 'M5y3V5CtqOn4XpgyC4e5', NULL, NULL, NULL, 0, '2010-05-17 04:28:09')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+  [1m[36mSQL (22.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:28:09', '7AFQU3CjHH4A6DACSgqD', NULL, '2010-05-17 04:28:09', NULL, NULL, 'aric.smith@kautzergoyette.name', 'e9ed888945ce11eac0fc6cb3060eb0dc7722287cd56cec2aa7452470e995e89abfb77001b9bea6a9f5ffe7c67ce98b31f9faad904b0bb2ec3eb8910d238cea44', NULL, NULL, 'BP29qO-I9Zd7WzMSuj8s', NULL, NULL, NULL, 0, '2010-05-17 04:28:09')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:30:38', 'XuhKD-mWIXvLtgPHVXUa', NULL, '2010-05-17 04:30:38', NULL, NULL, 'aric.smith@kautzergoyette.name', '99584dcb35293ad63b583a98e29f49280c3edb8e87e541e95eaf62d79b00fc860d4200b8de27fb949f06a485ac4ed1fe63b99a000275d4c8af21a89b8445e712', NULL, NULL, 'cxHC0_D9m1kawfGzoBul', NULL, NULL, NULL, 0, '2010-05-17 04:30:38')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.1ms)
+
+Sent mail to aric.smith@kautzergoyette.name (19ms)
+Date: Sun, 16 May 2010 21:30:38 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bf0c66e1bd9c_9aff800db1ac39744@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=XuhKD-mWIXvLtgPHVXUa">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 20) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'alysson@wittingcorwin.biz') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:30:38', 'tL9d38ogaXv4pfjK_DNl', NULL, '2010-05-17 04:30:38', NULL, NULL, 'alysson@wittingcorwin.biz', 'a380db267cce7d7fa43ef5e20911e04a97b71a52849fc640b0929bfb63a14cb9d06858e644e40d8457f9af6393eee0a0cb2ad6cc6ecaadaa8422b0102723940f', NULL, NULL, 'mjI22qQZXmwVdAeIpWx-', NULL, NULL, NULL, 0, '2010-05-17 04:30:38')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (0.7ms)
+
+Sent mail to alysson@wittingcorwin.biz (7ms)
+Date: Sun, 16 May 2010 21:30:38 -0700
+From: please-change-me@config-initializers-devise.com
+To: alysson@wittingcorwin.biz
+Message-ID: <4bf0c66e23ef9_9aff800db1ac39870@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome alysson@wittingcorwin.biz!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=tL9d38ogaXv4pfjK_DNl">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 21) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 04:30:38', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 04:30:38', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 7) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 04:30:38', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 04:30:38', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 7) LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:30:38', 'ep7J7Rxyao89Qi6Ud3gt', NULL, '2010-05-17 04:30:38', NULL, NULL, 'aric.smith@kautzergoyette.name', '91188e29d7dc8eaed508a829b1f8e4c2ce73d66143c45b55350651c090613d4356d6b7bb6df39449e9b2eb92747b2403ceed4ab109095871afdc264825d72fce', NULL, NULL, 'MfQSaYXD85k1EEdH5pw_', NULL, NULL, NULL, 0, '2010-05-17 04:30:38')
+Rendered devise/mailer/confirmation_instructions.html.erb (0.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:30:38', 'G5gs11G2Zqqh-FdiZ8op', NULL, '2010-05-17 04:30:38', NULL, NULL, 'aric.smith@kautzergoyette.name', '1bdcbde490c67db4c8120e28fa522486cde10b1b31c179c9ca346ea917aa482b0369bd5103f845953b34ffd878ff58770576fe5b38e42b4e76688a5472a539f4', NULL, NULL, 'S_Lb9gqrEFOvEzYNnp6T', NULL, NULL, NULL, 0, '2010-05-17 04:30:38')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.8ms)
+  [1m[36mSQL (1.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (40.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:35:37', '5JDuA3CZOfM4OXitTJ5V', NULL, '2010-05-17 04:35:37', NULL, NULL, 'aric.smith@kautzergoyette.name', '87e264634e9809271e4795d598adfd8b1e7a2cb12ee2bd4feef1b35dd725dfb4d680c9b3c8a1418d5cf1a49c836706758120e55f0cbe87a5b29d15c82000f8a0', NULL, NULL, 'hF_TEf7vIe6zl7hK2rcZ', NULL, NULL, NULL, 0, '2010-05-17 04:35:37')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+
+Sent mail to aric.smith@kautzergoyette.name (26ms)
+Date: Sun, 16 May 2010 21:35:37 -0700
+From: please-change-me@config-initializers-devise.com
+To: aric.smith@kautzergoyette.name
+Message-ID: <4bf0c7997f4aa_9b05800db1ac87027@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome aric.smith@kautzergoyette.name!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=5JDuA3CZOfM4OXitTJ5V">Confirm my account</a></p>
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 24) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'alysson@wittingcorwin.biz') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:35:37', 'hThUtNrEgj-m-jPbqbY4', NULL, '2010-05-17 04:35:37', NULL, NULL, 'alysson@wittingcorwin.biz', 'bbd14dc77ee5bb7c3c62e0a6fa56543aeb84a6102eaeed8c7b606b4136df5555271b83769d5c4b7fc9e077272ef791428b259374e7677f8a45bf0548188608ca', NULL, NULL, 'FmrIZuAOgTGPB453P-w1', NULL, NULL, NULL, 0, '2010-05-17 04:35:37')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to alysson@wittingcorwin.biz (10ms)
+Date: Sun, 16 May 2010 21:35:37 -0700
+From: please-change-me@config-initializers-devise.com
+To: alysson@wittingcorwin.biz
+Message-ID: <4bf0c799898d1_9b05800db1ac871d4@drhenner.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome alysson@wittingcorwin.biz!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost/users/confirmation?confirmation_token=hThUtNrEgj-m-jPbqbY4">Confirm my account</a></p>
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 25) LIMIT 1[0m
+  [1m[35mSQL (50.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 04:35:37', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 04:35:37', NULL)
+  [1m[36mSQL (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.4ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 8) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 04:35:37', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 04:35:37', '89500-1769')
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (1.4ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 8) LIMIT 1
+  [1m[36mState Load (0.6ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:35:37', 'rhhT4h26OmSKo_tCZc0U', NULL, '2010-05-17 04:35:37', NULL, NULL, 'aric.smith@kautzergoyette.name', '5b1c0319420e7661389108fd09cfc2209938ba29843cef89374db71b6d309ffc8123ddffc5b1c18858cbf18b4d01e10af33955861ea94a700d8d7fed50dcd80d', NULL, NULL, 'BvmuuUj3hEGi0QcWsGbk', NULL, NULL, NULL, 0, '2010-05-17 04:35:37')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.2ms)
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (41.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`email` = BINARY 'aric.smith@kautzergoyette.name') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `users` (`confirmation_sent_at`, `confirmation_token`, `confirmed_at`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `password_salt`, `remember_created_at`, `remember_token`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES ('2010-05-17 04:35:37', 'TxQzQxNoDMEDHPEdczCf', NULL, '2010-05-17 04:35:37', NULL, NULL, 'aric.smith@kautzergoyette.name', '47b067e7bcbd9c6d50e4e234687da3585c50eac9f4d3de41f04dacf6706595b89c0e7dba0d3f2f1bdc3b89b842b30b0a2b3af389d57189cae40705f7745486af', NULL, NULL, 'J3vZQ0DYskqnbmOuecpJ', NULL, NULL, NULL, 0, '2010-05-17 04:35:37')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.7ms)
+  [1m[36mSQL (34.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (21.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (5.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (1.1ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 3.3ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (2.1ms)
+Completed   in 17ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (7.5ms)
+Rendered admins/new.html.erb within layouts/application (10.1ms)
+Completed   in 14ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (3.5ms)
+Rendered admins/edit.html.erb within layouts/application (4.6ms)
+Completed   in 8ms
+  [1m[36mSQL (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to http://test.host/admins/1006
+Completed 302 Found in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to http://test.host/admins/1007
+Completed 302 Found in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (3.2ms)
+Rendered admins/new.html.erb within layouts/application (4.1ms)
+Completed   in 10ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (6.1ms)
+Rendered admins/new.html.erb within layouts/application (6.8ms)
+Completed   in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (3.1ms)
+Rendered admins/edit.html.erb within layouts/application (3.9ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins/1011
+Completed 302 Found in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins/1012
+Completed 302 Found in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (3.3ms)
+Rendered admins/edit.html.erb within layouts/application (4.1ms)
+Completed   in 6ms
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (3.3ms)
+Rendered admins/edit.html.erb within layouts/application (4.2ms)
+Completed   in 7ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `registration_infos`
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 05:29:37', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 05:29:37', NULL)[0m
+  [1m[35mSQL (1.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.4ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 9) LIMIT 1[0m
+  [1m[35mSQL (40.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.6ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `addresses`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 05:29:37', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 05:29:37', '89500-1769')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 9) LIMIT 1[0m
+  [1m[35mState Load (0.7ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (1.0ms)
+Completed   in 8ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.5ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (1.0ms)
+Rendered admins/new.html.erb within layouts/application (2.9ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 05:33:26', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 05:33:26', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 10) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.4ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 05:33:26', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 05:33:26', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 10) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (16.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (0.8ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.7ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (0.9ms)
+Rendered admins/new.html.erb within layouts/application (2.7ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/edit.html.erb within layouts/application (1.4ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.8ms)
+Rendered admins/new.html.erb within layouts/application (1.4ms)
+Completed   in 7ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.4ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.8ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.8ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 05:35:27', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 05:35:27', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (1.0ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 11) LIMIT 1[0m
+  [1m[35mSQL (53.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (6.5ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  describe `addresses`
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 05:35:27', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 05:35:27', '89500-1769')[0m
+  [1m[35mSQL (0.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (5.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 11) LIMIT 1[0m
+  [1m[35mState Load (0.6ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (0.9ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.8ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (1.3ms)
+Rendered admins/new.html.erb within layouts/application (3.1ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (1.6ms)
+Rendered admins/edit.html.erb within layouts/application (2.3ms)
+Completed   in 7ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 05:35:59', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 05:35:59', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 12) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 05:35:59', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 05:35:59', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 12) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.7ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.6ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.4ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (1.2ms)
+Completed   in 8ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (2.2ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (1.2ms)
+Rendered admins/new.html.erb within layouts/application (3.3ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (2.9ms)
+Rendered admins/edit.html.erb within layouts/application (4.1ms)
+Completed   in 8ms
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/new.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/new.html.erb within layouts/application (1.3ms)
+Completed   in 5ms
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/edit.html.erb within layouts/application (1.4ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.8ms)
+Rendered admins/edit.html.erb within layouts/application (1.8ms)
+Completed   in 5ms
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (26.5ms)[0m  describe `registration_infos`
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 05:39:45', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 05:39:45', NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.4ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 13) LIMIT 1[0m
+  [1m[35mSQL (16.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (49.0ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (13.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  describe `addresses`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 05:39:45', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 05:39:45', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 13) LIMIT 1[0m
+  [1m[35mState Load (0.7ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (16.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (17.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (152.9ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (11.9ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (202.3ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (0.9ms)
+Completed   in 236ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.8ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (1.1ms)
+Rendered admins/new.html.erb within layouts/application (3.0ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/edit.html.erb within layouts/application (5.1ms)
+Completed   in 9ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 1ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (43.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  describe `registration_infos`
+  [1m[36mSQL (255.8ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:01:19', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:01:19', NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.4ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 14) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (94.8ms)[0m  describe `addresses`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:01:20', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:01:20', '89500-1769')[0m
+  [1m[35mSQL (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 14) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (38.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (35.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (26.2ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (7.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (12.1ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (1.0ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (1.0ms)
+Completed   in 23ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.8ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (0.9ms)
+Rendered admins/new.html.erb within layouts/application (2.7ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.4ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/new.html.erb within layouts/application (1.2ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:04:58', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:04:58', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 15) LIMIT 1[0m
+  [1m[35mSQL (23.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `addresses`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:04:58', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:04:58', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 15) LIMIT 1[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (29.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (2.0ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.5ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (1.3ms)
+Completed   in 24ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (2.3ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (0.9ms)
+Rendered admins/new.html.erb within layouts/application (2.7ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.4ms)
+Completed   in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (2.0ms)
+Rendered admins/edit.html.erb within layouts/application (2.8ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `registration_infos`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:25:53', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:25:53', NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRegistrationInfo Load (0.5ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (64.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mState Load (0.3ms)[0m  SELECT `states`.* FROM `states` LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `addresses`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:25:53', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:25:53', '89500-1769')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 1) LIMIT 1[0m
+  [1m[35mState Load (0.5ms)[0m  SELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (0.9ms)
+Completed   in 11ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.7ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (0.9ms)
+Rendered admins/new.html.erb within layouts/application (2.6ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (1.4ms)
+Rendered admins/edit.html.erb within layouts/application (2.2ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (30.1ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:31:48', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:31:48', NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:31:48', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:31:48', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 1) LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (1.0ms)
+Completed   in 6ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.9ms)
+Completed   in 5ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (0.9ms)
+Rendered admins/new.html.erb within layouts/application (2.7ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.2ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '642cc957a6fc5053ac6943ab4343977425dbcf3b63e96cbf73ba2dd907aea9df733739c64bb9633d4df216c219d168affc0d70ac9d68e1787b2cdec72e3de82d') LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  describe `users`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:32:31', '26435bf857c23712a07206d25daaca9f4391530299dfd52310a0d81b0b02ca41c8f8c80e9442df0610968450b870c88ec6bc6c6b502bad5b338402a28fb72b5d', 'aric.smith@kautzergoyette.name', '-tmWAx5ZmZz85J4owm1X', 'HgZhXNWOzNMybAPtJMfc', '642cc957a6fc5053ac6943ab4343977425dbcf3b63e96cbf73ba2dd907aea9df733739c64bb9633d4df216c219d168affc0d70ac9d68e1787b2cdec72e3de82d', '2010-05-17 06:32:31')[0m
+  [1m[35mSQL (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (14.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '3bb15cc069ec558e34a7582cfeb4f69a3286a6a8fb5deeadef4311a207019fae4f1409ee8c27df8955e5615317f9c4a2509265e607abdb8ef238d10780d52b9b') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '642cc957a6fc5053ac6943ab4343977425dbcf3b63e96cbf73ba2dd907aea9df733739c64bb9633d4df216c219d168affc0d70ac9d68e1787b2cdec72e3de82d') LIMIT 1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id = 1)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '642cc957a6fc5053ac6943ab4343977425dbcf3b63e96cbf73ba2dd907aea9df733739c64bb9633d4df216c219d168affc0d70ac9d68e1787b2cdec72e3de82d') LIMIT 1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id = 1)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:32:31', '20025345267c712c77f93a1a7c7a836752b39008478a8bf3b7eddcb8bf1963fa6fa21c8ef36912da49f6292f2d4622e48d3703e34bf1fea59515f053712bc7d4', 'alysson@wittingcorwin.biz', 'fsX2fNR8MOvDFm2xg-MG', 'dBG6xuHaIb707k5t8T_O', '3bb15cc069ec558e34a7582cfeb4f69a3286a6a8fb5deeadef4311a207019fae4f1409ee8c27df8955e5615317f9c4a2509265e607abdb8ef238d10780d52b9b', '2010-05-17 06:32:31')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:32:31', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:32:31', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:32:31', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:32:31', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 2) LIMIT 1
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'aa3188823b77c04179f422379fe128f0a19f8c481fec4892a51a147cce1e4dd752d09b7ce1b26fd7787bd63b62bebd72b6214d8343220356f947d0caeadf3137') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '642cc957a6fc5053ac6943ab4343977425dbcf3b63e96cbf73ba2dd907aea9df733739c64bb9633d4df216c219d168affc0d70ac9d68e1787b2cdec72e3de82d') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:32:31', '85a04775f725c9c858b846ccc9dab0dca3abd4f178d1c81cbe2505a8502169922b189d32375922814ce3c2b7f881cdd045aa2fa07893cc4f78b23bc63b931e95', 'aric.smith@kautzergoyette.name', 'BjGGnURD1DFSu1qJvINm', 'KORCMpHp7X6AUUS5uvFV', 'aa3188823b77c04179f422379fe128f0a19f8c481fec4892a51a147cce1e4dd752d09b7ce1b26fd7787bd63b62bebd72b6214d8343220356f947d0caeadf3137', '2010-05-17 06:32:31')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b877104fd94298801479f17a0342b116e6de74fea8cc54fa803a1de641cbf791efaa004a608b352d6b687d6279799c6bcca3d77b6498fd033e7d0106cd5ee571') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'aa3188823b77c04179f422379fe128f0a19f8c481fec4892a51a147cce1e4dd752d09b7ce1b26fd7787bd63b62bebd72b6214d8343220356f947d0caeadf3137') LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'aa3188823b77c04179f422379fe128f0a19f8c481fec4892a51a147cce1e4dd752d09b7ce1b26fd7787bd63b62bebd72b6214d8343220356f947d0caeadf3137') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:32:31', 'cd7ebcc6a2cb173963bd1d93a9cdf1d87e9bccfc9f664f446dd23fc3336f8a052c041c32b4e55735841936d71b5a9282697e0e7690b72a8ca556481dc3a11a3b', 'aric.smith@kautzergoyette.name', 'JsZkXjvtXXaP-bsd-YKP', 'tHssvjLbjw6wOcqbXWXo', 'b877104fd94298801479f17a0342b116e6de74fea8cc54fa803a1de641cbf791efaa004a608b352d6b687d6279799c6bcca3d77b6498fd033e7d0106cd5ee571', '2010-05-17 06:32:31')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 4)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.2ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 1) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#index as HTML
+Rendered admins/index.html.erb within layouts/application (0.8ms)
+Completed   in 6ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  Processing by AdminsController#show as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/show.html.erb within layouts/application (1.7ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#new as HTML
+Rendered admins/_form.html.erb (0.9ms)
+Rendered admins/new.html.erb within layouts/application (2.6ms)
+Completed   in 5ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.3ms)
+Completed   in 4ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{"these"=>"params"}}
+Rendered admins/_form.html.erb (0.6ms)
+Rendered admins/new.html.erb within layouts/application (1.2ms)
+Completed   in 3ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#create as HTML
+  Parameters: {"admin"=>{}}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/new.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"admin"=>{"these"=>"params"}, "id"=>"37"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to 
+Completed   in 2ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#update as HTML
+  Parameters: {"id"=>"1"}
+Rendered admins/_form.html.erb (0.5ms)
+Rendered admins/edit.html.erb within layouts/application (1.1ms)
+Completed   in 3ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"37"}
+Redirected to http://test.host/admins
+Completed 302 Found in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by AdminsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admins
+Completed 302 Found in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '5fffac7edaa9c81c6f3bdc31e575f911c7cb41b380db0a03eb7e508e599d0eb92396db0148bf32b180632fd5c0759e28f4d825cd58962bbf8f63f0d823c38a34') LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  describe `users`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:35:20', '6ba09d2c28fa4be8247b358b52f615a790631dd8ecd007ebf894dec495394aa4bf1d3538f0e541ab3ce792038b6851f468f86469edf68969c325d5ceda2e6aaa', 'aric.smith@kautzergoyette.name', 'FFFxyhI1o-O_Ge-AbsQA', 'sMcoChtfqSB3_aQWkOnl', '5fffac7edaa9c81c6f3bdc31e575f911c7cb41b380db0a03eb7e508e599d0eb92396db0148bf32b180632fd5c0759e28f4d825cd58962bbf8f63f0d823c38a34', '2010-05-17 06:35:20')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 5) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '173fea29f82cde0876b7080c5ada027630393edd53e5a560b07d6b3987dbef3668d9d2042e829e0001c97d352fdc1a0e026658dfa45791ce9213115644117574') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '5fffac7edaa9c81c6f3bdc31e575f911c7cb41b380db0a03eb7e508e599d0eb92396db0148bf32b180632fd5c0759e28f4d825cd58962bbf8f63f0d823c38a34') LIMIT 1[0m
+  [1m[35mRegistrationInfo Load (0.4ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id = 5)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '5fffac7edaa9c81c6f3bdc31e575f911c7cb41b380db0a03eb7e508e599d0eb92396db0148bf32b180632fd5c0759e28f4d825cd58962bbf8f63f0d823c38a34') LIMIT 1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id = 5)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:35:20', '7db53269942479714e582b4362fae8ce9fd4a4a70e0d56a20ea40c7ff049c49af788b084851412d0ec0b420894e7d0db2b63ea5798703a259cd7c570c16fe89c', 'alysson@wittingcorwin.biz', '4EbTw_-mGT9WzKakNvNw', 'pWDL719dgPJU8vMb-yYf', '173fea29f82cde0876b7080c5ada027630393edd53e5a560b07d6b3987dbef3668d9d2042e829e0001c97d352fdc1a0e026658dfa45791ce9213115644117574', '2010-05-17 06:35:20')[0m
+  [1m[35mSQL (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 6) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:35:20', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:35:20', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.4ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 3) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:35:20', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:35:20', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 3) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '7b051a21dc006146c0a50a22e476c7be0649404a69c5f7f4762a924c1fb439f090f912b4216a0af70694dd65e1f34a61f9854608bd2c725a951f124a57f04825') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '5fffac7edaa9c81c6f3bdc31e575f911c7cb41b380db0a03eb7e508e599d0eb92396db0148bf32b180632fd5c0759e28f4d825cd58962bbf8f63f0d823c38a34') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:35:20', '9e1016c069237f3e629d691762f8b4232ef768e65df3ac9f66f90cbe5d64ed0a7d49e1a787053e3c14407150e4ca2443159419b045e3edeb200736e4bd4563e3', 'aric.smith@kautzergoyette.name', 'JhxIGzp1GT2vSuZm88_i', 'jMEYIZ6MiCZUNukOZqpm', '7b051a21dc006146c0a50a22e476c7be0649404a69c5f7f4762a924c1fb439f090f912b4216a0af70694dd65e1f34a61f9854608bd2c725a951f124a57f04825', '2010-05-17 06:35:20')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 7) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ed3a327a6ad2adf7f9ebe50bfb27470640416d9347007a706593fc41a7e771513730e42b647d757b985e181b78e420b4caeae6e1deb25d56a961f76ad8fdbb07') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '7b051a21dc006146c0a50a22e476c7be0649404a69c5f7f4762a924c1fb439f090f912b4216a0af70694dd65e1f34a61f9854608bd2c725a951f124a57f04825') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '7b051a21dc006146c0a50a22e476c7be0649404a69c5f7f4762a924c1fb439f090f912b4216a0af70694dd65e1f34a61f9854608bd2c725a951f124a57f04825') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:35:20', 'fc5de77bdd40cff272de0a94e95ba5b15014020777836fa4a8284df513f2e2223e5dab4b358a980c76c653742fb4ac40d3ca8cfcbb854b91f5f6ced5c59330a0', 'aric.smith@kautzergoyette.name', 'njvQNMw_Rpa69xouNzIt', 'BUS5A-75nV1I1wEKB3EA', 'ed3a327a6ad2adf7f9ebe50bfb27470640416d9347007a706593fc41a7e771513730e42b647d757b985e181b78e420b4caeae6e1deb25d56a961f76ad8fdbb07', '2010-05-17 06:35:20')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 8) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 8)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.3ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (1.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e495a8efab3f50a59bbabcfb5713bdc4ea4ab870389b2003de7273f6d254e388a501fcc183234e408b792c8ac8f5b2d8158a8109a1fef39c57334b61ed8fdaad') LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:39:42', '2b7e436f528bc5c3683e81186cb5dc51bb6d9650822f80a1ca8e973e7bdc18d96ab3ae1c0cd58b2c1c7a30e86b13ff1f0a7ee2272b9ac67a6633f3b813c5fafb', 'aric.smith@kautzergoyette.name', 'fhj5ou6B5ORf32kI38P1', 'Z56mFLBUItxGXuJAVw7T', 'e495a8efab3f50a59bbabcfb5713bdc4ea4ab870389b2003de7273f6d254e388a501fcc183234e408b792c8ac8f5b2d8158a8109a1fef39c57334b61ed8fdaad', '2010-05-17 06:39:42')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 9) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'bf3f84d304daf7c070fb8babe2ab457d330162872f77812958679b3ab5b3eeb93fc690cea0001446d58831fbad507e847cd7401bf747335db01beb1fb97b0f20') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:39:42', 'e5462bef04decd031952060d9976c5bf91cd3cb68bd800b245948093b8ae8adba82b4ed0929c26b9d0670921c1f8736f47f762b453b49eb7ceda41439039a03d', 'alysson@wittingcorwin.biz', 'vxzSoLv__z6s5oyBQ-Kh', 'KoUGjUTExD3vHcRGa6jS', 'bf3f84d304daf7c070fb8babe2ab457d330162872f77812958679b3ab5b3eeb93fc690cea0001446d58831fbad507e847cd7401bf747335db01beb1fb97b0f20', '2010-05-17 06:39:42')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 10) LIMIT 1[0m
+  [1m[35mSQL (29.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 06:39:42', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 06:39:42', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 4) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 06:39:42', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 06:39:42', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 4) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '29658d554ac04410e2eb9ed9717d9f73abc071bbca8e33b6b511e3d8c082b36e0244746d61bb9c24fd4f74f099168358371deba0c58b4e47c3ff3807af334286') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:39:42', '1da51f83c465071868544cad81a86d45fa777681311fcdb768a80a4efe53ce576979369abd2bcbbde0412bfdfdcb705ff1bfa7aac06d0bb59afbd18bb6e3dcf8', 'aric.smith@kautzergoyette.name', 'VtxgwL9LEOf9owplobKJ', '_vl-WlbjBpou2zBhJ86D', '29658d554ac04410e2eb9ed9717d9f73abc071bbca8e33b6b511e3d8c082b36e0244746d61bb9c24fd4f74f099168358371deba0c58b4e47c3ff3807af334286', '2010-05-17 06:39:42')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 11) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f54284d9b88cfe16e5e34338582fdb1654d252288b94552394ba56c83c038cf53ee13e8663b6c4af8d16335978d73391bb79ccecd231bd924094afe47568fc12') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 06:39:42', '87df841f073d7c4876cead2a344afd3c63fb6aa6eb9b6188c2a11d9ea17fdfef7955a9ab52c719d5353cb7fd341d3d6b875c134689b149023644611744928420', 'aric.smith@kautzergoyette.name', 'SgXP0jmyuyBzjrq1K2ne', '8VaTqFU0INA_-zkjWkUy', 'f54284d9b88cfe16e5e34338582fdb1654d252288b94552394ba56c83c038cf53ee13e8663b6c4af8d16335978d73391bb79ccecd231bd924094afe47568fc12', '2010-05-17 06:39:42')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 12) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 12)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.2ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 3) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '000e361eeed4759e4f088c6caa1860e289fee1875453ebb68b2a288ee5acb6e86f26367a3f1cae1a440f210ec417714350b0c43d2ba0f24f140c7fc8ec103850') LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:07:50', 'ff2668a20758839d32d4f47b7574c15ec57ec0de7bc8be9db7280d01404093db81040dfb1c73197f4e4b1ac3de58af4e23e2339e27e940d3409d7d4c9105aba8', 'aric.smith@kautzergoyette.name', 'CSS8RDwWfm42bBEI2YuF', '9tKIRpJ1VRdcO6QHFMnf', '000e361eeed4759e4f088c6caa1860e289fee1875453ebb68b2a288ee5acb6e86f26367a3f1cae1a440f210ec417714350b0c43d2ba0f24f140c7fc8ec103850', '2010-05-17 07:07:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 13) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '9bbb3aa5079d139a1db5f61ca3ea548e4f17927c2a5ab3084129fef9572c409d70b708e15623322e395ff336300d78601b9b7a59e2c4df95ab357f3589c0d1bc') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:07:50', 'e8e129a1396d579f29d26c66a82ef5d7c7e04030ccaf234790bd115d70039f2cda5a4873799f3ec5e6f0f43e32dd7dfbe50f5d6e0bdc0472f1cae6b913f6f2e8', 'alysson@wittingcorwin.biz', 'GMGHtwm2EDF3hnpqWtrH', '4fVvfu57Iyk2dP4WdFAD', '9bbb3aa5079d139a1db5f61ca3ea548e4f17927c2a5ab3084129fef9572c409d70b708e15623322e395ff336300d78601b9b7a59e2c4df95ab357f3589c0d1bc', '2010-05-17 07:07:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 14) LIMIT 1[0m
+  Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id IN (13,14))[0m
+Completed   in 8ms
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:07:50', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:07:50', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.4ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:07:50', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:07:50', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 5) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ba00de81dbc02807fd8458818221979583b5856be6de4ffb86923423086ca5f03a968e2c4f61eb352ae3d38fbb8530feb75396a8e299a9d4c7b263a262a77b89') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:07:50', '0daaa6f83ce3474cdabe3c8bb7d6a375828d1ed55722b34ccaaa5c578a0f1caec58a0ea503a83e3122c383357e358a3ef9d7ffe87430efbef1a252462a9c4aee', 'aric.smith@kautzergoyette.name', 'DArWqKaywH_6Hhv0xQzz', 'Eg6CyYhliweyWVB-L2io', 'ba00de81dbc02807fd8458818221979583b5856be6de4ffb86923423086ca5f03a968e2c4f61eb352ae3d38fbb8530feb75396a8e299a9d4c7b263a262a77b89', '2010-05-17 07:07:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 15) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '2969f199fa7c441ffd05e130de91bc8e36de59b075670e2908f81b337ea042f16eb8e3ef84bd79185ebb2e953f528d1091e0da48256bb577bd95a4bb3b802e15') LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'ba00de81dbc02807fd8458818221979583b5856be6de4ffb86923423086ca5f03a968e2c4f61eb352ae3d38fbb8530feb75396a8e299a9d4c7b263a262a77b89') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'ba00de81dbc02807fd8458818221979583b5856be6de4ffb86923423086ca5f03a968e2c4f61eb352ae3d38fbb8530feb75396a8e299a9d4c7b263a262a77b89') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:07:50', 'cb1882408f9b7129b933c2f4655d0804418e71fad940e4f8a7b082de7facf6348a248765897ab54ae5a95fd27edbb1fa7c278941c85b492a0a1c06ad2f7fe15b', 'aric.smith@kautzergoyette.name', 'Sef63BGweqrleZobNjAw', 'pMCwhQ0pRGjlqOUdrAu8', '2969f199fa7c441ffd05e130de91bc8e36de59b075670e2908f81b337ea042f16eb8e3ef84bd79185ebb2e953f528d1091e0da48256bb577bd95a4bb3b802e15', '2010-05-17 07:07:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 16) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 16)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.3ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 4) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '5bfb42c5370ed6f29819b53835696cdf6228dd066d8b351f6608b6518e9c5212148904127429566fc66f08fd551066a0eeecab4b3904afe6f51ba70be8112d51') LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:08:27', '7789719da1aea27f0ed31a0635677c694db6ba00aac811b579c9766bd3a3f597094e70c5467ed56fe3585101d9f8d8affa6f5270cd79720d69dc0f246165d2af', 'aric.smith@kautzergoyette.name', 'JG2DsnS4rQJzhT5eGsDK', 'o40vnLiGhGkrWFqd6vOd', '5bfb42c5370ed6f29819b53835696cdf6228dd066d8b351f6608b6518e9c5212148904127429566fc66f08fd551066a0eeecab4b3904afe6f51ba70be8112d51', '2010-05-17 07:08:27')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 17) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b77f7f1c928c314efcc2cef30372282cb87639292efa2659d0e946a872170f6b90a98d53fbe52c90c8437d9f375a8520d01758c07976cb564628ee184b3de95d') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:08:27', '61ffd8fcf80c5a9b02c93154dd18d97d19c559f2e6ccb5edad466f463078575da42e20d138eee2fcd7fac27629bba774926c7880d2bdd78f59a0504e4e7776fb', 'alysson@wittingcorwin.biz', 'dW0au4KnHhehymJxClWz', '0Qi2lUsagkwFSeAa6cZA', 'b77f7f1c928c314efcc2cef30372282cb87639292efa2659d0e946a872170f6b90a98d53fbe52c90c8437d9f375a8520d01758c07976cb564628ee184b3de95d', '2010-05-17 07:08:27')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 18) LIMIT 1[0m
+  Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id IN (17,18))[0m
+Completed   in 8ms
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:08:27', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:08:27', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 6) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:08:27', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:08:27', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 6) LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ad74a41d7eb769a155e1247d0b55d54357494f54a3f2a9b1810ad994ddec7f403cc263bf6699067bd7a0810e9bbe8c342d99dd1440d7bd1728b50f5a1f2a436d') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:08:27', '97a2d41eac8d84e691077bfa1618388b43d2afd29f4a14155b475204d19862e302fa2f02e765e00f047929584d536302c8bfb89c847b696b56a5cc5e7217b727', 'aric.smith@kautzergoyette.name', 'OlAGei47MTPD1UFE_n5f', 'OD8yiaTwdOUAKaNUls_U', 'ad74a41d7eb769a155e1247d0b55d54357494f54a3f2a9b1810ad994ddec7f403cc263bf6699067bd7a0810e9bbe8c342d99dd1440d7bd1728b50f5a1f2a436d', '2010-05-17 07:08:27')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 19) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '10755bc94a2fce9be2f3309258c07db022f1039932afe433f179984c255fbb37b58a1aee3dc9a37b716bff9e35f7aed2df881847c57237daa8f5dce7e283a199') LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'ad74a41d7eb769a155e1247d0b55d54357494f54a3f2a9b1810ad994ddec7f403cc263bf6699067bd7a0810e9bbe8c342d99dd1440d7bd1728b50f5a1f2a436d') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'ad74a41d7eb769a155e1247d0b55d54357494f54a3f2a9b1810ad994ddec7f403cc263bf6699067bd7a0810e9bbe8c342d99dd1440d7bd1728b50f5a1f2a436d') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:08:27', '4f9462da067da3706b744ea7d8ee965996b475b39d9ce61bd751fe81704ab72fe0fed3ab870fb26314a277e2ac0f9e8b24df3fa74c992829300497ca53721171', 'aric.smith@kautzergoyette.name', 'tEHjbPiUSlN8oUTgGjTm', 'zeyps_96oX5OsWxrv17T', '10755bc94a2fce9be2f3309258c07db022f1039932afe433f179984c255fbb37b58a1aee3dc9a37b716bff9e35f7aed2df881847c57237daa8f5dce7e283a199', '2010-05-17 07:08:27')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 20) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 20)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.2ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 5) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b2e4d57338d61875488066161e5dcc3c9d322cbf38811e8aba7a685741ff740b39f3e033e802bbd8e9dea7cdcee937a299d35b6a3f00352db65d8896d8666fe9') LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `users`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:19', '0430fef84a8c10aa01ad0e4ea6c1ca6f9870103c544b80e7c26e21af0615fc192e68ff31ee68513d99e1ee4c2c89ee39fefed77856dee57cb1d5e614eed161e6', 'aric.smith@kautzergoyette.name', 'mZ7X7MFVtf705-vCl6ut', 'TmS9FWxXy34vQAyiJA5y', 'b2e4d57338d61875488066161e5dcc3c9d322cbf38811e8aba7a685741ff740b39f3e033e802bbd8e9dea7cdcee937a299d35b6a3f00352db65d8896d8666fe9', '2010-05-17 07:09:19')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 21) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'bca8bc979b50a568c6108f1ce1d0efede7f5d35081980d092175d1baa9d1103c95e71ae9489306f8960c030cc464140bc1b349c1baff5c3bd174140b6f684476') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:19', 'e598d3018a61aa61693b3228afb8fb78249248b42d264c37d9576ad34d4863895a593034f6eb4cbf64bc9a90ecd0f5db29df8929629118cfc979668f3e279042', 'alysson@wittingcorwin.biz', 'IVCwtbuWMy5Cgl26894T', 'rZH6aEJjRKuOl8FWEAxs', 'bca8bc979b50a568c6108f1ce1d0efede7f5d35081980d092175d1baa9d1103c95e71ae9489306f8960c030cc464140bc1b349c1baff5c3bd174140b6f684476', '2010-05-17 07:09:19')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 22) LIMIT 1[0m
+  Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id IN (21,22))[0m
+Completed   in 8ms
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:09:19', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:09:19', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 7) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:09:19', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:09:19', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 7) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd056cb4a22af6a862581911575a97b0a8187aff9506e2f612398087eaadd5f805bcbe04661f22af969f9df5ec5a322d8146f1aeb9c18dcafc5b4ee9b7b25ddf9') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:19', 'd72ea680a622b26d5fbdf36f8fb2b0153014d91b5c02fe69e2ba3e767c72f3482a2f08a243b5ebe040b423b6e6f43f75f05e5ead195f9e8efdfc81e140548043', 'aric.smith@kautzergoyette.name', 'gtXpnA0LqNXOchQ-4ax7', 'pTyq_2j83vOpU_MNxPQn', 'd056cb4a22af6a862581911575a97b0a8187aff9506e2f612398087eaadd5f805bcbe04661f22af969f9df5ec5a322d8146f1aeb9c18dcafc5b4ee9b7b25ddf9', '2010-05-17 07:09:19')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 23) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '47249a32d51d1e9e9486fa68518f6ca7c9a64e6fe8ece475753f42ff4a08f375a0cb175f565abca0593589571ae941a2b85c02593301fdff0314b29eade61531') LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'd056cb4a22af6a862581911575a97b0a8187aff9506e2f612398087eaadd5f805bcbe04661f22af969f9df5ec5a322d8146f1aeb9c18dcafc5b4ee9b7b25ddf9') LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = 'd056cb4a22af6a862581911575a97b0a8187aff9506e2f612398087eaadd5f805bcbe04661f22af969f9df5ec5a322d8146f1aeb9c18dcafc5b4ee9b7b25ddf9') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:19', 'e7d72a55866855b8be0466f189f6cf7cb7c3aee517e612c853b67875a76034cc3d39a04d2d9b8842ac2757b52dd36a0cf293839a367c7e82ff297c7686deaffd', 'aric.smith@kautzergoyette.name', 'aIr0ba3pDHdMrWi2_Tjv', 'gStM5R8ge_qpN3aQ_Ki0', '47249a32d51d1e9e9486fa68518f6ca7c9a64e6fe8ece475753f42ff4a08f375a0cb175f565abca0593589571ae941a2b85c02593301fdff0314b29eade61531', '2010-05-17 07:09:19')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 24) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 24)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.2ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 6) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '8d87349fe534b672f7546a316aa30c9cf8352ac1ec03db423b9b6b5e6751061f215bfdb95a335c87bfa909d5d4c981acfc2daff289e1427a6d8590d907c30c23') LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `users`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:50', '268319c8c4a2c99fcb0ee95ae440c2f278915e7db2a85b512c780c1053b07375491ed6aab7254ff3c2358d13e75803810fa75a3c02a50a32ebb00b9b5f2d0162', 'aric.smith@kautzergoyette.name', 'Sad-ND29AmoQRe40tnPA', 'icbq2m1jnMw0ae43Qcz4', '8d87349fe534b672f7546a316aa30c9cf8352ac1ec03db423b9b6b5e6751061f215bfdb95a335c87bfa909d5d4c981acfc2daff289e1427a6d8590d907c30c23', '2010-05-17 07:09:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 25) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '70624715225f1f1fd466b05148ced2750675e16e284753d7a74dddcc297ac126f72c057dcd0ce001bda461d441c125ca8b4918c2f73d75e4c6b7831051ccc3a2') LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:50', '2bcc350f400c533bb0117adbed829a252c4dcd57bcf57c5fd84307552af6a1673e6834727caec1182c709ca38ddfac35ba27a453feabf48384a6642f2d11eaf4', 'alysson@wittingcorwin.biz', 'A19YKOLF4ReYTv5F69ap', '6JD3cxsA3bzS7iyrbK_u', '70624715225f1f1fd466b05148ced2750675e16e284753d7a74dddcc297ac126f72c057dcd0ce001bda461d441c125ca8b4918c2f73d75e4c6b7831051ccc3a2', '2010-05-17 07:09:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id IN (25,26))[0m
+Rendered admin/users/index.html.erb within layouts/application (0.6ms)
+Completed   in 12ms
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:09:50', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:09:50', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.4ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 8) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:09:50', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:09:50', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 8) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  ROLLBACK
+  [1m[36mSQL (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '808b6b98bf8fd34bac43350195f318e55ead659c88edccabd145a4d353b5ab143d434373338bc07df91f76017152457b0d3eb6ed6df005dfbf210246e0cfffc6') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:50', '7de90ca0cce8156017cb478aed951e5fe98f70593e1f58545f72b4a9ad92ad376c0e8c7417908ab8b9acf7e0566b269fca1e1f1f2b665354d1084f54fb93b8ba', 'aric.smith@kautzergoyette.name', '5Du7PjpYmeIolRAIvnga', 'SzTKz2LwACn8d729r0Zi', '808b6b98bf8fd34bac43350195f318e55ead659c88edccabd145a4d353b5ab143d434373338bc07df91f76017152457b0d3eb6ed6df005dfbf210246e0cfffc6', '2010-05-17 07:09:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 27) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e66197d14673723603fc29f765d763a70532d00bf7596049b5c84993a05e9147cbc1dc7f5b980a47b96f68696a516ae3510f16a4b7dd3064db225e5b0b764cd5') LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '808b6b98bf8fd34bac43350195f318e55ead659c88edccabd145a4d353b5ab143d434373338bc07df91f76017152457b0d3eb6ed6df005dfbf210246e0cfffc6') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`persistence_token` = '808b6b98bf8fd34bac43350195f318e55ead659c88edccabd145a4d353b5ab143d434373338bc07df91f76017152457b0d3eb6ed6df005dfbf210246e0cfffc6') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:09:50', 'a769c4f04a490cbaf2dac51bed4aa62f68b898ec3c046ef30673793fa4d0ccd25d98b4e7e9d8ad31baea324fc92fd90be4fb86ab7824bbcb5ad5020f46dea772', 'aric.smith@kautzergoyette.name', '354lh1fuT5wqWalhciFl', '2Udfd4RKhsjHGyWDlzSL', 'e66197d14673723603fc29f765d763a70532d00bf7596049b5c84993a05e9147cbc1dc7f5b980a47b96f68696a516ae3510f16a4b7dd3064db225e5b0b764cd5', '2010-05-17 07:09:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 28) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mdescribe `user_roles`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `user_roles` (`role_id`, `user_id`) VALUES (4, 28)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUserRole Load (0.3ms)[0m  SELECT `user_roles`.* FROM `user_roles` WHERE (`user_roles`.`id` = 7) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b33cada408d07817fc4e98bdc99ad64cbda69a0c17c29d2349ecc2924a1183fc0e53a9fe687a9bc7cf8ecf4a11b870cf6a8976ff4a473cdbd5dd5d5cdc83778c') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:11:57', '0d53d868b3fa4ad7f19b4e1402f9a364d298b17baaf939ecf997a47313f3623cc34c3d2123a4e41e4cc2347c4fe6a9543f781897db765b501a84d0c89f80b0a8', 'aric.smith@kautzergoyette.name', 'PzjZZm-OIaEAthY-qYz4', 'YX2Vqn4gSbsz09Z0BlrD', 'b33cada408d07817fc4e98bdc99ad64cbda69a0c17c29d2349ecc2924a1183fc0e53a9fe687a9bc7cf8ecf4a11b870cf6a8976ff4a473cdbd5dd5d5cdc83778c', '2010-05-17 07:11:57')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 29) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e58b97151bedda16a605eb71eaac1bae89de3fdd08cc77c5d47fd11a512fdbc28c3ab51d09922f01961d14de30fafd309ace5aaf8898aa394537956dd4f8e1b6') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:11:57', '9607419f2abc20dd1480d19ccb98f10dbd3d3f88cb9f5a63a76d971fc652ef7b2655d95c5d2dc40548a981eb350c8060dddd2fc7b45f216bc299ec53ba851854', 'alysson@wittingcorwin.biz', 's3sR79si0wCr6ZrkiUH5', 'NfxP0-POzpABkDHjCDC1', 'e58b97151bedda16a605eb71eaac1bae89de3fdd08cc77c5d47fd11a512fdbc28c3ab51d09922f01961d14de30fafd309ace5aaf8898aa394537956dd4f8e1b6', '2010-05-17 07:11:57')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 30) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mRegistrationInfo Load (0.3ms)[0m  [1mSELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.user_id IN (29,30))[0m
+Rendered admin/users/index.html.erb within layouts/application (0.9ms)
+Completed   in 10ms
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:11:58', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:11:58', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.6ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 9) LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.7ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:11:58', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:11:58', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 9) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b081a1dd98f7b3c6d3dc63d10cca97f6e26c730ccebe65c11ca204cd27f671acf7c2e315740fcb4654c14d304f5df20606658e778f2e9f7d7014a1e3244a1f14') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e1b7749cda971b1e341ef6de5ec692280ada67ef0f60275d4bf42b82a451c99f035d1ec93d6e2d375c2d79c5bbe90060ce308ba09757c5d5a4d638ab7ee8dd3e') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '5fa40bf3c5239b64046bb3100caf863b58a9ac91710e805cc4d030b7af6da89fede94ffc3a601d05c30592a26ff84a4697ecf68bf8bfe68b39be5bb6c87d5863') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '0920d89725583a2a46a935fad288e50071b41fbc63b9a117f1cb8ef8f2a1810c777b3e74a11c015402f96dfd10686f73b9371807518382677f72904024ef22eb') LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:20:25', 'ac757476bf105d70a56e8ab59b97fca68c33d446a44f9464f7f081cba33a4870285ce6d1f6261790c474321a2fce2101967d4d010de0ff7f6322975472fcfdf5', 'aric.smith@kautzergoyette.name', 'TD5ub9W8KuSdXOTCgz1j', 'q-4Td8m6sh5IqVl6jfXK', '0920d89725583a2a46a935fad288e50071b41fbc63b9a117f1cb8ef8f2a1810c777b3e74a11c015402f96dfd10686f73b9371807518382677f72904024ef22eb', '2010-05-17 07:20:25')
+  [1m[36mSQL (19.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 31) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd0992b2f2d52317a9c3e4eb7bbae45f534336a23f736957e5842c7881ca9c7be2c1aee69407d961fbab1156e7b454c60e1f3f713a102ce6152b01424672c8cf9') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:20:25', 'f004f5181f96e4342bc6d634aa6ead488d008ccf17d697b501403ecbae6af3462fda6bcfeaa5f71b4f9bc15db62f7331227406ae43f8fff8a0353b196b2d42df', 'alysson@wittingcorwin.biz', 'gAZkUdQQhJfvEhfznUQC', 'QgabHeeKnOfvnnXk87SO', 'd0992b2f2d52317a9c3e4eb7bbae45f534336a23f736957e5842c7881ca9c7be2c1aee69407d961fbab1156e7b454c60e1f3f713a102ce6152b01424672c8cf9', '2010-05-17 07:20:25')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 32) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/application (0.6ms)
+Completed   in 5ms
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:20:25', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:20:25', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 10) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:20:25', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:20:25', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 10) LIMIT 1
+  [1m[36mState Load (0.2ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '62a86acb8fec30b4728b2af858102ddb4af7c29762abdb05b1dc986abdc2a1411f8caffc7c9a03c14cdd864cc0c7f40d4f7bf00749be89c2c5338f4c1f6b27af') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '885a0148b89f3218babbcdb3822916c7ab694dc2f57a66ebc95ae16f191f741060608b70b5be2f89f0f925e7d6d92663d12b190a02383dc76321deab6705d424') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.6ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '199ac4c181628b00d9f55b1d0be5f6e2c832d3abf21a90677f9e91dcb2ed67453f18bcb8489f38e3e21c4b5128b774f6156367dec2a987fcb09bd4a1fb75f56e') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (102.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (1.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (1.7ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c0bf13a29eb57b6d45e325e639d2952d7459945d05e770fc326aeda5526f351ab744cb9d97702099786fd9b5dd5c6a8d92dcf9bcf9cee29a7dfa7cf4c5e8a3cf') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.4ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '3e79cae7cb911fe2f6b5484942221cacd7e362267117a521df710e204da96d67d25a8292a4de76167d765a28c474c50f6e4958174da63a6e4b878e7272cd167c') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:32:12', '344ea97e7f5536fb986e29e6779cf7547776b3007104cc0eca441402a972f219c1a45e8bc7b57aa68f16a3fb5d6fef57c906d90c9fa96e051d3089f8660932db', 'aric.smith@kautzergoyette.name', '_hD-AtyN2p_SCb-Heilm', 'GRSXcnPDjpVpXwWVBkbg', '3e79cae7cb911fe2f6b5484942221cacd7e362267117a521df710e204da96d67d25a8292a4de76167d765a28c474c50f6e4958174da63a6e4b878e7272cd167c', '2010-05-17 07:32:12')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 33) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'aea894d57e665ba3d514306939d339b6479b9f62a20b49dd46fb68a7efdda50885be70da3ec7995e2c95a1353e1b60a0f14b3022b27090d2b03e8059830a6974') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:32:12', 'c5b459371368fb9319deac964c0b320f025b666ac5090d87d3530156a6f66b4eb771ed6f2f88c6d4cfa5ce907dc82490658aa7c62c06b9cc99051d60a9c8523a', 'alysson@wittingcorwin.biz', 'b2TBItLKjWNOwHfissmr', 'fD-2hAbVSaEiitH1mFVf', 'aea894d57e665ba3d514306939d339b6479b9f62a20b49dd46fb68a7efdda50885be70da3ec7995e2c95a1353e1b60a0f14b3022b27090d2b03e8059830a6974', '2010-05-17 07:32:12')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 34) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/application (0.6ms)
+Completed   in 4ms
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:32:12', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:32:12', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.3ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 11) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:32:12', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:32:12', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 11) LIMIT 1
+  [1m[36mState Load (1.0ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '9f3c2bce2af2c7682c84b73ce650fdd0587c9921fcb36b8c6805832bd70b3237b3480dcdfe2912fc775238f6e9bf78818ebdc26e966a826b5ef0f443ada4bcd7') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'bae617d81d014eeebcff2d760d47b6181e8b0e933595bf40019d769eae2a1f6a3abbbcda513951689dc80a62b2f87ccf23640ac7d8eca2cbda67e56736cf1792') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f6c720180ef609efe2be3261871d0ffe6db0b4acf70dc72b4cb85cc7d82ad0114510b6062ee66038e83844b0ae8d8269ccae0b9a71d02b523448e4cdcba055a6') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.3ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e42e0822eb2448247a0c8d30497d442e1453af5eb81f584c716edbab7fe78176be0498377b9561445cf249a9a5a5c4d8ba0f4cb93eae8b54a28e564dc17688c1') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAddressType Load (0.4ms)[0m  SELECT `address_types`.* FROM `address_types`
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT `roles`.* FROM `roles`[0m
+  [1m[35mCountry Load (0.3ms)[0m  SELECT `countries`.* FROM `countries`
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '72fd52cec31d34be8694f7e59682f29af2f50b82d25e1a6a20aa8301fc6f4851c10d42ae9eff179c14f7ee5b71bc96779c3d500b755812ff9eb056afeb345a4a') LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:50:20', 'a2726569b1bd7f792903697d739deedb93db0da3c1c833e6887e67b1323f22f56fab90a378d254355aa09889fee7fd94e37da2a9c5a34a3dd70ffb86e93c637d', 'aric.smith@kautzergoyette.name', 'XmNAq_IN3vNQO2ccATl2', 'XI247Es0M0hA2lZ50Ze9', '72fd52cec31d34be8694f7e59682f29af2f50b82d25e1a6a20aa8301fc6f4851c10d42ae9eff179c14f7ee5b71bc96779c3d500b755812ff9eb056afeb345a4a', '2010-05-17 07:50:20')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 35) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('alysson@wittingcorwin.biz')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '2e85ba841efac464cc988dc03f81417867a069f9a59e15f8c92ef1c2d6578525fec718eb01a52c00b88a0d6090d957be806ab3c726218564db1654f203f1595a') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `crypted_password`, `email`, `password_salt`, `perishable_token`, `persistence_token`, `updated_at`) VALUES ('2010-05-17 07:50:20', '6749fddcc251b3578c8101c929d5d5e7d412dc35b24edf13bbf5639333fa5467f9982033f1fd5a43f1130654305f00fc62a2e299a1ece9826885eed125579fa0', 'alysson@wittingcorwin.biz', 'WvFlNl_KuAbYpWTHr34c', '1qiKefBTyYb7EpTCXRLn', '2e85ba841efac464cc988dc03f81417867a069f9a59e15f8c92ef1c2d6578525fec718eb01a52c00b88a0d6090d957be806ab3c726218564db1654f203f1595a', '2010-05-17 07:50:20')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 36) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by Admin::UsersController#index as HTML
+Rendered admin/users/index.html.erb within layouts/application (0.6ms)
+Completed   in 4ms
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `registration_infos`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `registration_infos` (`birth_date`, `created_at`, `first_name`, `last_name`, `updated_at`, `user_id`) VALUES ('1995-12-13', '2010-05-17 07:50:20', 'Aric Smith', 'Eliseo Kautzer', '2010-05-17 07:50:20', NULL)
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRegistrationInfo Load (0.2ms)[0m  SELECT `registration_infos`.* FROM `registration_infos` WHERE (`registration_infos`.`id` = 12) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `addresses` (`address1`, `address2`, `address_type_id`, `alternative_phone`, `city`, `created_at`, `first_name`, `last_name`, `phone`, `state_id`, `state_name`, `updated_at`, `zip_code`) VALUES ('17692 Aric Plaza', NULL, NULL, NULL, 'Lake Aricfurt', '2010-05-17 07:50:20', 'Aric Smith', 'Eliseo Kautzer', '(895)001-7692', 1, NULL, '2010-05-17 07:50:20', '89500-1769')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mAddress Load (0.3ms)[0m  SELECT `addresses`.* FROM `addresses` WHERE (`addresses`.`id` = 12) LIMIT 1
+  [1m[36mState Load (0.3ms)[0m  [1mSELECT `states`.* FROM `states` WHERE (`states`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '653a1d0c361c9747c199cdf7a7a082bc5a812899b164965fca8ecf1a5d81ca6eef0711d778c84f7a9b0e38b929f82e079ffb4bb53ab66cd4ad706281c6a70e22') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('aric.smith@kautzergoyette.name')) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.`id` FROM `users` WHERE (`users`.`persistence_token` = BINARY '3cbf50d76b1d51de4abd6c6a8f481b423bcd941aedcf1f38d814b0a12074e0968c71d75aea69cbef99761f444dd6c8940db7d6a4644c507f6bc7cd4b33d1c90d') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK

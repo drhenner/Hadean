@@ -1,8 +1,16 @@
 Hadean::Application.routes.draw do |map|
-  devise_for :users
+  #devise_for :admins
+  #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
+  resources :admins
+
+  #devise_for :users
 
   
   root :to => "welcome#index"
+  
+  namespace :admin do
+    resources :users
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

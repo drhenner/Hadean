@@ -4,10 +4,11 @@ source 'http://rubygems.org'
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "mysql"
 
-gem 'devise', '1.1.rc1'
+#gem 'devise', '1.1.rc1'
+gem "authlogic", :git => "git://github.com/odorcicd/authlogic.git", :branch => "rails3"
 #gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git', :branch => "rails3"
 #gem "authlogic", :git => "git://github.com/odorcicd/"
-#gem 'authlogic'
+#gem 'authlogic', "2.1.3"
 gem 'will_paginate', "3.0.pre"
 gem 'formtastic'
 gem 'prawn'

@@ -14,6 +14,9 @@ Dir["#{File.dirname(__FILE__)}/blueprints/*.rb"].each {|f| require f}
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
+include Hadean::TruncateHelper
+#setup { Sham.reset } 
+
 Rspec.configure do |config|
   # == Mock Framework
   #
@@ -26,9 +29,14 @@ Rspec.configure do |config|
   
   # MACHINIST stuff
   config.before(:all)    { Sham.reset(:before_all)  }
-  config.before(:each)   { Sham.reset(:before_each) }
+  config.before(:each)   do 
+    Sham.reset(:before_each) 
+  end
+  
+  config.before :suite do
+    trunctate_unseeded
+  end
   # If you'd prefer not to run each of your examples within a transaction,
   # uncomment the following line.
   # config.use_transactional_examples = false
 end
-
