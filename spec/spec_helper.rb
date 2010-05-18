@@ -33,10 +33,19 @@ Rspec.configure do |config|
     Sham.reset(:before_each) 
   end
   
-  config.before :suite do
-    trunctate_unseeded
-  end
+  #config.use_transactional_fixtures = true
+  config.before(:suite) { trunctate_unseeded }
+  
+  #config.before :suite do
+  #  trunctate_unseeded
+  #end
   # If you'd prefer not to run each of your examples within a transaction,
   # uncomment the following line.
   # config.use_transactional_examples = false
 end
+#Rspec::Runner.configure do |config|
+  #config.before(:all) { trunctate_unseeded }
+  #config.before(:each) {}
+  #config.after(:all) {}
+  #config.after(:each) {}
+#end
