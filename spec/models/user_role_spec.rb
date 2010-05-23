@@ -8,5 +8,6 @@ describe UserRole do
       @user_role = UserRole.make
       @user_role.should be_valid
     end
+    
   end
 end

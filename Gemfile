@@ -25,7 +25,7 @@ group :development do
 end
 
 group :test do
-  gem "rspec", "2.0.0.beta.8"
+  gem "rspec", ">=  2.0.0.beta.8"
   gem "rspec-rails",      ">= 2.0.0.beta"
   gem "machinist",        :git => "git://github.com/notahat/machinist.git"
   gem "faker"

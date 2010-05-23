@@ -6,7 +6,7 @@ require 'rspec/rails'
 
 
 # Require for machinist
-require File.expand_path (File.dirname(__FILE__) + "/blueprint.rb")
+require File.expand_path(File.dirname(__FILE__) + "/blueprint.rb")
 #require File.join(File.dirname(__FILE__), 'blueprint')
 Dir["#{File.dirname(__FILE__)}/blueprints/*.rb"].each {|f| require f}
 
@@ -28,7 +28,11 @@ Rspec.configure do |config|
   config.mock_with :rspec
   
   # MACHINIST stuff
-  config.before(:all)    { Sham.reset(:before_all)  }
+  config.before(:all)    do 
+    Sham.reset(:before_all)
+    #trunctate_unseeded
+  end
+  
   config.before(:each)   do 
     Sham.reset(:before_each) 
   end
@@ -43,6 +47,7 @@ Rspec.configure do |config|
   # uncomment the following line.
   # config.use_transactional_examples = false
 end
+
 #Rspec::Runner.configure do |config|
   #config.before(:all) { trunctate_unseeded }
   #config.before(:each) {}
