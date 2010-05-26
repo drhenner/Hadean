@@ -37,18 +37,6 @@ ActiveRecord::Schema.define(:version => 20100515185805) do
     t.string "abbreviation", :limit => 5
   end
 
-  create_table "registration_infos", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.date     "birth_date"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "registration_infos", ["first_name"], :name => "index_registration_infos_on_first_name"
-  add_index "registration_infos", ["last_name"], :name => "index_registration_infos_on_last_name"
-
   create_table "roles", :force => true do |t|
     t.string "name", :limit => 30
   end
@@ -66,7 +54,11 @@ ActiveRecord::Schema.define(:version => 20100515185805) do
   end
 
   create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "birth_date"
     t.string   "email"
+    t.string   "state"
     t.string   "password_salt"
     t.string   "crypted_password"
     t.string   "perishable_token"
@@ -76,5 +68,7 @@ ActiveRecord::Schema.define(:version => 20100515185805) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["first_name"], :name => "index_users_on_first_name"
+  add_index "users", ["last_name"], :name => "index_users_on_last_name"
 
 end

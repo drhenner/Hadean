@@ -8,7 +8,11 @@ User.blueprint do
 end
 
 
-User.blueprint(:admin) do 
+User.blueprint(:registered) do 
   email
-  registration_info { post.registration_info.make }
+  password "pasword"
+  password_confirmation "pasword"
+  first_name  { Sham.name }
+  last_name   { Sham.name }
+  birth_date
 end

@@ -1,3 +1,27 @@
-<% @users.each do |user| %>
-  <%= user.email%><br/>
-<% end %>
+<div  class="span-24">
+  <div  class="span-14">
+    <h2> Users </h2>
+  </div>
+  <div  class="span-8">
+    <%= link_to "Add User", new_admin_user_path, :class => "button blue" %>
+  </div>
+</div>
+<div class="span-12">
+<table id="admin_users_table">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Name</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @users.each do |user| %>
+        <td><%= user.email %></td>
+        <td><%= user.name %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+</div>

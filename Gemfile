@@ -15,6 +15,8 @@ gem 'prawn'
 gem 'mysql'
 gem 'state_machine'
 gem 'ssl_requirement'
+gem 'fancy-buttons'
+gem 'rmagick'
 #gem 'declarative_authorization'
 
 gem 'haml',  ">= 3.0.4"#, "2.2.21"#,

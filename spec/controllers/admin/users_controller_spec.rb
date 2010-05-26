@@ -14,8 +14,8 @@ describe Admin::UsersController do
     it "should render the index action" do
       #@first_user.should_receive(:email).and_return( "test@test.com" )
       #@second_user.should_receive(:email).and_return( "test2@test.com"  )
-      @first_user  = User.make
-      @second_user = User.make
+      @first_user  = User.make(:registered)
+      @second_user = User.make(:registered)
       User.stub!(:find).and_return([@first_user, @second_user]) 
       get 'index'
       response.should render_template('index')

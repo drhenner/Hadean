@@ -2,11 +2,12 @@ class DeviseCreateUsers < ActiveRecord::Migration
   def self.up
     create_table(:users) do |t|
       ##  THIS info goes into signup-info
-      #t.string :first_name  
-      #t.string :last_name
-      #t.date   :birthdate
+      t.string :first_name  
+      t.string :last_name
+      t.date   :birth_date
       
       t.string :email 
+      t.string :state 
       t.string :password_salt
       t.string :crypted_password
       t.string :perishable_token
@@ -22,7 +23,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
-
+    
+    add_index :users, :first_name
+    add_index :users, :last_name
     add_index :users, :email,                :unique => true
     #add_index :users, :confirmation_token,   :unique => true
     #add_index :users, :reset_password_token, :unique => true

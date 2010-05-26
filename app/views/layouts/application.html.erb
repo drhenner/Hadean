@@ -3,6 +3,7 @@
 <head>
   <title>Hadean</title>
   <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'compiled/buttons.css', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection' %>
   <%= stylesheet_link_tag 'compiled/print.css', :media => 'print'%>
     <!--[if lt IE 8]
@@ -14,18 +15,17 @@
   <%= "<p class='notice'> #{notice}</p>"  if notice %>
   <%= "<p class='error'>#{alert}</p>"     if alert %>
   <div class="container">
-    <div id="header" class="span-24 last">
+    <div id="header" class="span-12 last">
       <h1 id="book_haven" class="alt">Put a Hadean Image HERE</h1>
     </div>
 
-    <hr />
-    <div id="subheader" class="span-24 last">
+    <div id="subheader" class="span-12 last">
       <h3 class="alt">Your Ruby on Rails E-Commerce Solution.</h3>
     </div>
     <hr />
+  
+    <%= yield %>
   </div>
-  <%= yield %>
-
   <%= javascript_include_tag 'jquery/jquery-1.4.2.min' %>
   <%= javascript_include_tag :all, :cache => true %>
 </body>
