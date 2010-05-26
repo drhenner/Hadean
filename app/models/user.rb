@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   has_many    :user_roles,                      :dependent => :destroy
   has_many    :roles,         :through => :user_roles
   
+  validates_presence_of :first_name, :last_name, :if => :registered_user?
+  validates_presence_of :email
   #default_scope :include => [:registration_info]
   
   state_machine :state, :initial => :unregistered do
@@ -33,6 +35,10 @@ class User < ActiveRecord::Base
       transition :all => :canceled
     end
     
+  end
+  
+  def registered_user?
+    registered? || registered_with_credit?
   end
   
   def name 

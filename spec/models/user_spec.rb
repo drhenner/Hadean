@@ -24,3 +24,18 @@ describe User, ".name" do
     user.name.should == "Fred Flint"
   end
 end
+
+describe User, '.registered_user?' do
+  it "should return false for an unregistered user" do
+    user = User.make
+    user.registered_user?.should be_false
+  end
+  it "should return true for a registered user" do
+    user = User.make(:registered)
+    user.registered_user?.should be_true
+  end
+  it "should return true for a user registered_with_credit" do
+    user = User.make(:registered_with_credit)
+    user.registered_user?.should be_true
+  end
+end
