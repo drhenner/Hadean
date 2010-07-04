@@ -6,6 +6,6 @@ Address.blueprint do
   city        { Sham.city }
   state       { State.first }#,       :if => Proc.new { |address| address.state_name.blank?  }
   state_name   nil #,  :if => Proc.new { |address| address.state_id.blank?   }
-  zip_code
+  #zip_code    { Sham.zipcode }
   phone       { Sham.phone_number }
 end

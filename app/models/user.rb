@@ -13,8 +13,12 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :address_attributes
   
   #has_one     :registration_info
-  has_many    :addresses,                       :dependent => :destroy
-  has_one     :default_address,                                         :conditions => ['default = ?', true]
+  has_many    :addresses,                       :dependent => :destroy, 
+                                                :as => :addressable
+                                                
+  has_one     :default_address,                 :conditions => ['default = ?', true], 
+                                                :as => :addressable
+                                                
   has_many    :user_roles,                      :dependent => :destroy
   has_many    :roles,         :through => :user_roles
   
