@@ -3,4 +3,12 @@ nbproject/*
 .vimrc
 .vim
 
+log
+log/*.log
+
 log/*
+.project
+nbproject
+.DS_Store
+*.swp
+
