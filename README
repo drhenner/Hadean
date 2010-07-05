@@ -7,7 +7,7 @@ framework altogether.
 Hadean is designed differently.  Hadean is simply a starter application written for 
 Rails 3.  If you understand Rails you will understand Hadean.  There is nothing 
 in this project that you wouldn't see in a normal Rails application.  If you don't like 
-what is in the project just delete it like you would in any other Rails app.  
+what is in the project just change it like you would in any other Rails app.  
 
 Contributors are welcome.  For now email David Henner (drhenner@yahoo.com) to see how you 
 can contribute. (send your patch if you have one.)  Soon there will be a bug tracking 
