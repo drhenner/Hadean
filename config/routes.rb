@@ -10,6 +10,11 @@ Hadean::Application.routes.draw do |map|
   
   namespace :admin do
     resources :users
+    
+    namespace :merchandise do
+      resources :properties
+    end
+    
   end
   
   # The priority is based upon order of creation:

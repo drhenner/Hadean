@@ -29,7 +29,7 @@ describe Address, "#save_default_address(object, params)" do
     @address.id.should_not be_nil
   end
   
-  it "should save the address" do
+  it "should only the last default address should be the default address" do
     
     @address2   = Address.make
     @params2    = Address.make.attributes

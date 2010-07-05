@@ -5,7 +5,24 @@ class Role < ActiveRecord::Base
   
   validates_presence_of :name
   
-  NAMES = ['super_administrator', 'administrator', 'warehouse', 'user', 'report', 'customer_service']
+  SUPER_ADMIN       = 'super_administrator'
+  ADMIN             = 'administrator'
+  WAREHOUSE         = 'warehouse'
+  USER              = 'user'
+  REPORT            = 'report'
+  CUSTOMER_SERVICE  = 'customer_service'
+  
+  ROLES = [ SUPER_ADMIN, 
+            ADMIN, 
+            WAREHOUSE, 
+            USER, 
+            REPORT, 
+            CUSTOMER_SERVICE]
+  
+  NON_ADMIN_ROLES = [ WAREHOUSE, 
+                      USER, 
+                      REPORT, 
+                      CUSTOMER_SERVICE]
   
   USER_ID         = 4
   SUPER_ADMIN_ID  = 1

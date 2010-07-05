@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100515185805) do
+ActiveRecord::Schema.define(:version => 20100705132504) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -38,6 +38,52 @@ ActiveRecord::Schema.define(:version => 20100515185805) do
   create_table "countries", :force => true do |t|
     t.string "name"
     t.string "abbreviation", :limit => 5
+  end
+
+  create_table "product_properties", :force => true do |t|
+    t.integer "product_id"
+    t.integer "property_id"
+    t.integer "position"
+    t.string  "description"
+  end
+
+  create_table "product_types", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "tax_category_id"
+    t.integer  "shipping_category_id"
+    t.integer  "product_type_id"
+    t.datetime "available_at"
+    t.datetime "deleted_at"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", :force => true do |t|
+    t.string  "identifing_name"
+    t.string  "display_name"
+    t.boolean "active"
+  end
+
+  create_table "prototype_properties", :force => true do |t|
+    t.integer "prototype_id"
+    t.integer "property_id"
+  end
+
+  create_table "prototype_properties_product_types", :force => true do |t|
+    t.integer "prototype_property_id"
+    t.integer "product_type_id"
+  end
+
+  create_table "prototypes", :force => true do |t|
+    t.string  "name"
+    t.boolean "active"
   end
 
   create_table "roles", :force => true do |t|
@@ -73,5 +119,25 @@ ActiveRecord::Schema.define(:version => 20100515185805) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["first_name"], :name => "index_users_on_first_name"
   add_index "users", ["last_name"], :name => "index_users_on_last_name"
+
+  create_table "variant_properties", :force => true do |t|
+    t.integer "variant_id"
+    t.integer "property_id"
+    t.string  "description"
+  end
+
+  create_table "variants", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "sku"
+    t.decimal  "price",                       :precision => 8, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "cost",                        :precision => 8, :scale => 2, :default => 0.0,   :null => false
+    t.datetime "deleted_at"
+    t.boolean  "master",                                                    :default => false
+    t.integer  "count_on_hand"
+    t.integer  "count_pending_to_customer"
+    t.integer  "count_pending_from_supplier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -4,14 +4,14 @@ class Address < ActiveRecord::Base
   belongs_to  :addressable, :polymorphic => true
   
   
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :address1
-  validates_presence_of :city
-  validates_presence_of :state,       :if => Proc.new { |address| address.state_name.blank?  }
-  validates_presence_of :state_name,  :if => Proc.new { |address| address.state_id.blank?   }
-  #validates_presence_of :zip_code
-  validates_presence_of :phone
+  validates :first_name,  :presence => true
+  validates :last_name,   :presence => true
+  validates :address1,    :presence => true
+  validates :city,        :presence => true
+  validates :state,       :presence => true,  :if => Proc.new { |address| address.state_name.blank?  }
+  validates :state_name,  :presence => true,  :if => Proc.new { |address| address.state_id.blank?   }
+  #validates :zip_code,   :presence => true
+  validates :phone,       :presence => true
   
   def save_default_address(object, params)
     Address.transaction do

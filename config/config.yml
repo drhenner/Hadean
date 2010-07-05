@@ -1,0 +1,29 @@
+HADEAN_SETTINGS = {
+  ## CHANGE THE ENCRYPTION KEY AS SSON AS YOU START A NEW APP
+  ,
+  :admin_grid_rows  => 25
+}
+
+# You can use this to store API keys, mail server settings, 
+# or any other kind of configuration data that your application needs.
+# In order to keep your production settings secret, store the production 
+# copy of this file on your server under shared/config/config.yml and copy 
+# it on deployment with this Capistrano task:#
+
+# task :copy_config_files do
+#   filename = "config/config.yml"
+#   run "cp #{shared_path}/#{filename} #{release_path}/#{filename}"
+# end
+# after "deploy:update_code", :copy_config_files
+
+development: &non_production_settings
+  encryption_key: "\202\006\226\031\300\307/\030\214\230w\r\350\352\322\bv\314\137\347\356\346\016\243Y\242m\004P\351\257\266"
+  mailer:
+    server: mail.example.com
+    username: bubba
+    password: s0meth1ngs3cr3t
+test:
+  <<: *non_production_settings
+production:
+  encryption_key: "\202\006\226\031\300\307/\030\214\230w\r\350\352\322\bv\314\137\347\356\346\016\243Y\242m\004P\351\257\266"
+
