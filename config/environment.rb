@@ -5,5 +5,5 @@ require File.expand_path('../application', __FILE__)
 Hadean::Application.initialize!
 
 # Load custom config file for current environment
-raw_config = File.read(RAILS_ROOT + "/config/config.yml")
+raw_config = File.read("config/config.yml")
 HADEAN_CONFIG = YAML.load(raw_config)[RAILS_ENV]

@@ -1,8 +1,3 @@
-HADEAN_SETTINGS = {
-  ## CHANGE THE ENCRYPTION KEY AS SSON AS YOU START A NEW APP
-  ,
-  :admin_grid_rows  => 25
-}
 
 # You can use this to store API keys, mail server settings, 
 # or any other kind of configuration data that your application needs.
@@ -17,7 +12,7 @@ HADEAN_SETTINGS = {
 # after "deploy:update_code", :copy_config_files
 
 development: &non_production_settings
-  encryption_key: "\202\006\226\031\300\307/\030\214\230w\r\350\352\322\bv\314\137\347\356\346\016\243Y\242m\004P\351\257\266"
+  encryption_key: \202\006\226\031\300\307/\030\214\230w\r\350\352\322\bv\314\137\347\356\346\016\243Y\242m\004P\351\257\266
   mailer:
     server: mail.example.com
     username: bubba
@@ -25,5 +20,5 @@ development: &non_production_settings
 test:
   <<: *non_production_settings
 production:
-  encryption_key: "\202\006\226\031\300\307/\030\214\230w\r\350\352\322\bv\314\137\347\356\346\016\243Y\242m\004P\351\257\266"
+  encryption_key: \202\006\226\031\300\307/\030\214\230w\r\350\352\322\bv\314\137\347\356\346\016\243Y\242m\004P\351\257\266
 
