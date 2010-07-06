@@ -26,4 +26,7 @@ Configure your database.yml file (add the development and test database)
 5. rake db:test:prepare
 6. compass install -r fancy-buttons -f fancy-buttons
 
+7. git submodule add git://github.com/rails/jquery-ujs.git public/javascripts/jquery-ujs
+8. git submodule init
+9. git submodule update
 

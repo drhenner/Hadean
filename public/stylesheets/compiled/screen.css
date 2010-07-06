@@ -1228,17 +1228,17 @@ select {
   margin: 0.5em 0;
 }
 
-/* line 57, ../../../app/stylesheets/blueprint/_form.scss */
+/* line 60, ../../../app/stylesheets/blueprint/_form.scss */
 fieldset {
   border: 1px solid #cccccc;
 }
 
-/* line 60, ../../../app/stylesheets/blueprint/_form.scss */
+/* line 63, ../../../app/stylesheets/blueprint/_form.scss */
 input.text, input.title, input[type=text], input[type=password],
 textarea, select {
   border: 1px solid #bbbbbb;
 }
-/* line 62, ../../../app/stylesheets/blueprint/_form.scss */
+/* line 65, ../../../app/stylesheets/blueprint/_form.scss */
 input.text:focus, input.title:focus, input[type=text]:focus, input[type=password]:focus,
 textarea:focus, select:focus {
   border: 1px solid #666666;
@@ -1249,7 +1249,12 @@ input.text, input.title, input[type=text], input[type=password] {
   width: 300px;
 }
 
-/* line 48, ../../../app/stylesheets/blueprint/_form.scss */
+/* line 49, ../../../app/stylesheets/blueprint/_form.scss */
+input.ui-pg-input {
+  width: 20px;
+}
+
+/* line 51, ../../../app/stylesheets/blueprint/_form.scss */
 textarea {
   width: 390px;
   height: 250px;
