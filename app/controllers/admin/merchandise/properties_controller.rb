@@ -6,10 +6,10 @@ class Admin::Merchandise::PropertiesController < ApplicationController
       format.html
       format.json { render :json => @properties.to_jqgrid_json(
         [ :name ],
-        params[:page],
-        params[:rows],
-        @properties.total_entries,
-        {})
+        @properties.per_page, #params[:page],
+        @properties.current_page, #params[:rows],
+        @properties.total_entries)
+        
       }
     end
   end

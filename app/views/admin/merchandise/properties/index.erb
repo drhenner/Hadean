@@ -1,3 +1,11 @@
 <h2> Products </h2>
 
 #####  User the JQ grid here ####
+
+<%= raw jqgrid("Products", "admin_products_grid", admin_merchandise_properties_path,
+  [
+    { :field => "display_name", :label => "Name", :width => 295, :resizable => false }
+  ]
+) %>
+<%= jqgrid_stylesheets %>
+<%= jqgrid_javascripts %>

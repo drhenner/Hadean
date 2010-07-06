@@ -21,7 +21,7 @@ states_list.each_pair do |key,state|
   State.create(state['attributes']) unless s
 end 
 
-roles = Role::NAMES 
+roles = Role::ROLES 
 roles.each do |role|
   Role.find_or_create_by_name(role)
 end

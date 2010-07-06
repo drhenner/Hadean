@@ -19,10 +19,11 @@ We will always need help with UI, Documentation and code so feel free to help.
 
 Configure your database.yml file (add the development and test database)
 
-1. db:sessions:create
+1. rake db:sessions:create
 2. Go into config/initializers/setting and change the encryption code
 3. rake db:migrate
 4. rake db:seed
 5. rake db:test:prepare
+6. compass install -r fancy-buttons -f fancy-buttons
 
 

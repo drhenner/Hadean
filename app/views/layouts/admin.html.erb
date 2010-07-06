@@ -34,7 +34,8 @@
   
   <%= yield :bottom %>
   
-  <%= javascript_include_tag 'jquery/jquery-1.4.2.min' %>
+  <%# javascript_include_tag 'jquery/jquery-1.4.2.min' %>
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'rails' %>
   <%= javascript_include_tag :all, :cache => true %>
 </body>
 </html>

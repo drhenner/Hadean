@@ -8,14 +8,15 @@ class Variant < ActiveRecord::Base
     
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
-    grid = paginate({:page => params[:page]})
+
+    grid = Table(:variants)
     
-    grid.where("variants.product_id", product.id)
+    grid = Variant.where("variants.product_id", product.id)
     grid.includes(:product)
     grid.where("variants.name = ?", params[:name])  if params[:name].present?
     grid.order("#{params[:sidx]} #{params[:sord]}") 
     grid.limit(params[:rows])
-    grid
+    grid.paginate({:page => params[:page]})
   end
   
 end

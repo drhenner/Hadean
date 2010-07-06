@@ -10,11 +10,11 @@ class ProductType < ActiveRecord::Base
     
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
-    grid = paginate({:page => params[:page]})
+    grid = ProductType.all
     grid.where("product_types.name = ?", params[:name])  if params[:name].present?
     grid.order("#{params[:sidx]} #{params[:sord]}") 
     grid.limit(params[:rows])
-    grid
+    grid.paginate({:page => params[:page]})
   end
   
 end
