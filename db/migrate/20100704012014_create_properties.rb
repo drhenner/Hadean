@@ -3,7 +3,7 @@ class CreateProperties < ActiveRecord::Migration
     create_table :properties do |t|
       t.string      :identifing_name
       t.string      :display_name
-      t.boolean     :active
+      t.boolean     :active,          :default => true
     end
   end
 

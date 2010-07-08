@@ -19,14 +19,14 @@ We will always need help with UI, Documentation and code so feel free to help.
 
 Configure your database.yml file (add the development and test database)
 
-1. rake db:sessions:create
-2. Go into config/initializers/setting and change the encryption code
-3. rake db:migrate
-4. rake db:seed
-5. rake db:test:prepare
-6. compass install -r fancy-buttons -f fancy-buttons
+1. Go into config/initializers/setting and change the encryption code
+2. rake db:migrate
+3. rake db:seed
+4. rake db:test:prepare
 
-7. git submodule add git://github.com/rails/jquery-ujs.git public/javascripts/jquery-ujs
-8. git submodule init
-9. git submodule update
+5. git submodule init
+6. git submodule update
+
+
+######compass install -r fancy-buttons -f fancy-buttons
 
