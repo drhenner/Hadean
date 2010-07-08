@@ -32,6 +32,12 @@ GIT
     database_cleaner (0.5.2)
 
 GIT
+  remote: git://github.com/justinfrench/formtastic.git
+  revision: f763772
+  branch: rails3
+  specs:
+
+GIT
   remote: git://github.com/mislav/will_paginate.git
   revision: 60aa1c7
   branch: rails3
@@ -376,8 +382,8 @@ DEPENDENCIES
   database_cleaner!
   faker
   fancy-buttons
-  formtastic
-  friendly_id
+  formtastic!
+  friendly_id (~> 3.0)
   haml (>= 3.0.4)
   launchy
   machinist!

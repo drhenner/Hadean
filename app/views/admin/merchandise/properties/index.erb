@@ -1,5 +1,5 @@
 <h2> Products </h2>
-
+<%= link_to "New Product", new_admin_merchandise_property_path, :class => "button", :id => "new_product_button" %>
 <%= raw jqgrid("Products", "admin_products_grid", admin_merchandise_properties_path,
   [
     { :field => "display_name", :label => "Name", :width => 355, :resizable => false }

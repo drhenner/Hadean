@@ -10,8 +10,8 @@ gem "mysql"
 #gem "authlogic", :git => "git://github.com/odorcicd/"
 gem 'authlogic', "2.1.5"
 gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
-gem 'formtastic'
-gem 'friendly_id'
+gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
+gem "friendly_id", "~> 3.0"
 gem 'prawn'
 gem 'mysql'
 gem 'state_machine'
