@@ -6,7 +6,8 @@ nbproject/*
 
 log
 log/*.log
-
+tmp
+tmp/*
 log/*
 .project
 nbproject

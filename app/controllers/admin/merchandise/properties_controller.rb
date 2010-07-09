@@ -26,7 +26,7 @@ class Admin::Merchandise::PropertiesController < ApplicationController
     @property = Property.new(params[:property])
     
     if @property.save
-      render :action => :show
+      redirect_to :action => :index
     else
       flash[:error] = "The property could not be saved"
       render :action => :new
@@ -41,7 +41,7 @@ class Admin::Merchandise::PropertiesController < ApplicationController
     @property = Property.find(params[:id])
     
     if @property.update_attributes(params[:property])
-      render :action => :show
+      redirect_to :action => :index
     else
       render :action => :edit
     end

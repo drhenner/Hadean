@@ -4,6 +4,8 @@ class Variant < ActiveRecord::Base
   has_many :properies,          :through => :variant_properies
   
   
+  validates :name,    :presence => true
+  
   def self.admin_grid(product, params = {})
     
     params[:page] ||= 1

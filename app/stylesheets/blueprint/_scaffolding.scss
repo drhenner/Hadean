@@ -50,3 +50,7 @@
     @include colspacer; }
   form.inline {
     @include blueprint-inline-form; } }
+
+@mixin header-image {
+  background: url(../images/logos/hadean_wide.png);
+  }

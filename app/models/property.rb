@@ -9,6 +9,9 @@ class Property < ActiveRecord::Base
   has_many :variant_properies
   has_many :variants,          :through => :variant_properies
   
+  validates :identifing_name,    :presence => true
+  validates :display_name,       :presence => true
+  
   scope :visible, where("active == ?",true)
   
   def self.admin_grid(params = {})
