@@ -1,0 +1,18 @@
+/* line 4, ../../../app/stylesheets/main.scss */
+#header_wrapper {
+  width: 950px;
+  background-image: url(../../images/logos/hadean_wide.png);
+}
+/* line 7, ../../../app/stylesheets/main.scss */
+#header_wrapper h1, #header_wrapper h3, #header_wrapper a {
+  color: #EEE;
+}
+
+/* line 14, ../../../app/stylesheets/main.scss */
+#admin-property-names {
+  width: 390px;
+}
+/* line 16, ../../../app/stylesheets/main.scss */
+#admin-property-names p {
+  width: 390px;
+}

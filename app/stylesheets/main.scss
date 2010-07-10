@@ -1,0 +1,20 @@
+@import "compass";
+@import "blueprint";
+
+#header_wrapper {
+  @include span(24);
+  background-image: url(../../images/logos/hadean_wide.png);
+  h1, h3, a {
+    color: #EEE;
+  }
+  
+}
+
+
+#admin-property-names {
+  @include span(10);
+  p {
+    @include span(10);
+    }
+  }
+

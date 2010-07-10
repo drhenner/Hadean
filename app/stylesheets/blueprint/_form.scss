@@ -39,12 +39,12 @@
   $textarea_width: 390px,
   $textarea_height: 250px
 ) {
-  input {
-    &.text,
-    &.title,
-    &[type=text],
-    &[type=password] { width: $input_width; }
-  }
+  //input {
+  //  &.text,
+  //  &.title,
+  //  &[type=text],
+  //  &[type=password] { width: $input_width; }
+  //}
   input {
     &.ui-pg-input { width: 20px; }
   }

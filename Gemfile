@@ -26,6 +26,8 @@ gem 'fancy-buttons'
 
 group :development do 
   gem 'awesome_print'
+  gem "autotest-rails-pure"
+  gem "autotest-fsevent"
 end
 
 group :test do
@@ -35,7 +37,7 @@ group :test do
   gem "faker"
   gem "ZenTest"
   gem "autotest"
-  gem "autotest-rails"
+  gem "autotest-rails-pure"
   gem "autotest-fsevent"
   gem "autotest-growl"
   gem "redgreen"

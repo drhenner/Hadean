@@ -160,10 +160,8 @@ GEM
       autotest (>= 4.2.4)
     autotest-growl (0.2.4)
       autotest (>= 4.2.4)
-    autotest-rails (4.1.0)
-      ZenTest
-    autotest-rails (4.1.0)
-      ZenTest
+    autotest-rails-pure (4.1.0)
+    autotest-rails-pure (4.1.0)
     awesome_print (0.2.1)
     awesome_print (0.2.1)
     builder (2.1.2)
@@ -371,8 +369,10 @@ DEPENDENCIES
   authlogic (= 2.1.5)
   autotest
   autotest-fsevent
+  autotest-fsevent
   autotest-growl
-  autotest-rails
+  autotest-rails-pure
+  autotest-rails-pure
   awesome_print
   capybara
   capybara-envjs

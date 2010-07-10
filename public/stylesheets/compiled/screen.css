@@ -1244,11 +1244,6 @@ textarea:focus, select:focus {
   border: 1px solid #666666;
 }
 
-/* line 46, ../../../app/stylesheets/blueprint/_form.scss */
-input.text, input.title, input[type=text], input[type=password] {
-  width: 300px;
-}
-
 /* line 49, ../../../app/stylesheets/blueprint/_form.scss */
 input.ui-pg-input {
   width: 20px;
