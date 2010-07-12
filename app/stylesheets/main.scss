@@ -18,3 +18,14 @@
     }
   }
 
+#admin_products_page_wrapper {
+  @include span(24);
+}
+#admin_products_grid_wrapper {
+  @include column(18);
+}
+
+#admin_new_product_button {
+  @include column(6);
+  @include last;
+}

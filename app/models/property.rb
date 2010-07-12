@@ -27,4 +27,8 @@ class Property < ActiveRecord::Base
 
   end
   
+  def display_active
+    active? ? 'True' : 'False'
+  end
+  
 end

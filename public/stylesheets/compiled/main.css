@@ -16,3 +16,33 @@
 #admin-property-names p {
   width: 390px;
 }
+
+/* line 21, ../../../app/stylesheets/main.scss */
+#admin_products_page_wrapper {
+  width: 950px;
+}
+
+/* line 24, ../../../app/stylesheets/main.scss */
+#admin_products_grid_wrapper {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 710px;
+}
+/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+* html #admin_products_grid_wrapper {
+  overflow-x: hidden;
+}
+
+/* line 28, ../../../app/stylesheets/main.scss */
+#admin_new_product_button {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  margin-right: 0;
+}
+/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+* html #admin_new_product_button {
+  overflow-x: hidden;
+}
