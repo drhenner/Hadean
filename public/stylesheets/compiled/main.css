@@ -8,34 +8,27 @@
   color: #EEE;
 }
 
-/* line 14, ../../../app/stylesheets/main.scss */
+/* line 33, ../../../app/stylesheets/main.scss */
 #admin-property-names {
   width: 390px;
 }
-/* line 16, ../../../app/stylesheets/main.scss */
+/* line 28, ../../../app/stylesheets/main.scss */
 #admin-property-names p {
   width: 390px;
 }
 
-/* line 21, ../../../app/stylesheets/main.scss */
-#admin_products_page_wrapper {
+/* line 39, ../../../app/stylesheets/main.scss */
+#admin_properties_page_wrapper {
   width: 950px;
 }
 
-/* line 24, ../../../app/stylesheets/main.scss */
-#admin_products_grid_wrapper {
-  display: inline;
-  float: left;
-  margin-right: 10px;
+/* line 42, ../../../app/stylesheets/main.scss */
+#admin_properties_grid_wrapper {
   width: 710px;
 }
-/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
-* html #admin_products_grid_wrapper {
-  overflow-x: hidden;
-}
 
-/* line 28, ../../../app/stylesheets/main.scss */
-#admin_new_product_button {
+/* line 46, ../../../app/stylesheets/main.scss */
+#admin_new_property_button {
   display: inline;
   float: left;
   margin-right: 10px;
@@ -43,6 +36,38 @@
   margin-right: 0;
 }
 /* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
-* html #admin_new_product_button {
+* html #admin_new_property_button {
   overflow-x: hidden;
+}
+
+/* line 51, ../../../app/stylesheets/main.scss */
+#admin_product_types_page_wrapper {
+  width: 950px;
+}
+
+/* line 54, ../../../app/stylesheets/main.scss */
+#admin_product_types_grid_wrapper {
+  width: 710px;
+}
+
+/* line 58, ../../../app/stylesheets/main.scss */
+#admin_new_product_type_button {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  margin-right: 0;
+}
+/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+* html #admin_new_product_type_button {
+  overflow-x: hidden;
+}
+
+/* line 63, ../../../app/stylesheets/main.scss */
+#admin-product_type-names {
+  width: 390px;
+}
+/* line 28, ../../../app/stylesheets/main.scss */
+#admin-product_type-names p {
+  width: 390px;
 }

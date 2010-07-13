@@ -1,5 +1,5 @@
 class Admin::Merchandise::PropertiesController < ApplicationController
-  
+  respond_to :html, :json
   def index
     @properties = Property.admin_grid(params)
     respond_to do |format|
@@ -16,6 +16,7 @@ class Admin::Merchandise::PropertiesController < ApplicationController
   
   def show
     @property = Property.find(params[:id])
+    respond_with(@property)
   end
   
   def new

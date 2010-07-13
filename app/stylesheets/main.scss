@@ -10,22 +10,56 @@
   
 }
 
+@mixin admin-page-wrapper($width: 24) {
+  @include span($width);
+}
 
-#admin-property-names {
-  @include span(10);
+@mixin admin-grid-wrapper($width: 18) {
+  @include span($width);
+}
+
+@mixin admin-new-button($width: 6) {
+  @include column($width);
+  @include last;
+}
+
+@mixin admin-form-wrapper($width: 10) {
+  @include span($width);
   p {
     @include span(10);
     }
+}
+
+#admin-property-names {
+  @include admin-form-wrapper;
   }
 
-#admin_products_page_wrapper {
-  @include span(24);
+
+// properties admin page
+#admin_properties_page_wrapper {
+  @include admin-page-wrapper;
 }
-#admin_products_grid_wrapper {
-  @include column(18);
+#admin_properties_grid_wrapper {
+  @include admin-grid-wrapper;
 }
 
-#admin_new_product_button {
-  @include column(6);
-  @include last;
+#admin_new_property_button {
+  @include admin-new-button;
 }
+
+// product_types admin page
+#admin_product_types_page_wrapper {
+  @include admin-page-wrapper;
+}
+#admin_product_types_grid_wrapper {
+  @include admin-grid-wrapper;
+}
+
+#admin_new_product_type_button {
+  @include admin-new-button;
+}
+
+
+#admin-product_type-names {
+  @include admin-form-wrapper;
+  }

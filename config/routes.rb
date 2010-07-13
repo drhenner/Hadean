@@ -13,6 +13,7 @@ Hadean::Application.routes.draw do |map|
     
     namespace :merchandise do
       resources :properties
+      resources :product_types
     end
     
   end

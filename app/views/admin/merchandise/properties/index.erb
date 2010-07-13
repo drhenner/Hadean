@@ -1,8 +1,8 @@
-<h2> Products </h2>
+<h2> Properties </h2>
 
-<div id="admin_products_page_wrapper">
-  <div id="admin_products_grid_wrapper">
-    <%= raw jqgrid("Products", "admin_products_grid", admin_merchandise_properties_path,
+<div id="admin_properties_page_wrapper">
+  <div id="admin_properties_grid_wrapper">
+    <%= raw jqgrid("Properties", "admin_properties_grid", admin_merchandise_properties_path,
       [
         { :field => "display_name",   :label => "Name",     :width => 355,  :resizable => false },
         { :field => "display_active", :label => "Active?",  :width => 70,   :resizable => false }
@@ -10,8 +10,8 @@
     ) %>
   </div>
 
-  <div id="admin_new_product_button" class="admin_new_button last">
-    <%= link_to "New Product", new_admin_merchandise_property_path, :class => "button", :id => "new_product_button" %>
+  <div id="admin_new_property_button" class="admin_new_button last">
+    <%= link_to "New Product", new_admin_merchandise_property_path, :class => "button", :id => "new_property_button" %>
   </div>
 </div>
 <%= jqgrid_stylesheets %>
