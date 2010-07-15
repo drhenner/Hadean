@@ -1,5 +1,5 @@
 class Admin::Merchandise::ProductTypesController < ApplicationController
-  
+  respond_to :html, :json
   def index
     @product_types = ProductType.admin_grid(params)
     respond_to do |format|
