@@ -3,6 +3,7 @@ class Variant < ActiveRecord::Base
   has_many :variant_properies
   has_many :properies,          :through => :variant_properies
   
+  belongs_to :product
   
   validates :name,    :presence => true
   

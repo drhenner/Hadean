@@ -63,3 +63,37 @@
 #admin-product_type-names {
   @include admin-form-wrapper;
   }
+  
+// admin-prototype-names admin page
+
+#admin_prototypes_page_wrapper {
+  @include admin-page-wrapper;
+}
+#admin_prototypes_grid_wrapper {
+  @include admin-grid-wrapper;
+}
+#admin_new_prototype_type_button {
+  @include admin-new-button;
+}
+#admin-prototype-names {
+  @include admin-form-wrapper;
+}
+  
+.selectlist-list {
+  list-style: none;
+  margin:     0;
+  padding:    0;
+}
+
+.selectlist-item {
+  // Icon from http://pinvoke.com/ 
+  background:     #fff url(../images/cross-circle.png) no-repeat right center;
+  border-left:    solid 1px #eee;
+  border-top:     solid 1px #eee;
+  border-right:   solid 2px #ccc;
+  border-bottom:  solid 2px #ccc;
+  cursor:         pointer;
+  padding:        0.2em 0.3em;
+  margin:         1px 0;
+}
+  

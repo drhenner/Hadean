@@ -5,4 +5,22 @@ class Prototype < ActiveRecord::Base
   
   validates :name,    :presence => true
   
+  accepts_nested_attributes_for :properties, :prototype_properties
+  
+  def self.admin_grid(params = {})
+    
+    params[:page] ||= 1
+    params[:rows] ||= 25
+    
+    grid = Prototype
+    grid.where("active == ?",true)                    unless  params[:show_all].present? && 
+                                                              params[:show_all] == 'true'
+    grid.where("prototypes.display_name = ?", params[:display_name])  if params[:display_name].present?
+    grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
+
+  end
+  
+  def display_active
+    active? ? 'True' : 'False'
+  end
 end

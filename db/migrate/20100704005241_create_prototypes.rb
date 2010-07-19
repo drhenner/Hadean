@@ -2,7 +2,7 @@ class CreatePrototypes < ActiveRecord::Migration
   def self.up
     create_table :prototypes do |t|
       t.string      :name
-      t.boolean     :active
+      t.boolean     :active, :null => false, :default => true
     end
   end
 

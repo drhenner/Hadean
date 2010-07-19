@@ -166,6 +166,8 @@ GEM
     awesome_print (0.2.1)
     builder (2.1.2)
     builder (2.1.2)
+    cancan (1.1.0)
+    cancan (1.1.0)
     capybara (0.3.9)
       culerity (>= 0.2.4)
       mime-types (>= 1.16)
@@ -374,6 +376,7 @@ DEPENDENCIES
   autotest-rails-pure
   autotest-rails-pure
   awesome_print
+  cancan (= 1.1)
   capybara
   capybara-envjs
   compass (= 0.10.1)

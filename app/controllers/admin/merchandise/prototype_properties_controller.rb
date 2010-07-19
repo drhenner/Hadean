@@ -21,6 +21,7 @@ class Admin::Merchandise::PrototypePropertiesController < ApplicationController
   end
   
   def new
+    @properties = Property.all
     @prototype_property = PrototypeProperty.new
   end
   
@@ -30,12 +31,14 @@ class Admin::Merchandise::PrototypePropertiesController < ApplicationController
     if @prototype_property.save
       redirect_to :action => :index
     else
+      @properties = Property.all
       flash[:error] = "The prototype property could not be saved"
       render :action => :new
     end
   end
   
   def edit
+    @properties = Property.all
     @prototype_property = PrototypeProperty.find(params[:id])
   end
   
@@ -45,6 +48,7 @@ class Admin::Merchandise::PrototypePropertiesController < ApplicationController
     if @prototype_property.update_attributes(params[:prototype_property])
       redirect_to :action => :index
     else
+      @properties = Property.all
       render :action => :edit
     end
   end

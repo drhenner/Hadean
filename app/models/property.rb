@@ -1,13 +1,13 @@
 class Property < ActiveRecord::Base
   
-  has_many :prototype_properies
-  has_many :prototypes,          :through => :prototype_properies
+  has_many :prototype_properties
+  has_many :prototypes,          :through => :prototype_properties
   
-  has_many :product_properies
-  has_many :products,          :through => :product_properies
+  has_many :product_properties
+  has_many :products,          :through => :product_properties
   
-  has_many :variant_properies
-  has_many :variants,          :through => :variant_properies
+  has_many :variant_properties
+  has_many :variants,          :through => :variant_properties
   
   validates :identifing_name,    :presence => true
   validates :display_name,       :presence => true

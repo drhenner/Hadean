@@ -5,9 +5,7 @@ gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "mysql"
 
 #gem 'devise', '1.1.rc1'
-#gem "authlogic", :git => "git://github.com/odorcicd/authlogic.git", :branch => "rails3"
-#gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git', :branch => "rails3"
-#gem "authlogic", :git => "git://github.com/odorcicd/"
+gem 'cancan', '1.1'
 gem 'authlogic', "2.1.5"
 gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
 gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"

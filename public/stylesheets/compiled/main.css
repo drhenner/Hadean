@@ -71,3 +71,54 @@
 #admin-product_type-names p {
   width: 390px;
 }
+
+/* line 69, ../../../app/stylesheets/main.scss */
+#admin_prototypes_page_wrapper {
+  width: 950px;
+}
+
+/* line 72, ../../../app/stylesheets/main.scss */
+#admin_prototypes_grid_wrapper {
+  width: 710px;
+}
+
+/* line 75, ../../../app/stylesheets/main.scss */
+#admin_new_prototype_type_button {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  margin-right: 0;
+}
+/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+* html #admin_new_prototype_type_button {
+  overflow-x: hidden;
+}
+
+/* line 78, ../../../app/stylesheets/main.scss */
+#admin-prototype-names {
+  width: 390px;
+}
+/* line 28, ../../../app/stylesheets/main.scss */
+#admin-prototype-names p {
+  width: 390px;
+}
+
+/* line 82, ../../../app/stylesheets/main.scss */
+.selectlist-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 88, ../../../app/stylesheets/main.scss */
+.selectlist-item {
+  background: white url(../images/cross-circle.png) no-repeat right center;
+  border-left: solid 1px #eee;
+  border-top: solid 1px #eee;
+  border-right: solid 2px #ccc;
+  border-bottom: solid 2px #ccc;
+  cursor: pointer;
+  padding: 0.2em 0.3em;
+  margin: 1px 0;
+}

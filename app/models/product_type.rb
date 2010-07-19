@@ -2,9 +2,6 @@ class ProductType < ActiveRecord::Base
   
   has_many :products
   
-  has_many :prototype_properties_product_types
-  has_many :prototype_properties,      :through => :prototype_properties_product_types
-  
   def self.admin_grid(params = {})
     
     params[:page] ||= 1

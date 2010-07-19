@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   has_many :product_properies
   has_many :properies,          :through => :product_properies
   
+  has_many :variants
   
   def self.admin_grid(params = {})
     
