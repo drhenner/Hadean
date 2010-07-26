@@ -1,3 +1,7 @@
+<% content_for :head do -%>
+  <%= javascript_include_tag "admin/index_grid" %>
+<% end %>
+
 <h2> Prototypes </h2>
 
 <div id="admin_prototypes_page_wrapper">
@@ -6,9 +10,20 @@
                     "admin_prototypes_grid", 
                     admin_merchandise_prototypes_path,
       [
-        { :field => "display_name",           :label => "Name",     :width => 355,  :resizable => false },
-        { :field => "prototype_display_names", :label => "Active?",  :width => 70,   :resizable => false }
-      ]
+        { :field => "id",           :index => 'id', :name => "id", :label => "id",     :width => 10,  :resizable => false },
+        { :field => "name",           :label => "Name",     :width => 355,  :resizable => false, :sortable => true },
+        { :field => "display_active", :label => "Active?",  :width => 70,   :resizable => false, :sortable => true }
+      ], 
+      {
+        :height             => "390",
+        :alt_rows           => true,
+        :direct_selection   => true,
+        :editable           => true,
+        :selection_handler  => "Hadean.AdminIndexForm.editSelection",
+        :rownumbers         => false,
+        :rows_per_page      => 20,
+        :row_list           => [20, 50, 100]
+      }
     ) %>
   </div>
 
@@ -21,3 +36,7 @@
 </div>
 <%= jqgrid_stylesheets %>
 <%= jqgrid_javascripts %>
+
+<script>
+  Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/merchandise/prototypes'));
+</script>

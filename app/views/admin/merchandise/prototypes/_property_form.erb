@@ -1,0 +1,8 @@
+
+
+<% @all_properties.each do |property| %>
+    <div class="property_form left span-9 last">
+      <%= check_box_tag "prototype[property_ids][]", property.id, @prototype.properties.include?(property) %>
+      <%= property.display_name %>
+    </div>
+<% end %>

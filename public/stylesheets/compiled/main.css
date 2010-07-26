@@ -105,13 +105,19 @@
 }
 
 /* line 82, ../../../app/stylesheets/main.scss */
+.property_form {
+  display: inline;
+  text-align: left;
+}
+
+/* line 86, ../../../app/stylesheets/main.scss */
 .selectlist-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 88, ../../../app/stylesheets/main.scss */
+/* line 92, ../../../app/stylesheets/main.scss */
 .selectlist-item {
   background: white url(../images/cross-circle.png) no-repeat right center;
   border-left: solid 1px #eee;

@@ -1,13 +1,5 @@
-<h2>New Prototype Property</h2>
-
-<%= form_for @property, :url  => admin_merchandise_prototype_properties_path, 
-                        :html => {:class => 'prepend-6'}  do |form| %>
-  <fieldset id="admin-property-names">
-
-  </fieldset>
-  <div class="button generic_submit_button">
-    <%= submit_tag "Create", 
-                    :class  => "button", 
-                    :id     => "create_prototype_property_button" %>
-  </div>
-<% end %>
+<li class="property_form">
+  <%= @prototype_property.property.identifing_name %>,
+  <%= @prototype_property.property.display_name %>
+  <input type="hidden" name="prototype[prototype_properties_attributes][0][property_id]"  value="<%= @prototype_property.property_id %>"/>
+</li>

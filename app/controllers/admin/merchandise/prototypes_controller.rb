@@ -5,7 +5,7 @@ class Admin::Merchandise::PrototypesController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render :json => @prototypes.to_jqgrid_json(
-        [ :display_name, :display_active ],
+        [ :id, :name, :display_active ],
         @prototypes.per_page, #params[:page],
         @prototypes.current_page, #params[:rows],
         @prototypes.total_entries)
@@ -21,8 +21,9 @@ class Admin::Merchandise::PrototypesController < ApplicationController
 
   def new
     @all_properties = Property.all
-    @prototype      = Prototype.new
-    @prototype.properties.new# << Property.new
+
+    @prototype      = Prototype.new(:active => true)
+    @prototype.properties.build
   end
 
   def create
@@ -31,24 +32,25 @@ class Admin::Merchandise::PrototypesController < ApplicationController
     if @prototype.save
       redirect_to :action => :index
     else
-      @properties = Property.all
+      @all_properties = Property.all
       flash[:error] = "The prototype property could not be saved"
       render :action => :new
     end
   end
 
   def edit
-    @properties = Property.all
+    #@all_properties = [Property.new]
+    @all_properties = Property.all#.inject(@all_properties) {|i, prop| i << prop }
     @prototype = Prototype.find(params[:id])
   end
 
   def update
-    @prototype = PrototypeProperty.find(params[:id])
+    @prototype = Prototype.find(params[:id])
   
     if @prototype.update_attributes(params[:prototype])
       redirect_to :action => :index
     else
-      @properties = Property.all
+      @all_properties = Property.all
       render :action => :edit
     end
   end

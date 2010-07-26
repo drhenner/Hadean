@@ -1,6 +1,8 @@
 class Admin::Merchandise::PrototypePropertiesController < ApplicationController
   
   respond_to :html, :json
+
+=begin
   def index
     @prototype_properties = PrototypeProperty.admin_grid(params)
     respond_to do |format|
@@ -19,12 +21,13 @@ class Admin::Merchandise::PrototypePropertiesController < ApplicationController
     @prototype_property = PrototypeProperty.find(params[:id])
     respond_with(@prototype_property)
   end
-  
+=end
   def new
-    @properties = Property.all
-    @prototype_property = PrototypeProperty.new
+    #@properties = Property.all
+    @prototype_property = PrototypeProperty.new(params[:prototype_property]) 
+    render :template => 'admin/merchandise/prototype_properties/new', :layout => false
   end
-  
+=begin
   def create
     @prototype_property = PrototypeProperty.new(params[:prototype_property])
     
@@ -60,4 +63,5 @@ class Admin::Merchandise::PrototypePropertiesController < ApplicationController
     
     redirect_to :action => :index
   end
+=end
 end

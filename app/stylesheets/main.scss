@@ -79,6 +79,10 @@
   @include admin-form-wrapper;
 }
   
+.property_form {
+  display: inline;
+  text-align: left;
+}
 .selectlist-list {
   list-style: none;
   margin:     0;

@@ -1,0 +1,6 @@
+<% pp_id = "new_prototype_property_#{@prototype_property.id}"%>
+<li id="<%=pp_id%>" class="property_form">
+  <%= @prototype_property.property.display_name %>
+  <input type="hidden" name="prototype[prototype_properties_attributes][0][<%= @prototype_property.property_id %>]"  value="1"/>
+  &nbsp <a>Remove</a>
+</li>
