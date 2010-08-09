@@ -11,12 +11,12 @@
   <![endif]-->
   <%= csrf_meta_tag %>
   
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'jquery-ujs/src/rails' %>
   <%= yield :head %>
-  
 </head>
 <body class="bp">
-  <%= "<p class='notice'> #{notice}</p>"  if notice %>
-  <%= "<p class='error'>#{alert}</p>"     if alert %>
+  <%= raw "<p class='notice'> #{notice}</p>"  if notice %>
+  <%= raw "<p class='error'>#{alert}</p>"     if alert %>
   <div class="container">
     <div id='header_wrapper' class="span-24">
       <div id="header" class="span-12 last">

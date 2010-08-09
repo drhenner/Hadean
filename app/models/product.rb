@@ -1,8 +1,9 @@
 class Product < ActiveRecord::Base
   
   belongs_to :product_type
-  has_many :product_properies
-  has_many :properies,          :through => :product_properies
+  belongs_to :prototype
+  has_many :product_properties
+  has_many :properties,          :through => :product_properties
   
   has_many :variants
   

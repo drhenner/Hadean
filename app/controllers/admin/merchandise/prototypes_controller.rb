@@ -21,9 +21,13 @@ class Admin::Merchandise::PrototypesController < ApplicationController
 
   def new
     @all_properties = Property.all
-
-    @prototype      = Prototype.new(:active => true)
-    @prototype.properties.build
+    if @all_properties.empty?
+      flash[:notice] = "You must create a property before you create a prototype."
+      redirect_to new_admin_merchandise_property_path
+    else
+      @prototype      = Prototype.new(:active => true)
+      @prototype.properties.build
+    end
   end
 
   def create
@@ -39,9 +43,8 @@ class Admin::Merchandise::PrototypesController < ApplicationController
   end
 
   def edit
-    #@all_properties = [Property.new]
-    @all_properties = Property.all#.inject(@all_properties) {|i, prop| i << prop }
-    @prototype = Prototype.find(params[:id])
+    @all_properties = Property.all
+    @prototype = Prototype.includes(:properties).find(params[:id])
   end
 
   def update

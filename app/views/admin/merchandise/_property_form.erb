@@ -1,8 +1,7 @@
 
-
-<% @all_properties.each do |property| %>
+<% @product.prototype.properties.each do |property| %>
     <div class="property_form left span-9 last">
-      <% checked = @prototype.name && @prototype.properties.include?(property)%>
+      <% checked = parent.id && parent.properties.include?(property)%>
       <%= check_box_tag "prototype[property_ids][]", property.id, checked %>
       <%= property.display_name %>
     </div>

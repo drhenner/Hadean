@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer           :tax_category_id
       t.integer           :shipping_category_id
       t.integer           :product_type_id
+      t.integer           :prototype_id
       t.datetime          :available_at
       t.datetime          :deleted_at
       t.string            :meta_keywords

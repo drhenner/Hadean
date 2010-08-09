@@ -15,6 +15,11 @@ Hadean::Application.routes.draw do |map|
       resources :properties
       resources :prototypes
       resources :product_types
+      resources :products do 
+        member do 
+          get :add_properties
+        end
+      end
       resources :prototype_properties
     end
     

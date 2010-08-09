@@ -18,8 +18,8 @@
   
 </head>
 <body class="bp">
-  <%= "<p class='notice'> #{notice}</p>"  if notice %>
-  <%= "<p class='error'>#{alert}</p>"     if alert %>
+  <%= raw "<p class='notice'> #{notice}</p>"  if notice %>
+  <%= raw "<p class='error'>#{alert}</p>"     if alert %>
   <div class="container">
     <div id='header_wrapper' class="span-24 header-image">
       <div id="header" class="span-12">
@@ -41,6 +41,15 @@
   </div>
   
   <%= yield :bottom %>
+  
+  <script>
+  jQuery(window).ready(
+    function() {
+      jQuery('.notice').delay(5000).slideUp( 'slow');
+      jQuery('.error').delay(5000).slideUp( 'slow');
+    }
+  );
+  </script>
   
   <%# javascript_include_tag :defaults %>
   <%#= javascript_include_tag 'jquery-1.4.2.min', 'rails' %>
