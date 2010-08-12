@@ -30,30 +30,41 @@ Hadean.AdminMerchandiseProductForm = {
     }, 
     addProperties : function(id) {
       if ( typeof id == 'undefined' || id == 0 ) {
-        //  Remove properties...
-
-        jQuery(Hadean.AdminMerchandiseProductForm.productCheckboxesDiv).html('');
+        //  show all properties...
+$('#product_properties').children().fadeIn();
+        //jQuery(Hadean.AdminMerchandiseProductForm.productCheckboxesDiv).html('');
       }
       else {
         jQuery.ajax( {
            type : "GET",
            url : MerchProductForm.formController+'/'+id+"/add_properties",
            data : { product_id : Hadean.AdminMerchandiseProductForm.productId },
-           complete : function(htmlText) {
+           complete : function(json) {
              // open dialog with html
-             Hadean.AdminMerchandiseProductForm.refreshProductForm(htmlText);
+             Hadean.AdminMerchandiseProductForm.refreshProductForm(json);
             // STOP  WAIT INDICATOR...
            },
-           dataType : 'html'
+           dataType : 'json'
         });
       }
     },
-    refreshProductForm : function(htmlText) {
+    refreshProductForm : function(json) {
       // SHow the properties that are associated to this product
 
-      jQuery(MerchProductForm.productCheckboxesDiv).html(htmlText.responseText);
+      //jQuery(MerchProductForm.productCheckboxesDiv).html(htmlText.responseText);
       // Show the save button
-
+      //alert(json.responseText);
+      properties = JSON.parse(json.responseText);
+      //alert(properties.property[0])
+      jQuery.each (properties.active, function(p,value) { 
+        jQuery('#property_' + value ).fadeIn();
+      });
+      
+      jQuery.each (properties.inactive, function(p,value) { 
+        propertyId = '#property_' + value;
+        jQuery(propertyId ).hide();
+        jQuery(propertyId + ' input:text')[0].value = '';
+      });
     }
 }
 

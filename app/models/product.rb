@@ -6,13 +6,14 @@ class Product < ActiveRecord::Base
   has_many :properties,          :through => :product_properties
   
   has_many :variants
+  accepts_nested_attributes_for :product_properties, :reject_if => proc { |attributes| attributes['description'].blank? }
   
   def self.admin_grid(params = {})
     
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
     
-    grid = paginate({:page => params[:page]})
+    grid = Product#paginate({:page => params[:page]})
     
     #grid.includes(:variants)
     grid.where("products.name = ?",                 params[:name])                  if params[:name].present?
@@ -20,9 +21,7 @@ class Product < ActiveRecord::Base
     grid.where("products.shipping_category_id = ?", params[:shipping_category_id])  if params[:shipping_category_id].present?
     grid.where("products.available_at > ?",         params[:available_at_gt])       if params[:available_at_gt].present?
     grid.where("products.available_at < ?",         params[:available_at_lt])       if params[:available_at_lt].present?
-
-    grid.order("#{params[:sidx]} #{params[:sord]}") 
     grid.limit(params[:rows])
-    grid
+    grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
   end
 end
