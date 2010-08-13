@@ -29,12 +29,12 @@ class Admin::Merchandise::VariantsController < ApplicationController
   end
 
   def create
-    @variant = Variant.new(params[:variant])
+    @product = Product.find(params[:product_id])
+    @variant = @product.variants.new(params[:variant])
   
     if @variant.save
       redirect_to :action => :index
     else
-      @product  =  @variant.product
       form_info
       flash[:error] = "The variant could not be saved"
       render :action => :new
@@ -58,26 +58,7 @@ class Admin::Merchandise::VariantsController < ApplicationController
       render :action => :edit
     end
   end
-=begin
-  def add_properties
-    prototype  = Prototype.includes(:properties).find(params[:id])
-    @properties = prototype.properties
-    all_properties = Property.all
   
-    @properties_hash = all_properties.inject({:active => [], :inactive => []}) do |h, property|
-      if  @properties.detect{|p| (p.id == property.id) }
-        h[:active] << property.id
-      else
-        h[:inactive] << property.id
-      end
-      h
-    end
-    respond_to do |format|
-      format.html
-      format.json { render :json => @properties_hash.to_json }
-    end
-  end
-=end
   def destroy
     @variant = Variant.find(params[:id])
     @variant.active = false

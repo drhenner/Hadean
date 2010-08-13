@@ -1,14 +1,16 @@
 class Variant < ActiveRecord::Base
   
-  has_many :variant_properies
-  has_many :properies,          :through => :variant_properies
+  has_many :variant_properties
+  has_many :properties,          :through => :variant_properties
   
   belongs_to :product
   
-  validates :name,        :presence => true
+  #validates :name,        :presence => true
   validates :price,       :presence => true
   validates :product_id,  :presence => true
   validates :sku,         :presence => true
+  
+  accepts_nested_attributes_for :variant_properties
   
   def product_name 
     product.name
