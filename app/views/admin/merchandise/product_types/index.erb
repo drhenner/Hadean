@@ -1,11 +1,14 @@
+<% content_for :head do -%>
+  <%= javascript_include_tag "admin/index_grid" %>
+<% end %>
+
 <h2> Product Types </h2>
 
 <div id="admin_product_types_page_wrapper">
   <div id="admin_product_types_grid_wrapper">
     <%= raw jqgrid("Product Types", "admin_product_types_grid", admin_merchandise_product_types_path,
       [
-        { :field => "display_name",   :label => "Name",     :width => 355,  :resizable => false },
-        { :field => "display_active", :label => "Active?",  :width => 70,   :resizable => false }
+        { :field => "display_name",   :label => "Name",     :width => 355,  :resizable => false }
       ]
     ) %>
   </div>

@@ -5,5 +5,6 @@ class VariantProperty < ActiveRecord::Base
   
   validates :variant_id,  :presence => true
   validates :propery_id,  :presence => true
+  validates :description,  :presence => true
 
 end

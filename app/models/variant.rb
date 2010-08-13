@@ -5,7 +5,14 @@ class Variant < ActiveRecord::Base
   
   belongs_to :product
   
-  validates :name,    :presence => true
+  validates :name,        :presence => true
+  validates :price,       :presence => true
+  validates :product_id,  :presence => true
+  validates :sku,         :presence => true
+  
+  def product_name 
+    product.name
+  end
   
   def self.admin_grid(product, params = {})
     
@@ -16,7 +23,7 @@ class Variant < ActiveRecord::Base
     
     grid = Variant.where("variants.product_id", product.id)
     grid.includes(:product)
-    grid.where("variants.name = ?", params[:name])  if params[:name].present?
+    grid.where("products.name = ?", params[:name])  if params[:name].present?
     grid.order("#{params[:sidx]} #{params[:sord]}") 
     grid.limit(params[:rows])
     grid.paginate({:page => params[:page]})

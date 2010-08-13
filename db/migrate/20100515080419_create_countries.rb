@@ -4,9 +4,12 @@ class CreateCountries < ActiveRecord::Migration
       t.string :name
       t.string :abbreviation, :limit => 5
     end
+    add_index :countries, :name
+    execute "alter table states add constraint fk_states_countries foreign key (country_id) references countries(id)"
   end
 
   def self.down
+    execute "alter table states drop foreign key fk_states_countries"
     drop_table :countries
   end
 end

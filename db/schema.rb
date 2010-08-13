@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100707163022) do
+ActiveRecord::Schema.define(:version => 20100813024219) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -58,13 +58,13 @@ ActiveRecord::Schema.define(:version => 20100707163022) do
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
     t.integer  "product_type_id"
-    t.integer  "prototype_id"
     t.datetime "available_at"
     t.datetime "deleted_at"
     t.string   "meta_keywords"
     t.string   "meta_description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "prototype_id"
   end
 
   create_table "properties", :force => true do |t|
@@ -96,6 +96,10 @@ ActiveRecord::Schema.define(:version => 20100707163022) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "shipping_categories", :force => true do |t|
+    t.string "name", :null => false
+  end
 
   create_table "slugs", :force => true do |t|
     t.string   "name"

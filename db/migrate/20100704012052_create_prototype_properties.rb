@@ -1,8 +1,8 @@
 class CreatePrototypeProperties < ActiveRecord::Migration
   def self.up
     create_table :prototype_properties do |t|
-      t.integer 'prototype_id'
-      t.integer 'property_id'
+      t.integer 'prototype_id', :null => false
+      t.integer 'property_id', :null => false
     end
   end
 

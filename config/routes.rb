@@ -1,4 +1,5 @@
 Hadean::Application.routes.draw do |map|
+
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
   resources :admins
@@ -11,6 +12,9 @@ Hadean::Application.routes.draw do |map|
   namespace :admin do
     resources :users
     
+    namespace :generic do
+      resources :shipping_categories
+    end
     namespace :merchandise do
       resources :properties
       resources :prototypes
@@ -19,6 +23,7 @@ Hadean::Application.routes.draw do |map|
         member do 
           get :add_properties
         end
+        resources :variants
       end
       resources :prototype_properties
     end

@@ -4,23 +4,27 @@ class CreateAddresses < ActiveRecord::Migration
       t.integer  :address_type_id
       t.string   "first_name"
       t.string   "last_name"
-      t.string   'addressable_type'
-      t.integer  'addressable_id'
-      t.string   "address1"
+      t.string   'addressable_type',  :null => false
+      t.integer  'addressable_id',    :null => false
+      t.string   "address1",          :null => false
       t.string   "address2"
-      t.string   "city"
+      t.string   "city",              :null => false
       t.integer  "state_id"
       t.string   "state_name"
-      t.string   "zip_code"
+      t.string   "zip_code",          :null => false
       #t.integer  "country_id"
       t.string   "phone"
       t.string   "alternative_phone"
-      t.boolean  "default"
+      t.boolean  "default",             :default => false
       t.timestamps
     end
+    
+    add_index :addresses, :state_id
+    execute "alter table addresses add constraint fk_addresses_countries foreign key (state_id) references states(id)"
   end
 
   def self.down
+    execute "alter table addresses drop foreign key fk_addresses_countries"
     drop_table :addresses
   end
 end

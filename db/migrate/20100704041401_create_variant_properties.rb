@@ -1,9 +1,9 @@
 class CreateVariantProperties < ActiveRecord::Migration
   def self.up
     create_table :variant_properties do |t|
-      t.integer       :variant_id
-      t.integer       :property_id
-      t.string        :description
+      t.integer       :variant_id, :null => false
+      t.integer       :property_id, :null => false
+      t.string        :description, :null => false
     end
   end
 

@@ -3,7 +3,8 @@
 
 #header_wrapper {
   @include span(24);
-  background-image: url(../../images/logos/hadean_wide.png);
+  //background-image: url(../../images/logos/hadean_wide.png);
+  background-color: #57B;
   h1, h3, a {
     color: #EEE;
   }

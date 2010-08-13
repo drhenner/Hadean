@@ -1,33 +1,33 @@
 /* line 4, ../../../app/stylesheets/main.scss */
 #header_wrapper {
   width: 950px;
-  background-image: url(../../images/logos/hadean_wide.png);
+  background-color: #57B;
 }
-/* line 7, ../../../app/stylesheets/main.scss */
+/* line 8, ../../../app/stylesheets/main.scss */
 #header_wrapper h1, #header_wrapper h3, #header_wrapper a {
   color: #EEE;
 }
 
-/* line 33, ../../../app/stylesheets/main.scss */
+/* line 34, ../../../app/stylesheets/main.scss */
 #admin-property-names {
   width: 390px;
 }
-/* line 28, ../../../app/stylesheets/main.scss */
+/* line 29, ../../../app/stylesheets/main.scss */
 #admin-property-names p {
   width: 390px;
 }
 
-/* line 39, ../../../app/stylesheets/main.scss */
+/* line 40, ../../../app/stylesheets/main.scss */
 #admin_properties_page_wrapper {
   width: 950px;
 }
 
-/* line 42, ../../../app/stylesheets/main.scss */
+/* line 43, ../../../app/stylesheets/main.scss */
 #admin_properties_grid_wrapper {
   width: 710px;
 }
 
-/* line 46, ../../../app/stylesheets/main.scss */
+/* line 47, ../../../app/stylesheets/main.scss */
 #admin_new_property_button {
   display: inline;
   float: left;
@@ -40,17 +40,17 @@
   overflow-x: hidden;
 }
 
-/* line 51, ../../../app/stylesheets/main.scss */
+/* line 52, ../../../app/stylesheets/main.scss */
 #admin_product_types_page_wrapper {
   width: 950px;
 }
 
-/* line 54, ../../../app/stylesheets/main.scss */
+/* line 55, ../../../app/stylesheets/main.scss */
 #admin_product_types_grid_wrapper {
   width: 710px;
 }
 
-/* line 58, ../../../app/stylesheets/main.scss */
+/* line 59, ../../../app/stylesheets/main.scss */
 #admin_new_product_type_button {
   display: inline;
   float: left;
@@ -63,26 +63,26 @@
   overflow-x: hidden;
 }
 
-/* line 63, ../../../app/stylesheets/main.scss */
+/* line 64, ../../../app/stylesheets/main.scss */
 #admin-product_type-names {
   width: 390px;
 }
-/* line 28, ../../../app/stylesheets/main.scss */
+/* line 29, ../../../app/stylesheets/main.scss */
 #admin-product_type-names p {
   width: 390px;
 }
 
-/* line 69, ../../../app/stylesheets/main.scss */
+/* line 70, ../../../app/stylesheets/main.scss */
 #admin_prototypes_page_wrapper {
   width: 950px;
 }
 
-/* line 72, ../../../app/stylesheets/main.scss */
+/* line 73, ../../../app/stylesheets/main.scss */
 #admin_prototypes_grid_wrapper {
   width: 710px;
 }
 
-/* line 75, ../../../app/stylesheets/main.scss */
+/* line 76, ../../../app/stylesheets/main.scss */
 #admin_new_prototype_type_button {
   display: inline;
   float: left;
@@ -95,29 +95,29 @@
   overflow-x: hidden;
 }
 
-/* line 78, ../../../app/stylesheets/main.scss */
+/* line 79, ../../../app/stylesheets/main.scss */
 #admin-prototype-names {
   width: 390px;
 }
-/* line 28, ../../../app/stylesheets/main.scss */
+/* line 29, ../../../app/stylesheets/main.scss */
 #admin-prototype-names p {
   width: 390px;
 }
 
-/* line 82, ../../../app/stylesheets/main.scss */
+/* line 83, ../../../app/stylesheets/main.scss */
 .property_form {
   display: inline;
   text-align: left;
 }
 
-/* line 86, ../../../app/stylesheets/main.scss */
+/* line 87, ../../../app/stylesheets/main.scss */
 .selectlist-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 92, ../../../app/stylesheets/main.scss */
+/* line 93, ../../../app/stylesheets/main.scss */
 .selectlist-item {
   background: white url(../images/cross-circle.png) no-repeat right center;
   border-left: solid 1px #eee;

@@ -11,7 +11,7 @@ Hadean.Utility = {
 Hadean.AdminMerchandiseProductForm = {
     
     productCheckboxesDiv  : '#product_properties',
-    prototypeSelectId     : '#select-prototype',
+    prototypeSelectId     : '#product_prototype_id',
     formController        : '/admin/merchandise/products',
     productId             : null,
     

@@ -2,11 +2,17 @@ class Product < ActiveRecord::Base
   
   belongs_to :product_type
   belongs_to :prototype
+  belongs_to :shipping_category
   has_many :product_properties
   has_many :properties,          :through => :product_properties
   
   has_many :variants
   accepts_nested_attributes_for :product_properties, :reject_if => proc { |attributes| attributes['description'].blank? }
+  
+  validates :shipping_category_id,  :presence => true
+  #validates :tax_category_id,      :presence => true
+  validates :product_type_id,       :presence => true
+  validates :prototype_id,          :presence => true
   
   def self.admin_grid(params = {})
     

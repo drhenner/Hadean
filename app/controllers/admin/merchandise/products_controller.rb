@@ -20,8 +20,7 @@ class Admin::Merchandise::ProductsController < ApplicationController
   end
   
   def new
-    @all_properties = Property.all
-    @prototypes = Prototype.all
+    form_info
     if @prototypes.empty?
       flash[:notice] = "You must create a prototype before you create a product."
       redirect_to new_admin_merchandise_prototype_path
@@ -37,8 +36,7 @@ class Admin::Merchandise::ProductsController < ApplicationController
     if @product.save
       redirect_to :action => :index
     else
-      @prototypes = Prototype.all
-      @all_properties = Property.all
+      form_info
       flash[:error] = "The product could not be saved"
       render :action => :new
     end
@@ -46,8 +44,7 @@ class Admin::Merchandise::ProductsController < ApplicationController
   
   def edit
     @product        = Product.includes(:properties,:product_properties, {:prototype => :properties}).find(params[:id])
-    @prototypes     = Prototype.all
-    @all_properties = Property.all
+    form_info
   end
   
   def update
@@ -56,14 +53,13 @@ class Admin::Merchandise::ProductsController < ApplicationController
     if @product.update_attributes(params[:product])
       redirect_to :action => :index
     else
-      @all_properties = Property.all
+      form_info
       render :action => :edit
     end
   end
   
   def add_properties
     prototype  = Prototype.includes(:properties).find(params[:id])
-    #@product    =   Product.includes(:properties).find(params[:product_id]) if params[:product_id]
     @properties = prototype.properties
     all_properties = Property.all
     
@@ -75,7 +71,6 @@ class Admin::Merchandise::ProductsController < ApplicationController
       end
       h
     end
-    #render :template => 'admin/merchandise/products/add_properties', :layout => false
     respond_to do |format|
       format.html
       format.json { render :json => @properties_hash.to_json }
@@ -89,5 +84,14 @@ class Admin::Merchandise::ProductsController < ApplicationController
     
     redirect_to :action => :index
   end
+  
+  private
+  
+    def form_info
+      @prototypes = Prototype.all.collect{|pt| [pt.name, pt.id]}
+      @all_properties = Property.all
+      @select_product_types = ProductType.all.collect{|pt| [pt.name, pt.id]}
+      @select_shipping_category = ShippingCategory.all.collect {|sc| [sc.name, sc.id]}
+    end
   
 end

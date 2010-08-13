@@ -2,7 +2,7 @@ class CreateProductTypes < ActiveRecord::Migration
   def self.up
     create_table :product_types do |t|
 
-      t.string    :name
+      t.string    :name, :null => false
       t.boolean   :active, :default => true
     end
   end
