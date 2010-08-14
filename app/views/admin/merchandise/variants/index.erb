@@ -2,18 +2,18 @@
   <%= javascript_include_tag "admin/index_grid" %>
 <% end %>
 
-<h2> Product Variants</h2>
+<h2> <%= @product.name %> Variants</h2>
 
 <div id="admin_variants_page_wrapper">
   <div id="admin_variants_grid_wrapper">
     <%= raw jqgrid("Variant", "admin_variants_grid", admin_merchandise_product_variants_path(@product),
       [
-        { :field => "product_name",   :label => "Name",   :width => 355,  :resizable => false },
-        { :field => "sku",            :label => "SKU",    :width => 70,   :resizable => false },
+        { :field => "product_name",   :label => "Name",   :width => 280,  :resizable => false },
+        { :field => "sku",            :label => "SKU",    :width => 170,   :resizable => false },
         { :field => "price",          :label => "Price",  :width => 70,   :resizable => false }
       ], 
       {
-        :height             => "390",
+        :height             => "350",
         :alt_rows           => true,
         :direct_selection   => true,
         :editable           => true,
