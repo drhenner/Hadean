@@ -1,9 +1,14 @@
 class Variant < ActiveRecord::Base
   
+  
+  has_many :variant_suppliers
+  has_many :suppliers,         :through => :variant_suppliers
+  
   has_many :variant_properties
   has_many :properties,          :through => :variant_properties
   
   belongs_to :product
+  belongs_to :brand
   
   #validates :name,        :presence => true
   validates :price,       :presence => true

@@ -12,9 +12,12 @@ class CreateVariants < ActiveRecord::Migration
       t.integer         :count_pending_from_supplier, :default => 0, :null => false
       t.timestamps
     end
+    
+    execute "alter table variants add constraint fk_variants_products foreign key (product_id) references products(id)" if SETTINGS[:use_foreign_keys]
   end
 
   def self.down
+    execute "alter table variants drop foreign key fk_variants_products" if SETTINGS[:use_foreign_keys]
     drop_table :variants
   end
 end

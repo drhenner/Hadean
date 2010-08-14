@@ -12,20 +12,28 @@ class User < ActiveRecord::Base
   
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :address_attributes
   
-  #has_one     :registration_info
+  has_many    :phones,                          :dependent => :destroy, 
+                                                :as => :phoneable
+  
+  has_one     :primary_phone,                   :conditions => ['phones.primary = ?', true],
+                                                :as => :phoneable
+  
   has_many    :addresses,                       :dependent => :destroy, 
                                                 :as => :addressable
                                                 
-  has_one     :default_address,                 :conditions => ['default = ?', true], 
+  has_one     :default_address,                 :conditions => ['addresses.default = ?', true], 
                                                 :as => :addressable
                                                 
   has_many    :user_roles,                      :dependent => :destroy
   has_many    :roles,         :through => :user_roles
   
-  validates :first_name,  :presence => true, :if => :registered_user?
-  validates :last_name,   :presence => true, :if => :registered_user?
-  validates :email,       :presence => true
-  #default_scope :include => [:registration_info]
+  validates :first_name,  :presence => true, :if => :registered_user?,
+                          :format   => { :with => CustomValidators::Names.name_validator }
+  validates :last_name,   :presence => true, :if => :registered_user?,
+                          :format   => { :with => CustomValidators::Names.name_validator }
+  validates :email,       :presence => true,
+                          :uniqueness => true,
+                          :format   => { :with => CustomValidators::Emails.email_validator }
   
   accepts_nested_attributes_for :addresses
   

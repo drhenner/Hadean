@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100813024219) do
+ActiveRecord::Schema.define(:version => 20100814070240) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -36,9 +36,31 @@ ActiveRecord::Schema.define(:version => 20100813024219) do
     t.datetime "updated_at"
   end
 
+  create_table "brands", :force => true do |t|
+    t.string "name"
+  end
+
   create_table "countries", :force => true do |t|
     t.string "name"
     t.string "abbreviation", :limit => 5
+  end
+
+  create_table "phone_priorities", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "phone_types", :force => true do |t|
+    t.string "name", :null => false
+  end
+
+  create_table "phones", :force => true do |t|
+    t.integer  "phone_type_id"
+    t.string   "number",                            :null => false
+    t.string   "phoneable_type",                    :null => false
+    t.integer  "phoneable_id",                      :null => false
+    t.boolean  "primary",        :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "product_properties", :force => true do |t|
@@ -120,6 +142,13 @@ ActiveRecord::Schema.define(:version => 20100813024219) do
     t.integer "country_id"
   end
 
+  create_table "suppliers", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "user_roles", :force => true do |t|
     t.integer "role_id"
     t.integer "user_id"
@@ -147,6 +176,18 @@ ActiveRecord::Schema.define(:version => 20100813024219) do
     t.integer "variant_id"
     t.integer "property_id"
     t.string  "description"
+  end
+
+  create_table "variant_suppliers", :force => true do |t|
+    t.integer  "variant_id",                                                               :null => false
+    t.integer  "supplier_id",                                                              :null => false
+    t.decimal  "cost",                    :precision => 8, :scale => 2, :default => 0.0,   :null => false
+    t.integer  "total_quantity_supplied",                               :default => 0
+    t.integer  "min_quantity",                                          :default => 1
+    t.integer  "max_quantity",                                          :default => 10000
+    t.boolean  "active",                                                :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "variants", :force => true do |t|

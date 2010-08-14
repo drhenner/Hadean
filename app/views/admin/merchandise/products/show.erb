@@ -49,6 +49,6 @@
 <fieldset id="admin-product-properties" class='span-12'>
   <legend>Properties</legend>
   <% @product.product_properties.each do |product_prop|  %>
-    <%= product_prop.property.identifing_name %>, <%= product_prop.description %>
+    <%= product_prop.property.identifing_name %>: <%= product_prop.description %>
   <% end %>
 </fieldset>

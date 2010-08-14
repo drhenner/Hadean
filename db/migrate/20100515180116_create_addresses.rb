@@ -13,18 +13,18 @@ class CreateAddresses < ActiveRecord::Migration
       t.string   "state_name"
       t.string   "zip_code",          :null => false
       #t.integer  "country_id"
-      t.string   "phone"
+      t.string   "phone_id"
       t.string   "alternative_phone"
       t.boolean  "default",             :default => false
       t.timestamps
     end
     
     add_index :addresses, :state_id
-    execute "alter table addresses add constraint fk_addresses_countries foreign key (state_id) references states(id)"
+    execute "alter table addresses add constraint fk_addresses_countries foreign key (state_id) references states(id)" if SETTINGS[:use_foreign_keys]
   end
 
   def self.down
-    execute "alter table addresses drop foreign key fk_addresses_countries"
+    execute "alter table addresses drop foreign key fk_addresses_countries" if SETTINGS[:use_foreign_keys]
     drop_table :addresses
   end
 end

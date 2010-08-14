@@ -3,6 +3,7 @@
 ##  TO DEPLOY
 
 SETTINGS = {
-  :admin_grid_rows  => 25
+  :admin_grid_rows  => 25,
+  :use_foreign_keys => false
 }
 
