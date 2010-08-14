@@ -1,5 +1,13 @@
 Hadean::Application.routes.draw do |map|
 
+  get "suppliers/index"
+
+  get "suppliers/new"
+
+  get "suppliers/edit"
+
+  get "suppliers/show"
+
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
   resources :admins
