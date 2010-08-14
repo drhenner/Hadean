@@ -1,2 +1,37 @@
-<h1>Admin::Inventory::Suppliers#index</h1>
-<p>Find me in app/views/admin/inventory/suppliers/index.html.erb</p>
+<% content_for :head do -%>
+  <%= javascript_include_tag "admin/index_grid" %>
+<% end %>
+
+<h2> Suppliers </h2>
+
+<div id="admin_suppliers_page_wrapper">
+  <div id="admin_suppliers_grid_wrapper">
+    <%= raw jqgrid("Suppliers", "admin_suppliers_grid", admin_inventory_suppliers_path,
+      [
+        { :field => "display_name",   :label => "Name",     :width => 355,  :resizable => false },
+        { :field => "display_active", :label => "Active?",  :width => 70,   :resizable => false }
+      ], 
+      {
+        :height             => "350",
+        :alt_rows           => true,
+        :direct_selection   => true,
+        :editable           => true,
+        :selection_handler  => "Hadean.AdminIndexForm.editSelection",
+        :rownumbers         => false,
+        :rows_per_page      => 20,
+        :row_list           => [20, 50, 100]
+      }
+    ) %>
+  </div>
+
+  <div id="admin_new_supplier_button" class="admin_new_button last">
+    <%= link_to "New Supplier", new_admin_inventory_supplier_path, :class => "button", :id => "new_supplier_button" %>
+  </div>
+</div>
+<%= jqgrid_stylesheets %>
+<%= jqgrid_javascripts %>
+
+
+<script>
+  Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/inventory/suppliers'));
+</script>

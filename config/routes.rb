@@ -1,13 +1,5 @@
 Hadean::Application.routes.draw do |map|
 
-  get "suppliers/index"
-
-  get "suppliers/new"
-
-  get "suppliers/edit"
-
-  get "suppliers/show"
-
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
   resources :admins
@@ -23,17 +15,21 @@ Hadean::Application.routes.draw do |map|
     namespace :generic do
       resources :shipping_categories
     end
+    namespace :inventory do
+      resources :suppliers
+    end
+    
     namespace :merchandise do
       resources :properties
       resources :prototypes
       resources :product_types
+      resources :prototype_properties
       resources :products do 
         member do 
           get :add_properties
         end
         resources :variants
       end
-      resources :prototype_properties
     end
     
   end

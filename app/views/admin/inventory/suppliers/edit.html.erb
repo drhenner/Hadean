@@ -1,2 +1,12 @@
-<h1>Admin::Inventory::Suppliers#edit</h1>
-<p>Find me in app/views/admin/inventory/suppliers/edit.html.erb</p>
+<h2>Edit Supplier</h2>
+
+<%= form_for @supplier, :url  => admin_inventory_supplier_path(@supplier), 
+                        :html => {:class => 'prepend-6'}  do |form| %>
+  <%= render :partial => '/admin/inventory/suppliers/form', :locals => {:form => form}%>
+
+  <div class="button generic_submit_button">
+    <%= submit_tag "Update", 
+                    :class  => "button", 
+                    :id     => "create_supplier_button" %>
+  </div>
+<% end %>
