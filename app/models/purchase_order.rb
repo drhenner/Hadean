@@ -34,6 +34,16 @@ class PurchaseOrder < ActiveRecord::Base
     end
   end
   
+  def receive_po=(answer)
+    if (answer == 'true' || answer == '1') && (state != RECEIVED)
+      complete!
+    end
+  end
+  
+  def receive_po
+    (state == RECEIVED)
+  end
+  
   def receive_variants
     po_variants = PurchaseOrderVariant.where(:purchase_order_id => self.id).find(:lock => "LOCK IN SHARE MODE") 
     po_variants.each do |po_variant|
@@ -48,6 +58,10 @@ class PurchaseOrder < ActiveRecord::Base
   def display_estimated_arrival_on
     estimated_arrival_on? ? estimated_arrival_on.to_s(:format => :us_date) : ""
   end
+  
+  def display_tracking_number
+    tracking_number? ? tracking_number : 'N/A'
+  end 
   
   def supplier_name
     supplier.name rescue 'N/A'

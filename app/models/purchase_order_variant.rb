@@ -13,6 +13,20 @@ class PurchaseOrderVariant < ActiveRecord::Base
         self.is_received = true
         self.save!
       end
+      if 0 == PurchaseOrderVariant.where(['purchase_order_variants.purchase_order_id = ? && 
+                                           purchase_order_variants.is_received = ?', self.purchase_order_id, false]).count
+        self.purchase_order.mark_as_complete
+      end
     end
+  end
+  
+  def receive_po=(answer)
+    if (answer == 'true' || answer == '1') && !is_received?
+      receive!
+    end
+  end
+  
+  def receive_po
+    is_received?
   end
 end

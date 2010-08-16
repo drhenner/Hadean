@@ -15,19 +15,39 @@ class Admin::Inventory::ReceivingsController < ApplicationController
     end
   end
 
-  def new
-  end
+  #def new
+  #end
 
-  def create
-  end
+  #def create
+  #end
 
   def edit
+    @purchase_order = PurchaseOrder.includes([:variants , 
+                                              :supplier, 
+                                              {:purchase_order_variants => {:variant => :product }}]).find(params[:id])
+    form_info
   end
 
   def update
+    @purchase_order = PurchaseOrder.find(params[:id])
+
+    respond_to do |format|
+      if @purchase_order.update_attributes(params[:purchase_order])
+        format.html { redirect_to(:action => :index, :notice => 'Purchase order was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        form_info
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @purchase_order.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   def show
   end
 
+private
+  def form_info
+    
+  end
 end

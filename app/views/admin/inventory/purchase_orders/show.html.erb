@@ -32,9 +32,9 @@
 
 <p>
   <b>Is received:</b>
-  <%= @purchase_order.is_received %>
+  <%= @purchase_order.display_received  %>
 </p>
 
 
-<%= link_to 'Edit', edit_purchase_order_path(@purchase_order) %> |
-<%= link_to 'Back', purchase_orders_path %>
+<%= link_to 'Edit', edit_admin_inventory_receiving_path(@purchase_order) %> |
+<%= link_to 'View all POs', admin_inventory_purchase_orders_path %>

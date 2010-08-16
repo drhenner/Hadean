@@ -7,6 +7,9 @@ class Variant < ActiveRecord::Base
   has_many :variant_properties
   has_many :properties,          :through => :variant_properties
   
+  has_many   :purchase_order_variants
+  has_many   :purchase_orders, :through => :purchase_order_variants
+  
   belongs_to :product
   belongs_to :brand
   
