@@ -2,7 +2,7 @@ class Supplier < ActiveRecord::Base
   
   has_many :variant_suppliers
   has_many :variants,         :through => :variant_suppliers
-  
+  has_many :phones
   
   validates :name,        :presence => true
   validates :email,       :format   => { :with => CustomValidators::Emails.email_validator }

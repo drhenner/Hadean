@@ -8,8 +8,8 @@
   <div id="admin_suppliers_grid_wrapper">
     <%= raw jqgrid("Suppliers", "admin_suppliers_grid", admin_inventory_suppliers_path,
       [
-        { :field => "display_name",   :label => "Name",     :width => 355,  :resizable => false },
-        { :field => "display_active", :label => "Active?",  :width => 70,   :resizable => false }
+        { :field => "display_name",   :label => "Name",     :width => 220,  :resizable => false },
+        { :field => "email", :label => "Email",  :width => 200,   :resizable => false }
       ], 
       {
         :height             => "350",

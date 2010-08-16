@@ -16,7 +16,7 @@ class Address < ActiveRecord::Base
   #validates :zip_code,   :presence => true
   validates :phone_id,    :presence => true
   
-  accepts_nested_attributes_for :phones
+  #accepts_nested_attributes_for :phones
   
   def save_default_address(object, params)
     Address.transaction do

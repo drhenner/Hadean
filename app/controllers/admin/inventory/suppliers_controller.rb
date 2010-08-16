@@ -4,7 +4,7 @@ class Admin::Inventory::SuppliersController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render :json => @suppliers.to_jqgrid_json(
-        [ :name, :display_active ],
+        [ :name, :email ],
         @suppliers.per_page,
         @suppliers.current_page, 
         @suppliers.total_entries)

@@ -14,6 +14,7 @@ $(function() {
     if(hidden_field) {
       hidden_field.value = '1';
     }
+    $(this).parents('.new_fields').remove();
     $(this).parents('.fields').hide();
     return false;
   });

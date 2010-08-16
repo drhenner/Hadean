@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
                           :uniqueness => true,
                           :format   => { :with => CustomValidators::Emails.email_validator }
   
-  accepts_nested_attributes_for :addresses
+  accepts_nested_attributes_for :addresses, :phones
   
   state_machine :state, :initial => :unregistered do
     state :unregistered

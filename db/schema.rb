@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100814070240) do
+ActiveRecord::Schema.define(:version => 20100814213510) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -71,7 +71,8 @@ ActiveRecord::Schema.define(:version => 20100814070240) do
   end
 
   create_table "product_types", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "product_id"
   end
 
   create_table "products", :force => true do |t|
@@ -103,6 +104,28 @@ ActiveRecord::Schema.define(:version => 20100814070240) do
   create_table "prototypes", :force => true do |t|
     t.string  "name"
     t.boolean "active"
+  end
+
+  create_table "purchase_order_variants", :force => true do |t|
+    t.integer  "purchase_order_id",                                                   :null => false
+    t.integer  "variant_id",                                                          :null => false
+    t.integer  "quantity",                                                            :null => false
+    t.decimal  "cost",              :precision => 10, :scale => 0,                    :null => false
+    t.boolean  "is_received",                                      :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "purchase_orders", :force => true do |t|
+    t.integer  "supplier_id",          :null => false
+    t.string   "invoice_number"
+    t.string   "tracking_number"
+    t.string   "notes"
+    t.string   "state"
+    t.datetime "ordered_at",           :null => false
+    t.date     "estimated_arrival_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", :force => true do |t|

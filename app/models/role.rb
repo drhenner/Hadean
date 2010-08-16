@@ -24,10 +24,10 @@ class Role < ActiveRecord::Base
                       REPORT, 
                       CUSTOMER_SERVICE]
   
-  USER_ID         = 4
-  SUPER_ADMIN_ID  = 1
-  ADMIN_ID        = 2
-  WAREHOUSE_ID    = 3
-  REPORT_ID       = 5
-  CUSTOMER_SERVICE = 6
+  USER_ID             = 4
+  SUPER_ADMIN_ID      = 1
+  ADMIN_ID            = 2
+  WAREHOUSE_ID        = 3
+  REPORT_ID           = 5
+  CUSTOMER_SERVICE_ID = 6
 end

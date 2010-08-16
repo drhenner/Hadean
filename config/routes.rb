@@ -17,6 +17,8 @@ Hadean::Application.routes.draw do |map|
     end
     namespace :inventory do
       resources :suppliers
+      resources :purchase_orders
+      resources :receivings
     end
     
     namespace :merchandise do

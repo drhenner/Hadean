@@ -21,6 +21,10 @@ class Variant < ActiveRecord::Base
     product.name
   end
   
+  def name_with_sku
+    [product_name, sku].compact.join(': ')
+  end
+  
   def self.admin_grid(product, params = {})
     
     params[:page] ||= 1

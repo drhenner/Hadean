@@ -11,6 +11,7 @@ gem 'cancan'#, '1.1'
 gem 'authlogic', "2.1.5"
 gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
 gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
+gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
 gem "friendly_id", "~> 3.0"
 gem 'prawn'
 gem 'mysql'
