@@ -13,11 +13,13 @@ gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branc
 gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
 gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
 gem "friendly_id", "~> 3.0"
+gem 'paperclip'
 gem 'prawn'
 gem 'mysql'
 gem 'state_machine'
 gem 'ssl_requirement'
-gem 'rmagick'
+#gem 'rmagick'
+gem 'rmagick',    :require => 'RMagick'
 #gem 'declarative_authorization'
 
 gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
@@ -45,13 +47,13 @@ group :test do
   gem "autotest-growl"
   gem "redgreen"
   
-  gem "capybara"
-  gem "capybara-envjs"
+  #gem "capybara"
+  #gem "capybara-envjs"
   
   gem "database_cleaner"#, :git => 'git://github.com/bmabey/database_cleaner.git'
-  gem "cucumber-rails"#,   :git => "git://github.com/aslakhellesoy/cucumber-rails.git"
-  gem "cucumber"#,         :git => "git://github.com/aslakhellesoy/cucumber.git"
-  gem 'spork'
-  gem "launchy"
-  gem "ruby-debug"
+  #gem "cucumber-rails"#,   :git => "git://github.com/aslakhellesoy/cucumber-rails.git"
+  #gem "cucumber"#,         :git => "git://github.com/aslakhellesoy/cucumber.git"
+  #gem 'spork'
+  #gem "launchy"
+  gem "ruby-debug19"
 end

@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
   has_many :properties,          :through => :product_properties
   
   has_many :variants
+  accepts_nested_attributes_for :variants
   accepts_nested_attributes_for :product_properties, :reject_if => proc { |attributes| attributes['description'].blank? }
   
   validates :shipping_category_id,  :presence => true

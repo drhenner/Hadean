@@ -1,5 +1,8 @@
 class PhoneType < ActiveRecord::Base
   has_many :phones
   
-  valiates :presence => true
+  validates :name, :presence => true
+  
+  NAMES = ['Cell', 'Home', 'Work', 'Other']
+  
 end

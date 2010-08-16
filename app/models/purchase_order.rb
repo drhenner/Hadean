@@ -67,11 +67,12 @@ class PurchaseOrder < ActiveRecord::Base
     supplier.name rescue 'N/A'
   end
   
-  def self.admin_grid(params = {}, grid = PurchaseOrder.includes(:supplier))
+  def self.admin_grid(params = {})
     
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
     
+    grid = PurchaseOrder.includes(:supplier)
     grid.where("suppliers.name = ?",                  params[:name])            if params[:name].present?
     grid.where("purchase_orders.invoice_number = ?",  params[:invoice_number])  if params[:invoice_number].present?
     grid.where("purchase_orders.tracking_number = ?", params[:tracking_number]) if params[:tracking_number].present?
@@ -82,8 +83,18 @@ class PurchaseOrder < ActiveRecord::Base
   end
   
   def self.receiving_admin_grid(params = {})
-    grid = PurchaseOrder.includes(:supplier).includes(:purchase_order_variants)
-    grid.where(['purchase_orders.state != ?', PurchaseOrder::RECEIVED])
-    PurchaseOrder.admin_grid(params = {}, grid)
+    
+    params[:page] ||= 1
+    params[:rows] ||= SETTINGS[:admin_grid_rows]
+    
+    grid = PurchaseOrder.where(['purchase_orders.state != ?', PurchaseOrder::RECEIVED])#.where("suppliers.name = ?", params[:name]) 
+    grid.where("suppliers.name = ?",                  params[:name])            #if params[:name].present?
+    grid.where("purchase_orders.invoice_number = ?",  params[:invoice_number])  if params[:invoice_number].present?
+    grid.where("purchase_orders.tracking_number = ?", params[:tracking_number]) if params[:tracking_number].present?
+    
+    grid.order("#{params[:sidx]} #{params[:sord]}") 
+    grid.limit(params[:rows])
+    grid.includes([:supplier, :purchase_order_variants]).paginate({:page => params[:page]})
+    
   end
 end

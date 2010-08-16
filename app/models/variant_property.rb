@@ -7,4 +7,8 @@ class VariantProperty < ActiveRecord::Base
   validates :property_id,  :presence => true
   validates :description,  :presence => true
 
+
+  def property_name 
+    property.identifing_name
+  end
 end

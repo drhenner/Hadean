@@ -1,0 +1,19 @@
+
+<fieldset id="admin-product-inventories" class='span-12'>
+  <legend>Inventory</legend>
+  <div>Count on Hand</div>
+  <div id="variant_inventories" class='span-12 last'>
+    <% @product.variants.each do |variant| %>
+      <div  id='variant_<%= variant.id %>' 
+            class="variant_form left span-12 last">
+        <%= form.fields_for :variants, 
+                            variant do |variant_inventory_form|%>
+          <div class='span-10 '> 
+            <%= variant.name_with_sku %>: <%= variant_inventory_form.text_field  :count_on_hand, :class => 'span-2' %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</fieldset>

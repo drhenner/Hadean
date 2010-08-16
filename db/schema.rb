@@ -45,10 +45,6 @@ ActiveRecord::Schema.define(:version => 20100814213510) do
     t.string "abbreviation", :limit => 5
   end
 
-  create_table "phone_priorities", :force => true do |t|
-    t.string "name"
-  end
-
   create_table "phone_types", :force => true do |t|
     t.string "name", :null => false
   end
@@ -73,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20100814213510) do
   create_table "product_types", :force => true do |t|
     t.string  "name"
     t.integer "product_id"
+    t.integer "parent_id"
   end
 
   create_table "products", :force => true do |t|
