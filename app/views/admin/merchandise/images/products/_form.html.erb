@@ -1,6 +1,23 @@
+<% content_for :head do -%>
+  <%= javascript_include_tag 'application' %>
+<% end %>
+
+
+<% if @product.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this purchase_order from being saved:</h2>
+
+    <ul>
+    <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 
 <fieldset id="admin-product-images" class='span-12'>
-
+  <legend>Images</legend>
   
   <div id="product_images" class='span-12 last'>
     <% @product.images.each do |image| %>

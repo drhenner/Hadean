@@ -1,4 +1,10 @@
-<p class='field'>
-  Caption:  <%= image_form.text_field    :caption %><br/>
-  Photo:    <%= image_form.file_field    :photo %>
-</p>
+
+<fieldset id="admin-product-images" class='span-11 <%= image_form.object.new_record? ? 'new_fields' : 'fields' %>  '>
+  <p class='field'>
+    <div style='float:right;'>
+      <%= remove_child_link('remove', image_form) %>
+    </div>
+    Caption:  <%= image_form.text_field    :caption %><br/>
+    Photo:    <%= image_form.file_field    :photo %>
+  </p>
+</fieldset>
