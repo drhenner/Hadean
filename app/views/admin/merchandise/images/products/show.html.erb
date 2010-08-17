@@ -1,0 +1,5 @@
+<h1><%= @product.name %> Images</h1>
+
+<% @product.images do |image| %>
+  <%= image.attachment_file_name %><br/>
+<% end %>

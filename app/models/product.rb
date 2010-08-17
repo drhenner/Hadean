@@ -7,21 +7,27 @@ class Product < ActiveRecord::Base
   has_many :properties,          :through => :product_properties
   
   has_many :variants
+  has_many :images, :as         => :imageable,
+                    :order      => :position,
+                    :dependent  => :destroy
+
   accepts_nested_attributes_for :variants
   accepts_nested_attributes_for :product_properties, :reject_if => proc { |attributes| attributes['description'].blank? }
+
+  accepts_nested_attributes_for :images, :reject_if => lambda { |t| t['image'].nil? }
   
   validates :shipping_category_id,  :presence => true
   #validates :tax_category_id,      :presence => true
   validates :product_type_id,       :presence => true
   validates :prototype_id,          :presence => true
-  
+
   def self.admin_grid(params = {})
-    
+
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
-    
+
     grid = Product#paginate({:page => params[:page]})
-    
+
     #grid.includes(:variants)
     grid.where("products.name = ?",                 params[:name])                  if params[:name].present?
     grid.where("products.product_type_id = ?",      params[:product_type_id])       if params[:product_type_id].present?

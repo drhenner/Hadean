@@ -28,6 +28,15 @@ class Variant < ActiveRecord::Base
     [product_name, sku].compact.join(': ')
   end
   
+  def qty_to_add
+    0
+  end
+  
+  def qty_to_add=(num)
+    ###  TODO this method needs a history of who did what
+    self.count_on_hand = self.count_on_hand + num.to_i
+  end
+  
   def self.admin_grid(product, params = {})
     
     params[:page] ||= 1

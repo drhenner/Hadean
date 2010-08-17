@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100814213510) do
+ActiveRecord::Schema.define(:version => 20100817032428) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -45,6 +45,21 @@ ActiveRecord::Schema.define(:version => 20100814213510) do
     t.string "abbreviation", :limit => 5
   end
 
+  create_table "images", :force => true do |t|
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.integer  "image_height"
+    t.integer  "image_width"
+    t.integer  "position"
+    t.string   "caption"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "updated_at"
+    t.datetime "created_at"
+  end
+
   create_table "phone_types", :force => true do |t|
     t.string "name", :null => false
   end
@@ -69,7 +84,6 @@ ActiveRecord::Schema.define(:version => 20100814213510) do
   create_table "product_types", :force => true do |t|
     t.string  "name"
     t.integer "product_id"
-    t.integer "parent_id"
   end
 
   create_table "products", :force => true do |t|
@@ -216,10 +230,10 @@ ActiveRecord::Schema.define(:version => 20100814213510) do
     t.decimal  "price",                       :precision => 8, :scale => 2, :default => 0.0,   :null => false
     t.decimal  "cost",                        :precision => 8, :scale => 2, :default => 0.0,   :null => false
     t.datetime "deleted_at"
-    t.boolean  "master",                                                    :default => false
-    t.integer  "count_on_hand"
-    t.integer  "count_pending_to_customer"
-    t.integer  "count_pending_from_supplier"
+    t.boolean  "master",                                                    :default => false, :null => false
+    t.integer  "count_on_hand",                                             :default => 0,     :null => false
+    t.integer  "count_pending_to_customer",                                 :default => 0,     :null => false
+    t.integer  "count_pending_from_supplier",                               :default => 0,     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,11 @@
 Hadean::Application.routes.draw do |map|
 
+  get "images/new"
+
+  get "images/edit"
+
+  get "images/show"
+
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
   resources :admins
@@ -23,6 +29,9 @@ Hadean::Application.routes.draw do |map|
     end
     
     namespace :merchandise do
+      namespace :images do
+        resources :products
+      end
       resources :properties
       resources :prototypes
       resources :product_types

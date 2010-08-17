@@ -4,28 +4,30 @@ source 'http://rubygems.org'
 #gem 'rails', :git => 'git://github.com/rails/rails.git'
 #gem 'rails', '3.0.0.beta4'
 gem 'rails', '3.0.0.rc'
-gem "mysql"
 
-#gem 'devise', '1.1.rc1'
-gem 'cancan'#, '1.1'
-gem 'authlogic', "2.1.5"
-gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
-gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
 gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
-gem "friendly_id", "~> 3.0"
-gem 'paperclip'
-gem 'prawn'
-gem 'mysql'
-gem 'state_machine'
-gem 'ssl_requirement'
-#gem 'rmagick'
-gem 'rmagick',    :require => 'RMagick'
-#gem 'declarative_authorization'
-
-gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
+gem 'authlogic', "2.1.5"
+gem 'cancan'#, '1.3.2'
 gem 'compass', "0.10.4.pre.4" #"0.10.1"#, "0.10.1"#, "0.10.0.rc6" #0.10.4.pre.4
 
+#gem 'declarative_authorization'
+#gem 'devise', '1.1.rc1'
+
 gem 'fancy-buttons'
+gem "friendly_id", "~> 3.0"
+gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
+gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
+
+gem 'mysql'
+#gem 'ruby-mysql'
+#gem "nifty-generators"
+gem 'paperclip'
+gem 'prawn'
+
+gem 'rmagick',    :require => 'RMagick'
+gem 'ssl_requirement'
+gem 'state_machine'
+gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
 
 group :development do 
   gem 'awesome_print'
