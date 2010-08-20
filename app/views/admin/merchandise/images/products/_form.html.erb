@@ -19,10 +19,10 @@
 <fieldset id="admin-product-images" class='span-12'>
   <legend>Images</legend>
   
-  <div id="product_images" class='span-12 last'>
+  <div id="product_images" class='span-16'>
     <% @product.images.each do |image| %>
       <div  id='image_<%= image.id %>' 
-            class="variant_form left span-12 last">
+            class="variant_form left span-16 last">
         <%= form.fields_for :images, image do |image_form|%>
           <%= render :partial => 'image', :locals => {:image_form => image_form } %>
         <% end %>

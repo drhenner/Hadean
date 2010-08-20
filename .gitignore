@@ -13,4 +13,5 @@ log/*
 nbproject
 .DS_Store
 *.swp
-
+public/assets/**/*
+public/assets/*

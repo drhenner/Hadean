@@ -7,3 +7,17 @@ SETTINGS = {
   :use_foreign_keys => false
 }
 
+=begin
+#Paperclip.options[:image_magick_path] = '/opt/local/bin'
+if RAILS_ENV == "development" 
+  
+  Paperclip.options[:command_path] = "DYLD_LIBRARY_PATH='/Users/davidhenner/ImageMagick-6.6.3/lib' /Users/davidhenner/ImageMagick-6.6.3/bin"
+
+  #Paperclip.options[:command_path] = '/Users/davidhenner/ImageMagick-6.6.3/bin'
+  #Paperclip.options[:command_path] = '/usr/local/bin'
+  ###  UNCOMMENT IF USING MACPORTS
+  #Paperclip.options[:command_path] = '/opt/local/bin'
+else
+  Paperclip.options[:command_path] = '/usr/bin'
+end
+=end

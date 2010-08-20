@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :variants
   accepts_nested_attributes_for :product_properties, :reject_if => proc { |attributes| attributes['description'].blank? }
 
-  accepts_nested_attributes_for :images, :reject_if => lambda { |t| t['image'].nil? }
+  accepts_nested_attributes_for :images, :reject_if => lambda { |t| t['photo'].nil? }
   
   validates :shipping_category_id,  :presence => true
   #validates :tax_category_id,      :presence => true
