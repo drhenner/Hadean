@@ -22,7 +22,9 @@ class Address < ActiveRecord::Base
     Address.transaction do
       if params[:default] && params[:default] != '0'
         Address.update_all(["addresses.default = ?", false], 
-                            ["addresses.addressable_id = ? AND addresses.addressable_type = ? ", object.id, object.class.to_s]) if object
+                            ["addresses.addressable_id = ? AND 
+                              addresses.address_type_id = ? AND
+                              addresses.addressable_type = ? ", object.id, object.address_type_id, object.class.to_s]) if object
         self.default = true
       end
       self.addressable = object
