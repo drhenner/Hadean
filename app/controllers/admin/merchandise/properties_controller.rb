@@ -1,4 +1,4 @@
-class Admin::Merchandise::PropertiesController < ApplicationController
+class Admin::Merchandise::PropertiesController < Admin::BaseController
   respond_to :html, :json
   def index
     @properties = Property.admin_grid(params)

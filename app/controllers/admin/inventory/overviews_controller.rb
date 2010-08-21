@@ -1,4 +1,4 @@
-class Admin::Inventory::OverviewsController < ApplicationController
+class Admin::Inventory::OverviewsController < Admin::BaseController
   
   def index
     

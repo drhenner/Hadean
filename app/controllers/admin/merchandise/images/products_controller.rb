@@ -1,4 +1,4 @@
-class Admin::Merchandise::Images::ProductsController < ApplicationController
+class Admin::Merchandise::Images::ProductsController < Admin::BaseController
   
   def edit
     @product  = Product.includes(:images).find(params[:id])

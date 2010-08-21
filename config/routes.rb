@@ -1,10 +1,7 @@
 Hadean::Application.routes.draw do |map|
 
-  get "images/new"
-
-  get "images/edit"
-
-  get "images/show"
+  resources :cart_items
+  resources :wish_items
 
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }

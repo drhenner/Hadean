@@ -1,4 +1,5 @@
-class Admin::Merchandise::PrototypesController < ApplicationController
+class Admin::Merchandise::PrototypesController < Admin::BaseController
+  
   respond_to :html, :json
   def index
     @prototypes = Prototype.admin_grid(params)

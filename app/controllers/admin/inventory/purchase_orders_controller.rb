@@ -1,4 +1,4 @@
-class Admin::Inventory::PurchaseOrdersController < ApplicationController
+class Admin::Inventory::PurchaseOrdersController < Admin::BaseController
   # GET /purchase_orders
   # GET /purchase_orders.xml
   def index

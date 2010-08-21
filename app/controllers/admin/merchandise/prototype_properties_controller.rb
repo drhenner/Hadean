@@ -1,4 +1,4 @@
-class Admin::Merchandise::PrototypePropertiesController < ApplicationController
+class Admin::Merchandise::PrototypePropertiesController < Admin::BaseController
   
   respond_to :html, :json
 

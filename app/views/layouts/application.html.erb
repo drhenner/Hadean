@@ -35,8 +35,27 @@
         </div>
       </div>
     </div>
-    <hr />
-  
+    <hr>
+    <div id='header_bar'>
+      <div id='search_bar' class='alt'>
+        <div class='' style='margin-left:5px; color:#EEE;font-weight:bolder;font-size:large;'>
+          Search: 
+          <%= text_field_tag 'search', nil , :class => 'span-11 inline-block' %> 
+          <%= link_to 'Go', '/', :class => 'button spade inline-block' %>
+        </div>
+        
+      </div>
+      <div id='cart_button_bar'>
+        <%= link_to "Cart", cart_items_path, 
+                            :class  => "button yellow", 
+                            :id     => "cart_items_button" %>
+      </div>
+      <div id='wish_button_bar'>
+        <%= link_to "Wish", wish_items_path, 
+                            :class  => "button heart", 
+                            :id     => "cart_items_button" %>
+      </div>
+    </div>
     <%= yield %>
   </div>
   

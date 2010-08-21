@@ -1,4 +1,4 @@
-class Admin::Merchandise::VariantsController < ApplicationController
+class Admin::Merchandise::VariantsController < Admin::BaseController
   
   respond_to :html, :json
   def index

@@ -1,4 +1,4 @@
-class Admin::Generic::ShippingCategoriesController < ApplicationController
+class Admin::Generic::ShippingCategoriesController < Admin::BaseController
   def index
     @shipping_categories = ShippingCategory.all
   end

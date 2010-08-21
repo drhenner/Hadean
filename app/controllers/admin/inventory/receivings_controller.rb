@@ -1,4 +1,4 @@
-class Admin::Inventory::ReceivingsController < ApplicationController
+class Admin::Inventory::ReceivingsController < Admin::BaseController
   def index
     # by default find all POs that are not received
     

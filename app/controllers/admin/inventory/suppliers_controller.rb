@@ -1,4 +1,4 @@
-class Admin::Inventory::SuppliersController < ApplicationController
+class Admin::Inventory::SuppliersController < Admin::BaseController
   def index
     @suppliers = Supplier.admin_grid(params)
     respond_to do |format|

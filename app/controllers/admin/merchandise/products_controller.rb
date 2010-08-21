@@ -1,4 +1,4 @@
-class Admin::Merchandise::ProductsController < ApplicationController
+class Admin::Merchandise::ProductsController < Admin::BaseController
   respond_to :html, :json
   def index
     @products = Product.admin_grid(params)

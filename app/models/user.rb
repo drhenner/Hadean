@@ -32,7 +32,12 @@ class User < ActiveRecord::Base
   has_many    :addresses,                       :dependent => :destroy, 
                                                 :as => :addressable
                                                 
-  has_one     :default_address,                 :conditions => ['addresses.default = ?', true], 
+  has_one     :default_billing_address,         :conditions => ['addresses.default = ? AND
+                                                                addresses.address_type_id = ?', true, AddressType::BILLING_ID], 
+                                                :as => :addressable
+                                                
+  has_one     :default_shipping_address,        :conditions => ['addresses.default = ? AND
+                                                                addresses.address_type_id = ?', true, AddressType::SHIPPING_ID], 
                                                 :as => :addressable
                                                 
   has_many    :user_roles,                      :dependent => :destroy
