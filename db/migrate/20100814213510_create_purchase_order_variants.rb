@@ -8,6 +8,9 @@ class CreatePurchaseOrderVariants < ActiveRecord::Migration
       t.boolean :is_received,       :default => false
       t.timestamps
     end
+    
+    add_index :purchase_order_variants, :purchase_order_id
+    add_index :purchase_order_variants, :variant_id
   end
 
   def self.down

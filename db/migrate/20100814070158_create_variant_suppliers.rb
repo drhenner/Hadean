@@ -10,6 +10,9 @@ class CreateVariantSuppliers < ActiveRecord::Migration
       t.boolean     :active,                              :default => true
       t.timestamps
     end
+    
+    add_index :variant_suppliers, :variant_id
+    add_index :variant_suppliers, :supplier_id
   end
 
   def self.down

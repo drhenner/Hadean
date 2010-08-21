@@ -12,6 +12,9 @@ class CreatePurchaseOrders < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :purchase_orders, :supplier_id
+    add_index :purchase_orders, :tracking_number
   end
 
   def self.down

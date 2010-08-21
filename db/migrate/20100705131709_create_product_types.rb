@@ -6,6 +6,8 @@ class CreateProductTypes < ActiveRecord::Migration
       t.integer   :parent_id
       t.boolean   :active, :default => true
     end
+    
+    add_index :product_types, :parent_id
   end
 
   def self.down

@@ -8,6 +8,8 @@ class CreatePhones < ActiveRecord::Migration
       t.boolean  "primary",         :default => false
       t.timestamps
     end
+    
+    add_index :phones, :phone_type_id
   end
 
   def self.down

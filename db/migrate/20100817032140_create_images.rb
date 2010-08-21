@@ -8,6 +8,8 @@ class CreateImages < ActiveRecord::Migration
       t.integer :position
       t.string  :caption
     end
+    add_index :images, :imageable_id
+    add_index :images, :imageable_type
   end
 
   def self.down

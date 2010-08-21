@@ -11,9 +11,14 @@ class CreateProducts < ActiveRecord::Migration
       t.datetime          :deleted_at
       t.string            :meta_keywords
       t.string            :meta_description
+      t.boolean           :featured,          :default => false
       #t.integer           :count_on_hand
       t.timestamps
     end
+      add_index :products, :name
+      add_index :products, :tax_category_id
+      add_index :products, :product_type_id
+      add_index :products, :prototype_id
   end
 
   def self.down

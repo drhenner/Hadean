@@ -5,6 +5,10 @@ class CreateVariantProperties < ActiveRecord::Migration
       t.integer       :property_id, :null => false
       t.string        :description, :null => false
     end
+    
+    add_index :variant_properties, :variant_id
+    add_index :variant_properties, :property_id
+    
     if SETTINGS[:use_foreign_keys]
       execute "alter table variant_properties add constraint fk_variant_properties_variants foreign key (variant_id) references variants(id)"
       execute "alter table variant_properties add constraint fk_variant_properties_properties foreign key (property_id) references properties(id)"
