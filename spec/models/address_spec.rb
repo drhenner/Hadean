@@ -18,8 +18,8 @@ end
 describe Address, "#save_default_address(object, params)" do
   
   before(:each) do
-    @user     = Factory.build(:user)
-    @address  = Factory.build(:address)
+    @user     = Factory.create(:user)
+    @address  = Factory.create(:address)
     @params   = @address.attributes
     @params[:default] = '1'
   end
@@ -31,8 +31,10 @@ describe Address, "#save_default_address(object, params)" do
   
   it "should only the last default address should be the default address" do
     
-    @address2   = Factory.build(:address)
-    @params2    = Factory.build(:address).attributes
+    @address2   = Factory.create(:address)
+    @params2    = Factory.create(:address).attributes
+    puts @address2.address_type_id.to_s
+    puts @address2.address_type_id.to_s
     @params2[:default] = '1'
     @address2.save_default_address(@user, @params2)
     @address.save_default_address(@user, @params)

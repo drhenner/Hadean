@@ -2,7 +2,7 @@ class Address < ActiveRecord::Base
   belongs_to  :state
   belongs_to  :address_type
   belongs_to  :addressable, :polymorphic => true
-  
+  has_many     :phones, :as => :phoneable
   
   validates :first_name,  :presence => true,
                           :format   => { :with => CustomValidators::Names.name_validator }
@@ -14,7 +14,7 @@ class Address < ActiveRecord::Base
   validates :state,       :presence => true,  :if => Proc.new { |address| address.state_name.blank?  }
   validates :state_name,  :presence => true,  :if => Proc.new { |address| address.state_id.blank?   }
   #validates :zip_code,   :presence => true
-  validates :phone_id,    :presence => true
+  #validates :phone_id,    :presence => true
   
   #accepts_nested_attributes_for :phones
   
@@ -24,7 +24,7 @@ class Address < ActiveRecord::Base
         Address.update_all(["addresses.default = ?", false], 
                             ["addresses.addressable_id = ? AND 
                               addresses.address_type_id = ? AND
-                              addresses.addressable_type = ? ", object.id, object.address_type_id, object.class.to_s]) if object
+                              addresses.addressable_type = ? ", object.id, self.address_type_id, object.class.to_s]) if object
         self.default = true
       end
       self.addressable = object

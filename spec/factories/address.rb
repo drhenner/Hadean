@@ -12,4 +12,9 @@
 Factory.define :address do |u|
   u.first_name 'John'
   u.last_name  'Doe'
+  u.address1  '112 south park street'
+  u.city       'Fredville'
+  u.state     { State.first }
+  u.zip_code  '54322'
+  u.address_type { AddressType.first}
 end

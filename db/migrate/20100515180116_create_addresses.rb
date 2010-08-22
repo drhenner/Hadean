@@ -13,7 +13,7 @@ class CreateAddresses < ActiveRecord::Migration
       t.string   "state_name"
       t.string   "zip_code",          :null => false
       #t.integer  "country_id"
-      t.string   "phone_id"
+      t.integer   "phone_id"
       t.string   "alternative_phone"
       t.boolean  "default",             :default => false
       t.timestamps

@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
     config.validate_email_field = true;
     
     # Remove unecessary field validation given by Authlogic.
-    config.validate_password_field = false;
+    #config.validate_password_field = false;
     
   end
   
