@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe PurchaseOrdersController do
+describe Admin::Inventory::PurchaseOrdersController do
   describe "routing" do
 
         it "recognizes and generates #index" do

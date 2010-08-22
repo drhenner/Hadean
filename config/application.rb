@@ -40,7 +40,7 @@ module Hadean
     #  g.stylesheets false 
     #  g.test_framework :rspec 
     #  g.fixture_replacement :mechanist
-    g.fixture_replacement :mechanist
+    #g.fixture_replacement :mechanist
       g.stylesheets false
       g.test_framework :rspec, :fixture => true, :view_specs => false
       g.fixture_replacement :factory_girl, :dir=>"spec/factories"

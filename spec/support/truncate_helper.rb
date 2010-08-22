@@ -1,7 +1,7 @@
 module Hadean
   module TruncateHelper
     
-    UNSEEDED_TABLES = ["users", "addresses", "registration_infos", "user_roles"]
+    UNSEEDED_TABLES = ["users", "addresses", "user_roles"]
     
     def truncate_all
       tables = ActiveRecord::Base.connection.tables

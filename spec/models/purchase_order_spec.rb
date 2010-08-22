@@ -6,7 +6,7 @@ end
 
 describe PurchaseOrder do
   before(:each) do
-    @purchase_order = PurchaseOrder.make
+    @purchase_order = Factory.build(:purchase_order)
   end
   
   it "should be valid with minimum attribues" do
@@ -16,7 +16,7 @@ end
 
   describe PurchaseOrder, ".display_received" do
     it "should return Yes when true" do
-      order = PurchaseOrder.make
+      order = Factory.build(:purchase_order)
       order.stub!(:is_received).and_return(true)
 
       order.display_received == "Yes"
@@ -25,7 +25,7 @@ end
 
   describe PurchaseOrder, ".display_received" do
     it "should return No when false" do
-      order = PurchaseOrder.make
+      order = Factory.build(:purchase_order)
       order.stub!(:is_received).and_return(false)
 
       order.display_received == "No"
@@ -34,7 +34,7 @@ end
   
   describe PurchaseOrder, ".display_estimated_arrival_on" do
     it "should return the correct name" do
-      order = PurchaseOrder.make
+      order = Factory.build(:purchase_order)
       now = Time.now
       order.stub!(:estimated_arrival_on).and_return(now.to_date)
 
@@ -44,8 +44,8 @@ end
   
   describe PurchaseOrder, ".supplier_name" do
     it "should return the correct name" do
-      order = PurchaseOrder.make
-      supplier = Supplier.make
+      order = Factory.build(:purchase_order)
+      supplier = Factory.build(:supplier)
       supplier.stub!(:name).and_return("Supplier Test")
       order.stub!(:supplier).and_return(supplier)
 
