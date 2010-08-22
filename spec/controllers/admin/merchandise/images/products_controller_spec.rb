@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::Merchandise::Images::ProductsController do
@@ -24,3 +25,4 @@ describe Admin::Merchandise::Images::ProductsController do
   end
 
 end
+=end

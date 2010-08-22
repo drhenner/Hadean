@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::Inventory::SuppliersController do
@@ -31,3 +32,4 @@ describe Admin::Inventory::SuppliersController do
   end
 
 end
+=end

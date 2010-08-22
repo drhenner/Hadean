@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe CartItemsController do
@@ -123,3 +124,4 @@ describe CartItemsController do
   end
 
 end
+=end

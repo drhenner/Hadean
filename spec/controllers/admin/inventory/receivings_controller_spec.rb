@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::Inventory::ReceivingsController do
@@ -45,3 +46,4 @@ describe Admin::Inventory::ReceivingsController do
   end
 
 end
+=end

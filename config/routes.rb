@@ -1,4 +1,4 @@
-Hadean::Application.routes.draw do |map|
+Hadean::Application.routes.draw do # |map|
 
   resources :cart_items
   resources :wish_items

@@ -1,3 +1,4 @@
+=begin
 require 'machinist/active_record'
 require 'sham'
 require 'faker'
@@ -31,3 +32,4 @@ def make_admin_user(attributes = {})
   user
 end
 
+=end

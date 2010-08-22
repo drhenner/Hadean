@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::Inventory::OverviewsController do
@@ -24,3 +25,4 @@ describe Admin::Inventory::OverviewsController do
   end
 
 end
+=end

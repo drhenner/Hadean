@@ -16,3 +16,4 @@ nbproject
 *.swp
 public/assets/**/*
 public/assets/*
+.rvmrc

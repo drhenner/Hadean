@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100817032428) do
+ActiveRecord::Schema.define(:version => 20100821035624) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -40,6 +40,19 @@ ActiveRecord::Schema.define(:version => 20100817032428) do
     t.string "name"
   end
 
+  create_table "carts", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "variant_id"
+    t.boolean  "active"
+    t.integer  "item_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "carts", ["item_type_id"], :name => "index_carts_on_item_type_id"
+  add_index "carts", ["user_id"], :name => "index_carts_on_user_id"
+  add_index "carts", ["variant_id"], :name => "index_carts_on_variant_id"
+
   create_table "countries", :force => true do |t|
     t.string "name"
     t.string "abbreviation", :limit => 5
@@ -58,6 +71,12 @@ ActiveRecord::Schema.define(:version => 20100817032428) do
     t.datetime "photo_updated_at"
     t.datetime "updated_at"
     t.datetime "created_at"
+  end
+
+  create_table "item_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "phone_types", :force => true do |t|
@@ -99,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20100817032428) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "prototype_id"
+    t.boolean  "featured",             :default => false
   end
 
   create_table "properties", :force => true do |t|

@@ -36,11 +36,15 @@ module Hadean
     #   g.template_engine :erb
     #   g.test_framework  :test_unit, :fixture => true
     # end
-    #config.generators do |g|
+    config.generators do |g|
     #  g.stylesheets false 
     #  g.test_framework :rspec 
     #  g.fixture_replacement :mechanist
-    #end
+    g.fixture_replacement :mechanist
+      g.stylesheets false
+      g.test_framework :rspec, :fixture => true, :view_specs => false
+      g.fixture_replacement :factory_girl, :dir=>"spec/factories"
+    end
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

@@ -21,6 +21,12 @@ class Product < ActiveRecord::Base
   validates :product_type_id,       :presence => true
   validates :prototype_id,          :presence => true
 
+
+  def self.featured
+    product = Product.where("products.featured = ? ", true).includes(:images).first
+    product ? product : Product.includes(:images).first
+  end
+  
   def self.admin_grid(params = {})
 
     params[:page] ||= 1

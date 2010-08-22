@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::Generic::ShippingCategoriesController do
@@ -24,3 +25,4 @@ describe Admin::Generic::ShippingCategoriesController do
   end
 
 end
+=end

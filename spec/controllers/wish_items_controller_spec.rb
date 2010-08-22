@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe WishItemsController do
@@ -24,3 +25,4 @@ describe WishItemsController do
   end
 
 end
+=end

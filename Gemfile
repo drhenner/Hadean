@@ -36,11 +36,12 @@ group :development do
 end
 
 group :test do
+  gem 'factory_girl_rails'
   gem "rspec", ">=  2.0.0.beta.19"
   gem "rspec-rails", ">= 2.0.0.beta.19"
   #gem "rspec-rails",      '>= 2.0.0.beta.10'   #">= 2.0.0.beta"
-  #gem "machinist",        :git => "git://github.com/notahat/machinist.git"
-  gem 'machinist', '2.0.0.head', :git => 'git://github.com/notahat/machinist.git', :branch => 'machinist2'
+  #gem "machinist",      '>= 2.0.0.beta1'  #:git => "git://github.com/notahat/machinist.git"
+  #gem 'machinist', '2.0.0.head', :git => 'git://github.com/notahat/machinist.git', :branch => 'machinist2'
   gem "faker"
   gem "ZenTest"
   gem "autotest"
@@ -48,14 +49,17 @@ group :test do
   gem "autotest-fsevent"
   gem "autotest-growl"
   gem "redgreen"
+  gem "test-unit", "1.2.3"# This is needed to redgreen and ruby 1.9
   
-  #gem "capybara"
-  #gem "capybara-envjs"
+  gem "webrat"
+  gem "capybara"
+  gem "capybara-envjs"
   
   gem "database_cleaner"#, :git => 'git://github.com/bmabey/database_cleaner.git'
-  #gem "cucumber-rails"#,   :git => "git://github.com/aslakhellesoy/cucumber-rails.git"
-  #gem "cucumber"#,         :git => "git://github.com/aslakhellesoy/cucumber.git"
-  #gem 'spork'
-  #gem "launchy"
-  gem "ruby-debug19"
+  gem "cucumber"#,         :git => "git://github.com/aslakhellesoy/cucumber.git"
+  gem "cucumber-rails"#,   :git => "git://github.com/aslakhellesoy/cucumber-rails.git"
+  gem 'spork'
+  gem "launchy"
+  #gem "ruby-debug19"
+  gem "ruby-debug"
 end

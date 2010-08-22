@@ -1,14 +1,16 @@
 # This file is copied to ~/spec when you run 'ruby script/generate rspec'
 # from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
+require 'rspec'
+#require 'rspec/rails'
+#require 'generators_spec'
+
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(Rails)
-require 'rspec/rails'
 
 
 # Require for machinist
-require File.expand_path(File.dirname(__FILE__) + "/blueprint.rb")
-#require File.join(File.dirname(__FILE__), 'blueprint')
-Dir["#{File.dirname(__FILE__)}/blueprints/*.rb"].each {|f| require f}
+#require File.expand_path(File.dirname(__FILE__) + "/blueprint.rb")
+#Dir["#{File.dirname(__FILE__)}/blueprints/*.rb"].each {|f| require f}
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -46,6 +48,9 @@ Rspec.configure do |config|
   # If you'd prefer not to run each of your examples within a transaction,
   # uncomment the following line.
   # config.use_transactional_examples = false
+  
+  config.logger = :stdout
+  config.include ControllerMacros
 end
 
 #Rspec::Runner.configure do |config|

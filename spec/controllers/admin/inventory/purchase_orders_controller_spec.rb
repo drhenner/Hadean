@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::Inventory::PurchaseOrdersController do
@@ -123,3 +124,4 @@ describe Admin::Inventory::PurchaseOrdersController do
   end
 
 end
+=end

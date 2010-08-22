@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe Admin::UsersController do
@@ -22,3 +23,4 @@ describe Admin::UsersController do
     end
   #end
 end
+=end
