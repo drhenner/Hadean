@@ -2,12 +2,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
   
-  helper_method :current_user, :current_user_id
+  helper_method :current_user, :current_user_id, :most_likely_user, :random_user
   
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Access denied."
     redirect_to root_url
   end
+  
+  
+  private
   
   ## The most likely user can be determined off the session / cookies or for now lets grab a random user
   #   Change this method for showing products that the end user will more than likely like.
@@ -22,8 +25,7 @@ class ApplicationController < ActionController::Base
     @random_user = cookies[:hadean_user_id] ? User.find(cookies[:hadean_user_id]) : nil
   end
   
-  private
-  
+  ###  Authlogic helper methods
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find

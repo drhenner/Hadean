@@ -1,19 +1,5 @@
 module ApplicationHelper
   
-  ## The most likely user can be determined off the session / cookies or for now lets grab a random user
-  #   Change this method for showing products that the end user will more than likely like.
-  #   
-  def most_likely_user
-    current_user ? current_user : random_user
-  end
-  
-  ## TODO cookie[:hadean_user_id] value needs to be encrypted
-  def random_user
-    return @random_user if defined?(@random_user)
-    @random_user = cookies[:hadean_user_id] ? User.find(cookies[:hadean_user_id]) : nil
-  end
-  
-  
   ### The next three helpers are great to use to add and remove nested attributes in forms.
   #  LOK AT THIS WEBPAGE FOR REFERENCE
   ## http://openmonkey.com/articles/2009/10/complex-nested-forms-with-rails-unobtrusive-jquery
