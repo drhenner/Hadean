@@ -23,6 +23,8 @@ gem 'paperclip'
 gem 'prawn'
 
 gem 'rmagick',    :require => 'RMagick'
+gem 'sunspot'
+gem 'sunspot_rails' 
 gem 'ssl_requirement'
 gem 'state_machine'
 gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"

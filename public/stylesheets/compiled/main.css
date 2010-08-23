@@ -216,7 +216,12 @@
   *vertical-align: auto;
 }
 
-/* line 165, ../../../app/stylesheets/main.scss */
+/* line 166, ../../../app/stylesheets/main.scss */
+#content_wrapper {
+  padding-top: 4px;
+}
+
+/* line 171, ../../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }

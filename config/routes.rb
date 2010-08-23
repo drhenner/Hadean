@@ -1,5 +1,7 @@
 Hadean::Application.routes.draw do # |map|
 
+
+  resources :products
   resources :cart_items
   resources :wish_items
 

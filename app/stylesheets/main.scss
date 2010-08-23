@@ -161,6 +161,12 @@
   @include inline-block;
 }
 
+// Layout for apllication
+
+#content_wrapper {
+  padding-top: 4px;
+}
+
 // Main welcome page
 #right_side_panel {
   text-align: left;
