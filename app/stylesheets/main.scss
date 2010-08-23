@@ -11,6 +11,15 @@
   
 }
 
+@mixin left-text($buffer: 4px) {
+  text-align: left;
+  padding-left: $buffer;
+}
+
+@mixin padding($pad: 5px) {
+  padding: $pad;
+}
+
 @mixin admin-page-wrapper($width: 24) {
   @include span($width);
   @include last;
@@ -30,6 +39,26 @@
   p {
     @include span(10);
     }
+}
+
+.left-text {
+  text-align: left;
+}
+
+.left-text-4 {
+  @include left-text(4px);
+}
+
+.left-text-8 {
+  @include left-text(8px);
+}
+
+.padding-5 {
+  @include padding(5px);
+}
+
+.padding-10 {
+  @include padding(10px);
 }
 
 #admin-property-names {
@@ -132,3 +161,7 @@
   @include inline-block;
 }
 
+// Main welcome page
+#right_side_panel {
+  text-align: left;
+}

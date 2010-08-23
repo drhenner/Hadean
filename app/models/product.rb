@@ -24,7 +24,7 @@ class Product < ActiveRecord::Base
 
   def self.featured
     product = Product.where("products.featured = ? ", true).includes(:images).first
-    product ? product : Product.includes(:images).first
+    product ? product : Product.includes(:images).where(['products.deleted_at IS NULL']).first
   end
   
   def self.admin_grid(params = {})

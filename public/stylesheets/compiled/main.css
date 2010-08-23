@@ -8,27 +8,54 @@
   color: #EEE;
 }
 
-/* line 35, ../../../app/stylesheets/main.scss */
+/* line 44, ../../../app/stylesheets/main.scss */
+.left-text {
+  text-align: left;
+}
+
+/* line 48, ../../../app/stylesheets/main.scss */
+.left-text-4 {
+  text-align: left;
+  padding-left: 4px;
+}
+
+/* line 52, ../../../app/stylesheets/main.scss */
+.left-text-8 {
+  text-align: left;
+  padding-left: 8px;
+}
+
+/* line 56, ../../../app/stylesheets/main.scss */
+.padding-5 {
+  padding: 5px;
+}
+
+/* line 60, ../../../app/stylesheets/main.scss */
+.padding-10 {
+  padding: 10px;
+}
+
+/* line 64, ../../../app/stylesheets/main.scss */
 #admin-property-names {
   width: 390px;
 }
-/* line 30, ../../../app/stylesheets/main.scss */
+/* line 39, ../../../app/stylesheets/main.scss */
 #admin-property-names p {
   width: 390px;
 }
 
-/* line 41, ../../../app/stylesheets/main.scss */
+/* line 70, ../../../app/stylesheets/main.scss */
 #admin_properties_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 44, ../../../app/stylesheets/main.scss */
+/* line 73, ../../../app/stylesheets/main.scss */
 #admin_properties_grid_wrapper {
   width: 710px;
 }
 
-/* line 48, ../../../app/stylesheets/main.scss */
+/* line 77, ../../../app/stylesheets/main.scss */
 #admin_new_property_button {
   display: inline;
   float: left;
@@ -41,18 +68,18 @@
   overflow-x: hidden;
 }
 
-/* line 53, ../../../app/stylesheets/main.scss */
+/* line 82, ../../../app/stylesheets/main.scss */
 #admin_product_types_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 56, ../../../app/stylesheets/main.scss */
+/* line 85, ../../../app/stylesheets/main.scss */
 #admin_product_types_grid_wrapper {
   width: 710px;
 }
 
-/* line 60, ../../../app/stylesheets/main.scss */
+/* line 89, ../../../app/stylesheets/main.scss */
 #admin_new_product_type_button {
   display: inline;
   float: left;
@@ -65,27 +92,27 @@
   overflow-x: hidden;
 }
 
-/* line 65, ../../../app/stylesheets/main.scss */
+/* line 94, ../../../app/stylesheets/main.scss */
 #admin-product_type-names {
   width: 390px;
 }
-/* line 30, ../../../app/stylesheets/main.scss */
+/* line 39, ../../../app/stylesheets/main.scss */
 #admin-product_type-names p {
   width: 390px;
 }
 
-/* line 71, ../../../app/stylesheets/main.scss */
+/* line 100, ../../../app/stylesheets/main.scss */
 #admin_prototypes_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 74, ../../../app/stylesheets/main.scss */
+/* line 103, ../../../app/stylesheets/main.scss */
 #admin_prototypes_grid_wrapper {
   width: 710px;
 }
 
-/* line 77, ../../../app/stylesheets/main.scss */
+/* line 106, ../../../app/stylesheets/main.scss */
 #admin_new_prototype_type_button {
   display: inline;
   float: left;
@@ -98,29 +125,29 @@
   overflow-x: hidden;
 }
 
-/* line 80, ../../../app/stylesheets/main.scss */
+/* line 109, ../../../app/stylesheets/main.scss */
 #admin-prototype-names {
   width: 390px;
 }
-/* line 30, ../../../app/stylesheets/main.scss */
+/* line 39, ../../../app/stylesheets/main.scss */
 #admin-prototype-names p {
   width: 390px;
 }
 
-/* line 84, ../../../app/stylesheets/main.scss */
+/* line 113, ../../../app/stylesheets/main.scss */
 .property_form {
   display: inline;
   text-align: left;
 }
 
-/* line 88, ../../../app/stylesheets/main.scss */
+/* line 117, ../../../app/stylesheets/main.scss */
 .selectlist-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 94, ../../../app/stylesheets/main.scss */
+/* line 123, ../../../app/stylesheets/main.scss */
 .selectlist-item {
   background: white url(../images/cross-circle.png) no-repeat right center;
   border-left: solid 1px #eee;
@@ -132,13 +159,13 @@
   margin: 1px 0;
 }
 
-/* line 106, ../../../app/stylesheets/main.scss */
+/* line 135, ../../../app/stylesheets/main.scss */
 #admin-product-names {
   margin: 0  0  0.5em;
   padding: 0.3em;
 }
 
-/* line 113, ../../../app/stylesheets/main.scss */
+/* line 142, ../../../app/stylesheets/main.scss */
 #header_bar {
   width: 950px;
   display: -moz-inline-box;
@@ -151,7 +178,7 @@
   margin-right: 0;
 }
 
-/* line 120, ../../../app/stylesheets/main.scss */
+/* line 149, ../../../app/stylesheets/main.scss */
 #search_bar {
   width: 710px;
   display: inline;
@@ -165,7 +192,7 @@
   text-align: left;
 }
 
-/* line 126, ../../../app/stylesheets/main.scss */
+/* line 155, ../../../app/stylesheets/main.scss */
 #cart_items_button {
   display: inline;
   float: right;
@@ -177,7 +204,7 @@
   *vertical-align: auto;
 }
 
-/* line 130, ../../../app/stylesheets/main.scss */
+/* line 159, ../../../app/stylesheets/main.scss */
 #wish_items_button {
   display: inline;
   float: right;
@@ -187,4 +214,9 @@
   vertical-align: middle;
   *display: inline;
   *vertical-align: auto;
+}
+
+/* line 165, ../../../app/stylesheets/main.scss */
+#right_side_panel {
+  text-align: left;
 }

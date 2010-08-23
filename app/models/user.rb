@@ -69,6 +69,12 @@ class User < ActiveRecord::Base
     
   end
   
+  ##  This method will one day grow into the products a user most likly likes.  
+  #   Storing a list of product ids vs cron each night might be the most efficent mode for this method to work.
+  def might_be_interested_in_these_products
+    Product.limit(4).find
+  end
+  
   def registered_user?
     registered? || registered_with_credit?
   end

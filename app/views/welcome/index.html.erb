@@ -1,9 +1,28 @@
 <h1>Welcome</h1>
 <div id='content_wrapper'>
   <div id='featured_item' class='span-18'>
-    Place an item of a featured item  ... Pretty big
+    <div id='featured_item_details' class='float-left'>
+      <div id='featured_image' class='span-9 float-left'>
+        <%= link_to image_tag(@featured_product.images.first.photo.url(:product)) %>
+      </div>
+      <div id='featured_description' class='left-text-4'>
+        <%= raw @featured_product.description %>
+      </div>
+    </div>
+    
+    <div id='interesting_items' class='span-18'>
+      <% interesting_products = most_likely_user ? most_likely_user.might_be_interested_in_these_products : @best_selling_products %>
+      <% interesting_products.each_with_index do |product, i| %>
+        <div id='interesting_product_<%= i %>' class='left-text padding-5'>
+          <%= image_tag product.images.first.photo.url(:small) %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div id='right_side_panel first' class='span-6 last'>
-    Side panel area... 
+  
+  <div id='right_side_panel' class='span-6 last'>
+    <div id='right_side_panel_promo' class='span-6 last'>
+      Join our web site and get additional Savings....  (This should be an image) HJDHWBh c hjc wcbnsc  jnh nhdb db d jnbd hbdj dfh b!
+    </div>
   </div>
 </div>
