@@ -1,4 +1,8 @@
 
+<% content_for :head do -%>
+  <%= javascript_include_tag "shopping/cart" %>
+<% end %>
+
 <div id='product'>
   <h2><%= @product.name %> </h2>
   <div class='span-15 float-left'>
@@ -11,7 +15,14 @@
   <div class='span-9 float-left last'>
     <%= form_for @cart_item, shopping_cart_path(current_user) do |f| %>
       <%= f.hidden_field :variant_id %>
-      <%= image_tag('icons/add_to_shopping_cart_sm.png') %>
+      <%= image_tag('icons/add_to_shopping_cart_sm.png', :id => 'submit_add_to_cart', :class => 'add-to-cart') %>
     <% end %>
   </div>
 </div>
+
+
+<% content_for :below_body do -%>
+  <script>
+    Hadean.Utility.registerOnLoadHandler(Hadean.Cart.NewForm.initialize());
+  </script>
+<% end %>
