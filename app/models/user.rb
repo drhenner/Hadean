@@ -43,6 +43,21 @@ class User < ActiveRecord::Base
   has_many    :user_roles,                      :dependent => :destroy
   has_many    :roles,         :through => :user_roles
   
+  has_many    :cart_items,                      :dependent => :destroy
+  has_many    :shopping_cart_items,             :conditions => ['cart_items.active = ? AND
+                                                                cart_items.item_type_id = ?', true, ItemType::SHOPPING_CART_ID], 
+                                                :class_name => 'CartItem'
+                                                
+  has_many    :wish_list_items,                 :conditions => ['cart_items.active = ? AND
+                                                                 cart_items.item_type_id = ?', true, ItemType::WISH_LIST_ID], 
+                                                :class_name => 'CartItem'
+                                                
+  has_many    :purchased_items,                 :conditions => ['cart_items.active = ? AND
+                                                                 cart_items.item_type_id = ?', true, ItemType::PURCHASED_ID], 
+                                                :class_name => 'CartItem'
+                                                
+  has_many    :deleted_cart_items,              :conditions => ['cart_items.active = ?', false], :class_name => 'CartItem'
+  
   validates :first_name,  :presence => true, :if => :registered_user?,
                           :format   => { :with => CustomValidators::Names.name_validator }
   validates :last_name,   :presence => true, :if => :registered_user?,

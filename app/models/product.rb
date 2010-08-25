@@ -12,6 +12,14 @@ class Product < ActiveRecord::Base
                     :order      => :position,
                     :dependent  => :destroy
 
+  has_one :master_variant,
+    :class_name => 'Variant',
+    :conditions => ["variants.master = ? AND variants.deleted_at IS NULL", true]
+    
+  has_many :inactive_master_variants,
+    :class_name => 'Variant',
+    :conditions => ["variants.deleted_at IS NOT NULL AND variants.master = ? ", true]
+    
   accepts_nested_attributes_for :variants
   accepts_nested_attributes_for :product_properties, :reject_if => proc { |attributes| attributes['description'].blank? }
 
@@ -22,7 +30,14 @@ class Product < ActiveRecord::Base
   validates :product_type_id,       :presence => true
   validates :prototype_id,          :presence => true
 
+  def price
+    master_variant ? master_variant.price : last_master_variant.price
+  end
 
+  def last_master_variant
+    inactive_master_variants.last
+  end
+  
   def self.featured
     product = Product.where("products.featured = ? ", true).includes(:images).first
     product ? product : Product.includes(:images).where(['products.deleted_at IS NULL']).first

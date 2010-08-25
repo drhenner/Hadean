@@ -1,2 +1,17 @@
-<h2><%= @product.name %> </h2>
-<%= image_tag(@product.images.first.photo.url(:large)) %>
+
+<div id='product'>
+  <h2><%= @product.name %> </h2>
+  <div class='span-15 float-left'>
+    <div class='span-9 float-left'>
+      <%= image_tag(@product.images.first.photo.url(:product)) %><br/>
+      <%= number_to_currency @product.price %>
+    </div>
+    
+  </div>
+  <div class='span-9 float-left last'>
+    <%= form_for @cart_item, shopping_cart_path(current_user) do |f| %>
+      <%= f.hidden_field :variant_id %>
+      <%= image_tag('icons/add_to_shopping_cart_sm.png') %>
+    <% end %>
+  </div>
+</div>

@@ -14,6 +14,10 @@ Hadean::Application.routes.draw do # |map|
   
   root :to => "welcome#index"
   
+  namespace :shopping do
+    resources :carts
+  end
+  
   namespace :admin do
     resources :users
     
