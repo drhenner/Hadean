@@ -20,6 +20,25 @@
   padding: $pad;
 }
 
+@mixin top-rounded($radius: 4px) {
+  -moz-border-radius:$radius $radius 0px 0px;
+  -webkit-border-radius:$radius $radius 0px 0px;
+  behavior:url(border-radius.htc);
+}
+
+
+@mixin bottom-rounded($radius: 4px) {
+  -moz-border-radius:0px 0px $radius $radius;
+  -webkit-border-radius:0px 0px $radius $radius;
+  behavior:url(border-radius.htc);
+}
+
+@mixin rounded($radius: 4px) {
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  behavior:url(border-radius.htc);
+}
+
 @mixin admin-page-wrapper($width: 24) {
   @include span($width);
   @include last;
@@ -51,6 +70,21 @@
 
 .left-text-8 {
   @include left-text(8px);
+}
+
+.rounded-2 {
+  @include rounded(2px);
+}
+
+.rounded-4 {
+  @include rounded(4px);
+}
+.rounded-6 {
+  @include rounded(6px);
+}
+
+.rounded-8 {
+  @include rounded(8px);
 }
 
 .padding-5 {
@@ -144,6 +178,7 @@
   @include inline-block;
   background-color: #57B;
   @include last;
+  @include bottom-rounded(9px)
 }
 
 #search_bar {
@@ -161,7 +196,7 @@
   @include inline-block;
 }
 
-// Layout for apllication
+// Layout for application
 
 #content_wrapper {
   padding-top: 4px;
@@ -169,5 +204,18 @@
 
 // Main welcome page
 #right_side_panel {
+  text-align: left;
+}
+
+// Product page
+
+.variant_border {
+  padding: 3px;
+  margin-bottom: 3px;
+  border:   solid 2px #ddc;
+  @include rounded(4px);
+}
+
+.variant_select {
   text-align: left;
 }

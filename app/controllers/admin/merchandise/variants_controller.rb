@@ -24,8 +24,8 @@ class Admin::Merchandise::VariantsController < Admin::BaseController
 
   def new
     form_info
-    @variant = Variant.new(:product_id => params[:product_id])
-    @product  =  @variant.product
+    @product = Product.find(params[:product_id])
+    @variant = @product.variants.new()
   end
 
   def create

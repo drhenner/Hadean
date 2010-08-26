@@ -7,19 +7,32 @@ Hadean.Utility = {
 
 Hadean.Cart = {
   NewForm : {
-    newFormId : '#new_shopping_cart',
+    newFormId : '#new_cart_item',
     addToCart : true,
     
-    //Public methods
     initialize      : function() {
       jQuery('.add-to-cart').click( function() { 
+          if (jQuery('#cart_item_variant_id').val() == '' ) { // Select to see if variant is selected in hidden field
+            alert('Please click on a specific item to add.');
+          } else 
           if (Hadean.Cart.NewForm.addToCart) {
-            //jQuery(newFormId).submit();
-            alert('check if form can be submitted  VARIANT ID ' + Hadean.Cart.NewForm.newFormId)
-            Hadean.Cart.NewForm.addToCart = false;
-          };
+            Hadean.Cart.NewForm.addToCart = false;// ensure no double clicking
+            jQuery(Hadean.Cart.NewForm.newFormId).submit();
+            
+            // We might want to submit as an ajax request. Then return the result to a light box.  (create an overlay on click)
+            
+          }
         } 
       )
+
+      jQuery('.variant_border').click( function() { 
+          jQuery('#cart_item_variant_id').val(this.getAttribute("data-variant"));
+          jQuery('.variant_border')
+          jQuery(".variant_border").css("border","solid 2px #ddc");
+          jQuery(this).css("border","solid 2px #cee");
+        } 
+      )
+      
     }
   }
 }

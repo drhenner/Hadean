@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  has_friendly_id :permalink, :use_slug => true
+  has_friendly_id :permalink, :use_slug => false
   
   belongs_to :product_type
   belongs_to :prototype

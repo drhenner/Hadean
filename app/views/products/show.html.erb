@@ -5,16 +5,29 @@
 
 <div id='product'>
   <h2><%= @product.name %> </h2>
-  <div class='span-15 float-left'>
+  <div class='span-16 float-left last'>
     <div class='span-9 float-left'>
       <%= image_tag(@product.images.first.photo.url(:product)) %><br/>
-      <%= number_to_currency @product.price %>
     </div>
-    
+    <% @product.variants.each_with_index do |variant, i| %>
+      <div id='variant_border_<%= i %>' class='variant_border span-6 float-left last' data-variant='<%= variant.id %>' >
+        <% variant.variant_properties.each do |variant_property| %>
+          <div id='variant_<%= i %>' class='variant_select' >
+            <%= raw variant_property.property.display_name  %>: <%= raw variant_property.description %> 
+          </div>
+        <% end %>
+        <%= number_to_currency variant.price %>
+      </div>
+      
+    <% end %>
   </div>
-  <div class='span-9 float-left last'>
+  <div class='span-8 float-left last'>
     <%= form_for @cart_item, shopping_cart_path(current_user) do |f| %>
-      <%= f.hidden_field :variant_id %>
+      <% if @product.variants.size == 1 %>
+        <%= f.hidden_field :variant_id, :value => @product.variants.first.id %>
+      <% else %>
+        <%= f.hidden_field :variant_id %>
+      <% end %>
       <%= image_tag('icons/add_to_shopping_cart_sm.png', :id => 'submit_add_to_cart', :class => 'add-to-cart') %>
     <% end %>
   </div>
