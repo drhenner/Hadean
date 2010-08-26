@@ -10,9 +10,12 @@
       <%= image_tag(@product.images.first.photo.url(:product)) %><br/>
     </div>
     <% @product.variants.each_with_index do |variant, i| %>
-      <div id='variant_border_<%= i %>' class='variant_border span-6 float-left last' data-variant='<%= variant.id %>' >
+      <div  id='variant_border_<%= i %>' 
+            class='variant_border span-6 float-left last' 
+            data-variant='<%= variant.id %>' >
         <% variant.variant_properties.each do |variant_property| %>
-          <div id='variant_<%= i %>' class='variant_select' >
+          <div  id='variant_<%= i %>' 
+                class='variant_select' >
             <%= raw variant_property.property.display_name  %>: <%= raw variant_property.description %> 
           </div>
         <% end %>
@@ -28,7 +31,8 @@
       <% else %>
         <%= f.hidden_field :variant_id %>
       <% end %>
-      <%= image_tag('icons/add_to_shopping_cart_sm.png', :id => 'submit_add_to_cart', :class => 'add-to-cart') %>
+      <%= image_tag('icons/add_to_shopping_cart_sm.png',  :id => 'submit_add_to_cart', 
+                                                          :class => 'add-to-cart') %>
     <% end %>
   </div>
 </div>

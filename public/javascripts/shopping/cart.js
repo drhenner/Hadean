@@ -32,7 +32,7 @@ Hadean.Cart = {
           jQuery(this).css("border","solid 2px #cee");
         } 
       )
-      
+
     }
   }
 }
