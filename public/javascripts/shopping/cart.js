@@ -29,7 +29,9 @@ Hadean.Cart = {
           jQuery('#cart_item_variant_id').val(this.getAttribute("data-variant"));
           jQuery('.variant_border')
           jQuery(".variant_border").css("border","solid 2px #ddc");
+          jQuery(".variant_border").css("background-color","#EED");
           jQuery(this).css("border","solid 2px #cee");
+          jQuery(this).css("background-color","#dFF");
         } 
       )
 

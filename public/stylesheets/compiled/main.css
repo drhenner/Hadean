@@ -265,9 +265,10 @@
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
+  background-color: #EED;
 }
 
-/* line 219, ../../../app/stylesheets/main.scss */
+/* line 220, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
