@@ -209,12 +209,17 @@
 
 // Product page
 
+#submit_add_to_cart {
+  cursor: pointer;
+}
+
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
   border:   solid 2px #ddc;
   @include rounded(4px);
   background-color: #EED;
+  cursor: pointer;
 }
 
 .variant_select {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100821035624) do
+ActiveRecord::Schema.define(:version => 20100827061407) do
 
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20100821035624) do
     t.integer  "state_id"
     t.string   "state_name"
     t.string   "zip_code"
-    t.string   "phone"
     t.string   "alternative_phone"
     t.boolean  "default"
     t.datetime "created_at"
@@ -40,18 +39,24 @@ ActiveRecord::Schema.define(:version => 20100821035624) do
     t.string "name"
   end
 
-  create_table "carts", :force => true do |t|
-    t.integer  "user_id"
+  create_table "cart_items", :force => true do |t|
+    t.integer  "cart_id"
     t.integer  "variant_id"
     t.boolean  "active"
     t.integer  "item_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "quantity",     :default => 1
   end
 
-  add_index "carts", ["item_type_id"], :name => "index_carts_on_item_type_id"
-  add_index "carts", ["user_id"], :name => "index_carts_on_user_id"
-  add_index "carts", ["variant_id"], :name => "index_carts_on_variant_id"
+  add_index "cart_items", ["item_type_id"], :name => "index_carts_on_item_type_id"
+  add_index "cart_items", ["variant_id"], :name => "index_carts_on_variant_id"
+
+  create_table "carts", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "countries", :force => true do |t|
     t.string "name"
@@ -119,6 +124,7 @@ ActiveRecord::Schema.define(:version => 20100821035624) do
     t.datetime "updated_at"
     t.integer  "prototype_id"
     t.boolean  "featured",             :default => false
+    t.string   "permalink",                               :null => false
   end
 
   create_table "properties", :force => true do |t|

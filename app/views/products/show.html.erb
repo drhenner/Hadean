@@ -25,7 +25,7 @@
     <% end %>
   </div>
   <div class='span-8 float-left last'>
-    <%= form_for @cart_item, shopping_cart_path(current_user) do |f| %>
+    <%= form_for :cart_item, :url => shopping_cart_items_path(@cart_item) do |f| %>
       <% if @product.variants.size == 1 %>
         <%= f.hidden_field :variant_id, :value => @product.variants.first.id %>
       <% else %>

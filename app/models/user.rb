@@ -23,40 +23,44 @@ class User < ActiveRecord::Base
   
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :address_attributes
   
-  has_many    :phones,                          :dependent => :destroy, 
-                                                :as => :phoneable
+  has_many    :phones,                    :dependent => :destroy, 
+                                          :as => :phoneable
+                                          
+  has_one     :primary_phone,             :conditions => ['phones.primary = ?', true],
+                                          :as => :phoneable
+                                          
+  has_many    :addresses,                 :dependent => :destroy, 
+                                          :as => :addressable
+                                          
+  has_one     :default_billing_address,   :conditions => ['addresses.default = ? AND
+                                                          addresses.address_type_id = ?', true, AddressType::BILLING_ID], 
+                                          :as => :addressable
+                                                
+  has_one     :default_shipping_address,  :conditions => ['addresses.default = ? AND
+                                                          addresses.address_type_id = ?', true, AddressType::SHIPPING_ID], 
+                                          :as => :addressable
+                                                
+  has_many    :user_roles,                :dependent => :destroy
+  has_many    :roles,                     :through => :user_roles
   
-  has_one     :primary_phone,                   :conditions => ['phones.primary = ?', true],
-                                                :as => :phoneable
+  has_many    :carts,                     :dependent => :destroy
   
-  has_many    :addresses,                       :dependent => :destroy, 
-                                                :as => :addressable
+  has_many    :cart_items
+  has_many    :shopping_cart_items,       :conditions => ['cart_items.active = ? AND
+                                                          cart_items.item_type_id = ?', true, ItemType::SHOPPING_CART_ID], 
+                                          :class_name => 'CartItem'
                                                 
-  has_one     :default_billing_address,         :conditions => ['addresses.default = ? AND
-                                                                addresses.address_type_id = ?', true, AddressType::BILLING_ID], 
-                                                :as => :addressable
+  has_many    :wish_list_items,           :conditions => ['cart_items.active = ? AND
+                                                          cart_items.item_type_id = ?', true, ItemType::WISH_LIST_ID], 
+                                          :class_name => 'CartItem'
                                                 
-  has_one     :default_shipping_address,        :conditions => ['addresses.default = ? AND
-                                                                addresses.address_type_id = ?', true, AddressType::SHIPPING_ID], 
-                                                :as => :addressable
+  has_many    :purchased_items,           :conditions => ['cart_items.active = ? AND
+                                                          cart_items.item_type_id = ?', true, ItemType::PURCHASED_ID], 
+                                          :class_name => 'CartItem'
                                                 
-  has_many    :user_roles,                      :dependent => :destroy
-  has_many    :roles,         :through => :user_roles
+  has_many    :deleted_cart_items,        :conditions => ['cart_items.active = ?', false], :class_name => 'CartItem'
   
-  has_many    :cart_items,                      :dependent => :destroy
-  has_many    :shopping_cart_items,             :conditions => ['cart_items.active = ? AND
-                                                                cart_items.item_type_id = ?', true, ItemType::SHOPPING_CART_ID], 
-                                                :class_name => 'CartItem'
-                                                
-  has_many    :wish_list_items,                 :conditions => ['cart_items.active = ? AND
-                                                                 cart_items.item_type_id = ?', true, ItemType::WISH_LIST_ID], 
-                                                :class_name => 'CartItem'
-                                                
-  has_many    :purchased_items,                 :conditions => ['cart_items.active = ? AND
-                                                                 cart_items.item_type_id = ?', true, ItemType::PURCHASED_ID], 
-                                                :class_name => 'CartItem'
-                                                
-  has_many    :deleted_cart_items,              :conditions => ['cart_items.active = ?', false], :class_name => 'CartItem'
+  
   
   validates :first_name,  :presence => true, :if => :registered_user?,
                           :format   => { :with => CustomValidators::Names.name_validator }
@@ -84,6 +88,9 @@ class User < ActiveRecord::Base
     
   end
   
+  def current_cart
+    carts.last
+  end
   ##  This method will one day grow into the products a user most likly likes.  
   #   Storing a list of product ids vs cron each night might be the most efficent mode for this method to work.
   def might_be_interested_in_these_products

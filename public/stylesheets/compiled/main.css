@@ -258,6 +258,11 @@
 }
 
 /* line 212, ../../../app/stylesheets/main.scss */
+#submit_add_to_cart {
+  cursor: pointer;
+}
+
+/* line 216, ../../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -266,9 +271,10 @@
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
   background-color: #EED;
+  cursor: pointer;
 }
 
-/* line 220, ../../../app/stylesheets/main.scss */
+/* line 225, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }

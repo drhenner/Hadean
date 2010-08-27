@@ -10,6 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe Shopping::CartHelper do
+describe Shopping::CartItemsHelper do
   pending "add some examples to (or delete) #{__FILE__}"
 end

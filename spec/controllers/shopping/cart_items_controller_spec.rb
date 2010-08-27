@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Shopping::CartController do
+describe Shopping::CartItemsController do
 
   describe "GET 'index'" do
     it "should be successful" do

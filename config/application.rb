@@ -43,7 +43,7 @@ module Hadean
     #g.fixture_replacement :mechanist
       g.stylesheets false
       g.test_framework :rspec, :fixture => true, :view_specs => false
-      g.fixture_replacement :factory_girl, :dir=>"spec/factories"
+      g.fixture_replacement :factory_girl_rails, :dir=>"spec/factories"
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.
