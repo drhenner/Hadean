@@ -1,6 +1,9 @@
 Hadean::Application.routes.draw do # |map|
 
-
+  resources :user_sessions
+  match 'login'   => 'user_sessions#new'
+  match 'logout'  => 'user_sessions#destroy'
+  
   resources :products
   resources :cart_items
   resources :wish_items

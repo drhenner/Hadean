@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
   
   def session_cart
     return @session_cart if defined?(@session_cart)
+    session_cart!
+  end
+  # use this method if you want to force a SQL query to get the cart.
+  def session_cart!
     if session[:cart_id]
       @session_cart = Cart.includes(:shopping_cart_items).find(session[:cart_id])
     elsif current_user && current_user.current_cart
@@ -24,7 +28,6 @@ class ApplicationController < ActionController::Base
     end
     @session_cart
   end
-  
   ## The most likely user can be determined off the session / cookies or for now lets grab a random user
   #   Change this method for showing products that the end user will more than likely like.
   #   

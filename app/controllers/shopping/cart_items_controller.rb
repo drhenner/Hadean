@@ -1,7 +1,7 @@
 class Shopping::CartItemsController < ApplicationController
 
-  # GET /carts
-  # GET /carts.xml
+  # GET /shopping/cart_items
+  # GET /shopping/cart_items.xml
   def index
     @cart_items = session_cart.shopping_cart_items
 
@@ -11,8 +11,8 @@ class Shopping::CartItemsController < ApplicationController
     end
   end
 
-  # GET /carts/1
-  # GET /carts/1.xml
+  # GET /shopping/cart_items/1
+  # GET /shopping/cart_items/1.xml
   def show
     @cart_item = session_cart.shopping_cart_items.find(params[:id])
 
@@ -22,8 +22,8 @@ class Shopping::CartItemsController < ApplicationController
     end
   end
 
-  # GET /carts/new
-  # GET /carts/new.xml
+  # GET /shopping/cart_items/new
+  # GET /shopping/cart_items/new.xml
   def new
     @cart_item = CartItem.new(:user_id => current_user.id)
 
@@ -38,20 +38,23 @@ class Shopping::CartItemsController < ApplicationController
     @cart_item = session_cart.shopping_cart_items.find(params[:id])
   end
 
-  # POST /carts
-  # POST /carts.xml
+  # POST /shopping/cart_items
+  # POST /shopping/cart_items.xml
   def create
-    @cart_item = new_cart_item
+    @cart_item = get_new_cart_item
     
-    respond_to do |format|
-      if @cart_item.save
-        format.html { redirect_to(@cart_item, :notice => 'Item was successfully added to the cart.') }
-        format.xml  { render :xml => @cart_item, :status => :created, :location => @cart_item }
+      if session_cart.add_variant(params[:cart_item][:variant_id], most_likely_user)
+        session_cart.save_user(most_likely_user)
+        redirect_to(shopping_cart_items_url)
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @cart_item.errors, :status => :unprocessable_entity }
+        variant = Variant.includes(:product).find_by_id(params[:cart_item][:variant_id])
+        if variant
+          redirect_to(product_url(variant.product))
+        else
+          flash[:notice] = "Sorry something went wrong"
+          redirect_to(root_url())
+        end 
       end
-    end
   end
 
   # PUT /carts/1
@@ -60,7 +63,7 @@ class Shopping::CartItemsController < ApplicationController
     @cart_item = session_cart.shopping_cart_items.find(params[:id])
 
     respond_to do |format|
-      if @cart_item.update_attributes(params[:cart])
+      if @cart_item.update_attributes(params[:cart_item])
         format.html { redirect_to(@cart_item, :notice => 'Item was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -73,24 +76,18 @@ class Shopping::CartItemsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.xml
   def destroy
-    @cart_item = current_user.cart_items.find(params[:id])
-    @cart_item.active = false
-    @cart_item.save
-    
-    respond_to do |format|
-      format.html { redirect_to(shopping_carts_url) }
-      format.xml  { head :ok }
-    end
+    session_cart.remove_variant(params[:variant_id]) if params[:variant_id]
+    redirect_to(shopping_cart_items_url)
   end
   
   private
   
   def get_new_cart_item
     if current_user
-      session_cart.cart_items.new(params[:cart].merge({:user_id => current_user.id}))
+      session_cart.cart_items.new(params[:cart_item].merge({:user_id => current_user.id}))
     else
       ###  ADD to session cart
-      session_cart.cart_items.new(params[:cart])
+      session_cart.cart_items.new(params[:cart_item])
     end
   end
   

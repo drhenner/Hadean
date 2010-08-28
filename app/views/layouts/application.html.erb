@@ -23,7 +23,7 @@
   <div class="container">
     <div id='header_wrapper' class="span-24 header-image">
       <div id="header" class="span-12">
-        <h1 id="hadean-title" class="alt">Hadean</h1>
+        <h1 id="hadean-title" class="alt"><%= link_to 'Hadean', root_path %></h1>
       </div>
 
       <div id="subheader" class="span-12 last">
@@ -46,7 +46,7 @@
         
       </div>
       <div id='cart_button_bar'>
-        <%= link_to "Cart", cart_items_path, 
+        <%= link_to "Cart", shopping_cart_items_path, 
                             :class  => "button yellow", 
                             :id     => "cart_items_button" %>
       </div>

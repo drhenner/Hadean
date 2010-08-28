@@ -1,0 +1,27 @@
+
+<% if @user_session.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user_session.errors.count, "error") %> prohibited you from logging in:</h2>
+
+    <ul>
+    <% @user_session.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class='hadean-login'>
+  <%= form_for :user_session, @user_session, :url => user_sessions_path do |form| %>
+    <div id='username-block'>
+      <%=form.label :email %>
+      <%=form.text_field :email %>
+    </div>
+    <div id='password-block'>
+      <%=form.label :password %>
+      <%=form.password_field :password %>
+    </div>
+    <div id='login-buttons-container'>
+        <%=form.submit 'Log In', { :onmouseover => 'highlightButton(this)', :onmouseout => 'dimButton(this)' } %>
+    </div>
+  <% end %>
+</div>

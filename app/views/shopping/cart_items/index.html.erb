@@ -1,2 +1,14 @@
-<h1>Shopping::Cart#index</h1>
-<p>Find me in app/views/shopping/cart/index.html.erb</p>
+<% if @cart_items.nil? || @cart_items.empty? %>
+  <h5> Your cart is currently empty</h5>
+<% else %>
+  <h5>You currently have the following in your cart: </h5>
+  <ul>
+  <% @cart_items.each do |item| %>
+    <li>
+        (<%= item.quantity %>) 
+        <%= item.variant.product.name %> 
+        <%= link_to 'remove', shopping_cart_item_path(item, :variant_id => item.variant_id), :method => :delete %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

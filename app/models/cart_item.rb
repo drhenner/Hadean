@@ -6,4 +6,15 @@ class CartItem < ActiveRecord::Base
   
   belongs_to :session
   
+  def price
+    variant.price
+  end
+  
+  def total
+    price * quantity
+  end
+  
+  def inactivate!
+    self.update_attributes(:active => false)
+  end
 end

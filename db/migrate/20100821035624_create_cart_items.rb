@@ -3,10 +3,10 @@ class CreateCartItems < ActiveRecord::Migration
     create_table :cart_items do |t|
       t.integer :user_id
       t.integer :cart_id
-      t.integer :variant_id,  :null => false
+      t.integer :variant_id,                    :null => false
       t.integer :quantity,    :default => 1
-      t.boolean :active
-      t.integer :item_type_id
+      t.boolean :active,      :default => true
+      t.integer :item_type_id,                  :null   => false
 
       t.timestamps
     end
