@@ -10,18 +10,28 @@
     </ul>
   </div>
 <% end %>
-<div class='hadean-login'>
-  <%= form_for :user_session, @user_session, :url => user_sessions_path do |form| %>
-    <div id='username-block'>
-      <%=form.label :email %>
-      <%=form.text_field :email %>
+<div class='hadean-login span-12 prepend-4'>
+  <%= form_for :user_session, @user_session, 
+                :url => user_sessions_path, 
+                :html => {:class => 'span-12'} do |form| %>
+    <div id='username-block' style='display:inline-block;'>
+      <div id='username-label' class='span-3 float-left clearfix'>
+        <%=form.label :email, 'Email', :class => "span-3" %>
+      </div>
+      <div id='username-input' class='float-left clearfix' style='display:inline-block;'>
+        <%=form.text_field :email, :class => 'float-left' %>
+      </div>
     </div>
-    <div id='password-block'>
-      <%=form.label :password %>
-      <%=form.password_field :password %>
+    <div id='password-block' style='display:inline-block;'>
+      <div id='password-label' class='span-3 float-left clearfix' >
+        <%=form.label :password, 'Password', :class => "span-3 float-left" %>
+      </div>
+      <div id='password-input' class='float-left clearfix' style='display:inline-block;'>
+        <%=form.password_field :password, :class => 'float-left' %>
+      </div>
     </div>
     <div id='login-buttons-container'>
-        <%=form.submit 'Log In', { :onmouseover => 'highlightButton(this)', :onmouseout => 'dimButton(this)' } %>
+        <%=form.submit 'Log In' %>
     </div>
   <% end %>
 </div>
