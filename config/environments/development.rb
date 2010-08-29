@@ -18,4 +18,12 @@ Hadean::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.active_support.deprecation = :log
+  
+  config.after_initialize do
+    #require 'user_last_activity_updater'
+    Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
+    #Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
+    Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
+  end
+  
 end

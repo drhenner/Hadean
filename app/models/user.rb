@@ -20,8 +20,9 @@ class User < ActiveRecord::Base
     #config.validate_password_field = false;
     
   end
-  
-  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :address_attributes
+
+  before_validation :sanitize_data
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :openid_identifier, :birth_date, :address_attributes, :phone_attributes
   
   has_many    :phones,                    :dependent => :destroy, 
                                           :as => :phoneable
@@ -72,11 +73,17 @@ class User < ActiveRecord::Base
   
   accepts_nested_attributes_for :addresses, :phones
   
-  state_machine :state, :initial => :unregistered do
+  state_machine :state, :initial => :inactive do
+    state :inactive
+    state :active
     state :unregistered
     state :registered
     state :registered_with_credit
     state :canceled
+    
+    event :activate do
+      transition :inactive => :active
+    end
     
     event :register do 
       transition :unregistered => :registered
@@ -88,13 +95,17 @@ class User < ActiveRecord::Base
     
   end
   
+  def active?
+    !['canceled', 'inactive'].any? {|s| self.state == s }
+  end
+  
   def current_cart
     carts.last
   end
-  ##  This method will one day grow into the products a user most likly likes.  
+  ##  This method will one day grow into the products a user most likely likes.  
   #   Storing a list of product ids vs cron each night might be the most efficent mode for this method to work.
   def might_be_interested_in_these_products
-    Product.limit(4).find
+    Product.limit(4).find(:all)
   end
   
   def registered_user?
@@ -102,8 +113,20 @@ class User < ActiveRecord::Base
   end
   
   def name 
-    (first_name? && last_name?) ? [first_name, last_name ].join(" ") : email
+    (first_name? && last_name?) ? [first_name.capitalize, last_name.capitalize ].join(" ") : email
   end
 
+  def sanitize_data
+    self.email      = self.email.strip.downcase       unless email.blank?
+    self.first_name = self.first_name.strip.downcase  unless first_name.nil?
+    self.last_name  = self.last_name.strip.downcase   unless last_name.nil?
+  end
   
+  def deliver_activation_instructions!
+    Notifier.signup_notification(self).deliver
+  end
+  
+  def email_address_with_name
+    "\"#{name}\" <#{email}>"
+  end
 end

@@ -225,3 +225,12 @@
 .variant_select {
   text-align: left;
 }
+
+.ui-datepicker-calendar table {
+  margin: 0;
+}
+.ui-datepicker-calendar table th , .ui-datepicker-calendar table td {
+  padding: 0; 
+  text-align: center;
+}
+

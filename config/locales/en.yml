@@ -37,3 +37,21 @@ en:
       confirmation_instructions: 'Confirmation instructions'
       reset_password_instructions: 'Reset password instructions'
       unlock_instructions: 'Unlock Instructions'
+
+  formtastic:
+    titles:
+      post_details: "Post details"
+    labels:
+      post:
+        title: "Choose a title..."
+        body: "Write something..."
+        edit:
+          title: "Edit title"
+    hints:
+      post:
+        title: "Choose a good title for you post."
+        body: "Write something inspiring here."
+    actions:
+      create: "Create my {{model}}"
+      update: "Save changes"
+      dummie: "Launch!"

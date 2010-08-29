@@ -278,3 +278,14 @@
 .variant_select {
   text-align: left;
 }
+
+/* line 229, ../../../app/stylesheets/main.scss */
+.ui-datepicker-calendar table {
+  margin: 0;
+}
+
+/* line 232, ../../../app/stylesheets/main.scss */
+.ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
+  padding: 0;
+  text-align: center;
+}

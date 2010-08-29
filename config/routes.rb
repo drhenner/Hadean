@@ -17,6 +17,10 @@ Hadean::Application.routes.draw do # |map|
   
   root :to => "welcome#index"
   
+  namespace :customer do
+    resources :registrations
+  end
+  
   namespace :shopping do
     resources :cart_items
   end

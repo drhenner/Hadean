@@ -56,4 +56,9 @@ class ApplicationController < ActionController::Base
     return @current_user_id if defined?(@current_user_id)
     @current_user_id = current_user_session && current_user_session.record && current_user_session.record.id
   end
+  
+  def redirect_back_or_default(default)
+    redirect_to(session[:return_to] || default)
+    session[:return_to] = nil
+  end
 end

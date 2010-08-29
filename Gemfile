@@ -28,6 +28,7 @@ gem 'sunspot_rails'
 gem 'ssl_requirement'
 gem 'state_machine'
 gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
+gem 'validation_reflection',                                              :branch => "rails-3"
 
 group :development do 
   gem 'awesome_print'
