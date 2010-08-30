@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 ## Bundle rails:
 gem 'rails', '3.0.0.rc'
 
+gem "activemerchant", '1.7.2'#, :lib => 'active_merchant'
 gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
 gem 'authlogic', "2.1.5"
 gem 'cancan'#, '1.3.2'
@@ -34,6 +35,7 @@ group :development do
   gem 'awesome_print'
   gem "autotest-rails-pure"
   gem "autotest-fsevent"
+  gem "ruby-debug"
 end
 
 group :test do

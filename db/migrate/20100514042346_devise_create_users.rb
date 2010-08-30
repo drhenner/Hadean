@@ -12,6 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :crypted_password
       t.string :perishable_token
       t.string :persistence_token
+      t.string :access_token
       #t.database_authenticatable :null => false
       #t.confirmable
       #t.recoverable
@@ -26,9 +27,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
     
     add_index :users, :first_name
     add_index :users, :last_name
-    add_index :users, :email,                :unique => true
-    add_index :users, :perishable_token,   :unique => true
+    add_index :users, :email,               :unique => true
+    add_index :users, :perishable_token,    :unique => true
     add_index :users, :persistence_token,   :unique => true
+    add_index :users, :access_token,        :unique => true
     #add_index :users, :confirmation_token,   :unique => true
     #add_index :users, :confirmation_token,   :unique => true
     #add_index :users, :reset_password_token, :unique => true

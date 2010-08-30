@@ -17,14 +17,14 @@ class ApplicationController < ActionController::Base
   end
   # use this method if you want to force a SQL query to get the cart.
   def session_cart!
-    if session[:cart_id]
-      @session_cart = Cart.includes(:shopping_cart_items).find(session[:cart_id])
+    if cookies[:cart_id]
+      @session_cart = Cart.includes(:shopping_cart_items).find(cookies[:cart_id])
     elsif current_user && current_user.current_cart
       @session_cart = current_user.current_cart
-      session[:cart_id] = @session_cart.id
+      cookies[:cart_id] = @session_cart.id
     else
       @session_cart = Cart.create
-      session[:cart_id] = @session_cart.id
+      cookies[:cart_id] = @session_cart.id
     end
     @session_cart
   end
@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   ## TODO cookie[:hadean_user_id] value needs to be encrypted ### Authlogic persistence_token might work here
   def random_user
     return @random_user if defined?(@random_user)
-    @random_user = cookies[:hadean_user_id] ? User.find(cookies[:hadean_user_id]) : nil
+    @random_user = cookies[:hadean_uid] ? User.find_by_persistence_token(cookies[:hadean_uid]) : nil
   end
   
   ###  Authlogic helper methods

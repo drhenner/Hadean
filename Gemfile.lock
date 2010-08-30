@@ -38,6 +38,10 @@ GEM
       rack-mount (~> 0.6.9)
       rack-test (~> 0.5.4)
       tzinfo (~> 0.3.22)
+    activemerchant (1.7.2)
+      activesupport (>= 2.3.2)
+      braintree (>= 2.0.0)
+      builder (>= 2.0.0)
     activemodel (3.0.0.rc)
       activesupport (= 3.0.0.rc)
       builder (~> 2.1.2)
@@ -64,6 +68,8 @@ GEM
     autotest-rails-pure (4.1.0)
     awesome_print (0.2.1)
     babosa (0.1.1)
+    braintree (2.5.0)
+      builder
     builder (2.1.2)
     cancan (1.3.3)
     columnize (0.3.1)
@@ -158,6 +164,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemerchant (= 1.7.2)
   acts_as_tree!
   authlogic (= 2.1.5)
   autotest

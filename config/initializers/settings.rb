@@ -2,12 +2,18 @@
 ##  SETTINGS USE -- config/config.yml AND FOLLOW THE INSTRUCTIONS ON THAT PAGE 
 ##  TO DEPLOY
 
+require 'yaml'
+
 SETTINGS = {
   :admin_grid_rows  => 25,
   :use_foreign_keys => false
 }
 
+APP_CONFIG = YAML.load_file(File.join(Rails.root, "config", "config.yml"))
+
 =begin
+### These options are stored in each of the environment files
+
 #Paperclip.options[:image_magick_path] = '/opt/local/bin'
 if RAILS_ENV == "development" 
   

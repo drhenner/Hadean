@@ -17,6 +17,11 @@ development: &non_production_settings
     server: mail.example.com
     username: bubba
     password: s0meth1ngs3cr3t
+  paypal:
+    ip:         blah
+    login:      loginname
+    password:   my-PasWord
+    signature:  my-signature
 test:
   <<: *non_production_settings
 production:

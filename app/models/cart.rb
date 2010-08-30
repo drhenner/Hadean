@@ -43,9 +43,9 @@ class Cart < ActiveRecord::Base
   end
   
   def save_user(u)  # u is user object or nil
-    if u && session_cart.user_id != u.id
-      session_cart.user_id = u.id
-      session_cart.save
+    if u && self.user_id != u.id
+      self.user_id = u.id
+      self.save
     end
   end
   

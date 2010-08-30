@@ -9,6 +9,8 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
+      cookies[:hadean_uid] = @user_session.record.access_token
+      session[:authenticated_at] = Time.now
       flash[:notice] = "Login successful!"
       redirect_back_or_default root_url
     else
@@ -19,6 +21,7 @@ class UserSessionsController < ApplicationController
   def destroy
     current_user_session.destroy
     reset_session
+    cookies.delete(:hadean_uid)
     flash[:notice] = "Logout successful!"
     redirect_to login_url
   end

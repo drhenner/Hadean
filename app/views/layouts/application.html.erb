@@ -31,10 +31,12 @@
       <div id="subheader" class="span-12 last">
         <h3 class="alt">Your Ruby on Rails E-Commerce Solution.</h3>
         <div class="alt">
-          <% unless current_user %>
-            <%= link_to 'Login',  login_path %>
+          <% unless most_likely_user %>
+            <%= link_to 'Login',  login_path %> or
+            <%= link_to 'Sign up', signup_path %>
           <% else %>
-            <%= link_to 'Logout', logout_path %>
+            Hi <%= most_likely_user.first_name %>
+            (<%= link_to 'not you?', logout_path %>)
           <% end %>
         </div>
       </div>

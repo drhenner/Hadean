@@ -118,8 +118,8 @@ class User < ActiveRecord::Base
 
   def sanitize_data
     self.email      = self.email.strip.downcase       unless email.blank?
-    self.first_name = self.first_name.strip.downcase  unless first_name.nil?
-    self.last_name  = self.last_name.strip.downcase   unless last_name.nil?
+    self.first_name = self.first_name.strip.capitalize  unless first_name.nil?
+    self.last_name  = self.last_name.strip.capitalize   unless last_name.nil?
   end
   
   def deliver_activation_instructions!
@@ -128,5 +128,11 @@ class User < ActiveRecord::Base
   
   def email_address_with_name
     "\"#{name}\" <#{email}>"
+  end
+  
+  private
+  
+  def before_validation_on_create
+    self.access_token = ActiveSupport::SecureRandom::hex(8+rand(6)) if self.new_record? and self.access_token.nil?
   end
 end

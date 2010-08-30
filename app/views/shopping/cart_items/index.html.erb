@@ -1,14 +1,20 @@
 <% if @cart_items.nil? || @cart_items.empty? %>
   <h5> Your cart is currently empty</h5>
 <% else %>
-  <h5>You currently have the following in your cart: </h5>
-  <ul>
-  <% @cart_items.each do |item| %>
-    <li>
-        (<%= item.quantity %>) 
-        <%= item.variant.product.name %> 
-        <%= link_to 'remove', shopping_cart_item_path(item, :variant_id => item.variant_id), :method => :delete %>
-    </li>
-  <% end %>
-  </ul>
+  <div class='span-18 last'>
+    <h5>You currently have the following in your cart: </h5>
+    <ul>
+    <% @cart_items.each do |item| %>
+      <li>
+          (<%= item.quantity %>) 
+          <%= item.variant.product.name %> 
+          <%= link_to 'remove', shopping_cart_item_path(item, :variant_id => item.variant_id), :method => :delete %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+  <div class='span-6 last'>
+    <%= link_to 'Checkout', '/', :class => 'button spade inline-block' %>
+    <%# link_to image_tag('buttons/checkout1.gif', :alt => 'Proceed to Checkout')%>
+  </div>
 <% end %>
