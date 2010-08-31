@@ -39,4 +39,13 @@ Hadean::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :production
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+      :login      => HADEAN_CONFIG[:paypal][:login],
+      :password   => HADEAN_CONFIG[:paypal][:password],
+      :signature  => HADEAN_CONFIG[:paypal][:signature]
+    )
+  end
+  
 end

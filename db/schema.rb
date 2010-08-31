@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(:version => 20100827061407) do
 
+  create_table "accounts", :force => true do |t|
+    t.string   "name",                                                            :null => false
+    t.string   "account_type",                                                    :null => false
+    t.decimal  "monthly_charge", :precision => 10, :scale => 0,                   :null => false
+    t.boolean  "active",                                        :default => true, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "address_types", :force => true do |t|
     t.string "name",        :limit => 64
     t.string "description"
@@ -41,12 +50,13 @@ ActiveRecord::Schema.define(:version => 20100827061407) do
 
   create_table "cart_items", :force => true do |t|
     t.integer  "cart_id"
-    t.integer  "variant_id"
-    t.boolean  "active"
-    t.integer  "item_type_id"
+    t.integer  "variant_id",                     :null => false
+    t.boolean  "active",       :default => true
+    t.integer  "item_type_id",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "quantity",     :default => 1
+    t.integer  "user_id"
   end
 
   add_index "cart_items", ["item_type_id"], :name => "index_carts_on_item_type_id"
@@ -220,8 +230,10 @@ ActiveRecord::Schema.define(:version => 20100827061407) do
     t.date     "birth_date"
     t.string   "email"
     t.string   "state"
+    t.integer  "account_id"
     t.string   "password_salt"
     t.string   "crypted_password"
+    t.string   "access_token",      :limit => 64, :null => false
     t.string   "perishable_token"
     t.string   "persistence_token"
     t.datetime "created_at"

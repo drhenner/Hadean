@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AccountsController do
+describe Admin::AccountsController do
 
   def mock_account(stubs={})
     @mock_account ||= mock_model(Account, stubs).as_null_object

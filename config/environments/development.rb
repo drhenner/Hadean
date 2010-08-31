@@ -22,8 +22,14 @@ Hadean::Application.configure do
   config.after_initialize do
     #require 'user_last_activity_updater'
     Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
-    #Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
+    Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
     Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
+
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+      :login => HADEAN_CONFIG['paypal']['login'],
+      :password => HADEAN_CONFIG['paypal']['password'],
+      :signature => HADEAN_CONFIG['paypal']['signature']
+    )
   end
-  
 end

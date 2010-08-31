@@ -31,3 +31,5 @@ Configure your database.yml file (add the development and test database)
 ######compass install -r fancy-buttons -f fancy-buttons
 
 create shipping_categories  (just a name for use later)
+
+Open config/config.yml and change the encryption key and paypal or auth.net information

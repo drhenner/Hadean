@@ -120,6 +120,11 @@ class User < ActiveRecord::Base
     self.email      = self.email.strip.downcase       unless email.blank?
     self.first_name = self.first_name.strip.capitalize  unless first_name.nil?
     self.last_name  = self.last_name.strip.capitalize   unless last_name.nil?
+    
+    ## CHANGE THIS IF YOU HAVE DIFFERENT ACCOUNT TYPES
+    unless account_id
+      account = Account.first
+    end
   end
   
   def deliver_activation_instructions!

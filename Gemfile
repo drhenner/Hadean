@@ -35,7 +35,7 @@ group :development do
   gem 'awesome_print'
   gem "autotest-rails-pure"
   gem "autotest-fsevent"
-  gem "ruby-debug"
+  #gem "ruby-debug"
 end
 
 group :test do
