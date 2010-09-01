@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   before_validation :sanitize_data
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :openid_identifier, :birth_date, :address_attributes, :phone_attributes
   
+  has_many    :orders
   has_many    :phones,                    :dependent => :destroy, 
                                           :as => :phoneable
                                           

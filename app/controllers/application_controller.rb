@@ -2,7 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
   
-  helper_method :current_user, :current_user_id, :most_likely_user, :random_user, :session_cart
+  helper_method :current_user, :current_user_id, :most_likely_user, :random_user, :session_cart, :is_production_simulation
+  before_filter :secure_session
   
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Access denied."
@@ -10,6 +11,22 @@ class ApplicationController < ActionController::Base
   end
   
   private
+  
+  def is_production_simulation
+    false
+  end
+  
+  def secure_session
+    if Rails.env == 'production' || is_production_simulation
+      if session_cart && !request.ssl?
+        cookies[:insecure] = true
+      else
+        cookies[:insecure] = false
+      end
+    else
+      cookies[:insecure] = false
+    end
+  end
   
   def session_cart
     return @session_cart if defined?(@session_cart)

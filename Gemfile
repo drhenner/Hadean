@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 ## Bundle rails:
-gem 'rails', '3.0.0.rc'
+gem 'rails', '3.0.0.rc2'
 
 gem "activemerchant", '1.7.2'#, :lib => 'active_merchant'
 gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
@@ -19,7 +19,7 @@ gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
 
 #gem 'mysql'
 gem 'ruby-mysql'
-#gem "nifty-generators"
+gem "nifty-generators"
 gem 'paperclip'
 gem 'prawn'
 

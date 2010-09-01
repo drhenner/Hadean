@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100827061407) do
+ActiveRecord::Schema.define(:version => 20100831062412) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "name",                                                            :null => false
-    t.string   "account_type",                                                    :null => false
-    t.decimal  "monthly_charge", :precision => 10, :scale => 0,                   :null => false
-    t.boolean  "active",                                        :default => true, :null => false
+    t.string   "name",                                                           :null => false
+    t.string   "account_type",                                                   :null => false
+    t.decimal  "monthly_charge", :precision => 8, :scale => 2, :default => 0.0,  :null => false
+    t.boolean  "active",                                       :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -90,6 +90,33 @@ ActiveRecord::Schema.define(:version => 20100827061407) do
 
   create_table "item_types", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_items", :force => true do |t|
+    t.decimal  "price",        :precision => 10, :scale => 0
+    t.decimal  "total",        :precision => 10, :scale => 0
+    t.integer  "order_id"
+    t.integer  "variant_id"
+    t.string   "state"
+    t.integer  "tax_rate_id"
+    t.integer  "ship_rate_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.string   "number"
+    t.string   "ip_address"
+    t.string   "email"
+    t.string   "state"
+    t.integer  "user_id"
+    t.integer  "bill_address_id"
+    t.integer  "ship_address_id"
+    t.integer  "ship_method_id"
+    t.integer  "coupon_id"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

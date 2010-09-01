@@ -1,4 +1,4 @@
-class Shopping::CartItemsController < ApplicationController
+class Shopping::CartItemsController < Shopping::BaseController
 
   # GET /shopping/cart_items
   # GET /shopping/cart_items.xml
