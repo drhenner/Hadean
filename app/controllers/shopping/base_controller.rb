@@ -12,9 +12,9 @@ class Shopping::BaseController < ApplicationController
 
        ## If we are insecure
     elsif !current_user || 
-        session_cart[:authenticated_at].nil? ||
-        (Time.now - session_cart[:authenticated_at] > (60 * 20) ) || ## 20 minutes
-        (session_cart[:insecure].nil? || session_cart[:insecure] == true)## this should happen every time the user goes to a non-SSL page
+        session[:authenticated_at].nil? ||
+        (Time.now - session[:authenticated_at] > (60 * 20) ) || ## 20 minutes
+        (cookies[:insecure].nil? || cookies[:insecure] == true)## this should happen every time the user goes to a non-SSL page
       session[:return_to] = shopping_orders_url
       return login_url()
     else
