@@ -18,7 +18,7 @@ class Shopping::BaseController < ApplicationController
       session[:return_to] = shopping_orders_url
       return login_url()
     else
-      return shopping_address_url
+      return shopping_addresses_url
     end
   end
   

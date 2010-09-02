@@ -10,19 +10,6 @@
     </ul>
   </div>
 <% end %>
-<%= session_cart[:authenticated_at] %>
-<br>
-<br>
-<%#= (Time.now - Time.parse(session_cart[:authenticated_at])  > (60 * 20) )%>
-<br>
-<br>
-<%#= (Time.now - session_cart[:authenticated_at] )%>
-<br>
-<br>
-<%= session_cart[:insecure] %>
-<br>
-<br>
-<br><br>
 
 <div class='hadean-login span-12 prepend-4'>
   <%= form_for :user_session,  

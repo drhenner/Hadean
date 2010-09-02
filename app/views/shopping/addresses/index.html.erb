@@ -1,0 +1,18 @@
+<h1>Pick an Address</h1>
+
+
+<div class='span-24 last'>
+<% @shopping_addresses.each do |shopping_address| %>
+  <div class='span-8 last'>
+    <%= shopping_address.address_lines('<br/>') %><br/>
+    <%= shopping_address.city_state_zip %><br/>
+    <%= button_to 'Use', shopping_address_path(shopping_address), :class => 'button spade inline-block', :method => :put %>
+    <%= link_to 'Edit', edit_shopping_address_path(shopping_address) %>
+    <%= link_to 'Delete', shopping_address, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+<% end %>
+</div>
+<br />
+<%= form_for :address, @shopping_address do |address_form| %>
+  <%= render 'form' %>
+<% end %>
