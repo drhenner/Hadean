@@ -248,21 +248,33 @@
 }
 
 /* line 201, ../../../app/stylesheets/main.scss */
+li {
+  list-style: none;
+}
+
+/* line 204, ../../../app/stylesheets/main.scss */
+input.text, input.title, input[type="text"], input[type="password"] {
+  background-color: white;
+  margin: 0.15em 0;
+  padding: 5px;
+}
+
+/* line 210, ../../../app/stylesheets/main.scss */
 #content_wrapper {
   padding-top: 4px;
 }
 
-/* line 206, ../../../app/stylesheets/main.scss */
+/* line 215, ../../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }
 
-/* line 212, ../../../app/stylesheets/main.scss */
+/* line 221, ../../../app/stylesheets/main.scss */
 #submit_add_to_cart {
   cursor: pointer;
 }
 
-/* line 216, ../../../app/stylesheets/main.scss */
+/* line 225, ../../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -274,17 +286,17 @@
   cursor: pointer;
 }
 
-/* line 225, ../../../app/stylesheets/main.scss */
+/* line 234, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
 
-/* line 229, ../../../app/stylesheets/main.scss */
+/* line 238, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table {
   margin: 0;
 }
 
-/* line 232, ../../../app/stylesheets/main.scss */
+/* line 241, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
   padding: 0;
   text-align: center;

@@ -23,15 +23,16 @@ class Shopping::BaseController < ApplicationController
   end
   
   def find_or_create_order
+    return @session_order if @session_order
     if session[:order_id]
-      @order = current_user.orders.find(session[:order_id])
-      if !@order.in_progress?
-        @order = current_user.orders.create
-        session[:order_id] = @order.id
+      @session_order = current_user.orders.find(session[:order_id])
+      if !@session_order.in_progress?
+        @session_order = current_user.orders.create
+        session[:order_id] = @session_order.id
       end
     else
-      @order = current_user.orders.create
-      session[:order_id] = @order.id
+      @session_order = current_user.orders.create
+      session[:order_id] = @session_order.id
     end
   end
 end

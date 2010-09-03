@@ -36,12 +36,22 @@ class User < ActiveRecord::Base
                                           
   has_one     :default_billing_address,   :conditions => ['addresses.default = ? AND
                                                           addresses.address_type_id = ?', true, AddressType::BILLING_ID], 
-                                          :as => :addressable
-                                                
+                                          :as => :addressable,
+                                          :class_name => 'Address'
+                                          
+  has_one     :billing_addresses,         :conditions => ['addresses.address_type_id = ?',AddressType::BILLING_ID], 
+                                          :as => :addressable,
+                                          :class_name => 'Address'
+
   has_one     :default_shipping_address,  :conditions => ['addresses.default = ? AND
                                                           addresses.address_type_id = ?', true, AddressType::SHIPPING_ID], 
-                                          :as => :addressable
+                                          :as => :addressable,
+                                          :class_name => 'Address'
                                                 
+  has_many     :shipping_addresses,       :conditions => ['addresses.address_type_id = ?', AddressType::SHIPPING_ID], 
+                                          :as => :addressable,
+                                          :class_name => 'Address'
+  
   has_many    :user_roles,                :dependent => :destroy
   has_many    :roles,                     :through => :user_roles
   

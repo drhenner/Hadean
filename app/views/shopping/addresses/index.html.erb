@@ -1,5 +1,8 @@
-<h1>Pick an Address</h1>
-
+<% if  @shopping_addresses.empty? %>
+  <h1>New Address</h1>
+<% else %>
+  <h1>Pick an Address</h1>
+<% end %>
 
 <div class='span-24 last'>
 <% @shopping_addresses.each do |shopping_address| %>
