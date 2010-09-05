@@ -3,7 +3,6 @@ class CreateShippingRateTypes < ActiveRecord::Migration
     create_table :shipping_rate_types do |t|
       t.string :name
 
-      t.timestamps
     end
   end
 

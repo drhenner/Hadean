@@ -16,9 +16,11 @@
   <%= yield :head %>
 </head>
 <body class="bp">
-  <%= raw "<p class='notice'> #{notice}</p>"  if notice %>
-  <%= raw "<p class='error'>#{alert}</p>"     if alert %>
-  <div class="container">
+  <div class="bp">
+    <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
+    <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
+  </div>
+  <div class="container bp">
     <div id='header_wrapper' class="span-24 header-image">
       <div id="header" class="span-12">
         <h1 id="hadean-title" class="alt">Hadean</h1>
@@ -43,8 +45,8 @@
   <script>
   jQuery(window).ready(
     function() {
-      jQuery('.notice').delay(5000).slideUp( 'slow');
-      jQuery('.error').delay(5000).slideUp( 'slow');
+      jQuery('.flash_notice').delay(6000).slideUp( 'slow');
+      jQuery('.flash_error').delay(6000).slideUp( 'slow');
     }
   );
   </script>

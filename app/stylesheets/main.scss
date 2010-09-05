@@ -211,6 +211,14 @@ input.text, input.title, input[type="text"], input[type="password"] {
   padding-top: 4px;
 }
 
+.flash_error {
+  @include error;
+}
+
+.flash_notice {
+  @include notice;
+}
+
 // Main welcome page
 #right_side_panel {
   text-align: left;

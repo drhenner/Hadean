@@ -1,4 +1,4 @@
-class Admin::AccountsController < Admin::BaseController
+class Admin::Config::AccountsController < Admin::BaseController
   # GET /accounts
   # GET /accounts.xml
   def index

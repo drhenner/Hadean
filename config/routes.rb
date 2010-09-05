@@ -37,6 +37,12 @@ Hadean::Application.routes.draw do # |map|
   
   namespace :admin do
     resources :users
+
+    namespace :config do
+      resources :accounts
+      resources :shipping_rates
+      resources :shipping_methods
+    end
     
     namespace :generic do
       resources :shipping_categories

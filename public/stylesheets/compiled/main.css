@@ -264,17 +264,45 @@ input.text, input.title, input[type="text"], input[type="password"] {
   padding-top: 4px;
 }
 
-/* line 215, ../../../app/stylesheets/main.scss */
+/* line 214, ../../../app/stylesheets/main.scss */
+.flash_error {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4;
+}
+/* line 29, ../../../app/stylesheets/blueprint/_interaction.scss */
+.flash_error a {
+  color: #8a1f11;
+}
+
+/* line 218, ../../../app/stylesheets/main.scss */
+.flash_notice {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+}
+/* line 37, ../../../app/stylesheets/blueprint/_interaction.scss */
+.flash_notice a {
+  color: #514721;
+}
+
+/* line 223, ../../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }
 
-/* line 221, ../../../app/stylesheets/main.scss */
+/* line 229, ../../../app/stylesheets/main.scss */
 #submit_add_to_cart {
   cursor: pointer;
 }
 
-/* line 225, ../../../app/stylesheets/main.scss */
+/* line 233, ../../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -286,17 +314,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 234, ../../../app/stylesheets/main.scss */
+/* line 242, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
 
-/* line 238, ../../../app/stylesheets/main.scss */
+/* line 246, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table {
   margin: 0;
 }
 
-/* line 241, ../../../app/stylesheets/main.scss */
+/* line 249, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
   padding: 0;
   text-align: center;

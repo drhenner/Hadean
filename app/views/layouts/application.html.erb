@@ -19,8 +19,8 @@
 </head>
 <body >
   <div class="bp">
-    <%= raw "<p class='notice'> #{notice}</p>"  if notice %>
-    <%= raw "<p class='error'>#{alert}</p>"     if alert %>
+    <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
+    <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
   </div>
   <div class="container bp">
     <div id='header_wrapper' class="span-24 header-image">
@@ -73,8 +73,8 @@
   <script>
   jQuery(window).ready(
     function() {
-      jQuery('.notice').delay(5000).slideUp( 'slow');
-      jQuery('.error').delay(5000).slideUp( 'slow');
+      jQuery('.flash_notice').delay(6000).slideUp( 'slow');
+      jQuery('.flash_error').delay(6000).slideUp( 'slow');
     }
   );
   </script>

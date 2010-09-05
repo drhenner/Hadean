@@ -2,7 +2,7 @@ class CreateShippingMethods < ActiveRecord::Migration
   def self.up
     create_table :shipping_methods do |t|
       t.string :name
-      t.integer :zone_id
+      t.integer :shipping_zone_id
 
       t.timestamps
     end
