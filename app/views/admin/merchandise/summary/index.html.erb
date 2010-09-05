@@ -1,6 +1,5 @@
-
-<div id='header_sub_bar'>
+<% content_for :header_sub_bar do -%>
   <%= link_to 'Products', admin_merchandise_products_path %>
   <%= link_to 'Product Types', admin_merchandise_product_types_path %>
   <%= link_to 'Prototypes', admin_merchandise_prototypes_path %>
-<div>
+<% end %>
