@@ -1,4 +1,4 @@
-class Admin::Config::ShippingZonesController < ApplicationController
+class Admin::Config::ShippingZonesController < Admin::Config::BaseController
   # GET /admin/config/shipping_zones
   # GET /admin/config/shipping_zones.xml
   def index

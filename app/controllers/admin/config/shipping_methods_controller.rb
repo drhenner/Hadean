@@ -1,4 +1,4 @@
-class Admin::Config::ShippingMethodsController < Admin::BaseController
+class Admin::Config::ShippingMethodsController < Admin::Config::BaseController
   # GET /admin/config/shipping_methods
   # GET /admin/config/shipping_methods.xml
   def index

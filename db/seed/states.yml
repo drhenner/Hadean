@@ -3,6 +3,7 @@ a:
     name: Alaska
     abbreviation: AK
     country_id: 1
+    shipping_zone_id: 2
     described_as: State
     id: "1"
     
@@ -11,6 +12,7 @@ b:
     name: Alabama
     abbreviation: AL
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "2"
 c:
@@ -18,6 +20,7 @@ c:
     name: Arkansas
     abbreviation: AR
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "3"
     
@@ -26,6 +29,7 @@ d:
     name: American Samoa
     abbreviation: AS
     country_id: 1
+    shipping_zone_id: 4
     described_as: Territory
     id: "4"
     
@@ -34,6 +38,7 @@ e:
     name: Arizona
     abbreviation: AZ
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "5"
     
@@ -42,6 +47,7 @@ f:
     name: California
     abbreviation: CA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "6"
     
@@ -50,6 +56,7 @@ g:
     name: Colorado
     abbreviation: CO
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "7"
     
@@ -58,6 +65,7 @@ h:
     name: Connecticut
     abbreviation: CT
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "8"
     
@@ -66,6 +74,7 @@ i:
     name: District of Columbia
     abbreviation: DC
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "9"
     
@@ -74,6 +83,7 @@ j:
     name: Delaware
     abbreviation: DE
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "10"
     
@@ -82,6 +92,7 @@ k:
     name: Florida
     abbreviation: FL
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "11"
     
@@ -90,6 +101,7 @@ l:
     name: Georgia
     abbreviation: GA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "12"
     
@@ -98,6 +110,7 @@ m:
     name: Guam
     abbreviation: GU
     country_id: 1
+    shipping_zone_id: 4
     described_as: Territory
     id: "13"
     
@@ -106,6 +119,7 @@ n:
     name: Hawaii
     abbreviation: HI
     country_id: 1
+    shipping_zone_id: 2
     described_as: State
     id: "14"
     
@@ -114,6 +128,7 @@ o:
     name: Iowa
     abbreviation: IA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "15"
     
@@ -122,6 +137,7 @@ p:
     name: Idaho
     abbreviation: ID
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "16"
     
@@ -130,6 +146,7 @@ q:
     name: Illinois
     abbreviation: IL
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "17"
     
@@ -138,6 +155,7 @@ r:
     name: Indiana
     abbreviation: IN
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "18"
     
@@ -146,6 +164,7 @@ s:
     name: Kansas
     abbreviation: KS
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "19"
     
@@ -154,6 +173,7 @@ t:
     name: Kentucky
     abbreviation: KY
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "20"
     
@@ -162,6 +182,7 @@ u:
     name: Louisiana
     abbreviation: LA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "21"
     
@@ -170,6 +191,7 @@ v:
     name: Massachusetts
     abbreviation: MA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "22"
     
@@ -178,6 +200,7 @@ w:
     name: Maryland
     abbreviation: MD
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "23"
     
@@ -186,6 +209,7 @@ x:
     name: Maine
     abbreviation: ME
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "24"
     
@@ -194,6 +218,7 @@ y:
     name: Michigan
     abbreviation: MI
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "25"
     
@@ -202,6 +227,7 @@ z:
     name: Minnesota
     abbreviation: MN
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "26"
     
@@ -210,6 +236,7 @@ a1:
     name: Missouri
     abbreviation: MO
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "27"
     
@@ -218,6 +245,7 @@ b1:
     name: Mariana Islands
     abbreviation: MP
     country_id: 1
+    shipping_zone_id: 4
     described_as: Territory
     id: "28"
     
@@ -226,6 +254,7 @@ c1:
     name: Mississippi
     abbreviation: MS
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "29"
     
@@ -234,6 +263,7 @@ d1:
     name: Montana
     abbreviation: MT
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "30"
     
@@ -242,6 +272,7 @@ e1:
     name: North Carolina
     abbreviation: NC
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "31"
     
@@ -250,6 +281,7 @@ f1:
     name: North Dakota
     abbreviation: ND
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "32"
     
@@ -258,6 +290,7 @@ g1:
     name: Nebraska
     abbreviation: NE
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "33"
     
@@ -266,6 +299,7 @@ h1:
     name: New Hampshire
     abbreviation: NH
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "34"
     
@@ -274,6 +308,7 @@ i1:
     name: New Jersey
     abbreviation: NJ
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "35"
     
@@ -282,6 +317,7 @@ j1:
     name: New Mexico
     abbreviation: NM
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "36"
     
@@ -290,6 +326,7 @@ k1:
     name: Nevada
     abbreviation: NV
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "37"
     
@@ -298,6 +335,7 @@ l1:
     name: New York
     abbreviation: NY
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "38"
     
@@ -306,6 +344,7 @@ m1:
     name: Ohio
     abbreviation: OH
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "39"
     
@@ -314,6 +353,7 @@ n1:
     name: Oklahoma
     abbreviation: OK
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "40"
     
@@ -322,6 +362,7 @@ o1:
     name: Oregon
     abbreviation: OR
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "41"
     
@@ -330,6 +371,7 @@ p1:
     name: Pennsylvania
     abbreviation: PA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "42"
     
@@ -338,6 +380,7 @@ q1:
     name: PUERTO RICO
     abbreviation: PR
     country_id: 1
+    shipping_zone_id: 4
     described_as: Territory
     id: "43"
     
@@ -346,6 +389,7 @@ r1:
     name: Rhode Island
     abbreviation: RI
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "44"
     
@@ -354,6 +398,7 @@ s1:
     name: South Carolina
     abbreviation: SC
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "45"
     
@@ -362,6 +407,7 @@ t1:
     name: South Dakota
     abbreviation: SD
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "46"
     
@@ -370,6 +416,7 @@ u1:
     name: Tennesse
     abbreviation: TN
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "47"
     
@@ -378,6 +425,7 @@ v1:
     name: Texas
     abbreviation: TX
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "48"
     
@@ -386,6 +434,7 @@ w1:
     name: Utah
     abbreviation: UT
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "49"
     
@@ -394,6 +443,7 @@ x1:
     name: Virginia
     abbreviation: VA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "50"
     
@@ -402,6 +452,7 @@ y1:
     name: Virgin Islands
     abbreviation: VI
     country_id: 1
+    shipping_zone_id: 4
     described_as: Territory
     id: "51"
     
@@ -410,6 +461,7 @@ z1:
     name: Vermont
     abbreviation: VT
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "52"
     
@@ -418,6 +470,7 @@ a2:
     name: Washington
     abbreviation: WA
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "53"
     
@@ -426,6 +479,7 @@ b2:
     name: Wisconsin
     abbreviation: WI
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "54"
     
@@ -434,6 +488,7 @@ c2:
     name: West Virginia
     abbreviation: WV
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "55"
     
@@ -442,6 +497,7 @@ d2:
     name: Wyoming
     abbreviation: WY
     country_id: 1
+    shipping_zone_id: 1
     described_as: State
     id: "56"
     
@@ -450,6 +506,7 @@ e2:
     name: Ontario
     abbreviation: ON
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "57"
     
@@ -458,6 +515,7 @@ f2:
     name: Quebec
     abbreviation: QC
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "58"
     
@@ -466,6 +524,7 @@ g2:
     name: Nova Scotia
     abbreviation: NS
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "59"
     
@@ -474,6 +533,7 @@ h2:
     name: New Brunswick
     abbreviation: NB
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "60"
     
@@ -482,6 +542,7 @@ i2:
     name: Manitoba
     abbreviation: MB
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "61"
     
@@ -490,6 +551,7 @@ j2:
     name: British Columbia
     abbreviation: BC
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "62"
     
@@ -498,6 +560,7 @@ k2:
     name: Prince Edward Island
     abbreviation: PE
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "63"
     
@@ -506,6 +569,7 @@ l2:
     name: Saskatchewan
     abbreviation: SK
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "64"
     
@@ -514,6 +578,7 @@ m2:
     name: Alberta
     abbreviation: AB
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "65"
     
@@ -522,6 +587,7 @@ n2:
     name: Newfoundland and Labrador
     abbreviation: NL
     country_id: 2
+    shipping_zone_id: 3
     described_as: Province
     id: "66"
     
@@ -530,6 +596,7 @@ o2:
     name: Northwest Territories
     abbreviation: NT
     country_id: 2
+    shipping_zone_id: 3
     described_as: Territory
     id: "67"
     
@@ -538,6 +605,7 @@ p2:
     name: Yukon
     abbreviation: YT
     country_id: 2
+    shipping_zone_id: 3
     described_as: Territory
     id: "68"
     
@@ -546,6 +614,7 @@ q2:
     name: Nunavut
     abbreviation: NU
     country_id: 2
+    shipping_zone_id: 3
     described_as: Territory
     id: "69"
     

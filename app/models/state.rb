@@ -1,6 +1,8 @@
 class State < ActiveRecord::Base
   belongs_to :country
   has_many   :addresses
+  belongs_to :shipping_zone
+  
   
   
   def abbreviation_name(append_name = "")

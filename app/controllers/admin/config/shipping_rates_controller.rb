@@ -1,4 +1,4 @@
-class Admin::Config::ShippingRatesController < Admin::BaseController
+class Admin::Config::ShippingRatesController < Admin::Config::BaseController
   # GET /shipping_rates
   # GET /shipping_rates.xml
   def index
