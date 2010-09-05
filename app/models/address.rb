@@ -13,19 +13,43 @@ class Address < ActiveRecord::Base
                           :format   => { :with => CustomValidators::Names.name_validator }
   validates :state,       :presence => true,  :if => Proc.new { |address| address.state_name.blank?  }
   validates :state_name,  :presence => true,  :if => Proc.new { |address| address.state_id.blank?   }
-  #validates :zip_code,   :presence => true
+  validates :zip_code,    :presence => true
   #validates :phone_id,    :presence => true
   
   #accepts_nested_attributes_for :phones
+  
+  def self.update_address(old_address, params, address_type_id = AddressType::SHIPPING_ID )
+    new_address = Address.new(params.merge( :address_type_id  => address_type_id, 
+                              :addressable_type => old_address.addressable_type, 
+                              :addressable_id   => old_address.addressable_id ))
+    
+    new_address.default = true if old_address.default
+    if new_address.valid? && new_address.save_default_address
+      old_address.update_attributes(:active => false)
+      new_address  ## return the new address without errors
+    else
+      old_address.update_attributes(params) ##  This should always fail
+      old_address  ## return the old address with errors
+    end
+  end
+  
+  
+  
+  
   
   def save_default_address(object, params)
     Address.transaction do
       if params[:default] && params[:default] != '0'
         Address.update_all(["addresses.default = ?", false], 
-                            ["addresses.addressable_id = ? AND 
-                              addresses.address_type_id = ? AND
-                              addresses.addressable_type = ? ", object.id, self.address_type_id, object.class.to_s]) if object
+                            ["addresses.addressable_id = ? AND
+                              addresses.addressable_type = ? ", object.id, object.class.to_s]) if object
         self.default = true
+      end
+      if params[:billing_default] && params[:billing_default] != '0'
+        Address.update_all(["addresses.billing_default = ?", false], 
+                            ["addresses.addressable_id = ? AND
+                              addresses.addressable_type = ? ", object.id, object.class.to_s]) if object
+        self.billing_default = true
       end
       self.addressable = object
       self.save

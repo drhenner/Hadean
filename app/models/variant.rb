@@ -32,6 +32,12 @@ class Variant < ActiveRecord::Base
     0
   end
   
+  def add_pending_to_customer(num, reload_object = true)
+    self.reload if reload_object
+    self.count_pending_to_customer = self.count_pending_to_customer + num.to_i
+    save
+  end
+  
   def qty_to_add=(num)
     ###  TODO this method needs a history of who did what
     self.count_on_hand = self.count_on_hand + num.to_i

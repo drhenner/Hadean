@@ -10,7 +10,7 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :ship_address_id
       t.integer :ship_method_id
       t.integer :coupon_id
-      t.boolean :active
+      t.boolean :active, :default => true, :null => false
 
       t.timestamps
     end

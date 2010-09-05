@@ -17,8 +17,8 @@ class Shopping::BaseController < ApplicationController
         (cookies[:insecure].nil? || cookies[:insecure] == true)## this should happen every time the user goes to a non-SSL page
       session[:return_to] = shopping_orders_url
       return login_url()
-    else
-      return shopping_addresses_url
+    elsif find_or_create_order.ship_address_id.nil?
+      return shopping_addresses_url()
     end
   end
   
@@ -27,12 +27,15 @@ class Shopping::BaseController < ApplicationController
     if session[:order_id]
       @session_order = current_user.orders.find(session[:order_id])
       if !@session_order.in_progress?
-        @session_order = current_user.orders.create
+        @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
+                                                    :bill_address => current_user.bill_address  )
         session[:order_id] = @session_order.id
       end
     else
-      @session_order = current_user.orders.create
+      @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
+                                                  :bill_address => current_user.bill_address)
       session[:order_id] = @session_order.id
     end
+    @session_order
   end
 end

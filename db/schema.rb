@@ -1,8 +1,8 @@
-# This file is auto-generated from the current state of the database. Instead 
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your 
+# Note that this schema.rb definition is the authoritative source for your
 # database schema. If you need to create the application database on another
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100831062412) do
+ActiveRecord::Schema.define(:version => 20100905021656) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name",                                                           :null => false
@@ -39,9 +39,11 @@ ActiveRecord::Schema.define(:version => 20100831062412) do
     t.string   "state_name"
     t.string   "zip_code"
     t.string   "alternative_phone"
-    t.boolean  "default"
+    t.boolean  "default",           :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "billing_default",   :default => false
+    t.boolean  "active",            :default => true
   end
 
   create_table "brands", :force => true do |t|
@@ -116,7 +118,7 @@ ActiveRecord::Schema.define(:version => 20100831062412) do
     t.integer  "ship_address_id"
     t.integer  "ship_method_id"
     t.integer  "coupon_id"
-    t.boolean  "active"
+    t.boolean  "active",          :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -218,6 +220,34 @@ ActiveRecord::Schema.define(:version => 20100831062412) do
 
   create_table "shipping_categories", :force => true do |t|
     t.string "name", :null => false
+  end
+
+  create_table "shipping_methods", :force => true do |t|
+    t.string   "name"
+    t.integer  "zone_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shipping_rate_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shipping_rates", :force => true do |t|
+    t.integer  "shipping_method_id"
+    t.decimal  "rate",                  :precision => 10, :scale => 0
+    t.integer  "shipping_rate_type_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shipping_zones", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "slugs", :force => true do |t|

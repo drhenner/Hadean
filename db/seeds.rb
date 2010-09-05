@@ -44,3 +44,11 @@ Account::TYPES.each_pair do |acc_type, value|
     Account.create(:name => acc_type, :account_type => acc_type, :monthly_charge => value)
   end
 end
+
+ShippingRateType::TYPES.each do |rate_type|
+  ShippingRateType.find_or_create_by_name(rate_type)
+end
+
+ShippingZone::LOCATIONS.each do |loc|
+  ShippingZone.find_or_create_by_name(loc)
+end

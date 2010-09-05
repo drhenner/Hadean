@@ -34,21 +34,19 @@ class User < ActiveRecord::Base
   has_many    :addresses,                 :dependent => :destroy, 
                                           :as => :addressable
                                           
-  has_one     :default_billing_address,   :conditions => ['addresses.default = ? AND
-                                                          addresses.address_type_id = ?', true, AddressType::BILLING_ID], 
+  has_one     :default_billing_address,   :conditions => ['addresses.billing_default = ? AND active = ?', true, true], 
                                           :as => :addressable,
                                           :class_name => 'Address'
                                           
-  has_one     :billing_addresses,         :conditions => ['addresses.address_type_id = ?',AddressType::BILLING_ID], 
+  has_one     :billing_addresses,         :conditions => ['addresses.active = ?', true], 
                                           :as => :addressable,
                                           :class_name => 'Address'
 
-  has_one     :default_shipping_address,  :conditions => ['addresses.default = ? AND
-                                                          addresses.address_type_id = ?', true, AddressType::SHIPPING_ID], 
+  has_one     :default_shipping_address,  :conditions => ['addresses.default = ? AND active = ?', true, true], 
                                           :as => :addressable,
                                           :class_name => 'Address'
                                                 
-  has_many     :shipping_addresses,       :conditions => ['addresses.address_type_id = ?', AddressType::SHIPPING_ID], 
+  has_many     :shipping_addresses,       :conditions => ['addresses.active = ?', true], 
                                           :as => :addressable,
                                           :class_name => 'Address'
   
