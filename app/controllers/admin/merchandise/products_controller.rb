@@ -91,7 +91,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       @prototypes = Prototype.all.collect{|pt| [pt.name, pt.id]}
       @all_properties = Property.all
       @select_product_types = ProductType.all.collect{|pt| [pt.name, pt.id]}
-      @select_shipping_category = ShippingCategory.all.collect {|sc| [sc.name, sc.id]}
+      @all_shipping_rates = ShippingRate.all#.collect {|sr| [sr.name, sr.id]}
+      #@select_shipping_category = ShippingCategory.all.collect {|sc| [sc.name, sc.id]}
     end
   
 end

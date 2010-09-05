@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration
       t.string            :name, :null => false
       t.text              :description
       t.integer           :tax_category_id
-      t.integer           :shipping_category_id
       t.integer           :product_type_id, :null => false
       t.integer           :prototype_id
       t.string            :permalink, :null => false

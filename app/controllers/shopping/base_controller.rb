@@ -19,6 +19,8 @@ class Shopping::BaseController < ApplicationController
       return login_url()
     elsif find_or_create_order.ship_address_id.nil?
       return shopping_addresses_url()
+    elsif find_or_create_order.ship_method_id.nil?
+      return shopping_shipping_methods_url()
     end
   end
   

@@ -36,6 +36,16 @@
       </div>
     </div>
     <hr />
+    <div id='header_bar' class='float-left'>
+          <%= link_to 'Merchandise', admin_merchandise_path, :class => 'button spade inline-block', :id => 'merachandise_button' %>
+        
+        <%= link_to "Inventory", admin_inventory_overviews_path, 
+                            :class  => "button spade inline-block", 
+                            :id     => "admin_inventory_button" %>
+        <%= link_to "Users", admin_users_path, 
+                            :class  => "button spade inline-block", 
+                            :id     => "admin_users_button" %>
+    </div>
   
     <%= yield %>
   </div>

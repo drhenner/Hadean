@@ -1,89 +1,90 @@
 /* line 4, ../../../app/stylesheets/main.scss */
 #header_wrapper {
   width: 950px;
+  margin-right: 0;
   background-color: #57B;
 }
-/* line 8, ../../../app/stylesheets/main.scss */
+/* line 10, ../../../app/stylesheets/main.scss */
 #header_wrapper h1, #header_wrapper h3, #header_wrapper a {
   color: #EEE;
 }
 
-/* line 63, ../../../app/stylesheets/main.scss */
+/* line 73, ../../../app/stylesheets/main.scss */
 .left-text {
   text-align: left;
 }
 
-/* line 67, ../../../app/stylesheets/main.scss */
+/* line 77, ../../../app/stylesheets/main.scss */
 .left-text-4 {
   text-align: left;
   padding-left: 4px;
 }
 
-/* line 71, ../../../app/stylesheets/main.scss */
+/* line 81, ../../../app/stylesheets/main.scss */
 .left-text-8 {
   text-align: left;
   padding-left: 8px;
 }
 
-/* line 75, ../../../app/stylesheets/main.scss */
+/* line 85, ../../../app/stylesheets/main.scss */
 .rounded-2 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 79, ../../../app/stylesheets/main.scss */
+/* line 89, ../../../app/stylesheets/main.scss */
 .rounded-4 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 82, ../../../app/stylesheets/main.scss */
+/* line 92, ../../../app/stylesheets/main.scss */
 .rounded-6 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 86, ../../../app/stylesheets/main.scss */
+/* line 96, ../../../app/stylesheets/main.scss */
 .rounded-8 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 90, ../../../app/stylesheets/main.scss */
+/* line 100, ../../../app/stylesheets/main.scss */
 .padding-5 {
   padding: 5px;
 }
 
-/* line 94, ../../../app/stylesheets/main.scss */
+/* line 104, ../../../app/stylesheets/main.scss */
 .padding-10 {
   padding: 10px;
 }
 
-/* line 98, ../../../app/stylesheets/main.scss */
+/* line 108, ../../../app/stylesheets/main.scss */
 #admin-property-names {
   width: 390px;
 }
-/* line 58, ../../../app/stylesheets/main.scss */
+/* line 68, ../../../app/stylesheets/main.scss */
 #admin-property-names p {
   width: 390px;
 }
 
-/* line 104, ../../../app/stylesheets/main.scss */
+/* line 114, ../../../app/stylesheets/main.scss */
 #admin_properties_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 107, ../../../app/stylesheets/main.scss */
+/* line 117, ../../../app/stylesheets/main.scss */
 #admin_properties_grid_wrapper {
   width: 710px;
 }
 
-/* line 111, ../../../app/stylesheets/main.scss */
+/* line 121, ../../../app/stylesheets/main.scss */
 #admin_new_property_button {
   display: inline;
   float: left;
@@ -96,18 +97,18 @@
   overflow-x: hidden;
 }
 
-/* line 116, ../../../app/stylesheets/main.scss */
+/* line 126, ../../../app/stylesheets/main.scss */
 #admin_product_types_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 119, ../../../app/stylesheets/main.scss */
+/* line 129, ../../../app/stylesheets/main.scss */
 #admin_product_types_grid_wrapper {
   width: 710px;
 }
 
-/* line 123, ../../../app/stylesheets/main.scss */
+/* line 133, ../../../app/stylesheets/main.scss */
 #admin_new_product_type_button {
   display: inline;
   float: left;
@@ -120,27 +121,27 @@
   overflow-x: hidden;
 }
 
-/* line 128, ../../../app/stylesheets/main.scss */
+/* line 138, ../../../app/stylesheets/main.scss */
 #admin-product_type-names {
   width: 390px;
 }
-/* line 58, ../../../app/stylesheets/main.scss */
+/* line 68, ../../../app/stylesheets/main.scss */
 #admin-product_type-names p {
   width: 390px;
 }
 
-/* line 134, ../../../app/stylesheets/main.scss */
+/* line 144, ../../../app/stylesheets/main.scss */
 #admin_prototypes_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 137, ../../../app/stylesheets/main.scss */
+/* line 147, ../../../app/stylesheets/main.scss */
 #admin_prototypes_grid_wrapper {
   width: 710px;
 }
 
-/* line 140, ../../../app/stylesheets/main.scss */
+/* line 150, ../../../app/stylesheets/main.scss */
 #admin_new_prototype_type_button {
   display: inline;
   float: left;
@@ -153,29 +154,29 @@
   overflow-x: hidden;
 }
 
-/* line 143, ../../../app/stylesheets/main.scss */
+/* line 153, ../../../app/stylesheets/main.scss */
 #admin-prototype-names {
   width: 390px;
 }
-/* line 58, ../../../app/stylesheets/main.scss */
+/* line 68, ../../../app/stylesheets/main.scss */
 #admin-prototype-names p {
   width: 390px;
 }
 
-/* line 147, ../../../app/stylesheets/main.scss */
+/* line 157, ../../../app/stylesheets/main.scss */
 .property_form {
   display: inline;
   text-align: left;
 }
 
-/* line 151, ../../../app/stylesheets/main.scss */
+/* line 161, ../../../app/stylesheets/main.scss */
 .selectlist-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 157, ../../../app/stylesheets/main.scss */
+/* line 167, ../../../app/stylesheets/main.scss */
 .selectlist-item {
   background: white url(../images/cross-circle.png) no-repeat right center;
   border-left: solid 1px #eee;
@@ -187,13 +188,13 @@
   margin: 1px 0;
 }
 
-/* line 169, ../../../app/stylesheets/main.scss */
+/* line 179, ../../../app/stylesheets/main.scss */
 #admin-product-names {
   margin: 0  0  0.5em;
   padding: 0.3em;
 }
 
-/* line 176, ../../../app/stylesheets/main.scss */
+/* line 186, ../../../app/stylesheets/main.scss */
 #header_bar {
   width: 950px;
   display: -moz-inline-box;
@@ -209,7 +210,19 @@
   behavior: url(border-radius.htc);
 }
 
-/* line 184, ../../../app/stylesheets/main.scss */
+/* line 194, ../../../app/stylesheets/main.scss */
+#header_sub_bar {
+  width: 910px;
+  margin-right: 0;
+  margin-left: 18px;
+  background-color: #8AE;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: solid 2px #68C;
+}
+
+/* line 205, ../../../app/stylesheets/main.scss */
 #search_bar {
   width: 710px;
   display: inline;
@@ -223,7 +236,7 @@
   text-align: left;
 }
 
-/* line 190, ../../../app/stylesheets/main.scss */
+/* line 211, ../../../app/stylesheets/main.scss */
 #cart_items_button {
   display: inline;
   float: right;
@@ -235,7 +248,7 @@
   *vertical-align: auto;
 }
 
-/* line 194, ../../../app/stylesheets/main.scss */
+/* line 215, ../../../app/stylesheets/main.scss */
 #wish_items_button {
   display: inline;
   float: right;
@@ -247,24 +260,24 @@
   *vertical-align: auto;
 }
 
-/* line 201, ../../../app/stylesheets/main.scss */
+/* line 222, ../../../app/stylesheets/main.scss */
 li {
   list-style: none;
 }
 
-/* line 204, ../../../app/stylesheets/main.scss */
+/* line 225, ../../../app/stylesheets/main.scss */
 input.text, input.title, input[type="text"], input[type="password"] {
   background-color: white;
   margin: 0.15em 0;
   padding: 5px;
 }
 
-/* line 210, ../../../app/stylesheets/main.scss */
+/* line 231, ../../../app/stylesheets/main.scss */
 #content_wrapper {
   padding-top: 4px;
 }
 
-/* line 214, ../../../app/stylesheets/main.scss */
+/* line 235, ../../../app/stylesheets/main.scss */
 .flash_error {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -278,7 +291,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #8a1f11;
 }
 
-/* line 218, ../../../app/stylesheets/main.scss */
+/* line 239, ../../../app/stylesheets/main.scss */
 .flash_notice {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -292,17 +305,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #514721;
 }
 
-/* line 223, ../../../app/stylesheets/main.scss */
+/* line 244, ../../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }
 
-/* line 229, ../../../app/stylesheets/main.scss */
+/* line 250, ../../../app/stylesheets/main.scss */
 #submit_add_to_cart {
   cursor: pointer;
 }
 
-/* line 233, ../../../app/stylesheets/main.scss */
+/* line 254, ../../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -314,17 +327,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 242, ../../../app/stylesheets/main.scss */
+/* line 263, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
 
-/* line 246, ../../../app/stylesheets/main.scss */
+/* line 267, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table {
   margin: 0;
 }
 
-/* line 249, ../../../app/stylesheets/main.scss */
+/* line 270, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
   padding: 0;
   text-align: center;

@@ -1,4 +1,4 @@
-class Shopping::PaymentsController < ApplicationController
+class Shopping::PaymentsController < Shopping::BaseController
   # GET /shopping/payments
   # GET /shopping/payments.xml
   def index

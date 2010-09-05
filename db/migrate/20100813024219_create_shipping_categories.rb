@@ -1,7 +1,9 @@
 class CreateShippingCategories < ActiveRecord::Migration
   def self.up
     create_table :shipping_categories do |t|
-      t.string :name, :null => false,   :unique => true
+      #t.string :name, :null => false,   :unique => true
+      t.integer :product_id, :null => false
+      t.integer :shipping_rate_id, :null => false
       #t.timestamps
     end
   end

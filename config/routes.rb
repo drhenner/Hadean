@@ -5,7 +5,7 @@ Hadean::Application.routes.draw do # |map|
   match 'login'   => 'user_sessions#new'
   match 'logout'  => 'user_sessions#destroy'
   match 'signup'  => 'shopping/cart_items#new'
-  
+  match 'admin/merchandise' => 'admin/merchandise/summary#index'
   resources :products
   resources :cart_items
   resources :wish_items
@@ -24,8 +24,9 @@ Hadean::Application.routes.draw do # |map|
   end
   
   namespace :shopping do
-    resources :cart_items
+    resources  :cart_items
     resources  :orders
+    resources  :shipping_methods
     resources  :addresses do
       member do 
         put :select_address

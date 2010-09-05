@@ -1,4 +1,4 @@
 class ShippingCategory < ActiveRecord::Base
-  has_many :products
-  has_many :shipping_rates
+  belongs_to :product
+  belongs_to :shipping_rate
 end

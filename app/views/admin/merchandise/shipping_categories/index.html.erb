@@ -1,0 +1,21 @@
+<h1>Listing admin_merchandise_shipping_categories</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_merchandise_shipping_categories.each do |admin_merchandise_shipping_category| %>
+  <tr>
+    <td><%= link_to 'Show', admin_merchandise_shipping_category %></td>
+    <td><%= link_to 'Edit', edit_admin_merchandise_shipping_category_path(admin_merchandise_shipping_category) %></td>
+    <td><%= link_to 'Destroy', admin_merchandise_shipping_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shipping category', new_admin_merchandise_shipping_category_path %>

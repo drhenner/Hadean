@@ -1,0 +1,15 @@
+<h1>Pick a Shipping Method</h1>
+
+<table>
+  <tr>
+    <th>Method</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shipping_methods.each do |shipping_method| %>
+  <tr>
+    <td><%= shipping_method.name %> </td>
+  </tr>
+<% end %>
+</table>

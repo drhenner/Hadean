@@ -1,6 +1,8 @@
 class Order < ActiveRecord::Base
   belongs_to :user
   has_many   :order_items
+  belongs_to   :ship_address, :class_name => 'Address'
+  belongs_to   :bill_address, :class_name => 'Address'
   
   
   before_validation :set_email

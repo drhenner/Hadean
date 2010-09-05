@@ -1,0 +1,17 @@
+<%= form_for(@admin_merchandise_shipping_category) do |f| %>
+  <% if @admin_merchandise_shipping_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_merchandise_shipping_category.errors.count, "error") %> prohibited this admin_merchandise_shipping_category from being saved:</h2>
+
+      <ul>
+      <% @admin_merchandise_shipping_category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

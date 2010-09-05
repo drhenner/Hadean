@@ -3,6 +3,8 @@
 
 #header_wrapper {
   @include span(24);
+  @include last;
+  
   //background-image: url(../../images/logos/hadean_wide.png);
   background-color: #57B;
   h1, h3, a {
@@ -20,6 +22,14 @@
   padding: $pad;
 }
 
+@mixin margin($pad: 4px) {
+  margin: $pad;
+}
+
+@mixin left-right-margin($pad: 4px) {
+  margin-left: $pad;
+  margin-right: $pad;
+}
 @mixin top-rounded($radius: 4px) {
   -moz-border-radius:$radius $radius 0px 0px;
   -webkit-border-radius:$radius $radius 0px 0px;
@@ -179,6 +189,17 @@
   background-color: #57B;
   @include last;
   @include bottom-rounded(9px)
+}
+
+#header_sub_bar {
+  @include span(23);
+  @include last;
+  
+  margin-left:  18px;
+  // @include inline-block;
+  background-color: #8AE;
+  @include rounded(9px);
+  border:   solid 2px #68C;
 }
 
 #search_bar {
