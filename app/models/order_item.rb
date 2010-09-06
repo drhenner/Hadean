@@ -12,8 +12,10 @@ class OrderItem < ActiveRecord::Base
  end
  
   def self.order_items_in_cart(order_id)
-    find(:all, :conditions => ['order_items.order_id = ? ', order_id ],
+    find(:all, :joins => {:variant => :product },
+               :conditions => ['order_items.order_id = ? ', order_id ],
                :select => "order_items.*, count(*) as quantity, 
+                                          products.shipping_category_id as shipping_category_id,
                                           SUM(order_items.price) as sum_price,
                                           SUM(order_items.total) as sum_total",
                :group => "order_items.variant_id")

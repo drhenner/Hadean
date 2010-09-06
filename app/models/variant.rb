@@ -20,6 +20,14 @@ class Variant < ActiveRecord::Base
   
   accepts_nested_attributes_for :variant_properties
   
+  def display_property_details(separator = '<br/>')
+    property_details.inject {|detail| detail.join(separator) }.join(': ')
+  end
+  
+  def property_details
+    variant_properties.collect {|vp| [vp.property.display_name ,vp.description] }
+  end
+  
   def product_name 
     product.name
   end

@@ -4,7 +4,7 @@ class Admin::Config::ShippingRatesController < Admin::Config::BaseController
   def index
     form_info
     if @shipping_methods.empty?
-      flash[:notice] = 'You need a Shipping Method before you create a shippoing rate.'
+      flash[:notice] = 'You need a Shipping Method before you create a shipping rate.'
       redirect_to admin_config_shipping_methods_path
     else
       @shipping_rates = ShippingRate.includes([:shipping_method, :shipping_rate_type]).all
@@ -93,7 +93,8 @@ class Admin::Config::ShippingRatesController < Admin::Config::BaseController
   private
   
   def form_info
-    @shipping_rate_types = ShippingRateType.all
-    @shipping_methods = ShippingMethod.all
+    @shipping_rate_types  = ShippingRateType.all
+    @shipping_methods     = ShippingMethod.all
+    @shipping_categories  = ShippingCategory.all
   end
 end

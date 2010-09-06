@@ -272,12 +272,21 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: center;
 }
 
+.line_items_blue {
+  padding: 3px;
+  @include rounded(4px);
+  border:   solid 2px #D0D8EF;
+  background-color: #f0f8ff;
+  margin-bottom: 3px;
+}
+
 .line_item_yellow {
   padding: 3px;
   @include rounded(4px);
   border:   solid 2px #ddc;
   background-color: #EED;
   margin-bottom: 3px;
+  text-align:left;
 }
 
 .line_item_gray {
@@ -286,4 +295,5 @@ input.text, input.title, input[type="text"], input[type="password"] {
   border:   solid 2px #ddd;
   background-color: #EEE;
   margin-bottom: 3px;
+  text-align:left;
 }

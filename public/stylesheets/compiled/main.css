@@ -344,6 +344,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
 }
 
 /* line 275, ../../../app/stylesheets/main.scss */
+.line_items_blue {
+  padding: 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: solid 2px #D0D8EF;
+  background-color: #f0f8ff;
+  margin-bottom: 3px;
+}
+
+/* line 283, ../../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -352,9 +363,10 @@ input.text, input.title, input[type="text"], input[type="password"] {
   border: solid 2px #ddc;
   background-color: #EED;
   margin-bottom: 3px;
+  text-align: left;
 }
 
-/* line 283, ../../../app/stylesheets/main.scss */
+/* line 292, ../../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -363,4 +375,5 @@ input.text, input.title, input[type="text"], input[type="password"] {
   border: solid 2px #ddd;
   background-color: #EEE;
   margin-bottom: 3px;
+  text-align: left;
 }

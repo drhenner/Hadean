@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer           :tax_category_id
       t.integer           :product_type_id, :null => false
       t.integer           :prototype_id
+      t.integer           :shipping_category_id, :null => false
       t.string            :permalink, :null => false
       t.datetime          :available_at
       t.datetime          :deleted_at
@@ -18,6 +19,7 @@ class CreateProducts < ActiveRecord::Migration
       add_index :products, :name
       add_index :products, :tax_category_id
       add_index :products, :product_type_id
+      add_index :products, :shipping_category_id
       add_index :products, :prototype_id
       add_index :products, :permalink,   :unique => true
   end

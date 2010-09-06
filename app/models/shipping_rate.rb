@@ -5,7 +5,7 @@ class ShippingRate < ActiveRecord::Base
   belongs_to :shipping_method
   belongs_to :shipping_rate_type
   
-  has_many :shipping_categories
+  belongs_to :shipping_category
   has_many :products, :through => :shipping_categories
   
   validates  :rate,                   :presence => true, :numericality => true
