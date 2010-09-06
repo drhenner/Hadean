@@ -13,6 +13,10 @@ class CreateOrders < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :orders, :user_id
+    add_index :orders, :bill_address_id
+    add_index :orders, :ship_address_id
   end
 
   def self.down

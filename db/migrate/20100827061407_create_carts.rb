@@ -5,6 +5,7 @@ class CreateCarts < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :carts, :user_id
   end
 
   def self.down

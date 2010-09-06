@@ -12,6 +12,7 @@ class CreateCartItems < ActiveRecord::Migration
     end
     
     add_index :carts, :user_id
+    add_index :carts, :cart_id
     add_index :carts, :variant_id
     add_index :carts, :item_type_id
   end

@@ -10,6 +10,9 @@ class CreateShippingRates < ActiveRecord::Migration
       
       t.timestamps
     end
+    
+    add_index :shipping_rates, :shipping_method_id
+    add_index :shipping_rates, :shipping_rate_type_id
   end
 
   def self.down

@@ -13,6 +13,7 @@ class CreateVariants < ActiveRecord::Migration
       t.timestamps
     end
     add_index :variants, :sku 
+    add_index :variants, :product_id
     
     execute "alter table variants add constraint fk_variants_products foreign key (product_id) references products(id)" if SETTINGS[:use_foreign_keys]
   end

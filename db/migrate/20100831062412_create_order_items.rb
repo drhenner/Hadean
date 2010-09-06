@@ -10,6 +10,11 @@ class CreateOrderItems < ActiveRecord::Migration
       t.integer :shipping_rate_id
       t.timestamps
     end
+    
+    add_index :order_items, :order_id
+    add_index :order_items, :variant_id
+    add_index :order_items, :tax_rate_id
+    add_index :order_items, :shipping_rate_id
   end
 
   def self.down

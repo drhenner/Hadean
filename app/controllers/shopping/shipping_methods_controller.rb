@@ -9,7 +9,7 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
       ##  TODO  refactopr this method... it seems a bit lengthy
       @shipping_method_ids = session_order.ship_address.state.shipping_zone.shipping_method_ids
       
-      @order_items = OrderItem.order_items_in_cart(session_order.id)
+      @order_items = OrderItem.includes({:variant => {:product => :shipping_rates}}).order_items_in_cart(session_order.id)
       #session_order.order_
       @order_items.each do |item|
         item.variant.product.available_shipping_rates = ShippingRate.with_these_shipping_methods(item.variant.product.shipping_rate_ids, @shipping_method_ids)
