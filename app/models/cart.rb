@@ -25,10 +25,6 @@ class Cart < ActiveRecord::Base
       items = shopping_cart_items.inject({}) {|h, item| h[item.variant_id] = item.quantity; h}
       items_to_add_or_destroy(items, order.order_items)
       
-      #OrderItem.destroy_all("order_id = #{order.id}")
-      #shopping_cart_items.each do |item|
-      #  order.add_items(item.variant_id, item.quantity)
-      #end
     end
   end
   
@@ -40,7 +36,8 @@ class Cart < ActiveRecord::Base
         OrderItem.destroy_all("id IN (?)", array_of_order_items)
       elsif items_in_cart[variant_id] > array_of_order_items.size ## the number in the cart is larger than the amount in order_items
         ###  add more to the cart
-        order.add_items( variant_id , (items_in_cart[k] - array_of_order_items.size))
+        variant = Variant.find(variant_id)
+        order.add_items( variant , (items_in_cart[k] - array_of_order_items.size))
       elsif items_in_cart[variant_id] < array_of_order_items.size ## the number in the cart is smaller than the amount in order_items
         #remove items in cart
         qty_to_remove = array_of_order_items.size - items_in_cart[variant_id]  

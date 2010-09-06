@@ -30,9 +30,9 @@ class Order < ActiveRecord::Base
     self
   end
   
-  def add_items(variant_id, quantity)
+  def add_items(variant, quantity)
     quantity.times do
-      self.order_items.create(:variant_id => variant_id)
+      self.order_items.create(:variant_id => variant.id, :price => variant.price)
     end
   end
   
