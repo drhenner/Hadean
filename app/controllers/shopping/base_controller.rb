@@ -1,5 +1,5 @@
 class Shopping::BaseController < ApplicationController
-  helper_method :session_order
+  helper_method :session_order, :session_order_id
   # these are methods that can be used for all orders
   private
   
@@ -26,6 +26,10 @@ class Shopping::BaseController < ApplicationController
   
   def session_order
     find_or_create_order
+  end
+  
+  def session_order_id
+    session[:order_id] ? session[:order_id] : find_or_create_order.id
   end
   
   def find_or_create_order

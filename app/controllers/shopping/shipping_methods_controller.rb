@@ -56,15 +56,24 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
   # PUT /shopping/shipping_methods/1
   # PUT /shopping/shipping_methods/1.xml
   def update
-    @shipping_method = ShippingMethod.find(params[:id])
-
+    all_selected = true
+    params[:shipping_category].each_pair do |category_id, rate_id|#[rate]
+      if rate_id
+        items = OrderItem.includes([{:variant => :product}]).
+                          where(['order_items.order_id = ? AND 
+                                  products.shipping_category_id = ?', session_order_id, category_id])
+      
+        OrderItem.update_all("shipping_rate_id = #{rate_id}","id IN (#{items.map{|i| i.id}.join(',')})")
+      else
+        all_selected = false
+      end
+    end
     respond_to do |format|
-      if @shipping_method.update_attributes(params[:shopping_shipping_method])
-        format.html { redirect_to(@shipping_method, :notice => 'Shipping method was successfully updated.') }
+      if all_selected
+        format.html { redirect_to(shopping_orders_url, :notice => 'Shipping method was successfully updated.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @shipping_method.errors, :status => :unprocessable_entity }
+        format.html { redirect_to( shopping_shipping_methods_url, :notice => 'All the Shipping Methods must be selected') }
       end
     end
   end
