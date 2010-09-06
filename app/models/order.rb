@@ -14,6 +14,10 @@ class Order < ActiveRecord::Base
   
   state_machine :initial => 'in_progress' do
     
+    event :complete do
+      transition :to => 'complete', :from => 'in_progress'
+    end
+    
     after_transition :to => 'complete', :do => [:update_inventory]
   end
   
@@ -24,6 +28,12 @@ class Order < ActiveRecord::Base
       self.update_attributes(:bill_address_id => address_id)
     end
     self
+  end
+  
+  def add_items(variant_id, quantity)
+    quantity.times do
+      self.order_items.create(:variant_id => variant_id)
+    end
   end
   
   def set_email

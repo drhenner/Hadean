@@ -12,6 +12,7 @@ class Shopping::OrdersController < Shopping::BaseController
     #current or in-progress otherwise cart (unless cart is empty)
     @order = find_or_create_order 
     if f = next_form(@order)
+      session_cart.add_items_to_checkout(@order)
       redirect_to f
     else
       respond_to do |format|

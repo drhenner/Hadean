@@ -1,14 +1,13 @@
 class CreateOrderItems < ActiveRecord::Migration
   def self.up
     create_table :order_items do |t|
-      t.decimal :price
-      t.decimal :total
-      t.integer :order_id
-      t.integer :variant_id
-      t.string :state
+      t.decimal :price,      :precision => 8, :scale => 2
+      t.decimal :total,      :precision => 8, :scale => 2
+      t.integer :order_id,    :null => false
+      t.integer :variant_id,  :null => false
+      t.string :state,        :null => false
       t.integer :tax_rate_id
-      t.integer :ship_rate_id
-
+      t.integer :shipping_rate_id
       t.timestamps
     end
   end

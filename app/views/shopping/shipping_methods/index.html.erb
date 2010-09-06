@@ -1,15 +1,16 @@
 <h1>Pick a Shipping Method</h1>
 
-<table>
-  <tr>
-    <th>Method</th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @shipping_methods.each do |shipping_method| %>
-  <tr>
-    <td><%= shipping_method.name %> </td>
-  </tr>
-<% end %>
-</table>
+<ul>
+  <% @order_items.each do |item| %>
+    <li class='<%= cycle("line_item_yellow", "line_item_gray") -%>'>
+      <%= image_tag(item.variant.product.images.first.photo.url(:mini)) %>
+      <%= item.variant.product.name %> <%= item.variant.sku %> Quantity: <%= item.quantity %>
+      <% item.variant.product.available_shipping_rates.each do |shipping_rate| %>
+        <div> <%= shipping_rate.name_with_rate %> </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+

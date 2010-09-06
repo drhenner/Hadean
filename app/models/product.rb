@@ -1,10 +1,13 @@
 class Product < ActiveRecord::Base
   has_friendly_id :permalink, :use_slug => false
   
+  attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
+  
   belongs_to :product_type
   belongs_to :prototype
   has_many :shipping_categories
   has_many :shipping_rates, :through => :shipping_categories
+  
   has_many :product_properties
   has_many :properties,          :through => :product_properties
   

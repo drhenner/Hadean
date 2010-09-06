@@ -6,11 +6,17 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
       flash[:notice] = 'Select an address before you select a shipping method.'
       redirect_to shopping_addresses_url
     else
-      @shipping_methods = find_or_create_order.ship_address.state.shipping_zone.shipping_methods
-
+      ##  TODO  refactopr this method... it seems a bit lengthy
+      @shipping_method_ids = session_order.ship_address.state.shipping_zone.shipping_method_ids
+      
+      @order_items = OrderItem.order_items_in_cart(session_order.id)
+      #session_order.order_
+      @order_items.each do |item|
+        item.variant.product.available_shipping_rates = ShippingRate.with_these_shipping_methods(item.variant.product.shipping_rate_ids, @shipping_method_ids)
+      end
+      
       respond_to do |format|
         format.html # index.html.erb
-        format.xml  { render :xml => @shipping_methods }
       end
     end
   end
