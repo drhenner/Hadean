@@ -79,6 +79,6 @@ class Admin::Config::TaxRatesController < ApplicationController
   
   def form_info
     @states = State.form_selector
-    @product_types = ProductType.all.collect{|pt| [ pt.name, pt.id] }
+    @tax_statuses = TaxStatus.all.collect{|pt| [ pt.name, pt.id] }
   end
 end

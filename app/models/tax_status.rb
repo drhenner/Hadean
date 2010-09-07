@@ -10,4 +10,6 @@ class TaxStatus < ActiveRecord::Base
   
   CLOTHES_ID    = 1
   COSMETICS_ID  = 2
+  
+  validates :name, :presence => true, :uniqueness => true
 end

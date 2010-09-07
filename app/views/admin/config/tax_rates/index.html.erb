@@ -1,4 +1,4 @@
-<h1>Listing tax_rates</h1>
+<h1>Tax Rates</h1>
 
 <table>
   <tr>
@@ -16,8 +16,8 @@
 <% @tax_rates.each do |tax_rate| %>
   <tr>
     <td><%= tax_rate.percentage %></td>
-    <td><%= tax_rate.product_type_id %></td>
-    <td><%= tax_rate.state_id %></td>
+    <td><%= tax_rate.tax_status.name %></td>
+    <td><%= tax_rate.state.name %></td>
     <td><%= tax_rate.start_date %></td>
     <td><%= tax_rate.end_date %></td>
     <td><%= tax_rate.active.to_s %></td>

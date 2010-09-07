@@ -1,8 +1,8 @@
 class CreateTaxRates < ActiveRecord::Migration
   def self.up
     create_table :tax_rates do |t|
-      t.decimal :percentage,      :null => false
-      t.integer :product_type_id, :null => false
+      t.decimal :percentage,      :null => false, :precision => 8, :scale => 2, :default => 0.0
+      t.integer :tax_status_id,   :null => false
       t.integer :state_id,        :null => false
       t.date :start_date,         :null => false
       t.date :end_date
