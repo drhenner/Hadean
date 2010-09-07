@@ -52,3 +52,7 @@ end
 ShippingZone::LOCATIONS.each do |loc|
   ShippingZone.find_or_create_by_name(loc)
 end
+
+TaxStatus::STATUSES.each do |status|
+  TaxStatus.find_or_create_by_name(status)
+end

@@ -1,7 +1,7 @@
 class CreateShippingZones < ActiveRecord::Migration
   def self.up
     create_table :shipping_zones do |t|
-      t.string :name
+      t.string :name, :null => false
 
     end
   end

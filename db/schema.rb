@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100905021656) do
+ActiveRecord::Schema.define(:version => 20100906225709) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name",                                                           :null => false
@@ -97,13 +97,13 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
   end
 
   create_table "order_items", :force => true do |t|
-    t.decimal  "price",        :precision => 10, :scale => 0
-    t.decimal  "total",        :precision => 10, :scale => 0
+    t.decimal  "price",            :precision => 8, :scale => 2
+    t.decimal  "total",            :precision => 8, :scale => 2
     t.integer  "order_id"
     t.integer  "variant_id"
     t.string   "state"
     t.integer  "tax_rate_id"
-    t.integer  "ship_rate_id"
+    t.integer  "shipping_rate_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -116,7 +116,6 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
     t.integer  "user_id"
     t.integer  "bill_address_id"
     t.integer  "ship_address_id"
-    t.integer  "ship_method_id"
     t.integer  "coupon_id"
     t.boolean  "active",          :default => true, :null => false
     t.datetime "created_at"
@@ -146,15 +145,15 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
 
   create_table "product_types", :force => true do |t|
     t.string  "name"
-    t.integer "product_id"
+    t.integer "parent_id"
+    t.boolean "active",    :default => true, :null => false
   end
 
   create_table "products", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "tax_category_id"
-    t.integer  "shipping_category_id"
     t.integer  "product_type_id"
+    t.integer  "tax_status_id",                           :null => false
     t.datetime "available_at"
     t.datetime "deleted_at"
     t.string   "meta_keywords"
@@ -164,6 +163,7 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
     t.integer  "prototype_id"
     t.boolean  "featured",             :default => false
     t.string   "permalink",                               :null => false
+    t.integer  "shipping_category_id",                    :null => false
   end
 
   create_table "properties", :force => true do |t|
@@ -219,12 +219,13 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "shipping_categories", :force => true do |t|
-    t.string "name", :null => false
+    t.string  "name",       :null => false
+    t.integer "product_id", :null => false
   end
 
   create_table "shipping_methods", :force => true do |t|
     t.string   "name"
-    t.integer  "zone_id"
+    t.integer  "shipping_zone_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -236,12 +237,14 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
   end
 
   create_table "shipping_rates", :force => true do |t|
-    t.integer  "shipping_method_id"
-    t.decimal  "rate",                  :precision => 10, :scale => 0
-    t.integer  "shipping_rate_type_id"
+    t.integer  "shipping_method_id",                                  :null => false
+    t.decimal  "rate",                  :precision => 8, :scale => 2, :null => false
+    t.integer  "shipping_rate_type_id",                               :null => false
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "minimum_charge",        :precision => 8, :scale => 2, :null => false
+    t.integer  "shipping_category_id",                                :null => false
   end
 
   create_table "shipping_zones", :force => true do |t|
@@ -264,9 +267,10 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
 
   create_table "states", :force => true do |t|
     t.string  "name"
-    t.string  "abbreviation", :limit => 5
+    t.string  "abbreviation",     :limit => 5
     t.string  "described_as"
     t.integer "country_id"
+    t.integer "shipping_zone_id",              :default => 1
   end
 
   create_table "suppliers", :force => true do |t|
@@ -274,6 +278,22 @@ ActiveRecord::Schema.define(:version => 20100905021656) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tax_rates", :force => true do |t|
+    t.decimal "percentage",      :precision => 10, :scale => 0,                   :null => false
+    t.integer "product_type_id",                                                  :null => false
+    t.integer "state_id",                                                         :null => false
+    t.date    "start_date",                                                       :null => false
+    t.date    "end_date"
+    t.boolean "active",                                         :default => true
+  end
+
+  add_index "tax_rates", ["product_type_id"], :name => "index_tax_rates_on_product_type_id"
+  add_index "tax_rates", ["state_id"], :name => "index_tax_rates_on_state_id"
+
+  create_table "tax_statuses", :force => true do |t|
+    t.string "name", :null => false
   end
 
   create_table "user_roles", :force => true do |t|

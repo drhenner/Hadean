@@ -6,6 +6,7 @@ class Product < ActiveRecord::Base
   belongs_to :product_type
   belongs_to :prototype
   belongs_to :shipping_category
+  belongs_to :tax_status
   #has_many :shipping_categories
   #has_many :shipping_rates, :through => :shipping_categories
   
@@ -31,7 +32,7 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :images, :reject_if => lambda { |t| t['photo'].nil? }
   
   validates :shipping_category_id,  :presence => true
-  #validates :tax_category_id,      :presence => true
+  validates :tax_status_id,         :presence => true
   validates :product_type_id,       :presence => true
   validates :prototype_id,          :presence => true
 

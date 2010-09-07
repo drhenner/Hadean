@@ -11,10 +11,7 @@ class Shopping::BaseController < ApplicationController
       return root_url
 
        ## If we are insecure
-    elsif !current_user || 
-        session[:authenticated_at].nil? ||
-        (Time.now - session[:authenticated_at] > (60 * 1) ) || ## 20 minutes
-        (cookies[:insecure].nil? || cookies[:insecure] == true)## this should happen every time the user goes to a non-SSL page
+    elsif not_secure?
       session[:return_to] = shopping_orders_url
       return login_url()
     elsif session_order.ship_address_id.nil?
@@ -22,6 +19,13 @@ class Shopping::BaseController < ApplicationController
     elsif session_order.order_items.any?{ |item| item.shipping_rate_id.nil? }
       return shopping_shipping_methods_url()
     end
+  end
+  
+  def not_secure?
+    !current_user || 
+    session[:authenticated_at].nil? ||
+    (Time.now - session[:authenticated_at] > (60 * 20) ) || ## 20 minutes
+    (cookies[:insecure].nil? || cookies[:insecure] == true)## this should happen every time the user goes to a non-SSL page
   end
   
   def session_order
