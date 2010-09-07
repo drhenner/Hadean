@@ -1,4 +1,4 @@
-class Admin::Config::TaxStatusesController < ApplicationController
+class Admin::Config::TaxStatusesController < Admin::Config::BaseController
   # GET /tax_statuses
   # GET /tax_statuses.xml
   def index

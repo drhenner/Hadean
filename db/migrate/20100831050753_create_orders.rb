@@ -10,7 +10,9 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :ship_address_id
       t.integer :coupon_id
       t.boolean :active, :default => true, :null => false
-
+      t.datetime :calculated_at
+      t.datetime :completed_at
+      
       t.timestamps
     end
     

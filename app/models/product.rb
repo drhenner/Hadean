@@ -36,6 +36,17 @@ class Product < ActiveRecord::Base
   validates :product_type_id,       :presence => true
   validates :prototype_id,          :presence => true
 
+  def tax_rate(state_id, time = Time.zone.now)
+    #tax_status
+    self.tax_status.tax_rates.where(["state_id = ? AND 
+                           start_date <= ? AND
+                           (end_date > ? OR end_date IS NULL) AND
+                           active = ?", state_id, 
+                                        time.to_date.to_s(:db), 
+                                        time.to_date.to_s(:db), 
+                                        true]).order('start_date DESC').first
+  end
+
   def price
     master_variant ? master_variant.price : last_master_variant.price
   end

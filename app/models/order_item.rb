@@ -2,9 +2,18 @@ class OrderItem < ActiveRecord::Base
   belongs_to :order
   belongs_to :shipping_rate
   belongs_to :variant
- # belongs_to :tax_rate
- 
- 
+  belongs_to :tax_rate
+  
+  #after_save :calculate_order
+  after_find :set_beginning_values
+  after_destroy :set_order_calculated_at_to_nil
+  
+  def set_beginning_values
+    @beginning_tax_rate_id      = tax_rate_id # this stores the initial value of the tax_rate
+    @beginning_shipping_rate_id = shipping_rate_id # this stores the initial value of the tax_rate
+    @beginning_total            = total # this stores the initial value of the total
+  end
+  
  state_machine :initial => 'unpaid' do
    
    
@@ -19,6 +28,38 @@ class OrderItem < ActiveRecord::Base
                                           SUM(order_items.price) as sum_price,
                                           SUM(order_items.total) as sum_total",
                :group => "order_items.variant_id")
+  end
+  
+  def calculate_order
+    if self.ready_to_calculate? && 
+        (shipping_rate_id != @beginning_shipping_rate_id || tax_rate_id != @beginning_tax_rate_id)
+      set_beginning_values
+      order.calculate_totals
+    end
+  end
+  
+  def set_order_calculated_at_to_nil
+    order.update_attribute(:calculated_at, nil)
+  end
+  
+  def ready_to_calculate?
+    shipping_rate_id && tax_rate_id
+  end
+  # this is the price after coupons and anything before calculating the price + tax
+  def adjusted_price
+    ## coupon credit is calculated at the order level but because taxes we need to apply it now
+    # => this calculation will be complete in the version of Hadean
+    coupon_credit = 0.0
+    
+    self.price - coupon_credit
+  end
+  
+  def calculate_total(coupon = nil)
+    # shipping charges are calculated in order.rb
+    
+    # taxes 
+    tax_percentage = tax_rate.try(:percentage) ? tax_rate.try(:percentage) : 0.0
+    self.total = ((adjusted_price) * (tax_percentage + 100.0) / 100.0).round_at(2)
   end
   
 end
