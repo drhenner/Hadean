@@ -41,7 +41,9 @@ class Shopping::AddressesController < Shopping::BaseController
   # POST /shopping/addresses.xml
   def create
     if params[:address].present?
-      @shopping_address = Address.new(params[:address])
+      @shopping_address = current_user.addresses.new(params[:address])
+      @shopping_address.default = true          if current_user.default_shipping_address.nil?
+      @shopping_address.billing_default = true  if current_user.default_billing_address.nil?
       @shopping_address.save
     elsif params[:shopping_address_id].present?
       @shopping_address = Address.find(params[:shopping_address_id])
@@ -65,10 +67,10 @@ class Shopping::AddressesController < Shopping::BaseController
   def update
     #old_address = current_user.addresses.find(params[:id])
     #Address.update_address(old_address, params[:shopping_address], AddressType::SHIPPING_ID, find_or_create_order )
-    @shopping_address = current_user.addresses.new(params[:address].merge(:address_type_id => AddressType::SHIPPING_ID))
+    @shopping_address = current_user.addresses.new(params[:address])
     
     # if we are editing the current default address then this is the default address
-    @shopping_address.default = true if params[:id] == current_user.default_ship_address.try(:id)
+    @shopping_address.default = true if params[:id] == current_user.default_shipping_address.try(:id)
     
     respond_to do |format|
       if @shopping_address.valid? && @shopping_address.save_default_address
@@ -90,7 +92,7 @@ class Shopping::AddressesController < Shopping::BaseController
     address = current_user.addresses.find(params[:id])
     update_order_address_id(address.id)
     respond_to do |format|
-      format.html { render :action => "index" }
+      format.html { redirect_to shopping_orders_url }
     end
   end
   # DELETE /shopping/addresses/1

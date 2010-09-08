@@ -42,12 +42,12 @@ class Shopping::BaseController < ApplicationController
       @session_order = current_user.orders.find(session[:order_id])
       if !@session_order.in_progress?
         @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
-                                                    :bill_address => current_user.bill_address  )
+                                                    :bill_address => current_user.billing_address  )
         session[:order_id] = @session_order.id
       end
     else
       @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
-                                                  :bill_address => current_user.bill_address)
+                                                  :bill_address => current_user.billing_address)
       session[:order_id] = @session_order.id
     end
     @session_order

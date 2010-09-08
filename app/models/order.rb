@@ -103,8 +103,8 @@ class Order < ActiveRecord::Base
   end
   
   def set_order_number
-    unless number?
-      number = (1001001001000 + id).to_s(21)
+    if !self.number?
+      self.number = (1001001001000 + id).to_s(21)
       save
     end
   end

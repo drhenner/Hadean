@@ -63,7 +63,7 @@ class Address < ActiveRecord::Base
   end
 
   def state_abbr_name
-    state ? state.abbr : state_name
+    state ? state.abbreviation : state_name
   end
 
   def city_state_name
@@ -71,15 +71,15 @@ class Address < ActiveRecord::Base
   end
 
   def city_state_zip
-    [city_state_name, zipcode].join(' ')
+    [city_state_name, zip_code].join(' ')
   end
   
   def sanitize_data
     self.first_name  = self.first_name.strip  unless self.first_name.blank?
     self.last_name   = self.last_name.strip   unless self.last_name.blank?
     self.city       = self.city.strip       unless self.city.blank?
-    self.zipcode    = self.zipcode.strip    unless self.zipcode.blank?
-    self.phone      = self.phone.strip      unless self.phone.blank?
+    self.zip_code    = self.zipcode.strip    unless self.zipcode.blank?
+    #self.phone      = self.phone.strip      unless self.phone.blank?
     self.address1   = self.address1.strip   unless self.address1.blank?
     self.address2   = self.address2.strip   unless self.address2.blank?
   end

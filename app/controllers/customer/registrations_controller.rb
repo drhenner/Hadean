@@ -11,6 +11,7 @@ class Customer::RegistrationsController < ApplicationController
     # the User has not yet been activated
     if @user.save_without_session_maintenance
       @user.deliver_activation_instructions!
+      UserSession.new(@user.attributes)
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
       redirect_to root_url
     else
