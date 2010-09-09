@@ -92,9 +92,17 @@ class Order < ActiveRecord::Base
     self
   end
   
-  def add_items(variant, quantity)
+  def add_items(variant, quantity, state_id = nil)
+    tax_rate_id = state_id ? variant.product.tax_rate(state_id) : nil
     quantity.times do
-      self.order_items.create(:variant_id => variant.id, :price => variant.price, :tax_rate_id => variant.product.tax_rate())
+      self.order_items.create(:variant_id => variant.id, :price => variant.price, :tax_rate_id => tax_rate_id)
+    end
+  end
+  
+  def new_items(variant, quantity, state_id = nil)
+    tax_rate_id = state_id ? variant.product.tax_rate(state_id) : nil
+    quantity.times do
+      self.order_items.new(:variant_id => variant.id, :price => variant.price, :tax_rate_id => tax_rate_id)
     end
   end
   

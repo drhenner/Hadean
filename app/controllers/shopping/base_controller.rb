@@ -40,16 +40,23 @@ class Shopping::BaseController < ApplicationController
     return @session_order if @session_order
     if session[:order_id]
       @session_order = current_user.orders.find(session[:order_id])
-      if !@session_order.in_progress?
-        @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
-                                                    :bill_address => current_user.billing_address  )
-        session[:order_id] = @session_order.id
-      end
+      create_order if !@session_order.in_progress?
     else
-      @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
-                                                  :bill_address => current_user.billing_address)
-      session[:order_id] = @session_order.id
+      create_order
     end
     @session_order
+  end
+  
+  def create_order
+    @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
+                                                :bill_address => current_user.billing_address  )
+    add_new_cart_items(session_cart.shopping_cart_items)
+    session[:order_id] = @session_order.id
+  end
+  
+  def add_new_cart_items(items)
+    items.each do |item|
+      @session_order.add_items(item.variant, item.quantity)
+    end
   end
 end
