@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   
   after_find :set_beginning_values
     
-  attr_accessor :total
+  attr_accessor :total, :sub_total
   
   validates :user_id,     :presence => true
   validates :email,       :presence => true,
@@ -45,18 +45,19 @@ class Order < ActiveRecord::Base
   end
   
   def calculate_totals(force = false)
-    if order_items.any? {|item| (self.calculated_at.nil? || item.updated_at > self.calculated_at) }
+    if calculated_at.nil? || (order_items.any? {|item| (item.updated_at > self.calculated_at) })
       unless order_items.any? {|item| !item.ready_to_calculate? }
         total = 0.0
         tax_time = completed_at? ? completed_at : Time.zone.now
         order_items.each do |item|
-          if (calculated_at.nil || item.updated_at > self.calculated_at)
+          if (calculated_at.nil? || item.updated_at > self.calculated_at)
             item.tax_rate = item.variant.product.tax_rate(self.ship_address.state_id, tax_time)## This needs to change to completed_at
             item.calculate_total
             item.save
           end
           total = total + item.total
         end
+        sub_total = total
         total = total + shipping_charges
         self.calculated_at = Time.now
         save
@@ -65,22 +66,27 @@ class Order < ActiveRecord::Base
   end
   
   def order_total(force = false)
-    return total if total || force
     find_total
   end
   
-  def find_total
-    calculate_totals if order_items.any? {|item| (calculated_at.nil || item.updated_at > self.calculated_at) }
-    total = 0.0
+  def find_total(force = false)
+    calculate_totals if self.calculated_at.nil? || order_items.any? {|item| (item.updated_at > self.calculated_at) }
+    self.total = 0.0
     order_items.each do |item|
-      total = total + item.total
+      self.total = self.total + item.total
     end
-    total = total + shipping_charges
+    self.sub_total = self.total
+    self.total = self.total + shipping_charges
   end
   
   def shipping_charges
+    return @order_shipping_charges if defined?(@order_shipping_charges)
     items = OrderItem.order_items_in_cart(self.id)
-    charges = items.inject(0.0) {|total, item|  total + item.shipping_rate.rate  }
+    charged_items = items.inject([]) do |charged_items, item| 
+      charged_items << item if item.shipping_rate.shipping_rate_type_id == ShippingRateType::INDIVIDUAL || !charged_items.map{|i| i.shipping_rate }.include?(item.shipping_rate)
+      charged_items
+    end
+    @order_shipping_charges = charged_items.inject(0.0) {|sum, item|  sum + item.shipping_rate.rate  }
   end
   
   def update_address(address_type_id , address_id)

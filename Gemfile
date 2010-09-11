@@ -17,6 +17,7 @@ gem "friendly_id", "~> 3.0"
 gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
 gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
 
+gem 'memcache-client'
 #gem 'mysql'
 gem 'ruby-mysql'
 gem "nifty-generators"

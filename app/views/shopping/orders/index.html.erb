@@ -1,5 +1,30 @@
+<% content_for :head do -%>
+  <%= stylesheet_link_tag 'compiled/tables.css' %>
+<% end %>
+
 <h1>Order Summary</h1>
 
-<%= debug @order %>
+<div class='pretty_table span-10'>
+  <table>
+    <thead>
+      <tr class='odd'>
+        <th class='column1_header'>Item</th><th>Price:</th><th>Price + Tax</th>
+      </tr>
+    </thead>
+    <% @order.order_items.each do |item| %>
+      <tr class='<%= cycle("odd", "")%> '>
+        <td><%= item.variant.product.name %></td><td><%= item.price %></td><td><%= item.total %></td>
+      </tr>
+    <% end %>
+    <tr class='odd'>
+      <td></td><td>Sub-total:</td><td><%= @order.sub_total %></td>
+    </tr>
+    <tr>
+      <td></td><td>Shipping Charges:</td><td><%= @order.shipping_charges %></td>
+    </tr>
+    <tr class='odd'>
+      <td></td><td>Total:</td><td><%= @order.total %></td>
+    </tr>
+  </table>
+</div>
 
-<%= link_to 'Order', shopping_orders_path %>

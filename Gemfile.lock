@@ -96,6 +96,7 @@ GEM
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
+    memcache-client (1.8.5)
     mime-types (1.16)
     nifty-generators (0.4.0)
     paperclip (2.3.3)
@@ -181,6 +182,7 @@ DEPENDENCIES
   formtastic!
   friendly_id (~> 3.0)
   haml (= 3.0.13, >= 3.0.4)
+  memcache-client
   nifty-generators
   paperclip
   prawn

@@ -15,6 +15,7 @@ class Shopping::OrdersController < Shopping::BaseController
       session_cart.add_items_to_checkout(@order)
       redirect_to f
     else
+      @order.order_total
       respond_to do |format|
         format.html # index.html.erb
         format.xml  { render :xml => @orders }
