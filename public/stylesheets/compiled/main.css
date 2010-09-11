@@ -10,61 +10,71 @@
 }
 
 /* line 73, ../../../app/stylesheets/main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 77, ../../../app/stylesheets/main.scss */
+a:hover {
+  background-color: transparent;
+}
+
+/* line 81, ../../../app/stylesheets/main.scss */
 .left-text {
   text-align: left;
 }
 
-/* line 77, ../../../app/stylesheets/main.scss */
+/* line 85, ../../../app/stylesheets/main.scss */
 .left-text-4 {
   text-align: left;
   padding-left: 4px;
 }
 
-/* line 81, ../../../app/stylesheets/main.scss */
+/* line 89, ../../../app/stylesheets/main.scss */
 .left-text-8 {
   text-align: left;
   padding-left: 8px;
 }
 
-/* line 85, ../../../app/stylesheets/main.scss */
+/* line 93, ../../../app/stylesheets/main.scss */
 .rounded-2 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 89, ../../../app/stylesheets/main.scss */
+/* line 97, ../../../app/stylesheets/main.scss */
 .rounded-4 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 92, ../../../app/stylesheets/main.scss */
+/* line 100, ../../../app/stylesheets/main.scss */
 .rounded-6 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 96, ../../../app/stylesheets/main.scss */
+/* line 104, ../../../app/stylesheets/main.scss */
 .rounded-8 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   behavior: url(border-radius.htc);
 }
 
-/* line 100, ../../../app/stylesheets/main.scss */
+/* line 108, ../../../app/stylesheets/main.scss */
 .padding-5 {
   padding: 5px;
 }
 
-/* line 104, ../../../app/stylesheets/main.scss */
+/* line 112, ../../../app/stylesheets/main.scss */
 .padding-10 {
   padding: 10px;
 }
 
-/* line 108, ../../../app/stylesheets/main.scss */
+/* line 116, ../../../app/stylesheets/main.scss */
 #admin-property-names {
   width: 390px;
 }
@@ -73,18 +83,18 @@
   width: 390px;
 }
 
-/* line 114, ../../../app/stylesheets/main.scss */
+/* line 122, ../../../app/stylesheets/main.scss */
 #admin_properties_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 117, ../../../app/stylesheets/main.scss */
+/* line 125, ../../../app/stylesheets/main.scss */
 #admin_properties_grid_wrapper {
   width: 710px;
 }
 
-/* line 121, ../../../app/stylesheets/main.scss */
+/* line 129, ../../../app/stylesheets/main.scss */
 #admin_new_property_button {
   display: inline;
   float: left;
@@ -97,18 +107,18 @@
   overflow-x: hidden;
 }
 
-/* line 126, ../../../app/stylesheets/main.scss */
+/* line 134, ../../../app/stylesheets/main.scss */
 #admin_product_types_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 129, ../../../app/stylesheets/main.scss */
+/* line 137, ../../../app/stylesheets/main.scss */
 #admin_product_types_grid_wrapper {
   width: 710px;
 }
 
-/* line 133, ../../../app/stylesheets/main.scss */
+/* line 141, ../../../app/stylesheets/main.scss */
 #admin_new_product_type_button {
   display: inline;
   float: left;
@@ -121,7 +131,7 @@
   overflow-x: hidden;
 }
 
-/* line 138, ../../../app/stylesheets/main.scss */
+/* line 146, ../../../app/stylesheets/main.scss */
 #admin-product_type-names {
   width: 390px;
 }
@@ -130,18 +140,18 @@
   width: 390px;
 }
 
-/* line 144, ../../../app/stylesheets/main.scss */
+/* line 152, ../../../app/stylesheets/main.scss */
 #admin_prototypes_page_wrapper {
   width: 950px;
   margin-right: 0;
 }
 
-/* line 147, ../../../app/stylesheets/main.scss */
+/* line 155, ../../../app/stylesheets/main.scss */
 #admin_prototypes_grid_wrapper {
   width: 710px;
 }
 
-/* line 150, ../../../app/stylesheets/main.scss */
+/* line 158, ../../../app/stylesheets/main.scss */
 #admin_new_prototype_type_button {
   display: inline;
   float: left;
@@ -154,7 +164,7 @@
   overflow-x: hidden;
 }
 
-/* line 153, ../../../app/stylesheets/main.scss */
+/* line 161, ../../../app/stylesheets/main.scss */
 #admin-prototype-names {
   width: 390px;
 }
@@ -163,20 +173,20 @@
   width: 390px;
 }
 
-/* line 157, ../../../app/stylesheets/main.scss */
+/* line 165, ../../../app/stylesheets/main.scss */
 .property_form {
   display: inline;
   text-align: left;
 }
 
-/* line 161, ../../../app/stylesheets/main.scss */
+/* line 169, ../../../app/stylesheets/main.scss */
 .selectlist-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 167, ../../../app/stylesheets/main.scss */
+/* line 175, ../../../app/stylesheets/main.scss */
 .selectlist-item {
   background: white url(../images/cross-circle.png) no-repeat right center;
   border-left: solid 1px #eee;
@@ -188,13 +198,13 @@
   margin: 1px 0;
 }
 
-/* line 179, ../../../app/stylesheets/main.scss */
+/* line 187, ../../../app/stylesheets/main.scss */
 #admin-product-names {
   margin: 0  0  0.5em;
   padding: 0.3em;
 }
 
-/* line 186, ../../../app/stylesheets/main.scss */
+/* line 194, ../../../app/stylesheets/main.scss */
 #header_bar {
   width: 950px;
   display: -moz-inline-box;
@@ -210,7 +220,7 @@
   behavior: url(border-radius.htc);
 }
 
-/* line 194, ../../../app/stylesheets/main.scss */
+/* line 202, ../../../app/stylesheets/main.scss */
 #header_sub_bar {
   width: 910px;
   margin-right: 0;
@@ -222,7 +232,7 @@
   border: solid 2px #68C;
 }
 
-/* line 205, ../../../app/stylesheets/main.scss */
+/* line 213, ../../../app/stylesheets/main.scss */
 #search_bar {
   width: 710px;
   display: inline;
@@ -236,7 +246,7 @@
   text-align: left;
 }
 
-/* line 211, ../../../app/stylesheets/main.scss */
+/* line 219, ../../../app/stylesheets/main.scss */
 #cart_items_button {
   display: inline;
   float: right;
@@ -248,7 +258,7 @@
   *vertical-align: auto;
 }
 
-/* line 215, ../../../app/stylesheets/main.scss */
+/* line 223, ../../../app/stylesheets/main.scss */
 #wish_items_button {
   display: inline;
   float: right;
@@ -260,24 +270,24 @@
   *vertical-align: auto;
 }
 
-/* line 222, ../../../app/stylesheets/main.scss */
+/* line 230, ../../../app/stylesheets/main.scss */
 li {
   list-style: none;
 }
 
-/* line 225, ../../../app/stylesheets/main.scss */
+/* line 233, ../../../app/stylesheets/main.scss */
 input.text, input.title, input[type="text"], input[type="password"] {
   background-color: white;
   margin: 0.15em 0;
   padding: 5px;
 }
 
-/* line 231, ../../../app/stylesheets/main.scss */
+/* line 239, ../../../app/stylesheets/main.scss */
 #content_wrapper {
   padding-top: 4px;
 }
 
-/* line 235, ../../../app/stylesheets/main.scss */
+/* line 243, ../../../app/stylesheets/main.scss */
 .flash_error {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -291,7 +301,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #8a1f11;
 }
 
-/* line 239, ../../../app/stylesheets/main.scss */
+/* line 247, ../../../app/stylesheets/main.scss */
 .flash_notice {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -305,17 +315,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #514721;
 }
 
-/* line 244, ../../../app/stylesheets/main.scss */
+/* line 252, ../../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }
 
-/* line 250, ../../../app/stylesheets/main.scss */
+/* line 258, ../../../app/stylesheets/main.scss */
 #submit_add_to_cart {
   cursor: pointer;
 }
 
-/* line 254, ../../../app/stylesheets/main.scss */
+/* line 262, ../../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -327,23 +337,23 @@ input.text, input.title, input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 263, ../../../app/stylesheets/main.scss */
+/* line 271, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
 
-/* line 267, ../../../app/stylesheets/main.scss */
+/* line 275, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table {
   margin: 0;
 }
 
-/* line 270, ../../../app/stylesheets/main.scss */
+/* line 278, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
   padding: 0;
   text-align: center;
 }
 
-/* line 275, ../../../app/stylesheets/main.scss */
+/* line 283, ../../../app/stylesheets/main.scss */
 .line_items_blue {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -354,7 +364,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
-/* line 283, ../../../app/stylesheets/main.scss */
+/* line 291, ../../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -366,7 +376,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 292, ../../../app/stylesheets/main.scss */
+/* line 300, ../../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 10px;

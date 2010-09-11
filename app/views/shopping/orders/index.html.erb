@@ -8,7 +8,10 @@
   <table>
     <thead>
       <tr class='odd'>
-        <th class='column1_header'>Item</th><th>Price:</th><th>Price + Tax</th>
+        <th class='column1_header'>
+          Item <span class='ss_sprite ss_application_cascade'></span>
+          
+        </th><th>Price:</th><th>Price + Tax</th>
       </tr>
     </thead>
     <% @order.order_items.each do |item| %>
@@ -22,9 +25,11 @@
     <tr>
       <td></td><td>Shipping Charges:</td><td><%= @order.shipping_charges %></td>
     </tr>
-    <tr class='odd'>
-      <td></td><td>Total:</td><td><%= @order.total %></td>
-    </tr>
+    <tfoot>
+      <tr class='even'>
+        <td></td><td>Total:</td><td><em><%= @order.total %></em></td>
+      </tr>
+    </tfoot>
   </table>
 </div>
 

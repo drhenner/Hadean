@@ -70,6 +70,14 @@
     }
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
 .left-text {
   text-align: left;
 }
