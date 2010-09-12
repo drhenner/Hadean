@@ -365,6 +365,18 @@ input.text, input.title, input[type="text"], input[type="password"] {
 }
 
 /* line 291, ../../../app/stylesheets/main.scss */
+.line_item_blue {
+  padding: 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: solid 2px #D0D8EF;
+  background-color: #f0f8ff;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+/* line 300, ../../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -376,7 +388,19 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 300, ../../../app/stylesheets/main.scss */
+/* line 309, ../../../app/stylesheets/main.scss */
+.line_item_light_gray {
+  padding: 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: solid 2px #ECECEC;
+  background-color: #F6F6F6;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+/* line 318, ../../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 10px;

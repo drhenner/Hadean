@@ -3,6 +3,7 @@ class Address < ActiveRecord::Base
   belongs_to  :address_type
   belongs_to  :addressable, :polymorphic => true
   has_many     :phones, :as => :phoneable
+  has_many     :shipments
   
   validates :first_name,  :presence => true,
                           :format   => { :with => CustomValidators::Names.name_validator }
@@ -17,6 +18,10 @@ class Address < ActiveRecord::Base
   #validates :phone_id,    :presence => true
   
   #accepts_nested_attributes_for :phones
+  
+  def name
+    [first_name, last_name].compact.join(' ')
+  end
   
   def self.update_address(old_address, params, address_type_id = AddressType::SHIPPING_ID )
     new_address = Address.new(params.merge( :address_type_id  => address_type_id, 

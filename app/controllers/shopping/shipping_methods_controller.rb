@@ -59,10 +59,6 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
     all_selected = true
     params[:shipping_category].each_pair do |category_id, rate_id|#[rate]
       if rate_id
-        puts '*****************RATE*******************************'
-        puts rate_id 
-          puts '*****************CATEGORY*******************************'
-        puts category_id
         items = OrderItem.includes([{:variant => :product}]).
                           where(['order_items.order_id = ? AND 
                                   products.shipping_category_id = ?', session_order_id, category_id])

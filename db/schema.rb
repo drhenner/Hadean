@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906225709) do
+ActiveRecord::Schema.define(:version => 20100912070903) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name",                                                           :null => false
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20100906225709) do
   end
 
   create_table "addresses", :force => true do |t|
-    t.integer  "address_type_id"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "addressable_type"
@@ -120,6 +119,8 @@ ActiveRecord::Schema.define(:version => 20100906225709) do
     t.boolean  "active",          :default => true, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "calculated_at"
+    t.datetime "completed_at"
   end
 
   create_table "phone_types", :force => true do |t|
@@ -218,6 +219,23 @@ ActiveRecord::Schema.define(:version => 20100906225709) do
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
+  create_table "shipments", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "shipping_method_id",                   :null => false
+    t.integer  "address_id",                           :null => false
+    t.string   "tracking"
+    t.string   "number",                               :null => false
+    t.string   "state",                                :null => false
+    t.datetime "shipped_at"
+    t.boolean  "active",             :default => true, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shipments", ["address_id"], :name => "index_shipments_on_address_id"
+  add_index "shipments", ["order_id"], :name => "index_shipments_on_order_id"
+  add_index "shipments", ["shipping_method_id"], :name => "index_shipments_on_shipping_method_id"
+
   create_table "shipping_categories", :force => true do |t|
     t.string  "name",       :null => false
     t.integer "product_id", :null => false
@@ -273,6 +291,9 @@ ActiveRecord::Schema.define(:version => 20100906225709) do
     t.integer "shipping_zone_id",              :default => 1
   end
 
+  add_index "states", ["abbreviation"], :name => "index_states_on_abbreviation"
+  add_index "states", ["country_id"], :name => "index_states_on_country_id"
+
   create_table "suppliers", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "email"
@@ -281,16 +302,16 @@ ActiveRecord::Schema.define(:version => 20100906225709) do
   end
 
   create_table "tax_rates", :force => true do |t|
-    t.decimal "percentage",      :precision => 10, :scale => 0,                   :null => false
-    t.integer "product_type_id",                                                  :null => false
-    t.integer "state_id",                                                         :null => false
-    t.date    "start_date",                                                       :null => false
+    t.decimal "percentage",    :precision => 8, :scale => 2,                   :null => false
+    t.integer "tax_status_id",                                                 :null => false
+    t.integer "state_id",                                                      :null => false
+    t.date    "start_date",                                                    :null => false
     t.date    "end_date"
-    t.boolean "active",                                         :default => true
+    t.boolean "active",                                      :default => true
   end
 
-  add_index "tax_rates", ["product_type_id"], :name => "index_tax_rates_on_product_type_id"
   add_index "tax_rates", ["state_id"], :name => "index_tax_rates_on_state_id"
+  add_index "tax_rates", ["tax_status_id"], :name => "index_tax_rates_on_product_type_id"
 
   create_table "tax_statuses", :force => true do |t|
     t.string "name", :null => false

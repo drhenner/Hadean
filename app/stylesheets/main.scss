@@ -288,11 +288,29 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
+.line_item_blue {
+  padding: 3px;
+  @include rounded(4px);
+  border:   solid 2px #D0D8EF;
+  background-color: #f0f8ff;
+  margin-bottom: 3px;
+  text-align:left;
+}
+
 .line_item_yellow {
   padding: 3px;
   @include rounded(4px);
   border:   solid 2px #ddc;
   background-color: #EED;
+  margin-bottom: 3px;
+  text-align:left;
+}
+
+.line_item_light_gray {
+  padding: 3px;
+  @include rounded(4px);
+  border:   solid 2px #ECECEC;
+  background-color: #F6F6F6;
   margin-bottom: 3px;
   text-align:left;
 }

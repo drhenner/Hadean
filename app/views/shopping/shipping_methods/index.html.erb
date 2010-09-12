@@ -8,7 +8,7 @@
             <div class='span-12 <%= cycle("line_item_yellow", "line_item_gray") -%>'>
                 <div class='span-7 '>
                   <%= image_tag(item.variant.product.images.first.photo.url(:mini)) %>
-                  <%= item.variant.product.name %> Quantity: <%= item.quantity %>
+                  <%= item.variant.product.name %> Quantity: <%= items.size %>
                 </div>
                 <div class='span-5  last' style='text-align:left;'>
                   <%= raw item.variant.display_property_details %>

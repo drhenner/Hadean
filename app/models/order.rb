@@ -1,9 +1,11 @@
 class Order < ActiveRecord::Base
-  belongs_to :user
+  
   has_many   :order_items
+  has_many   :shipments
+  
+  belongs_to :user
   belongs_to   :ship_address, :class_name => 'Address'
   belongs_to   :bill_address, :class_name => 'Address'
-  
   
   before_validation :set_email
   after_create      :set_order_number
@@ -67,6 +69,10 @@ class Order < ActiveRecord::Base
   
   def order_total(force = false)
     find_total
+  end
+  
+  def ready_to_checkout?
+    order_items.all? {|item| item.ready_to_calculate? }
   end
   
   def find_total(force = false)

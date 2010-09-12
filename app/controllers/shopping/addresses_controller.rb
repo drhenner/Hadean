@@ -115,7 +115,6 @@ class Shopping::AddressesController < Shopping::BaseController
   end
   
   def update_order_address_id(id)
-    session_order = find_or_create_order 
     session_order.update_attributes(
                           :ship_address_id => id , 
                           :bill_address_id => (session_order.bill_address_id ? session_order.bill_address_id : id)
