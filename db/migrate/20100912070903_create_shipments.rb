@@ -21,3 +21,4 @@ class CreateShipments < ActiveRecord::Migration
     drop_table :shipments
   end
 end
+#rails g CreditCard first_name:string last_name:string month:string year:string cc_type:string number:string address_id:integer

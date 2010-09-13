@@ -9,6 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email 
       t.string :state 
       t.integer :account_id
+      t.string :customer_cim_id ## This is the ID returned from AUTH.NET
       t.string :password_salt
       t.string :crypted_password
       t.string :perishable_token
