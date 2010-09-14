@@ -17,3 +17,5 @@ nbproject
 public/assets/**/*
 public/assets/*
 .rvmrc
+config/config.yml
+
