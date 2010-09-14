@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 #         :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
+  include ActiveMerchant::Utils
+  
   acts_as_authentic do |config|
     config.validate_email_field
     config.validates_length_of_password_field_options( :minimum => 6, :on => :update, :if => :password_changed? )
@@ -69,7 +71,7 @@ class User < ActiveRecord::Base
                                           :class_name => 'CartItem'
                                                 
   has_many    :deleted_cart_items,        :conditions => ['cart_items.active = ?', false], :class_name => 'CartItem'
-  
+  has_many    :payment_profiles
   
   
   validates :first_name,  :presence => true, :if => :registered_user?,
@@ -148,7 +150,39 @@ class User < ActiveRecord::Base
     "\"#{name}\" <#{email}>"
   end
   
+  def get_cim_profile
+    return customer_cim_id if customer_cim_id
+    create_cim_profile
+    customer_cim_id
+  end
+  
+  def merchant_description
+    [name, default_shipping_address.try(:address_lines)].compact.join(', ')
+  end
+  
   private
+  
+  def create_cim_profile
+    return true if customer_cim_id
+    #Login to the gateway using your credentials in environment.rb
+    @gateway = get_payment_gateway
+    
+    #setup the user object to save
+    @user = {:profile => user_profile}
+    
+    #send the create message to the gateway API
+    response = @gateway.create_customer_profile(@user)
+    
+    if response.success? and response.authorization
+      update_attributes({:customer_cim_id => response.authorization})
+      return true
+    end
+    return false
+  end
+  
+  def user_profile
+    return {:merchant_customer_id => self.id, :email => self.email, :description => self.merchant_description}
+  end
   
   def before_validation_on_create
     self.access_token = ActiveSupport::SecureRandom::hex(8+rand(6)) if self.new_record? and self.access_token.nil?
