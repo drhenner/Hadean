@@ -20,8 +20,8 @@ Hadean::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.active_support.deprecation = :log
   
+  
   config.after_initialize do
-    #require 'user_last_activity_updater'
     Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
     Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
     Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
@@ -32,5 +32,10 @@ Hadean::Application.configure do
       :password => HADEAN_CONFIG['paypal']['password'],
       :signature => HADEAN_CONFIG['paypal']['signature']
     )
+    
+    #::GATEWAY = ActiveMerchant::Billing::BraintreeGateway.new(
+    #  :login => HADEAN_CONFIG['braintree']['login'],
+    #  :password => HADEAN_CONFIG['braintree']['password']
+    #)
   end
 end
