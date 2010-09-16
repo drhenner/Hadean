@@ -1,9 +1,10 @@
 class Invoice < ActiveRecord::Base
   has_many :payments
+  has_many :batches, :as => :batchable#, :polymorphic => true
   belongs_to :order
   
   
-  cattr_accessor :gateway
+  #cattr_accessor :gateway
   
   # after_create :create_authorized_transaction
   
@@ -17,7 +18,7 @@ class Invoice < ActiveRecord::Base
     state :payment_declined
     state :canceled
     
-    after_transition :to => 'authorized', :do => :complete_order
+    after_transition :to => 'authorized', :do => :authorize_complete_order
     
     event :payment_authorized do
       transitions :from => :pending,
@@ -39,9 +40,21 @@ class Invoice < ActiveRecord::Base
     end
   end
   
-  def complete_order 
+  def authorize_complete_order(amount)
     order.complete!
-    # find batch
+    now = Time.zone.now
+    if batches.empty?
+      batch = self.batches.new()
+      transaction = CreditCardPayment.new()##  This is a type of transaction
+      credit = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => 0, :credit => amount, :period => "#{now.month}-#{now.year}")
+      debit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::ACCOUNTS_RECEIVABLE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
+      transaction.transaction_ledgers.push(credit)
+      transaction.transaction_ledgers.push(debit)
+      batch.transactions.push(transaction)
+      batch.save
+    else
+      raise error ###  something messed up I think
+    end
     # batch.transactions.push(transaction)
     # Transaction.new(:batch_id => batch.id, )
     # ledger_params = {:accountable_type => 'User', 
@@ -53,13 +66,17 @@ class Invoice < ActiveRecord::Base
   end
   
   def unique_order_number
-    "#{Time.now.to_i}-#{rand(1_000_000)}"
+    "#{Time.now.to_i}-#{order.number}"
   end
   
   def authorization_reference
     if authorization = payments.find_by_action_and_success('authorization', true, :order => 'id ASC')
       authorization.reference
     end
+  end
+  
+  def succeeded?
+    payment_authorized? || payment_captured?
   end
   
   def authorize_payment(credit_card, options = {})

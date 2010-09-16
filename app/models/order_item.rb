@@ -5,10 +5,10 @@ class OrderItem < ActiveRecord::Base
   belongs_to :tax_rate
   
   #after_save :calculate_order
-  #after_find :set_beginning_values
+  after_find :set_beginning_values
   after_destroy :set_order_calculated_at_to_nil
   
-  def after_find
+  def set_beginning_values
     @beginning_tax_rate_id      = self.tax_rate_id      rescue @beginning_tax_rate_id = nil # this stores the initial value of the tax_rate
     @beginning_shipping_rate_id = self.shipping_rate_id rescue @beginning_shipping_rate_id = nil # this stores the initial value of the tax_rate
     @beginning_total            = self.total            rescue @beginning_total = nil # this stores the initial value of the total

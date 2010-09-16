@@ -3,7 +3,7 @@ class Payment < ActiveRecord::Base
   
   serialize :params
   # this is initialized to an instance of ActiveMerchant::Billing::Base.gateway
-  cattr_accessor :gateway
+  #cattr_accessor :gateway
   # after_save :mark_invoice_complete
   
   def mark_invoice_complete
@@ -42,7 +42,7 @@ class Payment < ActiveRecord::Base
       
       def charge( amount, profile_key, options ={})
         options[:order_id] ||= unique_order_number
-        if gateway.respond_to?(:purchase)
+        if GATEWAY.respond_to?(:purchase)
           process( 'charge', amount ) do |gw|
             gw.purchase( amount, profile_key, options )
           end        
@@ -86,7 +86,7 @@ class Payment < ActiveRecord::Base
         result.amount = amount ? (amount * 100).to_i : amount
         result.action = action
           begin
-            response          = yield gateway
+            response          = yield GATEWAY
             result.success    = response.success?
             result.confirmation_id  = response.authorization
             result.message    = response.message
@@ -97,7 +97,7 @@ class Payment < ActiveRecord::Base
             result.reference = nil
             result.message = e.message
             result.params = {}
-            result.test = gateway.test?
+            result.test = GATEWAY.test?
           end
         result
       end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100912070903) do
+ActiveRecord::Schema.define(:version => 20100913073138) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name",                                                           :null => false
@@ -44,6 +44,17 @@ ActiveRecord::Schema.define(:version => 20100912070903) do
     t.boolean  "billing_default",   :default => false
     t.boolean  "active",            :default => true
   end
+
+  create_table "batches", :force => true do |t|
+    t.string   "batchable_type"
+    t.integer  "batchable_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "batches", ["batchable_id"], :name => "index_batches_on_batchable_id"
+  add_index "batches", ["batchable_type"], :name => "index_batches_on_batchable_type"
 
   create_table "brands", :force => true do |t|
     t.string "name"
@@ -89,6 +100,18 @@ ActiveRecord::Schema.define(:version => 20100912070903) do
     t.datetime "created_at"
   end
 
+  create_table "invoices", :force => true do |t|
+    t.integer  "order_id",                                                   :null => false
+    t.string   "number",                                                     :null => false
+    t.decimal  "amount",     :precision => 8, :scale => 2,                   :null => false
+    t.string   "state",                                                      :null => false
+    t.boolean  "active",                                   :default => true, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "invoices", ["order_id"], :name => "index_invoices_on_order_id"
+
   create_table "item_types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -122,6 +145,35 @@ ActiveRecord::Schema.define(:version => 20100912070903) do
     t.datetime "calculated_at"
     t.datetime "completed_at"
   end
+
+  create_table "payment_profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "address_id"
+    t.string   "payment_cim_id"
+    t.boolean  "default"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "payment_profiles", ["user_id"], :name => "index_payment_profiles_on_user_id"
+
+  create_table "payments", :force => true do |t|
+    t.integer  "invoice_id"
+    t.string   "confirmation_id"
+    t.integer  "amount"
+    t.string   "error"
+    t.string   "error_code"
+    t.string   "message"
+    t.string   "action"
+    t.text     "params"
+    t.boolean  "success"
+    t.boolean  "test"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "payments", ["invoice_id"], :name => "index_payments_on_invoice_id"
 
   create_table "phone_types", :force => true do |t|
     t.string "name", :null => false
@@ -317,6 +369,38 @@ ActiveRecord::Schema.define(:version => 20100912070903) do
     t.string "name", :null => false
   end
 
+  create_table "transaction_accounts", :force => true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transaction_ledgers", :force => true do |t|
+    t.string   "accountable_type"
+    t.integer  "accountable_id"
+    t.integer  "transaction_id"
+    t.integer  "transaction_account_id"
+    t.decimal  "debit",                  :precision => 8, :scale => 2, :null => false
+    t.decimal  "credit",                 :precision => 8, :scale => 2, :null => false
+    t.string   "period"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "transaction_ledgers", ["accountable_id"], :name => "index_transaction_ledgers_on_accountable_id"
+  add_index "transaction_ledgers", ["transaction_account_id"], :name => "index_transaction_ledgers_on_transaction_account_id"
+  add_index "transaction_ledgers", ["transaction_id"], :name => "index_transaction_ledgers_on_transaction_id"
+
+  create_table "transactions", :force => true do |t|
+    t.string   "type"
+    t.integer  "batch_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "transactions", ["batch_id"], :name => "index_transactions_on_batch_id"
+
   create_table "user_roles", :force => true do |t|
     t.integer "role_id"
     t.integer "user_id"
@@ -329,6 +413,7 @@ ActiveRecord::Schema.define(:version => 20100912070903) do
     t.string   "email"
     t.string   "state"
     t.integer  "account_id"
+    t.string   "customer_cim_id"
     t.string   "password_salt"
     t.string   "crypted_password"
     t.string   "access_token",      :limit => 64, :null => false

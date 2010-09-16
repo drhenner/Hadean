@@ -34,17 +34,6 @@ class Shopping::OrdersController < Shopping::BaseController
     end
   end
 
-  # GET /shopping/orders/new
-  # GET /shopping/orders/new.xml
-  def new
-    @order = Order.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @order }
-    end
-  end
-
   # GET /shopping/orders/1/edit
   def edit
     @order = Order.find(params[:id])
@@ -53,15 +42,33 @@ class Shopping::OrdersController < Shopping::BaseController
   # POST /shopping/orders
   # POST /shopping/orders.xml
   def create
-    @order = Order.new(params[:shopping_order])
+    @order = find_or_create_order
+    @invoice = Invoice.new(params[:shopping_order])
+@order.ip_address = request.remote_ip
+if @order.create_invoice(:amount => @order.amount)
+  if @order.purchase
+    render :action => "success"
+  else
+    render :action => "failure"
+  end
+else
+  render :action => 'new'
+end
+
+#  t.integer :order_id,  :null => false
+#  t.string :number,     :null => false
+#  t.decimal :amount,      :precision => 8, :scale => 2,  :null => false
+#  #t.boolean :settled,     :default => false,  :null => false
+#  t.string  :state,  :null => false
+#  t.boolean :active,      :default => true,   :null => false
+
+
 
     respond_to do |format|
-      if @order.save
-        format.html { redirect_to(@order, :notice => 'Order was successfully created.') }
-        format.xml  { render :xml => @order, :status => :created, :location => @order }
+      if @invoice.save
+        format.html { redirect_to(@invoice, :notice => 'Order was successfully created.') }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
+        format.html { render :action => "index" }
       end
     end
   end
@@ -73,24 +80,11 @@ class Shopping::OrdersController < Shopping::BaseController
 
     respond_to do |format|
       if @order.update_attributes(params[:shopping_order])
-        format.html { redirect_to(@order, :notice => 'Order was successfully updated.') }
-        format.xml  { head :ok }
+        format.html { redirect_to(shopping_orders_path, :notice => 'Order was successfully updated.') }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /shopping/orders/1
-  # DELETE /shopping/orders/1.xml
-  def destroy
-    @order = Order.find(params[:id])
-    @order.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(shopping_orders_url) }
-      format.xml  { head :ok }
-    end
-  end
 end

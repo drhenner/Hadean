@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
+  has_friendly_id :number, :use_slug => false
   
   has_many   :order_items
   has_many   :shipments
@@ -16,6 +17,7 @@ class Order < ActiveRecord::Base
     
   attr_accessor :total, :sub_total
   
+  #validates :number,     :presence => true
   validates :user_id,     :presence => true
   validates :email,       :presence => true,
                           :format   => { :with => CustomValidators::Emails.email_validator }
@@ -26,7 +28,29 @@ class Order < ActiveRecord::Base
       transition :to => 'complete', :from => 'in_progress'
     end
     
-    after_transition :to => 'complete', :do => [:update_inventory]
+    before_transition :to => 'complete', :do => [:set_completed]
+    after_transition  :to => 'complete', :do => [:update_inventory]
+  end
+  
+  
+  ## This method creates the invoice and payment method.  If the payment is not authorized the whole transaction is roled back
+  def create_invoice(credit_card, args)
+    transaction do 
+      invoice_statement = Invoice.generate(args[:amount], "#{Time.now.to_i}-#{number}")
+      invoice_statement.authorize_payment(credit_card)#, options = {})
+      
+      invoices.push(invoice_statement)
+      if invoice_statement.succeeded?
+        #invoice_statement.complete_order! #complete!
+      else
+        role_back
+      end
+    end
+  end
+  
+  
+  def set_completed
+    completed_at = Time.zone.now
   end
   
   def set_beginning_values
@@ -105,6 +129,7 @@ class Order < ActiveRecord::Base
   end
   
   def add_items(variant, quantity, state_id = nil)
+    self.save! if self.new_record?
     tax_rate_id = state_id ? variant.product.tax_rate(state_id) : nil
     quantity.times do
       self.order_items.create(:variant_id => variant.id, :price => variant.price, :tax_rate_id => tax_rate_id)

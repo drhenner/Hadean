@@ -72,7 +72,7 @@ class User < ActiveRecord::Base
                                                 
   has_many    :deleted_cart_items,        :conditions => ['cart_items.active = ?', false], :class_name => 'CartItem'
   has_many    :payment_profiles
-  
+  has_many    :transaction_ledgers, :as => :accountable
   
   validates :first_name,  :presence => true, :if => :registered_user?,
                           :format   => { :with => CustomValidators::Names.name_validator }

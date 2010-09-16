@@ -52,7 +52,8 @@ class Shopping::BaseController < ApplicationController
   end
   
   def create_order
-    @session_order = current_user.orders.create(:ip_address => request.env['REMOTE_ADDR'], 
+    @session_order = current_user.orders.create(:number       => Time.now.to_i,
+                                                :ip_address   => request.env['REMOTE_ADDR'], 
                                                 :bill_address => current_user.billing_address  )
     add_new_cart_items(session_cart.shopping_cart_items)
     session[:order_id] = @session_order.id
