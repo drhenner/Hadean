@@ -41,50 +41,20 @@ class Shopping::OrdersController < Shopping::BaseController
 
   # POST /shopping/orders
   # POST /shopping/orders.xml
-  def create
-    @order = find_or_create_order
-    @invoice = Invoice.new(params[:shopping_order])
-@order.ip_address = request.remote_ip
-if @order.create_invoice(:amount => @order.amount)
-  if @order.purchase
-    render :action => "success"
-  else
-    render :action => "failure"
-  end
-else
-  render :action => 'new'
-end
-
-#  t.integer :order_id,  :null => false
-#  t.string :number,     :null => false
-#  t.decimal :amount,      :precision => 8, :scale => 2,  :null => false
-#  #t.boolean :settled,     :default => false,  :null => false
-#  t.string  :state,  :null => false
-#  t.boolean :active,      :default => true,   :null => false
-
-
-
-    respond_to do |format|
-      if @invoice.save
-        format.html { redirect_to(@invoice, :notice => 'Order was successfully created.') }
-      else
-        format.html { render :action => "index" }
-      end
-    end
-  end
-
-  # PUT /shopping/orders/1
-  # PUT /shopping/orders/1.xml
   def update
-    @order = Order.find(params[:id])
-
-    respond_to do |format|
-      if @order.update_attributes(params[:shopping_order])
-        format.html { redirect_to(shopping_orders_path, :notice => 'Order was successfully updated.') }
+    @order = find_or_create_order
+    #@invoice = Invoice.new(params[:order])
+    @order.ip_address = request.remote_ip
+    if @order.create_invoice(credit_card, :amount => @order.find_total)
+      if @order.purchase
+        render :action => "success"
       else
-        format.html { render :action => "edit" }
+        render :action => "failure"
       end
+    else
+      render :action => 'index'
     end
   end
+
 
 end
