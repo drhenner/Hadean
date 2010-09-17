@@ -163,19 +163,19 @@ a {
   text-decoration: underline;
   color: #000099;
 }
-/* line 18, ../../../../../../.rvm/gems/ruby-1.8.7-p302@my_app/gems/compass-0.10.5.pre.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 18, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 a:visited {
   color: #000066;
 }
-/* line 21, ../../../../../../.rvm/gems/ruby-1.8.7-p302@my_app/gems/compass-0.10.5.pre.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 21, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 a:focus {
   color: black;
 }
-/* line 24, ../../../../../../.rvm/gems/ruby-1.8.7-p302@my_app/gems/compass-0.10.5.pre.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 a:hover {
   color: black;
 }
-/* line 27, ../../../../../../.rvm/gems/ruby-1.8.7-p302@my_app/gems/compass-0.10.5.pre.1/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p0/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 a:active {
   color: #cc0099;
 }

@@ -1,14 +1,4 @@
 GIT
-  remote: git://github.com/justinfrench/formtastic.git
-  revision: eeba8d4
-  branch: rails3
-  specs:
-    formtastic (1.1.0.beta)
-      actionpack (>= 2.3.0)
-      activesupport (>= 2.3.0)
-      i18n (>= 0.4.0)
-
-GIT
   remote: git://github.com/mislav/will_paginate.git
   revision: 3615938
   branch: rails3
@@ -55,25 +45,24 @@ GEM
       activemodel (= 3.0.0.rc2)
       activesupport (= 3.0.0.rc2)
     activesupport (3.0.0.rc2)
+    archive-tar-minitar (0.5.2)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     authlogic (2.1.5)
       activesupport
     autotest (4.3.2)
-    autotest-fsevent (0.2.2)
-      autotest (>= 4.2.4)
+    autotest-fsevent (0.2.3)
       sys-uname
-    autotest-growl (0.2.4)
-      autotest (>= 4.2.4)
+    autotest-growl (0.2.5)
     autotest-rails-pure (4.1.0)
     awesome_print (0.2.1)
-    babosa (0.1.1)
-    braintree (2.5.0)
+    babosa (0.2.0)
+    braintree (2.5.2)
       builder
     builder (2.1.2)
-    cancan (1.3.3)
+    cancan (1.3.4)
     columnize (0.3.1)
-    compass (0.10.5.pre.1)
+    compass (0.10.5)
       haml (>= 3.0.4)
     diff-lcs (1.1.2)
     erubis (2.6.6)
@@ -87,12 +76,17 @@ GEM
     fancy-buttons (0.5.5)
       compass (>= 0.10.0)
       haml (>= 3.0.2)
-    friendly_id (3.1.3)
-      babosa (>= 0.1.0)
+    formtastic (1.1.0)
+      actionpack (>= 2.3.0)
+      activesupport (>= 2.3.0)
+      i18n (>= 0.4.0)
+    friendly_id (3.1.6)
+      babosa (~> 0.2.0)
     haml (3.0.13)
     i18n (0.4.1)
-    linecache (0.43)
-    mail (2.2.5)
+    linecache19 (0.5.11)
+      ruby_core_source (>= 0.1.4)
+    mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
@@ -132,22 +126,29 @@ GEM
     rmagick (2.13.1)
     rsolr (0.12.1)
       builder (>= 2.1.2)
-    rspec (2.0.0.beta.20)
-      rspec-core (= 2.0.0.beta.20)
-      rspec-expectations (= 2.0.0.beta.20)
-      rspec-mocks (= 2.0.0.beta.20)
-    rspec-core (2.0.0.beta.20)
-    rspec-expectations (2.0.0.beta.20)
+    rspec (2.0.0.beta.22)
+      rspec-core (= 2.0.0.beta.22)
+      rspec-expectations (= 2.0.0.beta.22)
+      rspec-mocks (= 2.0.0.beta.22)
+    rspec-core (2.0.0.beta.22)
+    rspec-expectations (2.0.0.beta.22)
       diff-lcs (>= 1.1.2)
-    rspec-mocks (2.0.0.beta.20)
-    rspec-rails (2.0.0.beta.20)
-      rspec (= 2.0.0.beta.20)
-    ruby-debug (0.10.3)
-      columnize (>= 0.1)
-      ruby-debug-base (~> 0.10.3.0)
-    ruby-debug-base (0.10.3)
-      linecache (>= 0.3)
+    rspec-mocks (2.0.0.beta.22)
+      rspec-core (= 2.0.0.beta.22)
+      rspec-expectations (= 2.0.0.beta.22)
+    rspec-rails (2.0.0.beta.22)
+      rspec (= 2.0.0.beta.22)
+    ruby-debug-base19 (0.11.24)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
     ruby-mysql (2.9.3)
+    ruby_core_source (0.1.4)
+      archive-tar-minitar (>= 0.5.2)
     ssl_requirement (0.1.0)
     state_machine (0.9.4)
     sunspot (1.1.0)
@@ -179,7 +180,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   fancy-buttons
-  formtastic!
+  formtastic (= 1.1.0)
   friendly_id (~> 3.0)
   haml (= 3.0.13, >= 3.0.4)
   memcache-client
@@ -193,7 +194,7 @@ DEPENDENCIES
   rspec-expectations (>= 2.0.0.beta.19)
   rspec-mocks (>= 2.0.0.beta.19)
   rspec-rails (>= 2.0.0.beta.19)
-  ruby-debug
+  ruby-debug19
   ruby-mysql
   ssl_requirement
   state_machine

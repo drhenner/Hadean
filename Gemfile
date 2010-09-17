@@ -14,7 +14,7 @@ gem 'compass', ">= 0.10.4.pre.4" #"0.10.1"#, "0.10.1"#, "0.10.0.rc6" #0.10.4.pre
 
 gem 'fancy-buttons'
 gem "friendly_id", "~> 3.0"
-gem 'formtastic',    :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
+gem 'formtastic',  "1.1.0"#  :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
 gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
 
 gem 'memcache-client'
@@ -36,6 +36,7 @@ group :development do
   gem 'awesome_print'
   gem "autotest-rails-pure"
   gem "autotest-fsevent"
+  gem "ruby-debug19"
   #gem "ruby-debug"
 end
 
@@ -72,6 +73,6 @@ group :test do
 #  gem "launchy"
   
   
-  #gem "ruby-debug19"
-  gem "ruby-debug"
+  gem "ruby-debug19"
+  #gem "ruby-debug"
 end
