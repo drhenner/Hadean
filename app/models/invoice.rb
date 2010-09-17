@@ -21,23 +21,27 @@ class Invoice < ActiveRecord::Base
     after_transition :to => 'authorized', :do => :authorize_complete_order
     
     event :payment_authorized do
-      transitions :from => :pending,
+      transition :from => :pending,
                   :to   => :authorized
-      transitions :from => :payment_declined,
+      transition :from => :payment_declined,
                   :to   => :authorized
     end
     event :payment_captured do
-      transitions :from => :authorized,
+      transition :from => :authorized,
                   :to   => :paid
     end
     event :transaction_declined do
-      transitions :from => :pending,
+      transition :from => :pending,
                   :to   => :payment_declined
-      transitions :from => :payment_declined,
+      transition :from => :payment_declined,
                   :to   => :payment_declined
-      transitions :from => :authorized,
+      transition :from => :authorized,
                   :to   => :authorized
     end
+  end
+  
+  def Invoice.generate(order_id, charge_amount, num)
+    Invoice.new(:order_id => order_id, :amount => charge_amount, :number => num)
   end
   
   def authorize_complete_order(amount)
@@ -66,7 +70,7 @@ class Invoice < ActiveRecord::Base
   end
   
   def unique_order_number
-    "#{Time.now.to_i}-#{order.number}"
+    "#{Time.now.to_i}-#{rand(1000000)}"
   end
   
   def authorization_reference
@@ -76,11 +80,11 @@ class Invoice < ActiveRecord::Base
   end
   
   def succeeded?
-    payment_authorized? || payment_captured?
+    authorized? || paid?
   end
   
   def authorize_payment(credit_card, options = {})
-    options[:invoice_id] ||= unique_order_number
+    options[:number] ||= unique_order_number
     transaction do
       authorization = Payment.authorize(amount, credit_card, options)
       payments.push(authorization)

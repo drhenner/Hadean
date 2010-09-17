@@ -3,6 +3,7 @@ class Order < ActiveRecord::Base
   
   has_many   :order_items
   has_many   :shipments
+  has_many   :invoices
   
   belongs_to :user
   belongs_to   :ship_address, :class_name => 'Address'
@@ -34,15 +35,16 @@ class Order < ActiveRecord::Base
   
   
   ## This method creates the invoice and payment method.  If the payment is not authorized the whole transaction is roled back
-  def create_invoice(credit_card, args)
+  def create_invoice(credit_card, charge_amount, args)
     transaction do 
-      invoice_statement = Invoice.generate(args[:amount], "#{Time.now.to_i}-#{number}")
-      invoice_statement.authorize_payment(credit_card)#, options = {})
+      invoice_statement = Invoice.generate(self.id, charge_amount, "#{Time.now.to_i}-#{number}")
+      invoice_statement.authorize_payment(credit_card, args)#, options = {})
       
       invoices.push(invoice_statement)
       if invoice_statement.succeeded?
         #invoice_statement.complete_order! #complete!
       else
+        debugger
         role_back
       end
     end

@@ -23,6 +23,18 @@ class Address < ActiveRecord::Base
     [first_name, last_name].compact.join(' ')
   end
   
+  def cc_params
+    { :name     => name,
+      :address1 => address1,
+      :address2 => address2,
+      :city     => city,
+      :state    => state.abbreviation,
+      :country  => state.country_id == Country::USA_ID ? 'US' : 'CAN',
+      :zip      => zip_code#,
+      #:phone    => phone
+    }
+  end
+  
   def self.update_address(old_address, params, address_type_id = AddressType::SHIPPING_ID )
     new_address = Address.new(params.merge( :address_type_id  => address_type_id, 
                               :addressable_type => old_address.addressable_type, 

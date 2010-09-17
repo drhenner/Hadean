@@ -15,6 +15,7 @@ class Shopping::OrdersController < Shopping::BaseController
       session_cart.add_items_to_checkout(@order)
       redirect_to f
     else
+      @credit_card ||= ActiveMerchant::Billing::CreditCard.new()
       @order.order_total
       respond_to do |format|
         format.html # index.html.erb
@@ -43,18 +44,42 @@ class Shopping::OrdersController < Shopping::BaseController
   # POST /shopping/orders.xml
   def update
     @order = find_or_create_order
-    #@invoice = Invoice.new(params[:order])
     @order.ip_address = request.remote_ip
-    if @order.create_invoice(credit_card, :amount => @order.find_total)
-      if @order.purchase
-        render :action => "success"
+    
+    @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
+    #gateway = ActiveMerchant::Billing::PaypalGateway.new(:login=>$PAYPAL_LOGIN, :password=>$PAYPAL_PASSWORD)
+
+    #res = gateway.authorize(amount, credit_card, :ip=>request.remote_ip, :billing_address=>billing_address)
+    address = @order.bill_address.cc_params
+    
+    if @credit_card.valid?
+      if response = @order.create_invoice(@credit_card, @order.find_total, {:email => @order.email, :billing_address=> address, :ip=> @order.ip_address })
+        if response.success?
+          render :action => "success"
+        else
+          render :action => "failure"
+        end
       else
-        render :action => "failure"
+        render :action => 'index'
       end
     else
+      flash[:error] = "Credit Card is not valid."
       render :action => 'index'
     end
   end
 
+  private
+  
+  def cc_params
+    {
+          :type               => params[:type],
+          :number             => params[:number],
+          :verification_value => params[:verification_value],
+          :month              => params[:month],
+          :year               => params[:year],
+          :first_name         => params[:first_name],
+          :last_name          => params[:last_name]
+    }
+  end
 
 end
