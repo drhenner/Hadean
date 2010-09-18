@@ -1,11 +1,12 @@
 <% content_for :head do -%>
   <%= javascript_include_tag "admin/index_grid" %>
 <% end %>
+<%= render :partial => '/admin/inventory/sub_header'%>
 
 <h2> Purchase Orders to be Received </h2>
 
 <div id="admin_purchase_orders_page_wrapper">
-  <div id="admin_purchase_orders_grid_wrapper">
+  <div id="admin_purchase_orders_grid_wrapper" class='column'>
     <%= raw jqgrid("Purchase Orders", "admin_receivings_grid", admin_inventory_receivings_path,
       [
         { :field => "supplier_name",    :label => "Supplier",         :width => 120,  :resizable => false },

@@ -1,11 +1,12 @@
 <% content_for :head do -%>
   <%= javascript_include_tag "admin/index_grid" %>
 <% end %>
+<%= render :partial => '/admin/merchandise/sub_header'%>
 
 <h2> Products </h2>
 
 <div id="admin_products_page_wrapper">
-  <div id="admin_products_grid_wrapper">
+  <div id="admin_products_grid_wrapper" class='column'>
     <%= raw jqgrid("Products", "admin_products_grid", admin_merchandise_products_path,
       [
         { :field => "display_name",   :label => "Name",     :width => 355,  :resizable => false },

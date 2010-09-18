@@ -2,10 +2,12 @@
   <%= javascript_include_tag "admin/index_grid" %>
 <% end %>
 
+<%= render :partial => '/admin/merchandise/sub_header'%>
+
 <h2> Prototypes </h2>
 
 <div id="admin_prototypes_page_wrapper">
-  <div id="admin_prototypes_grid_wrapper">
+  <div id="admin_prototypes_grid_wrapper" class='column'>
     <%= raw jqgrid( "Prototypes", 
                     "admin_prototypes_grid", 
                     admin_merchandise_prototypes_path,

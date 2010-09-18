@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   before_validation :sanitize_data, :before_validation_on_create
-  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :openid_identifier, :birth_date, :address_attributes, :phone_attributes
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :openid_identifier, :birth_date, :role_ids, :address_attributes, :phone_attributes
   
   has_many    :orders
   has_many    :phones,                    :dependent => :destroy, 
@@ -82,7 +82,7 @@ class User < ActiveRecord::Base
                           :uniqueness => true,
                           :format   => { :with => CustomValidators::Emails.email_validator }
   
-  accepts_nested_attributes_for :addresses, :phones
+  accepts_nested_attributes_for :addresses, :phones, :user_roles
   
   state_machine :state, :initial => :inactive do
     state :inactive
@@ -108,6 +108,10 @@ class User < ActiveRecord::Base
   
   def active?
     !['canceled', 'inactive'].any? {|s| self.state == s }
+  end
+  
+  def display_active
+    active?.to_s
   end
   
   def current_cart
@@ -158,6 +162,22 @@ class User < ActiveRecord::Base
   
   def merchant_description
     [name, default_shipping_address.try(:address_lines)].compact.join(', ')
+  end
+  
+  def self.admin_grid(params = {})
+    
+    params[:page] ||= 1
+    params[:rows] ||= SETTINGS[:admin_grid_rows]
+
+    grid = Table(:variants)
+    
+    grid = User
+    grid.includes(:roles)
+    grid.where("users.first_name = ?", params[:first_name])  if params[:first_name].present?
+    grid.where("users.last_name = ?",  params[:last_name])  if params[:last_name].present?
+    grid.order("#{params[:sidx]} #{params[:sord]}") 
+    grid.limit(params[:rows])
+    grid.paginate({:page => params[:page]})
   end
   
   private
