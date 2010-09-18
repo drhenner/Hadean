@@ -7,7 +7,15 @@ class ApplicationController < ActionController::Base
   
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Access denied."
-    redirect_to root_url
+    if current_user && current_user.admin?
+      redirect_to root_url
+    else
+      redirect_to root_url
+    end
+  end
+  
+  def current_ability
+    @current_ability ||= Ability.new(current_user)
   end
   
   private

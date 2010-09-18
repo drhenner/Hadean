@@ -166,6 +166,9 @@ a:hover {
   display: inline;
   text-align: left;
 }
+.roman-list li {
+  list-style: upper-roman;
+}
 .selectlist-list {
   list-style: none;
   margin:     0;

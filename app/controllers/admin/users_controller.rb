@@ -2,6 +2,7 @@ class Admin::UsersController < Admin::BaseController
   
   def index 
    # @users = User.find( :all)
+    authorize! :view_users, current_user
     
     @users = User.admin_grid(params)
     respond_to do |format|
@@ -18,11 +19,13 @@ class Admin::UsersController < Admin::BaseController
   end
   
   def new
+    authorize! :create_users, @user
     @user = User.new
     form_info
   end
   
   def create
+    authorize! :create_users, @user
     @user = User.new(params[:user])
     if @user.save
       @user.deliver_activation_instructions!

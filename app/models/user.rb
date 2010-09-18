@@ -110,6 +110,18 @@ class User < ActiveRecord::Base
     !['canceled', 'inactive'].any? {|s| self.state == s }
   end
   
+  def role?(role_name)
+    roles.any? {|r| r.name == role_name.to_s}
+  end
+  
+  def admin?
+    role?(:administrator) || role?(:super_administrator)
+  end
+  
+  def super_admin?
+    role?(:super_administrator)
+  end
+  
   def display_active
     active?.to_s
   end
@@ -205,6 +217,6 @@ class User < ActiveRecord::Base
   end
   
   def before_validation_on_create
-    self.access_token = ActiveSupport::SecureRandom::hex(8+rand(6)) if self.new_record? and self.access_token.nil?
+    self.access_token = ActiveSupport::SecureRandom::hex(9+rand(6)) if self.new_record? and self.access_token.nil?
   end
 end

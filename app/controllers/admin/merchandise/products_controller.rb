@@ -1,5 +1,7 @@
 class Admin::Merchandise::ProductsController < Admin::BaseController
   respond_to :html, :json
+  authorize_resource
+  
   def index
     @products = Product.admin_grid(params)
     respond_to do |format|

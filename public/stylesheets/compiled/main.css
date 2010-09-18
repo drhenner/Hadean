@@ -102,7 +102,7 @@ a:hover {
   width: 230px;
   margin-right: 0;
 }
-/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../app/stylesheets/blueprint/_grid.scss */
 * html #admin_new_property_button {
   overflow-x: hidden;
 }
@@ -126,7 +126,7 @@ a:hover {
   width: 230px;
   margin-right: 0;
 }
-/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../app/stylesheets/blueprint/_grid.scss */
 * html #admin_new_product_type_button {
   overflow-x: hidden;
 }
@@ -159,7 +159,7 @@ a:hover {
   width: 230px;
   margin-right: 0;
 }
-/* line 138, ../../../app/stylesheets/blueprint/_grid.scss */
+/* line 139, ../../../app/stylesheets/blueprint/_grid.scss */
 * html #admin_new_prototype_type_button {
   overflow-x: hidden;
 }
@@ -180,13 +180,18 @@ a:hover {
 }
 
 /* line 169, ../../../app/stylesheets/main.scss */
+.roman-list li {
+  list-style: upper-roman;
+}
+
+/* line 172, ../../../app/stylesheets/main.scss */
 .selectlist-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 175, ../../../app/stylesheets/main.scss */
+/* line 178, ../../../app/stylesheets/main.scss */
 .selectlist-item {
   background: white url(../images/cross-circle.png) no-repeat right center;
   border-left: solid 1px #eee;
@@ -198,13 +203,13 @@ a:hover {
   margin: 1px 0;
 }
 
-/* line 187, ../../../app/stylesheets/main.scss */
+/* line 190, ../../../app/stylesheets/main.scss */
 #admin-product-names {
   margin: 0  0  0.5em;
   padding: 0.3em;
 }
 
-/* line 194, ../../../app/stylesheets/main.scss */
+/* line 197, ../../../app/stylesheets/main.scss */
 #header_bar {
   width: 950px;
   display: -moz-inline-box;
@@ -220,7 +225,7 @@ a:hover {
   behavior: url(border-radius.htc);
 }
 
-/* line 202, ../../../app/stylesheets/main.scss */
+/* line 205, ../../../app/stylesheets/main.scss */
 #header_sub_bar {
   width: 910px;
   margin-right: 0;
@@ -232,7 +237,7 @@ a:hover {
   border: solid 2px #68C;
 }
 
-/* line 213, ../../../app/stylesheets/main.scss */
+/* line 216, ../../../app/stylesheets/main.scss */
 #search_bar {
   width: 710px;
   display: inline;
@@ -246,7 +251,7 @@ a:hover {
   text-align: left;
 }
 
-/* line 219, ../../../app/stylesheets/main.scss */
+/* line 222, ../../../app/stylesheets/main.scss */
 #cart_items_button {
   display: inline;
   float: right;
@@ -258,7 +263,7 @@ a:hover {
   *vertical-align: auto;
 }
 
-/* line 223, ../../../app/stylesheets/main.scss */
+/* line 226, ../../../app/stylesheets/main.scss */
 #wish_items_button {
   display: inline;
   float: right;
@@ -270,24 +275,24 @@ a:hover {
   *vertical-align: auto;
 }
 
-/* line 230, ../../../app/stylesheets/main.scss */
+/* line 233, ../../../app/stylesheets/main.scss */
 li {
   list-style: none;
 }
 
-/* line 233, ../../../app/stylesheets/main.scss */
+/* line 236, ../../../app/stylesheets/main.scss */
 input.text, input.title, input[type="text"], input[type="password"] {
   background-color: white;
   margin: 0.15em 0;
   padding: 5px;
 }
 
-/* line 239, ../../../app/stylesheets/main.scss */
+/* line 242, ../../../app/stylesheets/main.scss */
 #content_wrapper {
   padding-top: 4px;
 }
 
-/* line 243, ../../../app/stylesheets/main.scss */
+/* line 246, ../../../app/stylesheets/main.scss */
 .flash_error {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -301,7 +306,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #8a1f11;
 }
 
-/* line 247, ../../../app/stylesheets/main.scss */
+/* line 250, ../../../app/stylesheets/main.scss */
 .flash_notice {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -315,17 +320,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #514721;
 }
 
-/* line 252, ../../../app/stylesheets/main.scss */
+/* line 255, ../../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }
 
-/* line 258, ../../../app/stylesheets/main.scss */
+/* line 261, ../../../app/stylesheets/main.scss */
 #submit_add_to_cart {
   cursor: pointer;
 }
 
-/* line 262, ../../../app/stylesheets/main.scss */
+/* line 265, ../../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -337,23 +342,23 @@ input.text, input.title, input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 271, ../../../app/stylesheets/main.scss */
+/* line 274, ../../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
 
-/* line 275, ../../../app/stylesheets/main.scss */
+/* line 278, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table {
   margin: 0;
 }
 
-/* line 278, ../../../app/stylesheets/main.scss */
+/* line 281, ../../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
   padding: 0;
   text-align: center;
 }
 
-/* line 283, ../../../app/stylesheets/main.scss */
+/* line 286, ../../../app/stylesheets/main.scss */
 .line_items_blue {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -364,7 +369,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
-/* line 291, ../../../app/stylesheets/main.scss */
+/* line 294, ../../../app/stylesheets/main.scss */
 .line_item_blue {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -376,7 +381,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 300, ../../../app/stylesheets/main.scss */
+/* line 303, ../../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -388,7 +393,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 309, ../../../app/stylesheets/main.scss */
+/* line 312, ../../../app/stylesheets/main.scss */
 .line_item_light_gray {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -400,7 +405,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 318, ../../../app/stylesheets/main.scss */
+/* line 321, ../../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 10px;

@@ -26,6 +26,9 @@ Configure your database.yml file (add the development and test database)
 
 5. git submodule init
 6. git submodule update
+7. gem install compass
+8. gem install fancy-buttons
+
 
 
 ######compass install -r fancy-buttons -f fancy-buttons
