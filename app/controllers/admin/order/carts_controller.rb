@@ -2,11 +2,17 @@ class Admin::Order::CartsController < ApplicationController
   # GET /admin/order/carts
   # GET /admin/order/carts.xml
   def index
-    @admin_order_carts = Admin::Order::Cart.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @admin_order_carts }
+    
+    
+    @cart = find_or_create_order 
+    if f = next_admin_cart_form
+      redirect_to f
+    else
+      @credit_card ||= ActiveMerchant::Billing::CreditCard.new()
+      #@order.order_total
+      respond_to do |format|
+        format.html # index.html.erb
+      end
     end
   end
 
