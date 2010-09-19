@@ -14,12 +14,18 @@ Hadean::Application.configure do
   config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = true
 
-  config.cache_store = :mem_cache_store
+  config.cache_store = :mem_cache_store, "localhost"
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.active_support.deprecation = :log
   
+  config.session_store = :mem_cache_store
+  config.session = {
+  :session_key => '_hadean_session',
+  :secret      => 'someotherkindofsecretthatnooneknows095876347323467900kgf',
+  :cache       => CACHE,
+  :expires     => 90  }
   
   config.after_initialize do
     Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)

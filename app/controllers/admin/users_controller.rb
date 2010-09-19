@@ -19,14 +19,15 @@ class Admin::UsersController < Admin::BaseController
   end
   
   def new
-    authorize! :create_users, @user
     @user = User.new
+    authorize! :create_users, current_user
     form_info
   end
   
   def create
-    authorize! :create_users, @user
+    
     @user = User.new(params[:user])
+    authorize! :create_users, current_user
     if @user.save
       @user.deliver_activation_instructions!
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
@@ -39,12 +40,14 @@ class Admin::UsersController < Admin::BaseController
   
   def edit
     @user = User.includes(:roles).find(params[:id])
+    authorize! :create_users, current_user
     form_info
   end
   
   def update
     params[:user][:role_ids] ||= []
     @user = User.includes(:roles).find(params[:id])
+    authorize! :create_users, current_user
     if @user.update_attributes(params[:user])
       flash[:notice] = "#{@user.name} has been updated."
       redirect_to admin_users_url

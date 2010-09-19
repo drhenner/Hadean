@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
       flash[:alert] = 'Sorry you are not allowed to do that.'
       redirect_to :back
     else
+      flash[:alert] = 'Sorry you are not allowed to do that.'
       redirect_to root_url
     end
   end

@@ -7,6 +7,7 @@ class Ability
     if user.super_admin?
       can :manage, :all
     elsif user.admin?
+      debugger
       can :manage, :all
     else
       can :read, Order, :user_id => user.id

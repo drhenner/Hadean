@@ -1,0 +1,29 @@
+<h1>Listing admin_order_users</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Birth date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_order_users.each do |admin_order_user| %>
+  <tr>
+    <td><%= admin_order_user.first_name %></td>
+    <td><%= admin_order_user.last_name %></td>
+    <td><%= admin_order_user.email %></td>
+    <td><%= admin_order_user.birth_date %></td>
+    <td><%= link_to 'Show', admin_order_user %></td>
+    <td><%= link_to 'Edit', edit_admin_order_user_path(admin_order_user) %></td>
+    <td><%= link_to 'Destroy', admin_order_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_admin_order_user_path %>

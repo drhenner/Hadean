@@ -13,7 +13,7 @@ class AdminAbility
       end
       #authorize! :view_users, @user
       can :create_users, User do
-        user.admin?
+        user.super_admin?
       end
       #authorize! :create_users, @user
     else

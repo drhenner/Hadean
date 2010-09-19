@@ -1,0 +1,21 @@
+<h1>Listing admin_order_carts</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_order_carts.each do |admin_order_cart| %>
+  <tr>
+    <td><%= link_to 'Show', admin_order_cart %></td>
+    <td><%= link_to 'Edit', edit_admin_order_cart_path(admin_order_cart) %></td>
+    <td><%= link_to 'Destroy', admin_order_cart, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cart', new_admin_order_cart_path %>

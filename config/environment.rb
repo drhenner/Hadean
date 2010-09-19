@@ -8,6 +8,10 @@ HADEAN_CONFIG = YAML.load(raw_config)[Rails.env]
 CIM_LOGIN_ID = HADEAN_CONFIG['paypal']['login']
 CIM_TRANSACTION_KEY = HADEAN_CONFIG['paypal']['password']
 
+require 'memcache'
+CACHE = MemCache.new(:namespace => "hadean_cache")
+CACHE.servers = 'localhost:11211'
+
 #Paperclip.options[:command_path] = "/Users/davidhenner/ImageMagick-6.5.9/bin"
 Paperclip.options[:command_path] = "/usr/local/bin"
 
