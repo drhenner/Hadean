@@ -7,7 +7,7 @@ class AdminAbility
       can :manage, :all
     elsif user.admin?
       #can :manage, :all
-      
+      can :read, :all
       can :view_users, User do
         user.admin?
       end
@@ -16,6 +16,7 @@ class AdminAbility
         user.super_admin?
       end
       #authorize! :create_users, @user
+      can :create_orders, User 
     else
       
     end

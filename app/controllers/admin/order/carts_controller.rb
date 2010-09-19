@@ -1,13 +1,12 @@
-class Admin::Order::CartsController < ApplicationController
+class Admin::Order::CartsController < Admin::Order::BaseController
   # GET /admin/order/carts
   # GET /admin/order/carts.xml
   def index
-    
-    
-    @cart = find_or_create_order 
+    authorize! :create_orders, current_user
     if f = next_admin_cart_form
       redirect_to f
     else
+      @cart = session_admin_cart 
       @credit_card ||= ActiveMerchant::Billing::CreditCard.new()
       #@order.order_total
       respond_to do |format|
@@ -19,7 +18,7 @@ class Admin::Order::CartsController < ApplicationController
   # GET /admin/order/carts/1
   # GET /admin/order/carts/1.xml
   def show
-    @admin_order_cart = Admin::Order::Cart.find(params[:id])
+    @admin_order_cart = Cart.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -30,7 +29,7 @@ class Admin::Order::CartsController < ApplicationController
   # GET /admin/order/carts/new
   # GET /admin/order/carts/new.xml
   def new
-    @admin_order_cart = Admin::Order::Cart.new
+    @admin_order_cart = Cart.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,13 +39,13 @@ class Admin::Order::CartsController < ApplicationController
 
   # GET /admin/order/carts/1/edit
   def edit
-    @admin_order_cart = Admin::Order::Cart.find(params[:id])
+    @admin_order_cart = Cart.find(params[:id])
   end
 
   # POST /admin/order/carts
   # POST /admin/order/carts.xml
   def create
-    @admin_order_cart = Admin::Order::Cart.new(params[:admin_order_cart])
+    @admin_order_cart = Cart.new(params[:admin_order_cart])
 
     respond_to do |format|
       if @admin_order_cart.save

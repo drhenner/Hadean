@@ -9,6 +9,8 @@
 class Admin::Order::BaseController < Admin::BaseController
   helper_method :session_admin_cart#, :new_admin_cart#, :reset_admin_cart
   
+  layout 'admin_cart'
+  
   private
   
   def reset_admin_cart
@@ -20,14 +22,19 @@ class Admin::Order::BaseController < Admin::BaseController
   end
   
   def new_admin_cart
-    {
+    session[:admin_cart] = {
       :user             => nil,
       :shipping_address => nil,
       :billing_address  => nil,
       :coupon           => nil,
       :shipping_method  => nil,
-      :variants => {}# the key is variant_id, a hash of {variant, shipping_rate, quantity, tax_rate, total}
+      :variants => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total}
     }
+    
+#  variants =>  [
+#                 :id => {}, 
+#                 :id => {:variant => variant, :quantity => 2, :shipping_rate => shipping_rate, :total => 30.85}
+#               ]
   end
   
   def next_admin_cart_form()

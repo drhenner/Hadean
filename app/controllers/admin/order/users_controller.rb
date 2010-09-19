@@ -1,55 +1,55 @@
-class Admin::Order::UsersController < ApplicationController
+class Admin::Order::UsersController < Admin::Order::BaseController
   # GET /admin/order/users
   # GET /admin/order/users.xml
   def index
-    @admin_order_users = Admin::Order::User.all
-
+    
+    @users = User.admin_grid(params)
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @admin_order_users }
+      format.html
+      format.json { render :json => @users.to_jqgrid_json(
+        [ :first_name, :last_name, :email, :state ],
+        @users.per_page, #params[:page],
+        @users.current_page, #params[:rows],
+        @users.total_entries)
+      
+      }
     end
   end
 
   # GET /admin/order/users/1
   # GET /admin/order/users/1.xml
   def show
-    @admin_order_user = Admin::Order::User.find(params[:id])
+    @user = User.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @admin_order_user }
     end
   end
 
   # GET /admin/order/users/new
   # GET /admin/order/users/new.xml
   def new
-    @admin_order_user = Admin::Order::User.new
+    @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @admin_order_user }
     end
   end
 
   # GET /admin/order/users/1/edit
   def edit
-    @admin_order_user = Admin::Order::User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   # POST /admin/order/users
   # POST /admin/order/users.xml
   def create
-    @admin_order_user = Admin::Order::User.new(params[:admin_order_user])
-
-    respond_to do |format|
-      if @admin_order_user.save
-        format.html { redirect_to(@admin_order_user, :notice => 'User was successfully created.') }
-        format.xml  { render :xml => @admin_order_user, :status => :created, :location => @admin_order_user }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @admin_order_user.errors, :status => :unprocessable_entity }
-      end
+    @user = User.find_by_id(params[:user_id])
+    session_admin_cart[:user] = @user
+    if @user
+      redirect_to(admin_order_carts_url, :notice => "#{@user.name} was added.") 
+    else
+      redirect_to admin_order_users_url 
     end
   end
 

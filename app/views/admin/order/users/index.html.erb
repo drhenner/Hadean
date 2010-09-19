@@ -1,29 +1,43 @@
-<h1>Listing admin_order_users</h1>
 
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Birth date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_order_users.each do |admin_order_user| %>
-  <tr>
-    <td><%= admin_order_user.first_name %></td>
-    <td><%= admin_order_user.last_name %></td>
-    <td><%= admin_order_user.email %></td>
-    <td><%= admin_order_user.birth_date %></td>
-    <td><%= link_to 'Show', admin_order_user %></td>
-    <td><%= link_to 'Edit', edit_admin_order_user_path(admin_order_user) %></td>
-    <td><%= link_to 'Destroy', admin_order_user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% content_for :head do -%>
+  <%= javascript_include_tag "admin/index_grid" %>
 <% end %>
-</table>
 
-<br />
+<% content_for :bottom do -%>
 
-<%= link_to 'New User', new_admin_order_user_path %>
+  <%= jqgrid_stylesheets %>
+  <%= jqgrid_javascripts %>
+  <script>
+    Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/order/users'));
+  </script>
+
+<% end %>
+
+<h2>Select User</h2>
+
+<div id="admin_order_users_page_wrapper">
+  <div id="admin_order_users_grid_wrapper" class='column'>
+    <%= raw jqgrid("Users", "admin_order_users_grid", admin_order_users_path,
+      [
+        { :field => "first_name", :label => "First name", :width => 80,  :resizable => false },
+        { :field => "last_name",  :label => "Last",       :width => 80,  :resizable => false },
+        { :field => "email",      :label => "Email",      :width => 355,  :resizable => false },
+        { :field => "state",      :label => "State",      :width => 70,   :resizable => false }
+      ], 
+      {
+        :height             => "390",
+        :alt_rows           => true,
+        :direct_selection   => true,
+        :editable           => true,
+        :selection_handler  => "Hadean.AdminIndexForm.userSelection",
+        :rownumbers         => false,
+        :rows_per_page      => 20,
+        :row_list           => [20, 50, 100]
+      }
+    ) %>
+  </div>
+
+</div>
+<%= form_tag admin_order_users_path, :id => 'admin-user-form' do %>
+  <%= hidden_field_tag('user_id', nil, :id => 'admin-user_id') %>
+<% end %>

@@ -1,4 +1,4 @@
-class Admin::Order::BillingAddressesController < ApplicationController
+class Admin::Order::BillingAddressesController < Admin::Order::BaseController
   # GET /admin/order/billing_addresses
   # GET /admin/order/billing_addresses.xml
   def index

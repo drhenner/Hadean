@@ -1,0 +1,27 @@
+<h4> <%= session_admin_cart[:user] ? session_admin_cart[:user].name : 'No User' %> </h4>
+  <table>
+    <thead>
+      <tr class='odd'>
+        <th class='column1_header'>
+          Item <span class='ss_sprite ss_application_cascade'></span>
+        
+        </th><th>Price:</th><th>Price + Tax</th>
+      </tr>
+    </thead>
+    <% session_admin_cart[:variants].each do |item| %>
+      <tr class='<%= cycle("odd", "")%> '>
+        <td><%= item[:variant].name %></td><td><%= item[:variant].price %></td><td><%= item[:total] %></td>
+      </tr>
+    <% end %>
+    <tr class='odd'>
+      <td></td><td>Sub-total:</td><td><%=  %></td>
+    </tr>
+    <tr>
+      <td></td><td>Shipping Charges:</td><td><%=  %></td>
+    </tr>
+    <tfoot>
+      <tr class='even'>
+        <td></td><td>Total:</td><td><em><%= %></em></td>
+      </tr>
+    </tfoot>
+  </table>

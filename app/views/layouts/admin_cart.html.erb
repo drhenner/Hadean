@@ -51,6 +51,10 @@
     </div>
   
     <%= yield %>
+    
+    <div id='cart-right-side-panel' class='span-9 last float-right'>
+      <%= render :partial => '/admin/order/right_panel_summary'%>
+    </div>
   </div>
   
   <%= yield :bottom %>
@@ -68,5 +72,3 @@
   <%#= javascript_include_tag 'jquery-1.4.2.min', 'rails' %>
   <%#= javascript_include_tag :all, :cache => true %>
 </body>
-  <%= yield :below_body %>
-</html>
