@@ -2,82 +2,60 @@ class Admin::Order::BillingAddressesController < Admin::Order::BaseController
   # GET /admin/order/billing_addresses
   # GET /admin/order/billing_addresses.xml
   def index
-    @admin_order_billing_addresses = Admin::Order::BillingAddress.all
-
+    @billing_addresses = session_admin_cart[:user].billing_addresses
+    #debugger
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @admin_order_billing_addresses }
-    end
-  end
-
-  # GET /admin/order/billing_addresses/1
-  # GET /admin/order/billing_addresses/1.xml
-  def show
-    @admin_order_billing_address = Admin::Order::BillingAddress.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @admin_order_billing_address }
     end
   end
 
   # GET /admin/order/billing_addresses/new
   # GET /admin/order/billing_addresses/new.xml
   def new
-    @admin_order_billing_address = Admin::Order::BillingAddress.new
-
+    old_address       = Address.find_by_id(params[:old_address_id])
+    attributes        = old_address.try(:address_atributes)
+    @billing_address = session_admin_cart[:user].addresses.new(attributes)
+    form_info
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @admin_order_billing_address }
-    end
-  end
-
-  # GET /admin/order/billing_addresses/1/edit
-  def edit
-    @admin_order_billing_address = Admin::Order::BillingAddress.find(params[:id])
-  end
-
-  # POST /admin/order/billing_addresses
-  # POST /admin/order/billing_addresses.xml
-  def create
-    @admin_order_billing_address = Admin::Order::BillingAddress.new(params[:admin_order_billing_address])
-
-    respond_to do |format|
-      if @admin_order_billing_address.save
-        format.html { redirect_to(@admin_order_billing_address, :notice => 'Billing address was successfully created.') }
-        format.xml  { render :xml => @admin_order_billing_address, :status => :created, :location => @admin_order_billing_address }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @admin_order_billing_address.errors, :status => :unprocessable_entity }
-      end
     end
   end
 
   # PUT /admin/order/billing_addresses/1
   # PUT /admin/order/billing_addresses/1.xml
-  def update
-    @admin_order_billing_address = Admin::Order::BillingAddress.find(params[:id])
-
+  def create
+    old_address       = Address.find_by_id(params[:old_address_id])
+    @billing_address = session_admin_cart[:user].addresses.new(params[:address])
+    if old_address && (old_address.default? || old_address.billing_default?)
+      @billing_address.default = true         if old_address.default?
+      @billing_address.billing_default = true if old_address.billing_default?
+    end
     respond_to do |format|
-      if @admin_order_billing_address.update_attributes(params[:admin_order_billing_address])
-        format.html { redirect_to(@admin_order_billing_address, :notice => 'Billing address was successfully updated.') }
-        format.xml  { head :ok }
+      if @billing_address.save#update_attributes(params[:admin_order_billing_address])
+        if old_address
+          old_address.default = false
+          old_address.billing_default = false
+          old_address.inactive!
+        end
+        session_admin_cart[:billing_address] = @billing_address
+        format.html { redirect_to(admin_order_carts_url, :notice => 'Shipping address was successfully updated.') }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_order_billing_address.errors, :status => :unprocessable_entity }
+        form_info
+        format.html { render :action => "new", :old_address_id => params[:old_address_id] }
       end
     end
   end
-
-  # DELETE /admin/order/billing_addresses/1
-  # DELETE /admin/order/billing_addresses/1.xml
-  def destroy
-    @admin_order_billing_address = Admin::Order::BillingAddress.find(params[:id])
-    @admin_order_billing_address.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(admin_order_billing_addresses_url) }
-      format.xml  { head :ok }
-    end
+  
+  def update
+    @billing_address       = Address.find_by_id(params[:id])
+    session_admin_cart[:billing_address] = @billing_address
+    redirect_to(admin_order_carts_url, :notice => 'Shipping address was successfully selected.')
+  end
+  
+  private
+  
+  def form_info
+    @billing_addresses = session_admin_cart[:user].billing_addresses
+    @states     = State.form_selector
   end
 end

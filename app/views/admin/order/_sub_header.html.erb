@@ -1,0 +1,7 @@
+<%= link_to 'User', admin_order_users_path %> 
+<% if session_admin_cart[:user] %>
+  |
+  <%= link_to 'Shipping', admin_order_shipping_addresses_path %> |
+  <%= link_to 'Billing', admin_order_billing_addresses_path %> |
+  <%= link_to 'Shipping Method', admin_order_shipping_methods_path %>
+<% end %>

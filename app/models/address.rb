@@ -23,6 +23,15 @@ class Address < ActiveRecord::Base
     [first_name, last_name].compact.join(' ')
   end
   
+  def inactive!
+    active = false
+    save!
+  end
+  
+  def address_atributes
+    attributes.delete_if {|key, value| ["id", 'updated_at', 'created_at'].any?{|k| k == key }}
+  end
+  
   def cc_params
     { :name     => name,
       :address1 => address1,

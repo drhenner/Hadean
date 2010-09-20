@@ -1,34 +1,19 @@
-<h1>Listing admin_order_shipping_addresses</h1>
+<h2>Select Shipping Address</h2>
 
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Address1</th>
-    <th>Address2</th>
-    <th>City</th>
-    <th>Zip code</th>
-    <th>State</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_order_shipping_addresses.each do |admin_order_shipping_address| %>
-  <tr>
-    <td><%= admin_order_shipping_address.first_name %></td>
-    <td><%= admin_order_shipping_address.last_name %></td>
-    <td><%= admin_order_shipping_address.address1 %></td>
-    <td><%= admin_order_shipping_address.address2 %></td>
-    <td><%= admin_order_shipping_address.city %></td>
-    <td><%= admin_order_shipping_address.zip_code %></td>
-    <td><%= admin_order_shipping_address.state_id %></td>
-    <td><%= link_to 'Show', admin_order_shipping_address %></td>
-    <td><%= link_to 'Edit', edit_admin_order_shipping_address_path(admin_order_shipping_address) %></td>
-    <td><%= link_to 'Destroy', admin_order_shipping_address, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<%= form_tag admin_order_shipping_addresses_path do %>
+  
+  <% @shipping_addresses.each_with_index do |shipping_address, i| %>
+    <% selected = session_admin_cart[:shipping_address].try(:id) == shipping_address.id %>
+    <div  id='select-address-<%= i %>' 
+          class='span-5 rounded-4
+                <%= cycle("odd","")%> 
+                <%= 'address_selected' if selected %>'>
+      <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => shipping_address} %>
+      <%= link_to 'Use', admin_order_shipping_address_path(shipping_address), :method => 'put' %> |
+      <%= link_to 'Edit', new_admin_order_shipping_address_path(:old_address_id => shipping_address.id) %>
+    </div>
+  <% end %>
 <% end %>
-</table>
 
 <br />
 

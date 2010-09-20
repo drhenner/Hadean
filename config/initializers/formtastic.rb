@@ -5,7 +5,8 @@ Formtastic::SemanticFormBuilder.default_text_field_size = 30
 Formtastic::SemanticFormBuilder.default_text_area_height = 5
 
 # Should all fields be considered "required" by default?
-# Defaults to true, see ValidationReflection notes below.
+# Rails 2 only, ignored by Rails 3 because it will never fall back to this default.
+# Defaults to true.
 # Formtastic::SemanticFormBuilder.all_fields_required_by_default = true
 
 # Should select fields have a blank option/prompt by default?
@@ -52,53 +53,3 @@ Formtastic::SemanticFormBuilder.required_string = "*"
 # You can add custom inputs or override parts of Formtastic by subclassing SemanticFormBuilder and
 # specifying that class here.  Defaults to SemanticFormBuilder.
 # Formtastic::SemanticFormHelper.builder = MyCustomBuilder
-
-module Formtastic
-  module DatePicker
-    protected
-
-    def datepicker_input(method, options = {})
-      format = options[:format] || '%d %b %Y'
-      string_input(method, datepicker_options(format, object.send(method)).merge(options))
-    end
-
-    # Generate html input options for the datepicker_input
-    #
-    def datepicker_options(format, value = nil)
-      datepicker_options = {:value => value.try(:strftime, format), :input_html => {:class => 'ui-datepicker'}}
-    end
-  end
-  
-  module YearPicker
-    protected
-
-    def yearpicker_input(method, options = {})
-      format = options[:format] || '%d %b %Y'
-      string_input(method, yearpicker_options(format, object.send(method)).merge(options))
-    end
-
-    # Generate html input options for the datepicker_input
-    #
-    def yearpicker_options(format, value = nil)
-      yearpicker_options = {:value => value.try(:strftime, format), :input_html => {:class => 'ui-yearpicker'}}
-    end
-  end
-  
-  module FuturePicker
-    protected
-
-    def futurepicker_input(method, options = {})
-      format = options[:format] || '%d %b %Y'
-      string_input(method, futurepicker_options(format, object.send(method)).merge(options))
-    end
-
-    # Generate html input options for the datepicker_input
-    #
-    def futurepicker_options(format, value = nil)
-      futurepicker_options = {:value => value.try(:strftime, format), :input_html => {:class => 'ui-futurepicker'}}
-    end
-  end
-end
-  #Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
-  #Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
-  #Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)

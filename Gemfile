@@ -1,24 +1,24 @@
 source 'http://rubygems.org'
 
 ## Bundle rails:
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.0.rc2'
 
 gem "activemerchant", '1.7.2'#, :lib => 'active_merchant'
-gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
+#gem 'acts_as_tree',    :git => 'git://github.com/parasew/acts_as_tree.git'
 gem 'authlogic', "2.1.5"
 gem 'cancan'#, '1.3.2'
-gem 'compass', ">= 0.10.4.pre.4" #"0.10.1"#, "0.10.1"#, "0.10.0.rc6" #0.10.4.pre.4
+gem 'compass', ">= 0.10.5" 
 
 #gem 'declarative_authorization'
 #gem 'devise', '1.1.rc1'
 
 gem 'fancy-buttons'
 gem "friendly_id", "~> 3.0"
-gem 'formtastic',  "1.1.0"#  :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
-gem 'haml',  "= 3.0.13", ">= 3.0.4"#, "2.2.21"#,
+gem 'formtastic',  "~> 1.1.0"#  :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
+gem 'haml',  ">= 3.0.13"#, ">= 3.0.4"#, "2.2.21"#,
 
 gem 'memcache-client'
-#gem 'mysql'
+#gem 'mysql2'
 gem 'ruby-mysql'
 gem "nifty-generators"
 gem 'paperclip'
@@ -29,11 +29,11 @@ gem 'sunspot'
 gem 'sunspot_rails' 
 gem 'ssl_requirement'
 gem 'state_machine'
-gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => "rails3"
-gem 'validation_reflection',                                              :branch => "rails-3"
+gem 'will_paginate', '~> 3.0.pre2'
+#gem 'validation_reflection',      :branch => "rails-3"
 
 group :development do 
-  gem 'awesome_print'
+  #gem 'awesome_print'
   gem "autotest-rails-pure"
   gem "autotest-fsevent"
   gem "ruby-debug19"
@@ -42,12 +42,12 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem "rspec-rails",  ">= 2.0.0.beta.19"
-  gem "rspec",        ">=  2.0.0.beta.19"
+  gem "rspec-rails",  ">= 2.0.0.beta.22"
+  gem "rspec",        ">=  2.0.0.beta.22"
   
-  gem "rspec-core",         ">=  2.0.0.beta.19"
-  gem "rspec-expectations", ">=  2.0.0.beta.19"
-  gem "rspec-mocks",        ">=  2.0.0.beta.19"
+  gem "rspec-core",         ">=  2.0.0.beta.22"
+  gem "rspec-expectations", ">=  2.0.0.beta.22"
+  gem "rspec-mocks",        ">=  2.0.0.beta.22"
   
   #gem "rspec-rails",      '>= 2.0.0.beta.10'   #">= 2.0.0.beta"
   #gem "machinist",      '>= 2.0.0.beta1'  #:git => "git://github.com/notahat/machinist.git"

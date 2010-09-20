@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
                                           :as => :addressable,
                                           :class_name => 'Address'
                                           
-  has_one     :billing_addresses,         :conditions => ['addresses.active = ?', true], 
+  has_many    :billing_addresses,         :conditions => ['addresses.active = ?', true], 
                                           :as => :addressable,
                                           :class_name => 'Address'
 

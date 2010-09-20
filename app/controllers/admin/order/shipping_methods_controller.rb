@@ -2,33 +2,30 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
   # GET /admin/order/shipping_methods
   # GET /admin/order/shipping_methods.xml
   def index
-    @admin_order_shipping_methods = Admin::Order::ShippingMethod.all
+    @shipping_methods = #session_admin_cart[:user].shipping_addresses
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @admin_order_shipping_methods }
     end
   end
 
   # GET /admin/order/shipping_methods/1
   # GET /admin/order/shipping_methods/1.xml
   def show
-    @admin_order_shipping_method = Admin::Order::ShippingMethod.find(params[:id])
+    @shipping_method = ShippingMethod.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @admin_order_shipping_method }
     end
   end
 
   # GET /admin/order/shipping_methods/new
   # GET /admin/order/shipping_methods/new.xml
   def new
-    @admin_order_shipping_method = Admin::Order::ShippingMethod.new
+    @shipping_method = ShippingMethod.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @admin_order_shipping_method }
     end
   end
 

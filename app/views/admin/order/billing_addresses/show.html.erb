@@ -2,39 +2,39 @@
 
 <p>
   <b>First name:</b>
-  <%= @admin_order_billing_address.first_name %>
+  <%= @billing_address.first_name %>
 </p>
 
 <p>
   <b>Last name:</b>
-  <%= @admin_order_billing_address.last_name %>
+  <%= @billing_address.last_name %>
 </p>
 
 <p>
   <b>Address1:</b>
-  <%= @admin_order_billing_address.address1 %>
+  <%= @billing_address.address1 %>
 </p>
 
 <p>
   <b>Address2:</b>
-  <%= @admin_order_billing_address.address2 %>
+  <%= @billing_address.address2 %>
 </p>
 
 <p>
   <b>City:</b>
-  <%= @admin_order_billing_address.city %>
+  <%= @billing_address.city %>
 </p>
 
 <p>
   <b>Zip code:</b>
-  <%= @admin_order_billing_address.zip_code %>
+  <%= @billing_address.zip_code %>
 </p>
 
 <p>
   <b>State:</b>
-  <%= @admin_order_billing_address.state_id %>
+  <%= @billing_address.state_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_order_billing_address_path(@admin_order_billing_address) %> |
+<%= link_to 'Edit', edit_billing_address_path(@billing_address) %> |
 <%= link_to 'Back', admin_order_billing_addresses_path %>
