@@ -6,7 +6,7 @@
     <% selected = session_admin_cart[:shipping_address].try(:id) == shipping_address.id %>
     <div  id='select-address-<%= i %>' 
           class='span-5 rounded-4
-                <%= cycle("odd","")%> 
+                <%= cycle("line_item_yellow", "line_item_gray") %> 
                 <%= 'address_selected' if selected %>'>
       <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => shipping_address} %>
       <%= link_to 'Use', admin_order_shipping_address_path(shipping_address), :method => 'put' %> |
