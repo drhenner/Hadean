@@ -12,7 +12,7 @@
 <% end %>
 
 <div class='hadean-login span-12 prepend-4'>
-  <%= form_for  @user_session, :as => :user_session,  
+  <%= form_for  :user_session, @user_session, 
                 :url => user_sessions_path(@user_session), 
                 :html => {:class => 'span-12'} do |form| %>
     <div id='username-block' style='display:inline-block;'>

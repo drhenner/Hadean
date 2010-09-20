@@ -1,4 +1,4 @@
-<%= semantic_form_for(@shopping_address, :as => :address, :url => shopping_addresses_path) do |f| %>
+<%= semantic_form_for(:address, @shopping_address, :url => shopping_addresses_path) do |f| %>
   <% if @shopping_address.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shopping_address.errors.count, "error") %> prohibited this shopping_address from being saved:</h2>

@@ -1,4 +1,4 @@
-<%= semantic_form_for(@shipping_rate, :url => admin_config_shipping_rate_path) do |f| %>
+<%= semantic_form_for(:shipping_rate, @shipping_rate, :url => admin_config_shipping_rate_path) do |f| %>
   <% if @shipping_rate.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shipping_rate.errors.count, "error") %> prohibited this shipping_rate from being saved:</h2>

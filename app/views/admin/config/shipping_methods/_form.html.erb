@@ -1,4 +1,4 @@
-<%= semantic_form_for(@shipping_method, :url => admin_config_shipping_method_path) do |f| %>
+<%= semantic_form_for(:shipping_method, @shipping_method, :url => admin_config_shipping_method_path) do |f| %>
   <% if @shipping_method.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shipping_method.errors.count, "error") %> prohibited this Shipping Method from being saved:</h2>

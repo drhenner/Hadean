@@ -1,4 +1,4 @@
-<%= form_for(@shopping_payment, :as => :payment) do |f| %>
+<%= form_for(:payment, @shopping_payment) do |f| %>
   <% if @shopping_payment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shopping_payment.errors.count, "error") %> prohibited this shopping_payment from being saved:</h2>

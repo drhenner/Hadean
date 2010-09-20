@@ -1,4 +1,4 @@
-<%= form_for(@admin_order_shipping_method) do |f| %>
+<%= form_for(:shipping_method, @admin_order_shipping_method) do |f| %>
   <% if @admin_order_shipping_method.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_order_shipping_method.errors.count, "error") %> prohibited this admin_order_shipping_method from being saved:</h2>
