@@ -43,6 +43,7 @@ Hadean::Application.routes.draw do # |map|
       resources :carts
       resources :billing_addresses
       resources :credit_cards
+      resources :products
       resources :shipping_addresses
       resources :shipping_methods
       resources :users
