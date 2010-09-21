@@ -51,6 +51,17 @@ class Product < ActiveRecord::Base
     master_variant ? master_variant.price : last_master_variant.price
   end
 
+  def display_price_range(j = ' to ')
+    price_range.join(j)
+  end
+  
+  def price_range
+    range = variants.inject([variants.first.price, variants.first.price]) do |variant, a|
+      a[0] = variant.price if variant.price < a[0]
+      a[1] = variant.price if variant.price > a[1]
+    end
+  end
+  
   def last_master_variant
     inactive_master_variants.last
   end
@@ -60,13 +71,14 @@ class Product < ActiveRecord::Base
     product ? product : Product.includes(:images).where(['products.deleted_at IS NULL']).first
   end
   
-  def self.admin_grid(params = {})
+  def self.admin_grid(params = {}, active_state = nil)
 
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
 
     grid = Product#paginate({:page => params[:page]})
-
+    grid.where(['products.active = ?', false])                  if active_state == false##  note nil != false
+    grid.where(['products.active = ?', true])                   if active_state == true
     #grid.includes(:variants)
     grid.where("products.name = ?",                 params[:name])                  if params[:name].present?
     grid.where("products.product_type_id = ?",      params[:product_type_id])       if params[:product_type_id].present?

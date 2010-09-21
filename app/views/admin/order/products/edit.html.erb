@@ -1,6 +1,17 @@
-<h1>Editing admin_order_product</h1>
+<h2>Add Products</h2>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form' %>
+<%= form_tag admin_order_products_path %>
+  <% @product.variants.each_with_index do |variant, i| %>
+    <div  id='variant-<%= i %>' 
+          class='<%= cycle("line_item_yellow", "line_item_gray") %> '>
+      <%= variant.display_property_details %>
+      <%= number_to_currency( variant.price ) %>
+      <div id='variant-qty-<%= i %>' class='span-3'>
+        Quantity: <%= text_field_tag('variant[<%= variant.id %>][]', nil, :class => 'span-1') %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 
-<%= link_to 'Show', @admin_order_product %> |
 <%= link_to 'Back', admin_order_products_path %>

@@ -10,9 +10,10 @@ Hadean.AdminIndexForm = {
   editSelection : function(id) {
     window.location.href = Hadean.AdminIndexForm.formController+'/'+id+"/edit";
   },
+  showSelection : function(id) {
+    window.location.href = Hadean.AdminIndexForm.formController+'/'+id;
+  },
   userSelection : function(id) {
-    //window.location.href = Hadean.AdminIndexForm.formController+'/'+id+"/edit";
-    //Get the form element, inject the user_id and click submit.  
     jQuery('#admin-user_id').val(id);  
     jQuery('#admin-user-form').submit();
   }

@@ -20,6 +20,19 @@ class Variant < ActiveRecord::Base
   
   accepts_nested_attributes_for :variant_properties
   
+  tax_time = completed_at? ? completed_at : Time.zone.now
+  order_items.each do |item|
+    rate = item.variant.product.tax_rate(self.ship_address.state_id, tax_time)
+    if item.tax_rate_id != rate.id 
+      item.tax_rate = rate
+      item.save
+    end
+  end
+  
+  def product_tax_rate(state_id, tax_time = Time.now)
+    product.tax_rate(state_id, tax_time)
+  end
+  
   def display_property_details(separator = '<br/>')
     property_details.inject {|detail| detail.join(separator) }.join(': ')
   end

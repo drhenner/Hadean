@@ -2,18 +2,23 @@ class Admin::Order::ProductsController < ApplicationController
   # GET /admin/order/products
   # GET /admin/order/products.xml
   def index
-    @admin_order_products = Admin::Order::Product.all
-
+    @products = Product.admin_grid(params, true)
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @admin_order_products }
+      format.html
+      format.json { render :json => @products.to_jqgrid_json(
+        [ :name, :display_price_range ],
+        @products.per_page, #params[:page],
+        @products.current_page, #params[:rows],
+        @products.total_entries)
+        
+      }
     end
   end
 
   # GET /admin/order/products/1
   # GET /admin/order/products/1.xml
   def show
-    @admin_order_product = Admin::Order::Product.find(params[:id])
+    @product = Product.includes({:variants => {:variant_properties => :property} }).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,21 +39,19 @@ class Admin::Order::ProductsController < ApplicationController
 
   # GET /admin/order/products/1/edit
   def edit
-    @admin_order_product = Admin::Order::Product.find(params[:id])
+    @product = Product.includes({:variants => {:variant_properties => :property} }).find(params[:id])
   end
 
   # POST /admin/order/products
   # POST /admin/order/products.xml
   def create
-    @admin_order_product = Admin::Order::Product.new(params[:admin_order_product])
+    @product = Product.new(params[:product])
 
     respond_to do |format|
-      if @admin_order_product.save
+      if @product.save
         format.html { redirect_to(@admin_order_product, :notice => 'Product was successfully created.') }
-        format.xml  { render :xml => @admin_order_product, :status => :created, :location => @admin_order_product }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @admin_order_product.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -56,15 +59,24 @@ class Admin::Order::ProductsController < ApplicationController
   # PUT /admin/order/products/1
   # PUT /admin/order/products/1.xml
   def update
-    @admin_order_product = Admin::Order::Product.find(params[:id])
-
+    #@product = Product.find(params[:id])
+    params[:variant].each_pair |variant_id, qty|
+        if (qty.nil? || qty.to_i == 0)
+          session_admin_cart[:variants][variant_id].reject! {|key, value| key == variant_id }
+        else
+          variant = Variant.find(variant_id)
+          tax_rate = nil
+          tax_rate = variant.product_tax_rate(session_admin_cart[:shipping_address].state_id, Time.now) if session_admin_cart[:shipping_address]
+          session_admin_cart[:variants][variant_id] = { :variant  => variant, 
+                                                        :quantity => qty,
+                                                        :total    => tax_rate ? ((1 + tax_rate) * variant.price) : nil } 
+        end
+    end
     respond_to do |format|
-      if @admin_order_product.update_attributes(params[:admin_order_product])
-        format.html { redirect_to(@admin_order_product, :notice => 'Product was successfully updated.') }
-        format.xml  { head :ok }
+      if 
+        format.html { redirect_to(admin_order_products_url, :notice => 'Successfully added.') }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_order_product.errors, :status => :unprocessable_entity }
       end
     end
   end
