@@ -45,7 +45,8 @@ class Admin::Order::BaseController < Admin::BaseController
       return admin_order_shipping_addresses_url
     elsif session_admin_cart[:billing_address].nil?
       return admin_order_billing_addresses_url()
-    elsif session_admin_cart[:variants].empty?
+    elsif session_admin_cart[:order_items].blank?
+      #session_admin_cart[:order_items] = {}
       return admin_order_products_url()
     elsif session_admin_cart[:shipping_method].nil?
       return admin_order_shipping_methods_url()

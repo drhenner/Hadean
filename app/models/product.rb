@@ -56,9 +56,10 @@ class Product < ActiveRecord::Base
   end
   
   def price_range
-    range = variants.inject([variants.first.price, variants.first.price]) do |variant, a|
+    range = variants.inject([variants.first.price, variants.first.price]) do |a, variant|
       a[0] = variant.price if variant.price < a[0]
       a[1] = variant.price if variant.price > a[1]
+      a
     end
   end
   
@@ -76,9 +77,9 @@ class Product < ActiveRecord::Base
     params[:page] ||= 1
     params[:rows] ||= SETTINGS[:admin_grid_rows]
 
-    grid = Product#paginate({:page => params[:page]})
-    grid.where(['products.active = ?', false])                  if active_state == false##  note nil != false
-    grid.where(['products.active = ?', true])                   if active_state == true
+    grid = Product.includes(:variants)#paginate({:page => params[:page]})
+    grid = grid.where(['products.deleted_at IS NOT NULL AND products.deleted_at > ?', Time.now.to_s(:db)])  if active_state == false##  note nil != false
+    grid = grid.where(['products.deleted_at IS NULL     OR  products.deleted_at < ?', Time.now.to_s(:db)])  if active_state == true
     #grid.includes(:variants)
     grid.where("products.name = ?",                 params[:name])                  if params[:name].present?
     grid.where("products.product_type_id = ?",      params[:product_type_id])       if params[:product_type_id].present?

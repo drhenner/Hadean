@@ -416,3 +416,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
   text-align: left;
 }
+
+/* line 330, ../../../app/stylesheets/main.scss */
+.top_border td {
+  border-top: solid 2px #ddd;
+}

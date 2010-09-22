@@ -5,23 +5,29 @@
         <th class='column1_header'>
           Item <span class='ss_sprite ss_application_cascade'></span>
         
-        </th><th>Price:</th><th>Price + Tax</th>
+        </th><th>Price:</th><th>Qty</th><th>Price + Tax</th>
       </tr>
     </thead>
-    <% session_admin_cart[:variants].each do |item| %>
+    <% session_admin_cart[:order_items].each do |item| %>
       <tr class='<%= cycle("odd", "")%> '>
-        <td><%= item[:variant].name %></td><td><%= item[:variant].price %></td><td><%= item[:total] %></td>
+        <td><%= item.second[:variant].product_name %></td>
+        <td><%= item.second[:price] %></td>
+        <td><%= item.second[:quantity] %></td>
+        <td><%= item.second[:quantity].to_f * item.second[:total] %></td>
       </tr>
     <% end %>
-    <tr class='odd'>
-      <td></td><td>Sub-total:</td><td><%=  %></td>
+    <tr class='odd top_border'>
+      <td></td>
+      <td>Sub-total:</td>
+      <td></td>
+      <td><%= session_admin_cart[:order_items].inject(0) {|total,i| (i.second[:quantity].to_f * i.second[:total]) + total } %></td>
     </tr>
     <tr>
       <td></td><td>Shipping Charges:</td><td><%=  %></td>
     </tr>
     <tfoot>
       <tr class='even'>
-        <td></td><td>Total:</td><td><em><%= %></em></td>
+        <td></td><td>Total:</td><td></td><td><em><%= %></em></td>
       </tr>
     </tfoot>
   </table>

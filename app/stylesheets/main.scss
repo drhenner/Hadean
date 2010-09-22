@@ -326,3 +326,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
   text-align:left;
 }
+
+.top_border td {
+  border-top:   solid 2px #ddd;
+}
