@@ -24,6 +24,10 @@ class Variant < ActiveRecord::Base
     product.tax_rate(state_id, tax_time)
   end
   
+  def shipping_category_id
+    product.shipping_category_id
+  end
+  
   def display_property_details(separator = '<br/>')
     property_details.inject {|detail| detail.join(separator) }.join(': ')
   end

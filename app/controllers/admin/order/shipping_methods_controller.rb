@@ -4,15 +4,15 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
   def index
     @shipping_methods = #session_admin_cart[:user].shipping_addresses
 
-      unless session_admin_cart[:ship_address]
+      unless session_admin_cart[:shipping_address]
         flash[:notice] = 'Select an address before you select a shipping method.'
-        redirect_to admin_order_shopping_addresses_url
+        redirect_to admin_order_shipping_addresses_url
       else
         ##  TODO  refactopr this method... it seems a bit lengthy
-        @shipping_method_ids = session_admin_cart[:ship_address].state.shipping_zone.shipping_method_ids
+        @shipping_method_ids = session_admin_cart[:shipping_address].state.shipping_zone.shipping_method_ids
 
         session_admin_cart[:order_items].each do |item|
-          item.variant.product.available_shipping_rates = ShippingRate.with_these_shipping_methods(item.variant.product.shipping_category.shipping_rate_ids, @shipping_method_ids)
+          item.second[:variant].product.available_shipping_rates = ShippingRate.with_these_shipping_methods(item.second[:variant].product.shipping_category.shipping_rate_ids, @shipping_method_ids)
         end
 
         respond_to do |format|

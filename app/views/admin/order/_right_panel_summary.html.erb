@@ -23,7 +23,14 @@
       <td><%= session_admin_cart[:order_items].inject(0) {|total,i| (i.second[:quantity].to_f * i.second[:total]) + total } %></td>
     </tr>
     <tr>
-      <td></td><td>Shipping Charges:</td><td><%=  %></td>
+      <td></td>
+      <% if session_admin_cart[:order_items].size > 0 %>
+          <td><%= link_to 'Shipping Charges:', admin_order_shipping_methods_path %></td>
+          <td><%=  %></td>
+      <% else %>
+          <td>Shipping Charges:</td>
+          <td> N/A </td>
+      <% end %>
     </tr>
     <tfoot>
       <tr class='even'>

@@ -1,8 +1,8 @@
 <h2>Pick a Shipping Method</h2>
 
 
-  <%= form_tag(shopping_shipping_method_path(session_order.id), :method => :put) do -%>
-    <% @order_items.group_by(&:shipping_category_id).each do |shipping_category_id, items| %>
+  <%= form_tag(admin_order_shipping_methods_path) do -%>
+    <% session_admin_cart[:order_items].group_by(&:shipping_category_id).each do |shipping_category_id, items| %>
       <div class='column float-left span-18 line_items_blue last'>
           <% items.each do |item| %>
             <div class='span-12 <%= cycle("line_item_yellow", "line_item_gray") -%>'>

@@ -28,7 +28,7 @@ class Admin::Order::BaseController < Admin::BaseController
       :billing_address  => nil,
       :coupon           => nil,
       :shipping_method  => nil,
-      :variants => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total}
+      :variants => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total, shipping_category_id}
     }
     
 #  variants =>  [
