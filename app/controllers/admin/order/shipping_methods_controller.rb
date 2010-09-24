@@ -23,17 +23,22 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
 
   # PUT /admin/order/shipping_methods/1
   # PUT /admin/order/shipping_methods/1.xml
-  def update
+  def create
     all_selected = true
     params[:shipping_category].each_pair do |category_id, rate_id|#[rate]
       if rate_id
         session_admin_cart[:order_items].each do |item|
-          item[:shipping_rate_id] = rate_id if item[:variant].product.shipping_category_id == category_id
+          if item.second[:variant].product.shipping_category_id == category_id.to_i
+            ship_rate = ShippingRate.find(rate_id) 
+            item.second[:shipping_rate] = ship_rate
+            
+          end
         end
       else
         all_selected = false
       end
     end
+    session_admin_cart[:shipping_rate] = all_selected # complete
     respond_to do |format|
       if all_selected
         format.html { redirect_to(admin_order_carts_url, :notice => 'Shipping method was successfully selected.') }

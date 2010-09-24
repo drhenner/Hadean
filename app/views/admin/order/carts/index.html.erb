@@ -1,21 +1,38 @@
-<h1>Listing admin_order_carts</h1>
+<h3>Shipping Method</h4>  
+  
+  <% session_admin_cart[:order_items].group_by{ |i| i.second[:variant].product.shipping_category_id }.each do |shipping_category_id, items| %>
+    <div class='column float-left span-14 line_items_blue '>
+        <% items.each do |item| %>
+          <div class='span-9 <%= cycle("line_item_yellow", "line_item_gray") -%>'>
+              <div class='span-5 '>
+                <%= image_tag(item.second[:variant].product.images.first.photo.url(:mini)) %>
+                <%= item.second[:variant].product.name %> Quantity: <%= items.size %>
+              </div>
+              <div class='span-4  last' style='text-align:left;'>
+                <%= raw item.second[:variant].display_property_details %>
+              </div>
+          </div>
+        <% end %>
+        <% items.first.second[:variant].product.shipping_category.shipping_rates.each do |rate| %>
+          <%# radio_button_tag "shipping_category[#{shipping_category_id}]", rate.id %> <%= rate.name_with_rate %>
+        <% end %>
+    </div>
+  <% end %>
+  
+  
+  
+<h3>Credit Card Info<h4>
+  
+<% content_for :right_side_bar do -%>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @admin_order_carts.each do |admin_order_cart| %>
-  <tr>
-    <td><%= link_to 'Show', admin_order_cart %></td>
-    <td><%= link_to 'Edit', edit_admin_order_cart_path(admin_order_cart) %></td>
-    <td><%= link_to 'Destroy', admin_order_cart, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class='span-5 float-left' >
+    <h5>Shipping Address</h5>
+    <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @cart[:shipping_address]} %>
+  </div>
+  <div class='span-5 float-left last'>
+    <h5>Billing Address</h5>  
+    <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @cart[:billing_address]} %>
+  </div>
+  <div class='clear' style='margin-bottom:8px;'></div>
+  <%= link_to 'Complete Order', admin_order_carts_path(), :class => 'button light' %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Cart', new_admin_order_cart_path %>

@@ -48,7 +48,7 @@ class Admin::Order::BaseController < Admin::BaseController
     elsif session_admin_cart[:order_items].blank?
       #session_admin_cart[:order_items] = {}
       return admin_order_products_url()
-    elsif session_admin_cart[:shipping_method].nil?
+    elsif session_admin_cart[:shipping_rate].nil?
       return admin_order_shipping_methods_url()
     else
       return nil#admin_order_carts_url()

@@ -20,21 +20,31 @@
       <td></td>
       <td>Sub-total:</td>
       <td></td>
-      <td><%= session_admin_cart[:order_items].inject(0) {|total,i| (i.second[:quantity].to_f * i.second[:total]) + total } %></td>
+      <td><%= sub_total = session_admin_cart[:order_items].inject(0) {|total,i| (i.second[:quantity].to_f * i.second[:total]) + total } %></td>
     </tr>
     <tr>
       <td></td>
       <% if session_admin_cart[:order_items].size > 0 %>
           <td><%= link_to 'Shipping Charges:', admin_order_shipping_methods_path %></td>
-          <td><%=  %></td>
+          <td></td>
+          <td>
+            <% rates = session_admin_cart[:order_items].inject([]) do |rates,i| 
+              rates << i.second[:shipping_rate] if i.second[:shipping_rate].individual? || !rates.include?(i.second[:shipping_rate])
+              rates
+            end
+            %>
+            <%= ship_rate = rates.inject(0) {|total,rate| rate.rate + total }%>
+          </td>
       <% else %>
+          <% ship_rate = 0 %>
           <td>Shipping Charges:</td>
+          <td></td>
           <td> N/A </td>
       <% end %>
     </tr>
     <tfoot>
       <tr class='even'>
-        <td></td><td>Total:</td><td></td><td><em><%= %></em></td>
+        <td></td><td>Total:</td><td></td><td><em><%= ship_rate + sub_total %></em></td>
       </tr>
     </tfoot>
   </table>

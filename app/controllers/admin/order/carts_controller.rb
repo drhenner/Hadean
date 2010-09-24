@@ -18,7 +18,7 @@ class Admin::Order::CartsController < Admin::Order::BaseController
   # GET /admin/order/carts/1
   # GET /admin/order/carts/1.xml
   def show
-    @admin_order_cart = Cart.find(params[:id])
+    @cart = Cart.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

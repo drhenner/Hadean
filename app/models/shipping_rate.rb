@@ -20,6 +20,9 @@ class ShippingRate < ActiveRecord::Base
         }
         
   
+  def individual?
+    shipping_rate_type_id == ShippingRateType::INDIVIDUAL_ID
+  end
   
   def name
     [shipping_method.name, shipping_method.shipping_zone.name, sub_name].join(', ')
