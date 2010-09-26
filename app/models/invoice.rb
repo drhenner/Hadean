@@ -83,14 +83,16 @@ class Invoice < ActiveRecord::Base
     authorized? || paid?
   end
   
+  def integer_amount
+    (amount * 100).to_i
+  end
+  
   def authorize_payment(credit_card, options = {})
     options[:number] ||= unique_order_number
     transaction do
-      authorization = Payment.authorize(amount, credit_card, options)
+      authorization = Payment.authorize(integer_amount, credit_card, options)
       payments.push(authorization)
       if authorization.success?
-        debugger
-        
         payment_authorized!
         authorize_complete_order
       else
@@ -103,7 +105,7 @@ class Invoice < ActiveRecord::Base
   
   def capture_payment(options = {})
     transaction do
-      capture = Payment.capture(amount, authorization_reference, options)
+      capture = Payment.capture(integer_amount, authorization_reference, options)
       payments.push(capture)
       if capture.success?
         payment_captured!

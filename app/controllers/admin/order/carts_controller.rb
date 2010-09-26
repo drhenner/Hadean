@@ -45,20 +45,20 @@ class Admin::Order::CartsController < Admin::Order::BaseController
   # POST /admin/order/carts
   # POST /admin/order/carts.xml
   def create
-    @cart = session_admin_cart
-    
-    @order = Order.new_admin_cart(@cart)
-    @order.ip_address = request.remote_ip
-
+    @cart         =  session_admin_cart
     @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
     
-    
     if @credit_card.valid?
-      response = @order.create_invoice( @credit_card, 
-                                        @order.find_total, 
-                                        { :email            => @order.email, 
-                                          :billing_address  => address, 
-                                          :ip               => @order.ip_address })
+      Order.transaction do
+        @order = Order.new_admin_cart(@cart)
+        @order.ip_address = request.remote_ip
+        response = @order.create_invoice_transaction( @credit_card, 
+                                          @order.find_total, 
+                                          { :email            => @order.email, 
+                                            :billing_address  => @cart[:billing_address], 
+                                            :ip               => @order.ip_address })
+      end
+      debugger
       if response
         if response.success?
           render :action => "success"

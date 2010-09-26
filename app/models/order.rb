@@ -33,30 +33,72 @@ class Order < ActiveRecord::Base
     #after_transition  :to => 'complete', :do => [:update_inventory]
   end
   
+  #########
+  ##  This method is used when the session in admin orders is ready to authorize the credit card
+  #   The cart has the following format
+  #
+  #  session[:admin_cart] = {
+  #    :user             => nil,
+  #    :shipping_address => nil,
+  #    :billing_address  => nil,
+  #    :coupon           => nil,
+  #    :shipping_method  => nil,
+  #    :order_items => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total, shipping_category_id}
+  #  }
+  
+  def self.new_admin_cart(admin_cart, args)
+    #transaction do 
+      admin_order = Order.new(  :ship_address     => admin_cart[:shipping_address],
+                                :bill_address     => admin_cart[:billing_address],
+                                :coupon           => admin_cart[:coupon],
+                                :shipping_method  => admin_cart[:shipping_method],
+                                :email            => admin_cart[:user].email,
+                                :user             => admin_cart[:user],
+                                #:ip_address       => args[:ip_address],
+                                :email            => admin_cart[:user].email
+                            )
+      admin_cart[:order_items].each_pair do |variant_id, hash|
+          hash[:quantity].times do
+              item = OrderItem.new( :variant        => hash[:variant],
+                                    :tax_rate       => hash[:tax_rate],
+                                    :price          => hash[:variant].price,
+                                    :total          => hash[:total],
+                                    :shipping_rate  => hash[:shipping_rate]
+                                )
+              admin_order.order_items.push(item)
+          end
+      end
+      admin_order.save
+      
+    #end
+  end
   
   ## This method creates the invoice and payment method.  If the payment is not authorized the whole transaction is roled back
   def create_invoice(credit_card, charge_amount, args)
     transaction do 
-      invoice_statement = Invoice.generate(self.id, charge_amount, "#{Time.now.to_i}-#{number}")
-      invoice_statement.save
-      invoice_statement.authorize_payment(credit_card, args)#, options = {})
-      invoices.push(invoice_statement)
-      if invoice_statement.succeeded?
-        self.order_complete! #complete!
-      else
-        debugger
-        role_back
-        false
-      end
-      invoice_statement
+      create_invoice_transaction(credit_card, charge_amount, args)
     end
+  end
+  
+  def create_invoice_transaction(credit_card, charge_amount, args)
+    invoice_statement = Invoice.generate(self.id, charge_amount, "#{Time.now.to_i}-#{number}")
+    invoice_statement.save
+    invoice_statement.authorize_payment(credit_card, args)#, options = {})
+    invoices.push(invoice_statement)
+    if invoice_statement.succeeded?
+      self.order_complete! #complete!
+    else
+      debugger
+      role_back
+      false
+    end
+    invoice_statement
   end
   
   
   def order_complete!
     self.state = 'complete'
     self.completed_at = Time.zone.now
-    debugger
     update_inventory
   end
   
