@@ -53,9 +53,8 @@
       </tfoot>
     </table>
     <div>
-      <%= debug @credit_card.errors %>
-    </div>  
-    <%= form_tag(shopping_order_path(@order), 
+  </div>  
+    <%= form_tag(:order, shopping_order_path(@order), 
                                   :method => :put,
                                   :as   => :order, 
                                   :id   => 'purchase_order') do  %>

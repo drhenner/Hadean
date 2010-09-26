@@ -45,17 +45,34 @@ class Admin::Order::CartsController < Admin::Order::BaseController
   # POST /admin/order/carts
   # POST /admin/order/carts.xml
   def create
-    @admin_order_cart = Cart.new(params[:admin_order_cart])
+    @cart = session_admin_cart
+    
+    @order = Order.new_admin_cart(@cart)
+    @order.ip_address = request.remote_ip
 
-    respond_to do |format|
-      if @admin_order_cart.save
-        format.html { redirect_to(@admin_order_cart, :notice => 'Cart was successfully created.') }
-        format.xml  { render :xml => @admin_order_cart, :status => :created, :location => @admin_order_cart }
+    @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
+    
+    
+    if @credit_card.valid?
+      response = @order.create_invoice( @credit_card, 
+                                        @order.find_total, 
+                                        { :email            => @order.email, 
+                                          :billing_address  => address, 
+                                          :ip               => @order.ip_address })
+      if response
+        if response.success?
+          render :action => "success"
+        else
+          render :action => "failure"
+        end
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @admin_order_cart.errors, :status => :unprocessable_entity }
+        render :action => 'index' #admin_order_carts_url
       end
+    else
+      flash[:error] = "Credit Card is not valid."
+      render :action => 'index'
     end
+    
   end
 
   # PUT /admin/order/carts/1
@@ -77,12 +94,25 @@ class Admin::Order::CartsController < Admin::Order::BaseController
   # DELETE /admin/order/carts/1
   # DELETE /admin/order/carts/1.xml
   def destroy
-    @admin_order_cart = Admin::Order::Cart.find(params[:id])
-    @admin_order_cart.destroy
+    session_admin_cart = nil
 
     respond_to do |format|
       format.html { redirect_to(admin_order_carts_url) }
-      format.xml  { head :ok }
     end
+  end
+  
+  
+  private
+  
+  def cc_params
+    {
+          :type               => params[:type],
+          :number             => params[:number],
+          :verification_value => params[:verification_value],
+          :month              => params[:month],
+          :year               => params[:year],
+          :first_name         => params[:first_name],
+          :last_name          => params[:last_name]
+    }
   end
 end

@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/parasew/acts_as_tree.git
+  revision: ed52495d1671c99e1add582628403bf8104e9077
+  specs:
+    acts_as_tree (1.2.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -78,7 +84,6 @@ GEM
       treetop (>= 1.4.5)
     memcache-client (1.8.5)
     mime-types (1.16)
-    nifty-generators (0.4.0)
     paperclip (2.3.3)
       activerecord
       activesupport
@@ -154,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   activemerchant (= 1.7.2)
+  acts_as_tree!
   authlogic (= 2.1.5)
   autotest
   autotest-fsevent
@@ -168,7 +174,6 @@ DEPENDENCIES
   friendly_id (~> 3.0)
   haml (>= 3.0.13)
   memcache-client
-  nifty-generators
   paperclip
   prawn
   rails (= 3.0.0)

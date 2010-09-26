@@ -1,3 +1,5 @@
+
+#=begin
 # Set the default text field size when input is a string. Default is 50.
 Formtastic::SemanticFormBuilder.default_text_field_size = 30
 
@@ -53,3 +55,56 @@ Formtastic::SemanticFormBuilder.required_string = "*"
 # You can add custom inputs or override parts of Formtastic by subclassing SemanticFormBuilder and
 # specifying that class here.  Defaults to SemanticFormBuilder.
 # Formtastic::SemanticFormHelper.builder = MyCustomBuilder
+
+
+module Formtastic
+  module DatePicker
+    protected
+
+    def datepicker_input(method, options = {})
+      format = options[:format] || '%d %b %Y'
+      string_input(method, datepicker_options(format, object.send(method)).merge(options))
+    end
+
+    # Generate html input options for the datepicker_input
+    #
+    def datepicker_options(format, value = nil)
+      datepicker_options = {:value => value.try(:strftime, format), :input_html => {:class => 'ui-datepicker'}}
+    end
+  end
+  
+  module YearPicker
+    protected
+
+    def yearpicker_input(method, options = {})
+      format = options[:format] || '%d %b %Y'
+      string_input(method, yearpicker_options(format, object.send(method)).merge(options))
+    end
+
+    # Generate html input options for the datepicker_input
+    #
+    def yearpicker_options(format, value = nil)
+      yearpicker_options = {:value => value.try(:strftime, format), :input_html => {:class => 'ui-yearpicker'}}
+    end
+  end
+  
+  module FuturePicker
+    protected
+
+    def futurepicker_input(method, options = {})
+      format = options[:format] || '%d %b %Y'
+      string_input(method, futurepicker_options(format, object.send(method)).merge(options))
+    end
+
+    # Generate html input options for the datepicker_input
+    #
+    def futurepicker_options(format, value = nil)
+      futurepicker_options = {:value => value.try(:strftime, format), :input_html => {:class => 'ui-futurepicker'}}
+    end
+  end
+end
+  Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
+  Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
+  Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
+  
+#=end

@@ -3,7 +3,7 @@ class Admin::Merchandise::VariantsController < Admin::BaseController
   respond_to :html, :json
   def index
     @product = Product.find(params[:product_id])
-    @variants = @product.variants.admin_grid(params)
+    @variants = @product.variants.admin_grid(@product, params)
     respond_to do |format|
       format.html
       format.json { render :json => @variants.to_jqgrid_json(
@@ -11,7 +11,6 @@ class Admin::Merchandise::VariantsController < Admin::BaseController
         @variants.per_page, #params[:page],
         @variants.current_page, #params[:rows],
         @variants.total_entries)
-      
       }
     end
   end

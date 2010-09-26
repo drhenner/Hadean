@@ -19,8 +19,11 @@ class Admin::OverviewsController < ApplicationController
                        :password => @password,
                        :password_confirmation => @password)
       @user.role_ids = Role.all.collect{|r| r.id }
-      @user.save
+      debugger
+      @current_user = @user.save
       
+      debugger
+      @current_user
     end
   end
 
