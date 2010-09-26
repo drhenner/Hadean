@@ -29,8 +29,8 @@ class Order < ActiveRecord::Base
       transition :to => 'complete', :from => 'in_progress'
     end
     
-    before_transition :to => 'complete', :do => [:set_completed]
-    after_transition  :to => 'complete', :do => [:update_inventory]
+    #before_transition :to => 'complete', :do => [:set_completed]
+    #after_transition  :to => 'complete', :do => [:update_inventory]
   end
   
   
@@ -38,21 +38,26 @@ class Order < ActiveRecord::Base
   def create_invoice(credit_card, charge_amount, args)
     transaction do 
       invoice_statement = Invoice.generate(self.id, charge_amount, "#{Time.now.to_i}-#{number}")
+      invoice_statement.save
       invoice_statement.authorize_payment(credit_card, args)#, options = {})
-      
       invoices.push(invoice_statement)
       if invoice_statement.succeeded?
-        #invoice_statement.complete_order! #complete!
+        self.order_complete! #complete!
       else
         debugger
         role_back
+        false
       end
+      invoice_statement
     end
   end
   
   
-  def set_completed
-    completed_at = Time.zone.now
+  def order_complete!
+    self.state = 'complete'
+    self.completed_at = Time.zone.now
+    debugger
+    update_inventory
   end
   
   def set_beginning_values
@@ -159,5 +164,9 @@ class Order < ActiveRecord::Base
   ## This method is called when the order transitions to paid
   def update_inventory
     self.order_items.each {|item| item.variant.add_pending_to_customer(1) }
+  end
+  
+  def variant_ids
+    order_items.collect{|oi| oi.variant_id }
   end
 end

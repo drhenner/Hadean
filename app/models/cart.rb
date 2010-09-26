@@ -80,6 +80,10 @@ class Cart < ActiveRecord::Base
     end
   end
   
+  def cart_item_ids
+    shopping_cart_items.collect {|cart_item| cart_item.id}
+  end
+  
   private
   def update_cart(cart_item,customer)
     if customer

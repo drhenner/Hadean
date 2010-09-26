@@ -48,10 +48,23 @@ class Variant < ActiveRecord::Base
     0
   end
   
-  def add_pending_to_customer(num, reload_object = true)
-    self.reload if reload_object
-    self.count_pending_to_customer = self.count_pending_to_customer + num.to_i
-    save
+  def is_available?
+    count_available > 0
+  end
+  
+  def count_available(reload_variant = true)
+    self.reload if reload_variant
+    count_on_hand - pending_to_customer
+  end
+  
+  def add_count_on_hand(num)
+      sql = "UPDATE variants SET count_on_hand = (#{num} + count_on_hand) WHERE id = #{self.id}"
+      ActiveRecord::Base.connection.execute(sql)
+  end
+  
+  def add_pending_to_customer(num)
+      sql = "UPDATE variants SET count_pending_to_customer = (#{num} + count_pending_to_customer) WHERE id = #{self.id}"
+      ActiveRecord::Base.connection.execute(sql)
   end
   
   def qty_to_add=(num)

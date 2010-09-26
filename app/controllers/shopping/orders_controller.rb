@@ -52,19 +52,25 @@ class Shopping::OrdersController < Shopping::BaseController
     #res = gateway.authorize(amount, credit_card, :ip=>request.remote_ip, :billing_address=>billing_address)
     address = @order.bill_address.cc_params
     
-    if @credit_card.valid?
+    if @credit_card.valid? && !@order.complete?
       if response = @order.create_invoice(@credit_card, @order.find_total, {:email => @order.email, :billing_address=> address, :ip=> @order.ip_address })
         if response.success?
+          ##  MARK items as purchased          
+          CartItem.mark_items_purchased(session_cart, @order)
+          debugger
           render :action => "success"
         else
+          debugger
           render :action => "failure"
         end
       else
+        debugger
         ###  Take this
         flash[:error] = "Could not process the Credit Card."
         render :action => 'index'
       end
     else
+      debugger
       flash[:error] = "Credit Card is not valid."
       render :action => 'index'
     end

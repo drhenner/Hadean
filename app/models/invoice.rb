@@ -18,7 +18,7 @@ class Invoice < ActiveRecord::Base
     state :payment_declined
     state :canceled
     
-    after_transition :to => 'authorized', :do => :authorize_complete_order
+    #after_transition :on => 'payment_authorized', :do => :authorize_complete_order
     
     event :payment_authorized do
       transition :from => :pending,
@@ -44,8 +44,8 @@ class Invoice < ActiveRecord::Base
     Invoice.new(:order_id => order_id, :amount => charge_amount, :number => num)
   end
   
-  def authorize_complete_order(amount)
-    order.complete!
+  def authorize_complete_order#(amount)
+    x = order.complete!
     now = Time.zone.now
     if batches.empty?
       batch = self.batches.new()
@@ -89,8 +89,12 @@ class Invoice < ActiveRecord::Base
       authorization = Payment.authorize(amount, credit_card, options)
       payments.push(authorization)
       if authorization.success?
+        debugger
+        
         payment_authorized!
+        authorize_complete_order
       else
+        debugger
         transaction_declined!
       end
       authorization
