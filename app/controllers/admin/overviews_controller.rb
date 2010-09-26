@@ -1,11 +1,13 @@
 class Admin::OverviewsController < ApplicationController
   # GET /admin/overviews
   # GET /admin/overviews.xml
-  layout 'admin'
+  layout false
   
   def index
     #  The index action should 
-    if User.first
+    if u = User.first
+      debugger
+      u
       redirect_to root_url if !current_user || !current_user.admin?
       
     else
@@ -15,15 +17,17 @@ class Admin::OverviewsController < ApplicationController
       
       @user = User.new(:first_name => 'Admin', 
                        :last_name => 'User', 
-                       :email => 'admin@not_a_real_email.com',
+                       :email => 'admin@notarealemail.com',
                        :password => @password,
                        :password_confirmation => @password)
       @user.role_ids = Role.all.collect{|r| r.id }
-      debugger
-      @current_user = @user.save
+      if @user.activate!
       
-      debugger
-      @current_user
+        @user_session = UserSession.new(:email => @user.email, :password => @password)
+        us = @user_session.save
+        debugger
+        @user_session
+      end
     end
   end
 

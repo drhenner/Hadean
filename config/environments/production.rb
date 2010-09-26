@@ -39,13 +39,11 @@ Hadean::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
-  config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = :production
-    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-      :login      => HADEAN_CONFIG[:paypal][:login],
-      :password   => HADEAN_CONFIG[:paypal][:password],
-      :signature  => HADEAN_CONFIG[:paypal][:signature]
-    )
-  end
-  
+
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation can not be found)
+  config.i18n.fallbacks = true
+
+  # Send deprecation notices to registered listeners
+  config.active_support.deprecation = :notify
 end

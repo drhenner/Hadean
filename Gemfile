@@ -9,13 +9,11 @@ gem 'authlogic', "2.1.5"
 gem 'cancan'#, '1.3.2'
 gem 'compass', ">= 0.10.5" 
 
-#gem 'declarative_authorization'
-#gem 'devise', '1.1.rc1'
-
 gem 'fancy-buttons'
 gem "friendly_id", "~> 3.0"
 gem 'formtastic',  "~> 1.1.0"#  :git => 'git://github.com/justinfrench/formtastic.git', :branch => "rails3"
 gem 'haml',  ">= 3.0.13"#, ">= 3.0.4"#, "2.2.21"#,
+gem "jquery-rails"
 
 gem 'memcache-client'
 #gem 'mysql2'
@@ -71,7 +69,6 @@ group :test do
 #  gem "cucumber-rails"
 #  gem 'spork'
 #  gem "launchy"
-  
   
   gem "ruby-debug19"
   #gem "ruby-debug"

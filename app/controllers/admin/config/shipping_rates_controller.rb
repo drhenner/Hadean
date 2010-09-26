@@ -20,21 +20,27 @@ class Admin::Config::ShippingRatesController < Admin::Config::BaseController
   # GET /shipping_rates/1.xml
   def show
     @shipping_rate = ShippingRate.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @shipping_rate }
-    end
+      respond_to do |format|
+        format.html # show.html.erb
+      end
   end
 
   # GET /shipping_rates/new
   # GET /shipping_rates/new.xml
   def new
-    @shipping_rate = ShippingRate.new
     form_info
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @shipping_rate }
+    if @shipping_categories.empty?
+        flash[:notice] = "You must create a Shipping Category before you create a Shipping Rate."
+        redirect_to new_admin_config_shipping_category_path
+    elsif @shipping_methods.empty?
+        flash[:notice] = "You must create a Shipping Method before you create a Shipping Rate."
+        redirect_to new_admin_config_shipping_method_path
+    else
+      @shipping_rate = ShippingRate.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @shipping_rate }
+      end
     end
   end
 
@@ -52,11 +58,9 @@ class Admin::Config::ShippingRatesController < Admin::Config::BaseController
     respond_to do |format|
       if @shipping_rate.save
         format.html { redirect_to(admin_config_shipping_rate_url(@shipping_rate), :notice => 'Shipping rate was successfully created.') }
-        format.xml  { render :xml => @shipping_rate, :status => :created, :location => @shipping_rate }
       else
         form_info
         format.html { render :action => "new" }
-        format.xml  { render :xml => @shipping_rate.errors, :status => :unprocessable_entity }
       end
     end
   end

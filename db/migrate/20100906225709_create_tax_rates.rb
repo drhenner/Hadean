@@ -10,7 +10,7 @@ class CreateTaxRates < ActiveRecord::Migration
 
       #t.timestamps
     end
-    add_index :tax_rates, :product_type_id
+    add_index :tax_rates, :tax_status_id
     add_index :tax_rates, :state_id
     
   end

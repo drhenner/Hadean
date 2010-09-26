@@ -11,6 +11,7 @@ class Admin::Merchandise::VariantsController < Admin::BaseController
         @variants.per_page, #params[:page],
         @variants.current_page, #params[:rows],
         @variants.total_entries)
+      
       }
     end
   end

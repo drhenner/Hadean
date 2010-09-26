@@ -1,4 +1,3 @@
-<%= form_for(:account, @account) do |f| %>
   <% if @account.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
@@ -26,4 +25,3 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>

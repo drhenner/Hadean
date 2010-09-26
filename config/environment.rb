@@ -5,8 +5,8 @@ require File.expand_path('../application', __FILE__)
 raw_config = File.read("config/config.yml")
 HADEAN_CONFIG = YAML.load(raw_config)[Rails.env]
 
-CIM_LOGIN_ID = HADEAN_CONFIG['paypal']['login']
-CIM_TRANSACTION_KEY = HADEAN_CONFIG['paypal']['password']
+CIM_LOGIN_ID = HADEAN_CONFIG['authnet']['login']
+CIM_TRANSACTION_KEY = HADEAN_CONFIG['authnet']['password']
 
 require 'memcache'
 CACHE = MemCache.new(:namespace => "hadean_cache")

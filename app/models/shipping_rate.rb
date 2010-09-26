@@ -1,7 +1,6 @@
 class ShippingRate < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
   
-  belongs_to :shipping_category
   belongs_to :shipping_method
   belongs_to :shipping_rate_type
   

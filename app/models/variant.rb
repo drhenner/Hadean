@@ -29,11 +29,11 @@ class Variant < ActiveRecord::Base
   end
   
   def display_property_details(separator = '<br/>')
-    property_details.inject {|detail| detail.join(separator) }.join(': ')
+    property_details.join(separator)
   end
   
-  def property_details
-    variant_properties.collect {|vp| [vp.property.display_name ,vp.description] }
+  def property_details(separator = ': ')
+    variant_properties.collect {|vp| [vp.property.display_name ,vp.description].join(separator) }
   end
   
   def product_name 

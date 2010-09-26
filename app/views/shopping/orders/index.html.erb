@@ -1,5 +1,5 @@
 <% content_for :head do -%>
-  <%= stylesheet_link_tag 'compiled/tables.css' %>
+  <%= stylesheet_link_tag 'tables.css' %>
 <% end %>
 <div id='order-wrapper' class='span-24'>
   <div class='span-14'>
@@ -15,12 +15,12 @@
       <% end %>
     </div>
     
-    <div id='final-order-shipping-address' class='box span-6' style='text-align:left;'>
+    <div id='final-order-shipping-address' class='box span-6 rounded-4' style='text-align:left;'>
       <h5>Shipping Address</h5>
       <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @order.ship_address} %>
       <%= link_to 'Change address', shopping_addresses_path, :class => 'button green' %>
     </div>
-    <div id='final-order-shipping-address' class='box span-6' style='text-align:left;'>
+    <div id='final-order-shipping-address' class='box span-6 rounded-8 last' style='text-align:left;'>
       <h5>Billing Address</h5>
       <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @order.bill_address} %>
     </div>
@@ -54,9 +54,9 @@
     </table>
     <div>
   </div>  
-    <%= form_tag(:order, shopping_order_path(@order), 
+    <%= form_tag( shopping_order_path(@order), 
                                   :method => :put,
-                                  :as   => :order, 
+                                  #:as   => :order, 
                                   :id   => 'purchase_order') do  %>
                                   
                                   

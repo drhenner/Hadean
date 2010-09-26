@@ -5,11 +5,15 @@ class TaxStatus < ActiveRecord::Base
   #FOOD = 'Food'
   CLOTHES   = 'Clothes'
   COSMETICS = 'Cosmetics'
+  STANDARD  = 'Standard'
+  FOOD      = 'Food'
   
-  STATUSES = [CLOTHES, COSMETICS]
+  STATUSES = [CLOTHES, COSMETICS, STANDARD, FOOD]
   
   CLOTHES_ID    = 1
   COSMETICS_ID  = 2
+  STANDARD_ID   = 3
+  FOOD_ID       = 4
   
   validates :name, :presence => true, :uniqueness => true
 end

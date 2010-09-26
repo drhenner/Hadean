@@ -24,11 +24,17 @@ class Admin::Config::ShippingMethodsController < Admin::Config::BaseController
   # GET /admin/config/shipping_methods/new
   # GET /admin/config/shipping_methods/new.xml
   def new
-    @shipping_method = ShippingMethod.new
+    
     form_info
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @shipping_method }
+    if @shipping_zones.empty?
+        flash[:notice] = "You must create a Shipping Zone before you create a Shipping Method."
+        redirect_to new_admin_config_shipping_zone_path
+    else
+      @shipping_method = ShippingMethod.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @shipping_method }
+      end
     end
   end
 
@@ -74,15 +80,15 @@ class Admin::Config::ShippingMethodsController < Admin::Config::BaseController
 
   # DELETE /admin/config/shipping_methods/1
   # DELETE /admin/config/shipping_methods/1.xml
-  def destroy
-    @shipping_method = ShippingMethod.find(params[:id])
-    @shipping_method.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(admin_config_shipping_methods_url) }
-      format.xml  { head :ok }
-    end
-  end
+  #def destroy
+  #  @shipping_method = ShippingMethod.find(params[:id])
+  #  #@shipping_method.destroy
+  #
+  #  respond_to do |format|
+  #    format.html { redirect_to(admin_config_shipping_methods_url) }
+  #    format.xml  { head :ok }
+  #  end
+  #end
   
   private
   

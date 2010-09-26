@@ -2,30 +2,21 @@
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
   adapter: mysql
-  database: hadean_development
-  username: root
-  password: 
+  database: newhadean
   pool: 5
   timeout: 5000
-  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test: &test
-  adapter: mysql
-  database: hadean_test
-  username: root
-  password: 
+test:
+  adapter: mylsql
+  database: newhadean_test
   pool: 5
   timeout: 5000
-  socket: /tmp/mysql.sock
 
 production:
-  adapter: mysql
-  database: hadean_production
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
   timeout: 5000
-
-#cucumber:
-#  <<: *test

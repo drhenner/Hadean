@@ -60,6 +60,8 @@ class Shopping::OrdersController < Shopping::BaseController
           render :action => "failure"
         end
       else
+        ###  Take this
+        flash[:error] = "Could not process the Credit Card."
         render :action => 'index'
       end
     else

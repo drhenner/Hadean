@@ -1,7 +1,13 @@
 @import "blueprint";
 
-// Generate the blueprint print styles:
-@include blueprint-print;
+//Recommended Blueprint configuration with scoping and semantic layout:
+body.bp {
+  @include blueprint-print(true); }
+
+
+
+  // Generate the blueprint print styles:
+//  @include blueprint-print;
 
 
 @mixin header-image {

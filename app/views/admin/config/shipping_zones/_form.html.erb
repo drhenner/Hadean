@@ -1,5 +1,4 @@
-<% path_to_submit = @shipping_zone.new_record? ? admin_config_shipping_zones_path : admin_config_shipping_zone_path(@shipping_zone) %>
-<%= semantic_form_for(:shipping_zone, @shipping_zone, :url => path_to_submit) do |f| %>
+
   <% if @shipping_zone.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shipping_zone.errors.count, "error") %> prohibited this Shipping Zone from being saved:</h2>
@@ -18,4 +17,3 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>

@@ -28,7 +28,7 @@ class Admin::Order::BaseController < Admin::BaseController
       :billing_address  => nil,
       :coupon           => nil,
       :shipping_method  => nil,
-      :variants => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total, shipping_category_id}
+      :order_items => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total, shipping_category_id}
     }
     
 #  variants =>  [
@@ -39,6 +39,7 @@ class Admin::Order::BaseController < Admin::BaseController
   
   def next_admin_cart_form()
      # if cart is empty
+     session_admin_cart[:order_items] = {}
     if session_admin_cart[:user].nil?
       return admin_order_users_url
     elsif session_admin_cart[:shipping_address].nil?
@@ -46,7 +47,7 @@ class Admin::Order::BaseController < Admin::BaseController
     elsif session_admin_cart[:billing_address].nil?
       return admin_order_billing_addresses_url()
     elsif session_admin_cart[:order_items].blank?
-      #session_admin_cart[:order_items] = {}
+      
       return admin_order_products_url()
     elsif session_admin_cart[:shipping_rate].nil?
       return admin_order_shipping_methods_url()

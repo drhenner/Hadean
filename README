@@ -29,10 +29,20 @@ Configure your database.yml file (add the development and test database)
 7. gem install compass
 8. gem install fancy-buttons
 
-
-
 ######compass install -r fancy-buttons -f fancy-buttons
 
-create shipping_categories  (just a name for use later)
-
 Open config/config.yml and change the encryption key and paypal or auth.net information
+
+
+Once everything is setup, start up the server and direct it to
+admin/overviews
+
+write down the username/password and follow the directions.
+
+
+FYI:
+
+Shipping categories are categoryies based off price:
+
+you might have two shipping categories (light items) & (heavy items)
+Have fun!!!

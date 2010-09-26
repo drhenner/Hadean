@@ -12,14 +12,28 @@ Hadean::Application.configure do
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_view.debug_rjs             = true
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
 
-  config.cache_store = :mem_cache_store, "localhost"
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = false
+
+  # Print deprecation notices to the Rails logger
+  config.active_support.deprecation = :log
+
+  # Only use best-standards-support built into browsers
+  config.action_dispatch.best_standards_support = :builtin
+  
+  
+  
+  
+  
+  config.cache_store = :mem_cache_store, "localhost" #'localhost:11211'
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.active_support.deprecation = :log
   
+  
+  ##  Change this to use riak and ripple
   config.session_store = :mem_cache_store
   config.session = {
   :session_key => '_hadean_session',
@@ -51,3 +65,4 @@ Hadean::Application.configure do
     #)
   end
 end
+
