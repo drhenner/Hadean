@@ -56,7 +56,7 @@ GEM
     columnize (0.3.1)
     compass (0.10.5)
       haml (>= 3.0.4)
-    curb (0.7.8)
+    dalli (0.9.7)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -117,16 +117,6 @@ GEM
       rake (>= 0.8.4)
       thor (~> 0.14.0)
     rake (0.8.7)
-    riak-client (0.8.0)
-      activesupport (>= 2.3.5)
-      i18n (~> 0.4.0)
-    riak-sessions (0.8.0)
-      rack (>= 1.0)
-      riak-client (~> 0.8.0)
-    ripple (0.8.0)
-      activemodel (= 3.0.0)
-      activesupport (= 3.0.0)
-      riak-client (= 0.8.0)
     rmagick (2.13.1)
     rsolr (0.12.1)
       builder (>= 2.1.2)
@@ -166,7 +156,6 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
     will_paginate (3.0.pre2)
-    yajl-ruby (0.7.7)
 
 PLATFORMS
   ruby
@@ -181,7 +170,7 @@ DEPENDENCIES
   autotest-rails-pure
   cancan
   compass (>= 0.10.5)
-  curb
+  dalli
   factory_girl_rails
   faker
   fancy-buttons
@@ -193,9 +182,6 @@ DEPENDENCIES
   paperclip
   prawn
   rails (= 3.0.0)
-  riak-client
-  riak-sessions
-  ripple
   rmagick
   rspec (>= 2.0.0.beta.22)
   rspec-core (>= 2.0.0.beta.22)
@@ -209,4 +195,3 @@ DEPENDENCIES
   sunspot
   sunspot_rails
   will_paginate (~> 3.0.pre2)
-  yajl-ruby

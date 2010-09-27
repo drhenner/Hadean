@@ -22,18 +22,18 @@ class Admin::Order::ProductsController < Admin::Order::BaseController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @admin_order_product }
+      format.xml  { render :xml => @admin_shopping_product }
     end
   end
 
   # GET /admin/order/products/new
   # GET /admin/order/products/new.xml
 #  def new
-#    @admin_order_product = Admin::Order::Product.new
+#    @admin_shopping_product = Admin::Order::Product.new
 #
 #    respond_to do |format|
 #      format.html # new.html.erb
-#      format.xml  { render :xml => @admin_order_product }
+#      format.xml  { render :xml => @admin_shopping_product }
 #    end
 #  end
 #
@@ -49,7 +49,7 @@ class Admin::Order::ProductsController < Admin::Order::BaseController
 #
 #    respond_to do |format|
 #      if @product.save
-#        format.html { redirect_to(@admin_order_product, :notice => 'Product was successfully created.') }
+#        format.html { redirect_to(@admin_shopping_product, :notice => 'Product was successfully created.') }
 #      else
 #        format.html { render :action => "new" }
 #      end
@@ -77,7 +77,7 @@ class Admin::Order::ProductsController < Admin::Order::BaseController
         end
     end
     respond_to do |format|
-      format.html { redirect_to(admin_order_products_url, :notice => 'Successfully added.  Ask the customer if they would like anything else.') }
+      format.html { redirect_to(admin_shopping_products_url, :notice => 'Successfully added.  Ask the customer if they would like anything else.') }
     end
   end
 
@@ -90,11 +90,11 @@ class Admin::Order::ProductsController < Admin::Order::BaseController
   # DELETE /admin/order/products/1
   # DELETE /admin/order/products/1.xml
 #  def destroy
-#    @admin_order_product = Admin::Order::Product.find(params[:id])
-#    @admin_order_product.destroy
+#    @admin_shopping_product = Admin::Order::Product.find(params[:id])
+#    @admin_shopping_product.destroy
 #
 #    respond_to do |format|
-#      format.html { redirect_to(admin_order_products_url) }
+#      format.html { redirect_to(admin_shopping_products_url) }
 #      format.xml  { head :ok }
 #    end
 #  end

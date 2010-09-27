@@ -22,25 +22,21 @@ class Admin::Order::CartsController < Admin::Order::BaseController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @admin_order_cart }
+      format.xml  { render :xml => @admin_shopping_cart }
     end
   end
 
   # GET /admin/order/carts/new
   # GET /admin/order/carts/new.xml
   def new
-    @admin_order_cart = Cart.new
+    @admin_shopping_cart = Cart.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @admin_order_cart }
+      format.xml  { render :xml => @admin_shopping_cart }
     end
   end
 
-  # GET /admin/order/carts/1/edit
-  def edit
-    @admin_order_cart = Cart.find(params[:id])
-  end
 
   # POST /admin/order/carts
   # POST /admin/order/carts.xml
@@ -49,7 +45,8 @@ class Admin::Order::CartsController < Admin::Order::BaseController
     @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
     
     if @credit_card.valid?
-      Order.transaction do
+      Cart.transaction do
+        debugger
         @order = Order.new_admin_cart(@cart)
         @order.ip_address = request.remote_ip
         response = @order.create_invoice_transaction( @credit_card, 
@@ -58,15 +55,19 @@ class Admin::Order::CartsController < Admin::Order::BaseController
                                             :billing_address  => @cart[:billing_address], 
                                             :ip               => @order.ip_address })
       end
-      debugger
       if response
         if response.success?
+          #clear the items out of the session_cart
+          reset_admin_cart
+          ## Render the summary with a success message
+          flash[:error] = "Processed order successfully."
           render :action => "success"
         else
           render :action => "failure"
         end
       else
-        render :action => 'index' #admin_order_carts_url
+        flash[:error] = "Could not process the Credit Card."
+        render :action => 'index' #admin_shopping_carts_url
       end
     else
       flash[:error] = "Credit Card is not valid."
@@ -78,15 +79,15 @@ class Admin::Order::CartsController < Admin::Order::BaseController
   # PUT /admin/order/carts/1
   # PUT /admin/order/carts/1.xml
   def update
-    @admin_order_cart = Admin::Order::Cart.find(params[:id])
+    @admin_shopping_cart = Admin::Order::Cart.find(params[:id])
 
     respond_to do |format|
-      if @admin_order_cart.update_attributes(params[:admin_order_cart])
-        format.html { redirect_to(@admin_order_cart, :notice => 'Cart was successfully updated.') }
+      if @admin_shopping_cart.update_attributes(params[:admin_shopping_cart])
+        format.html { redirect_to(@admin_shopping_cart, :notice => 'Cart was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_order_cart.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @admin_shopping_cart.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -97,7 +98,7 @@ class Admin::Order::CartsController < Admin::Order::BaseController
     session_admin_cart = nil
 
     respond_to do |format|
-      format.html { redirect_to(admin_order_carts_url) }
+      format.html { redirect_to(admin_shopping_carts_url) }
     end
   end
   

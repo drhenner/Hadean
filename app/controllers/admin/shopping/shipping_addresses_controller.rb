@@ -31,14 +31,14 @@ class Admin::Order::ShippingAddressesController < Admin::Order::BaseController
       @shipping_address.billing_default = true if old_address.billing_default?
     end
     respond_to do |format|
-      if @shipping_address.save#update_attributes(params[:admin_order_shipping_address])
+      if @shipping_address.save#update_attributes(params[:admin_shopping_shipping_address])
         if old_address
           old_address.default = false
           old_address.billing_default = false
           old_address.inactive!
         end
         session_admin_cart[:shipping_address] = @shipping_address
-        format.html { redirect_to(admin_order_carts_url, :notice => 'Shipping address was successfully updated.') }
+        format.html { redirect_to(admin_shopping_carts_url, :notice => 'Shipping address was successfully updated.') }
       else
         form_info
         format.html { render :action => "new", :old_address_id => params[:old_address_id] }
@@ -49,7 +49,7 @@ class Admin::Order::ShippingAddressesController < Admin::Order::BaseController
   def update
     @shipping_address       = Address.find_by_id(params[:id])
     session_admin_cart[:shipping_address] = @shipping_address
-    redirect_to(admin_order_carts_url, :notice => 'Shipping address was successfully selected.')
+    redirect_to(admin_shopping_carts_url, :notice => 'Shipping address was successfully selected.')
   end
   
   private

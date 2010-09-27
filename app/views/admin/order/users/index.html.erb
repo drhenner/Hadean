@@ -15,9 +15,9 @@
 
 <h2>Select User</h2>
 
-<div id="admin_order_users_page_wrapper">
-  <div id="admin_order_users_grid_wrapper" class='column'>
-    <%= raw jqgrid("Users", "admin_order_users_grid", admin_order_users_path,
+<div id="admin_shopping_users_page_wrapper">
+  <div id="admin_shopping_users_grid_wrapper" class='column'>
+    <%= raw jqgrid("Users", "admin_shopping_users_grid", admin_shopping_users_path,
       [
         { :field => "first_name", :label => "First name", :width => 80,  :resizable => false },
         { :field => "last_name",  :label => "Last",       :width => 80,  :resizable => false },
@@ -38,6 +38,6 @@
   </div>
 
 </div>
-<%= form_tag admin_order_users_path, :id => 'admin-user-form' do %>
+<%= form_tag admin_shopping_users_path, :id => 'admin-user-form' do %>
   <%= hidden_field_tag('user_id', nil, :id => 'admin-user_id') %>
 <% end %>

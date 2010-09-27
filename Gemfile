@@ -16,11 +16,13 @@ gem 'haml',  ">= 3.0.13"#, ">= 3.0.4"#, "2.2.21"#,
 gem "jquery-rails"
 
 ## require 'riak-sessions'
-gem 'curb' # Faster HTTP
-gem 'yajl-ruby' # Faster JSON
-gem 'riak-client', :require => 'riak'
-gem 'ripple'
-gem 'riak-sessions'
+#gem 'curb' # Faster HTTP
+#gem 'yajl-ruby' # Faster JSON
+#gem 'riak-client', :require => 'riak'
+#gem 'ripple'
+#gem 'riak-sessions'
+
+gem 'dalli'
 
 gem 'memcache-client'
 #gem 'mysql2'

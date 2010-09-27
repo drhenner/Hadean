@@ -2,24 +2,24 @@
 
 <p>
   <b>First name:</b>
-  <%= @admin_order_user.first_name %>
+  <%= @user.first_name %>
 </p>
 
 <p>
   <b>Last name:</b>
-  <%= @admin_order_user.last_name %>
+  <%= @user.last_name %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%= @admin_order_user.email %>
+  <%= @user.email %>
 </p>
 
 <p>
   <b>Birth date:</b>
-  <%= @admin_order_user.birth_date %>
+  <%= @user.birth_date %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_order_user_path(@admin_order_user) %> |
-<%= link_to 'Back', admin_order_users_path %>
+<%= link_to 'Edit', edit_admin_shopping_user_path(@user) %> |
+<%= link_to 'Back', admin_shopping_users_path %>

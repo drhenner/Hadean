@@ -6,7 +6,7 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
 
       unless session_admin_cart[:shipping_address]
         flash[:notice] = 'Select an address before you select a shipping method.'
-        redirect_to admin_order_shipping_addresses_url
+        redirect_to admin_shopping_shipping_addresses_url
       else
         ##  TODO  refactopr this method... it seems a bit lengthy
         @shipping_method_ids = session_admin_cart[:shipping_address].state.shipping_zone.shipping_method_ids
@@ -41,9 +41,9 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
     session_admin_cart[:shipping_rate] = all_selected # complete
     respond_to do |format|
       if all_selected
-        format.html { redirect_to(admin_order_carts_url, :notice => 'Shipping method was successfully selected.') }
+        format.html { redirect_to(admin_shopping_carts_url, :notice => 'Shipping method was successfully selected.') }
       else
-        format.html { redirect_to( admin_order_shipping_methods_url, :notice => 'All the Shipping Methods must be selected') }
+        format.html { redirect_to( admin_shopping_shipping_methods_url, :notice => 'All the Shipping Methods must be selected') }
       end
     end
   end
@@ -70,21 +70,21 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
 #
 #  # GET /admin/order/shipping_methods/1/edit
 #  def edit
-#    @admin_order_shipping_method = Admin::Order::ShippingMethod.find(params[:id])
+#    @admin_shopping_shipping_method = Admin::Order::ShippingMethod.find(params[:id])
 #  end
 #
 #  # POST /admin/order/shipping_methods
 #  # POST /admin/order/shipping_methods.xml
 #  def create
-#    @admin_order_shipping_method = Admin::Order::ShippingMethod.new(params[:admin_order_shipping_method])
+#    @admin_shopping_shipping_method = Admin::Order::ShippingMethod.new(params[:admin_shopping_shipping_method])
 #
 #    respond_to do |format|
-#      if @admin_order_shipping_method.save
-#        format.html { redirect_to(@admin_order_shipping_method, :notice => 'Shipping method was successfully created.') }
-#        format.xml  { render :xml => @admin_order_shipping_method, :status => :created, :location => @admin_order_shipping_method }
+#      if @admin_shopping_shipping_method.save
+#        format.html { redirect_to(@admin_shopping_shipping_method, :notice => 'Shipping method was successfully created.') }
+#        format.xml  { render :xml => @admin_shopping_shipping_method, :status => :created, :location => @admin_shopping_shipping_method }
 #      else
 #        format.html { render :action => "new" }
-#        format.xml  { render :xml => @admin_order_shipping_method.errors, :status => :unprocessable_entity }
+#        format.xml  { render :xml => @admin_shopping_shipping_method.errors, :status => :unprocessable_entity }
 #      end
 #    end
 #  end

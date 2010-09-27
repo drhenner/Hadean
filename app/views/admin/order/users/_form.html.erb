@@ -1,10 +1,10 @@
-<%= form_for(:user, @admin_order_user) do |f| %>
-  <% if @admin_order_user.errors.any? %>
+<%= form_for(:user, :url => admin_shopping_users_path @user) do |f| %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_order_user.errors.count, "error") %> prohibited this admin_order_user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-      <% @admin_order_user.errors.full_messages.each do |msg| %>
+      <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

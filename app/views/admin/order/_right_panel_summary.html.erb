@@ -25,11 +25,14 @@
     <tr>
       <td></td>
       <% if session_admin_cart[:order_items].size > 0 %>
-          <td><%= link_to 'Shipping Charges:', admin_order_shipping_methods_path %></td>
+          <td><%= link_to 'Shipping Charges:', admin_shopping_shipping_methods_path %></td>
           <td></td>
           <td>
             <% rates = session_admin_cart[:order_items].inject([]) do |rates,i| 
-              rates << i.second[:shipping_rate] if i.second[:shipping_rate].individual? || !rates.include?(i.second[:shipping_rate])
+              if i.second[:shipping_rate] && (i.second[:shipping_rate].individual? || 
+                                              !rates.include?(i.second[:shipping_rate]))
+                rates << i.second[:shipping_rate] 
+              end
               rates
             end
             %>

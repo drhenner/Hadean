@@ -4,9 +4,9 @@
 
 <h2> Products </h2>
 
-<div id="admin_order_products_page_wrapper">
-  <div id="admin_order_products_grid_wrapper" class='column'>
-    <%= raw jqgrid("Products", "admin_products_grid", admin_order_products_path,
+<div id="admin_shopping_products_page_wrapper">
+  <div id="admin_shopping_products_grid_wrapper" class='column'>
+    <%= raw jqgrid("Products", "admin_products_grid", admin_shopping_products_path,
       [
         { :field => "display_name",   :label => "Name",     :width => 325,  :resizable => false },
         { :field => "display_price_range", :label => "Price Range",  :width => 100,   :resizable => false }
@@ -30,5 +30,5 @@
 
 
 <script>
-  Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/order/products'));
+  Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/shopping/products'));
 </script>

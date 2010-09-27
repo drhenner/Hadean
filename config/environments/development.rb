@@ -12,7 +12,7 @@ Hadean::Application.configure do
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_view.debug_rjs             = true
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
@@ -26,20 +26,12 @@ Hadean::Application.configure do
   
   
   
-  
-  config.cache_store = :mem_cache_store, "localhost" #'localhost:11211'
+  #config.cache_store = :dalli_store
+  #config.cache_store = :mem_cache_store, "localhost" #'localhost:11211'
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
-  
-  ##  Change this to use riak and ripple
-  #config.session_store = :mem_cache_store
-  #config.session = {
-  #:session_key => '_hadean_session',
-  #:secret      => 'someotherkindofsecretthatnooneknows095876347323467900kgf',
-  #:cache       => CACHE,
-  #:expires     => 90  }
   
   config.after_initialize do
     #Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
@@ -65,4 +57,3 @@ Hadean::Application.configure do
     #)
   end
 end
-

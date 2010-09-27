@@ -47,37 +47,24 @@ class Admin::Order::UsersController < Admin::Order::BaseController
     @user = User.find_by_id(params[:user_id])
     session_admin_cart[:user] = @user
     if @user
-      redirect_to(admin_order_carts_url, :notice => "#{@user.name} was added.") 
+      redirect_to(admin_shopping_carts_url, :notice => "#{@user.name} was added.") 
     else
-      redirect_to admin_order_users_url 
+      redirect_to admin_shopping_users_url 
     end
   end
 
   # PUT /admin/order/users/1
   # PUT /admin/order/users/1.xml
   def update
-    @admin_order_user = Admin::Order::User.find(params[:id])
+    @user = Admin::Order::User.find(params[:id])
 
     respond_to do |format|
-      if @admin_order_user.update_attributes(params[:admin_order_user])
-        format.html { redirect_to(@admin_order_user, :notice => 'User was successfully updated.') }
-        format.xml  { head :ok }
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to(admin_shopping_user_url @user, :notice => 'User was successfully updated.') }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @admin_order_user.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /admin/order/users/1
-  # DELETE /admin/order/users/1.xml
-  def destroy
-    @admin_order_user = Admin::Order::User.find(params[:id])
-    @admin_order_user.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(admin_order_users_url) }
-      format.xml  { head :ok }
-    end
-  end
 end

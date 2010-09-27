@@ -41,7 +41,7 @@ Hadean::Application.routes.draw do # |map|
     resources :users
     resources :overviews
     
-    namespace :order do
+    namespace :shopping do
       resources :carts
       resources :billing_addresses
       resources :credit_cards

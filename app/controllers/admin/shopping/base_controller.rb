@@ -7,7 +7,7 @@
 # => This will hit the DB much less and should have better performance.
 
 class Admin::Order::BaseController < Admin::BaseController
-  helper_method :session_admin_cart#, :new_admin_cart#, :reset_admin_cart
+  helper_method :session_admin_cart, :reset_admin_cart#, :new_admin_cart#
   
   layout 'admin_cart'
   
@@ -18,7 +18,6 @@ class Admin::Order::BaseController < Admin::BaseController
   end
   
   def session_admin_cart
-    debugger
     session[:admin_cart] ? session[:admin_cart] : new_admin_cart
   end
   
@@ -40,22 +39,20 @@ class Admin::Order::BaseController < Admin::BaseController
   
   def next_admin_cart_form()
      # if cart is empty
-     session_admin_cart[:order_items] = {}
     if session_admin_cart[:user].nil?
-      return admin_order_users_url
+      return admin_shopping_users_url
     elsif session_admin_cart[:shipping_address].nil?
-      return admin_order_shipping_addresses_url
+      return admin_shopping_shipping_addresses_url
     elsif session_admin_cart[:billing_address].nil?
-      return admin_order_billing_addresses_url()
+      return admin_shopping_billing_addresses_url()
     elsif session_admin_cart[:order_items].blank?
-      
-      return admin_order_products_url()
+      return admin_shopping_products_url()
     elsif session_admin_cart[:shipping_rate].nil?
-      return admin_order_shipping_methods_url()
+      return admin_shopping_shipping_methods_url()
     else
-      return nil#admin_order_carts_url()
+      return nil#admin_shopping_carts_url()
 #    elsif session_admin_cart[:coupon].nil?
-#      return admin_order_coupons_url()
+#      return admin_shopping_coupons_url()
     end
   end
   
