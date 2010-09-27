@@ -1,4 +1,4 @@
-class Admin::Order::CartsController < Admin::Order::BaseController
+class Admin::Shopping::CartsController < Admin::Shopping::BaseController
   # GET /admin/order/carts
   # GET /admin/order/carts.xml
   def index
@@ -45,16 +45,16 @@ class Admin::Order::CartsController < Admin::Order::BaseController
     @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
     
     if @credit_card.valid?
-      Cart.transaction do
+      #ActiveRecord::Base.transaction do
+        @order = Order.new_admin_cart(@cart, {:ip_address => request.remote_ip})
         debugger
-        @order = Order.new_admin_cart(@cart)
-        @order.ip_address = request.remote_ip
-        response = @order.create_invoice_transaction( @credit_card, 
+        response = @order.create_invoice( @credit_card, 
                                           @order.find_total, 
                                           { :email            => @order.email, 
                                             :billing_address  => @cart[:billing_address], 
-                                            :ip               => @order.ip_address })
-      end
+                                            :ip               => request.remote_ip }) if @order
+      #end
+      
       if response
         if response.success?
           #clear the items out of the session_cart
@@ -79,7 +79,7 @@ class Admin::Order::CartsController < Admin::Order::BaseController
   # PUT /admin/order/carts/1
   # PUT /admin/order/carts/1.xml
   def update
-    @admin_shopping_cart = Admin::Order::Cart.find(params[:id])
+    @admin_shopping_cart = Cart.find(params[:id])
 
     respond_to do |format|
       if @admin_shopping_cart.update_attributes(params[:admin_shopping_cart])

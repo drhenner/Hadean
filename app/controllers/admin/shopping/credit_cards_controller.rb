@@ -1,4 +1,4 @@
-class Admin::Order::CreditCardsController < Admin::Order::BaseController
+class Admin::Shopping::CreditCardsController < Admin::Shopping::BaseController
   # GET /admin/order/credit_cards
   # GET /admin/order/credit_cards.xml
   def index

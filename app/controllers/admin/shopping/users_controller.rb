@@ -1,4 +1,4 @@
-class Admin::Order::UsersController < Admin::Order::BaseController
+class Admin::Shopping::UsersController < Admin::Shopping::BaseController
   # GET /admin/order/users
   # GET /admin/order/users.xml
   def index
@@ -56,7 +56,7 @@ class Admin::Order::UsersController < Admin::Order::BaseController
   # PUT /admin/order/users/1
   # PUT /admin/order/users/1.xml
   def update
-    @user = Admin::Order::User.find(params[:id])
+    @user = User.find(params[:id])
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

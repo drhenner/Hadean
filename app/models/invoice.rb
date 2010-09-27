@@ -92,7 +92,7 @@ class Invoice < ActiveRecord::Base
     transaction do
       authorization = Payment.authorize(integer_amount, credit_card, options)
       payments.push(authorization)
-      if authorization.success?g
+      if authorization.success?
         payment_authorized!
         authorize_complete_order
       else

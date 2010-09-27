@@ -6,7 +6,7 @@
 # => So lets use the mem_cache session store to store more information than we would normal.  
 # => This will hit the DB much less and should have better performance.
 
-class Admin::Order::BaseController < Admin::BaseController
+class Admin::Shopping::BaseController < Admin::BaseController
   helper_method :session_admin_cart, :reset_admin_cart#, :new_admin_cart#
   
   layout 'admin_cart'

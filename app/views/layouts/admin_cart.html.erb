@@ -47,14 +47,14 @@
                             :id     => "admin_users_button" %>
     </div>
     <div id='header_sub_bar'>
-      <%= render :partial => '/admin/order/sub_header' %>
+      <%= render :partial => '/admin/shopping/sub_header' %>
     </div>
     
     <div class='span-14'>
       <%= yield %>
     </div>
     <div id='cart-right-side-panel' class='span-10 last float-right'>
-      <%= render :partial => '/admin/order/right_panel_summary'%>
+      <%= render :partial => '/admin/shopping/right_panel_summary'%>
       <%= yield :right_side_bar %>
     </div>
   </div>

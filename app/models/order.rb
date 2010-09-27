@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   belongs_to   :ship_address, :class_name => 'Address'
   belongs_to   :bill_address, :class_name => 'Address'
   
-  before_validation :set_email
+  before_validation :set_email, :set_number
   after_create      :set_order_number
   before_save       :update_tax_rates
     
@@ -63,17 +63,17 @@ class Order < ActiveRecord::Base
     includes([:completed_invoices, :invoices])
   end
   
-  def self.new_admin_cart(admin_cart, args)
-    #transaction do 
+  def self.new_admin_cart(admin_cart, args = {})
+    transaction do 
       admin_order = Order.new(  :ship_address     => admin_cart[:shipping_address],
                                 :bill_address     => admin_cart[:billing_address],
-                                :coupon           => admin_cart[:coupon],
-                                :shipping_method  => admin_cart[:shipping_method],
+                                #:coupon           => admin_cart[:coupon],
                                 :email            => admin_cart[:user].email,
                                 :user             => admin_cart[:user],
-                                #:ip_address       => args[:ip_address],
+                                :ip_address       => args[:ip_address],
                                 :email            => admin_cart[:user].email
                             )
+      admin_order.save
       admin_cart[:order_items].each_pair do |variant_id, hash|
           hash[:quantity].times do
               item = OrderItem.new( :variant        => hash[:variant],
@@ -85,9 +85,11 @@ class Order < ActiveRecord::Base
               admin_order.order_items.push(item)
           end
       end
+      debugger
       admin_order.save
-      
-    #end
+      debugger
+      admin_order
+    end
   end
   
   ## This method creates the invoice and payment method.  If the payment is not authorized the whole transaction is roled back
@@ -128,7 +130,7 @@ class Order < ActiveRecord::Base
       tax_time = completed_at? ? completed_at : Time.zone.now
       order_items.each do |item|
         rate = item.variant.product.tax_rate(self.ship_address.state_id, tax_time)
-        if item.tax_rate_id != rate.id 
+        if rate && item.tax_rate_id != rate.id 
           item.tax_rate = rate
           item.save
         end
@@ -178,11 +180,13 @@ class Order < ActiveRecord::Base
   def shipping_charges
     return @order_shipping_charges if defined?(@order_shipping_charges)
     items = OrderItem.order_items_in_cart(self.id)
-    charged_items = items.inject([]) do |charged_items, item| 
-      charged_items << item if item.shipping_rate.shipping_rate_type_id == ShippingRateType::INDIVIDUAL || !charged_items.map{|i| i.shipping_rate }.include?(item.shipping_rate)
-      charged_items
+    shipping_rates = items.inject([]) do |shipping_rates, item| 
+      debugger
+      shipping_rates << item.shipping_rate if item.shipping_rate.individual? || !shipping_rates.include?(item.shipping_rate)
+      shipping_rates
     end
-    @order_shipping_charges = charged_items.inject(0.0) {|sum, item|  sum + item.shipping_rate.rate  }
+    debugger
+    @order_shipping_charges = shipping_rates.inject(0.0) {|sum, shipping_rate|  sum + shipping_rate.rate  }
   end
   
   def update_address(address_type_id , address_id)
@@ -213,11 +217,13 @@ class Order < ActiveRecord::Base
     self.email = user.email if user_id
   end
   
+  def set_number
+    self.number = (Time.now.to_i).to_s(21)
+  end
+  
   def set_order_number
-    if !self.number?
-      self.number = (1001001001000 + id).to_s(21)
-      save
-    end
+    self.number = (1001001001000 + id).to_s(21)
+    save
   end
   
   ## This method is called when the order transitions to paid

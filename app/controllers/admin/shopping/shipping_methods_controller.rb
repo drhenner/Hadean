@@ -1,4 +1,4 @@
-class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
+class Admin::Shopping::ShippingMethodsController < Admin::Shopping::BaseController
   # GET /admin/order/shipping_methods
   # GET /admin/order/shipping_methods.xml
   def index
@@ -70,13 +70,13 @@ class Admin::Order::ShippingMethodsController < Admin::Order::BaseController
 #
 #  # GET /admin/order/shipping_methods/1/edit
 #  def edit
-#    @admin_shopping_shipping_method = Admin::Order::ShippingMethod.find(params[:id])
+#    @admin_shopping_shipping_method = ShippingMethod.find(params[:id])
 #  end
 #
 #  # POST /admin/order/shipping_methods
 #  # POST /admin/order/shipping_methods.xml
 #  def create
-#    @admin_shopping_shipping_method = Admin::Order::ShippingMethod.new(params[:admin_shopping_shipping_method])
+#    @admin_shopping_shipping_method = ShippingMethod.new(params[:admin_shopping_shipping_method])
 #
 #    respond_to do |format|
 #      if @admin_shopping_shipping_method.save

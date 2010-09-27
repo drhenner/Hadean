@@ -1,4 +1,4 @@
-class Admin::Order::BillingAddressesController < Admin::Order::BaseController
+class Admin::Shopping::BillingAddressesController < Admin::Shopping::BaseController
   # GET /admin/order/billing_addresses
   # GET /admin/order/billing_addresses.xml
   def index

@@ -1,4 +1,4 @@
-class Admin::Order::ProductsController < Admin::Order::BaseController
+class Admin::Shopping::ProductsController < Admin::Shopping::BaseController
   # GET /admin/order/products
   # GET /admin/order/products.xml
   def index
@@ -29,7 +29,7 @@ class Admin::Order::ProductsController < Admin::Order::BaseController
   # GET /admin/order/products/new
   # GET /admin/order/products/new.xml
 #  def new
-#    @admin_shopping_product = Admin::Order::Product.new
+#    @admin_shopping_product = Product.new
 #
 #    respond_to do |format|
 #      format.html # new.html.erb
@@ -86,16 +86,4 @@ class Admin::Order::ProductsController < Admin::Order::BaseController
   def tax_percentage(tax_rate)
     tax_rate ? tax_rate.rate : 0
   end
-  
-  # DELETE /admin/order/products/1
-  # DELETE /admin/order/products/1.xml
-#  def destroy
-#    @admin_shopping_product = Admin::Order::Product.find(params[:id])
-#    @admin_shopping_product.destroy
-#
-#    respond_to do |format|
-#      format.html { redirect_to(admin_shopping_products_url) }
-#      format.xml  { head :ok }
-#    end
-#  end
 end
