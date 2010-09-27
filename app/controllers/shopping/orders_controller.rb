@@ -52,7 +52,11 @@ class Shopping::OrdersController < Shopping::BaseController
     #res = gateway.authorize(amount, credit_card, :ip=>request.remote_ip, :billing_address=>billing_address)
     address = @order.bill_address.cc_params
     
-    if @credit_card.valid? && !@order.complete?
+    if @order.complete?
+      CartItem.mark_items_purchased(session_cart, @order)
+      flash[:error] = "The order has been purchased."
+      redirect_to myaccount_order_url(@order)
+    elsif @credit_card.valid?
       if response = @order.create_invoice(@credit_card, @order.find_total, {:email => @order.email, :billing_address=> address, :ip=> @order.ip_address })
         if response.success?
           ##  MARK items as purchased          

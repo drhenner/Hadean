@@ -18,6 +18,7 @@ class Admin::Order::BaseController < Admin::BaseController
   end
   
   def session_admin_cart
+    debugger
     session[:admin_cart] ? session[:admin_cart] : new_admin_cart
   end
   

@@ -34,12 +34,12 @@ Hadean::Application.configure do
   
   
   ##  Change this to use riak and ripple
-  config.session_store = :mem_cache_store
-  config.session = {
-  :session_key => '_hadean_session',
-  :secret      => 'someotherkindofsecretthatnooneknows095876347323467900kgf',
-  :cache       => CACHE,
-  :expires     => 90  }
+  #config.session_store = :mem_cache_store
+  #config.session = {
+  #:session_key => '_hadean_session',
+  #:secret      => 'someotherkindofsecretthatnooneknows095876347323467900kgf',
+  #:cache       => CACHE,
+  #:expires     => 90  }
   
   config.after_initialize do
     #Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)

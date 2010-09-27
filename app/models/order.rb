@@ -4,6 +4,9 @@ class Order < ActiveRecord::Base
   has_many   :order_items
   has_many   :shipments
   has_many   :invoices
+  has_many   :completed_invoices,  :class_name => 'Invoice', :conditions => ['state = ? OR state = ?', 'authorized', 'paid']
+  has_many   :authorized_invoices, :class_name => 'Invoice', :conditions => ['state = ?', 'authorized']
+  has_many   :paid_invoices      , :class_name => 'Invoice', :conditions => ['state = ?', 'paid']
   
   belongs_to :user
   belongs_to   :ship_address, :class_name => 'Address'
@@ -45,6 +48,20 @@ class Order < ActiveRecord::Base
   #    :shipping_method  => nil,
   #    :order_items => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total, shipping_category_id}
   #  }
+  
+  def first_invoice_amount
+    return '' if completed_invoices.empty?
+    completed_invoices.first.amount
+  end
+  
+  def status
+    return 'not processed' if invoices.empty?
+    invoices.last.state
+  end
+  
+  def self.find_myaccount_details
+    includes([:completed_invoices, :invoices])
+  end
   
   def self.new_admin_cart(admin_cart, args)
     #transaction do 

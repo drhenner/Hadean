@@ -1,6 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'ripple/railtie'
+require 'riak-sessions'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -43,6 +45,8 @@ module Hadean
       g.test_framework  :rspec, :fixture => true
       g.fixture_replacement :factory_girl, :dir=>"spec/factories"
     end
+
+    config.session_store = ::Ripple::SessionStore
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation, :number, :cc_number, :verification_value]

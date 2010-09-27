@@ -15,6 +15,13 @@ gem 'formtastic',  "~> 1.1.0"#  :git => 'git://github.com/justinfrench/formtasti
 gem 'haml',  ">= 3.0.13"#, ">= 3.0.4"#, "2.2.21"#,
 gem "jquery-rails"
 
+## require 'riak-sessions'
+gem 'curb' # Faster HTTP
+gem 'yajl-ruby' # Faster JSON
+gem 'riak-client', :require => 'riak'
+gem 'ripple'
+gem 'riak-sessions'
+
 gem 'memcache-client'
 #gem 'mysql2'
 gem 'ruby-mysql'
