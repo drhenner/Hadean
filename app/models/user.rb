@@ -184,12 +184,12 @@ class User < ActiveRecord::Base
     grid = Table(:variants)
     
     grid = User
-    grid.includes(:roles)
-    grid.where("users.first_name LIKE ?", "%#{params[:first_name]}%") if params[:first_name].present?
-    grid.where("users.last_name LIKE ?",  "%#{params[:last_name]}%")  if params[:last_name].present?
-    grid.where("users.email LIKE ?",      "%#{params[:email]}%")      if params[:email].present?
-    grid.order("#{params[:sidx]} #{params[:sord]}") 
-    grid.limit(params[:rows])
+    grid = grid.includes(:roles)
+    grid = grid.where("users.first_name LIKE ?", "%#{params[:first_name]}%") if params[:first_name].present?
+    grid = grid.where("users.last_name LIKE ?",  "%#{params[:last_name]}%")  if params[:last_name].present?
+    grid = grid.where("users.email LIKE ?",      "%#{params[:email]}%")      if params[:email].present?
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}") 
+    grid = grid.limit(params[:rows])
     grid.paginate({:page => params[:page]})
   end
   

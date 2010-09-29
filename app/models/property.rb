@@ -20,9 +20,9 @@ class Property < ActiveRecord::Base
     params[:rows] ||= 25
     
     grid = Property
-    grid.where("active == ?",true)                    unless  params[:show_all].present? && 
+    grid = grid.where("active == ?",true)                    unless  params[:show_all].present? && 
                                                               params[:show_all] == 'true'
-    grid.where("properties.display_name = ?", params[:display_name])  if params[:display_name].present?
+    grid = grid.where("properties.display_name = ?", params[:display_name])  if params[:display_name].present?
     grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
 
   end

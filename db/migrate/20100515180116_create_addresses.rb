@@ -21,6 +21,8 @@ class CreateAddresses < ActiveRecord::Migration
     end
     
     add_index :addresses, :state_id
+    add_index :addresses, :addressable_id
+    add_index :addresses, :addressable_type
     execute "alter table addresses add constraint fk_addresses_countries foreign key (state_id) references states(id)" if SETTINGS[:use_foreign_keys]
   end
 

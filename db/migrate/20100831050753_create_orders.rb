@@ -10,15 +10,18 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :ship_address_id
       t.integer :coupon_id
       t.boolean :active, :default => true, :null => false
+      t.boolean :shipped, :default => false, :null => false
       t.datetime :calculated_at
       t.datetime :completed_at
       
       t.timestamps
     end
     
+    add_index :orders, :number
     add_index :orders, :user_id
     add_index :orders, :bill_address_id
     add_index :orders, :ship_address_id
+    add_index :orders, :coupon_id
   end
 
   def self.down

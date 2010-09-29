@@ -8,6 +8,7 @@ class CreateOrderItems < ActiveRecord::Migration
       t.string :state,        :null => false
       t.integer :tax_rate_id
       t.integer :shipping_rate_id
+      t.integer :shipment_id
       t.timestamps
     end
     
@@ -15,6 +16,7 @@ class CreateOrderItems < ActiveRecord::Migration
     add_index :order_items, :variant_id
     add_index :order_items, :tax_rate_id
     add_index :order_items, :shipping_rate_id
+    add_index :order_items, :shipment_id
   end
 
   def self.down

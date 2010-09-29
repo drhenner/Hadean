@@ -81,12 +81,12 @@ class Product < ActiveRecord::Base
     grid = grid.where(['products.deleted_at IS NOT NULL AND products.deleted_at > ?', Time.now.to_s(:db)])  if active_state == false##  note nil != false
     grid = grid.where(['products.deleted_at IS NULL     OR  products.deleted_at < ?', Time.now.to_s(:db)])  if active_state == true
     #grid.includes(:variants)
-    grid.where("products.name = ?",                 params[:name])                  if params[:name].present?
-    grid.where("products.product_type_id = ?",      params[:product_type_id])       if params[:product_type_id].present?
-    grid.where("products.shipping_category_id = ?", params[:shipping_category_id])  if params[:shipping_category_id].present?
-    grid.where("products.available_at > ?",         params[:available_at_gt])       if params[:available_at_gt].present?
-    grid.where("products.available_at < ?",         params[:available_at_lt])       if params[:available_at_lt].present?
-    grid.limit(params[:rows])
-    grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
+    grid = grid.where("products.name = ?",                 params[:name])                  if params[:name].present?
+    grid = grid.where("products.product_type_id = ?",      params[:product_type_id])       if params[:product_type_id].present?
+    grid = grid.where("products.shipping_category_id = ?", params[:shipping_category_id])  if params[:shipping_category_id].present?
+    grid = grid.where("products.available_at > ?",         params[:available_at_gt])       if params[:available_at_gt].present?
+    grid = grid.where("products.available_at < ?",         params[:available_at_lt])       if params[:available_at_lt].present?
+    grid = grid.limit(params[:rows])
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
   end
 end

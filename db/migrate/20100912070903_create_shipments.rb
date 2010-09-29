@@ -15,6 +15,7 @@ class CreateShipments < ActiveRecord::Migration
     add_index :shipments, :shipping_method_id
     add_index :shipments, :address_id
     add_index :shipments, :order_id
+    add_index :shipments, :number
   end
 
   def self.down

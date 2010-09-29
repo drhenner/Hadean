@@ -14,10 +14,10 @@ class Supplier < ActiveRecord::Base
     
     grid = Supplier
     #grid.includes(:product)
-    grid.where("suppliers.name = ?", params[:name])  if params[:name].present?
-    grid.where("suppliers.email = ?", params[:email])  if params[:email].present?
-    grid.order("#{params[:sidx]} #{params[:sord]}") 
-    grid.limit(params[:rows])
+    grid = grid.where("suppliers.name = ?", params[:name])  if params[:name].present?
+    grid = grid.where("suppliers.email = ?", params[:email])  if params[:email].present?
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}") 
+    grid = grid.limit(params[:rows])
     grid.paginate({:page => params[:page]})
   end
 end

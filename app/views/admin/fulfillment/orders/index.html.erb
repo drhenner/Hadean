@@ -1,0 +1,22 @@
+<h2>Orders</h2>
+
+<table>
+  <tr>
+    <th>Completed at</th>
+    <th>Email</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.completed_at.to_s(:us_date) %></td>
+    <td><%= order.email %></td>
+    <td><%= order.name %></td>
+    <td><%= link_to 'Show', admin_fulfillment_order_path(order) %></td>
+    <td><%= link_to 'New Shipment', new_admin_fulfillment_order_path(order) %></td>
+  </tr>
+<% end %>
+</table>
+

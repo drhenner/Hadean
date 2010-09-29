@@ -49,6 +49,10 @@ class Order < ActiveRecord::Base
   #    :order_items => {}# the key is variant_id , a hash of {variant, shipping_rate, quantity, tax_rate, total, shipping_category_id}
   #  }
   
+  def name
+    user.name
+  end
+  
   def first_invoice_amount
     return '' if completed_invoices.empty?
     completed_invoices.first.amount
@@ -85,9 +89,7 @@ class Order < ActiveRecord::Base
               admin_order.order_items.push(item)
           end
       end
-      debugger
       admin_order.save
-      debugger
       admin_order
     end
   end
@@ -185,7 +187,6 @@ class Order < ActiveRecord::Base
       shipping_rates << item.shipping_rate if item.shipping_rate.individual? || !shipping_rates.include?(item.shipping_rate)
       shipping_rates
     end
-    debugger
     @order_shipping_charges = shipping_rates.inject(0.0) {|sum, shipping_rate|  sum + shipping_rate.rate  }
   end
   
@@ -233,5 +234,21 @@ class Order < ActiveRecord::Base
   
   def variant_ids
     order_items.collect{|oi| oi.variant_id }
+  end
+  
+  def self.fulfillment_grid(params = {})
+    
+    params[:page] ||= 1
+    params[:rows] ||= 25
+    
+    grid = Order
+    grid = grid.includes([:user])
+    grid = grid.where("active = ?",true)                     unless  params[:show_all].present? && 
+                                                                      params[:show_all] == 'true'
+    grid = grid.where("orders.number LIKE ?", params[:number])  if params[:number].present?                                                          
+    grid = grid.where("orders.shipped = ?", false)              unless (params[:shipped].present? && params[:shipped] == 'true')
+    grid = grid.where("orders.email LIKE ?", params[:email])    if params[:email].present?
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
+
   end
 end

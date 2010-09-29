@@ -9,7 +9,9 @@ class CreatePaymentProfiles < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :payment_profiles, :user_id
+      add_index :payment_profiles, :user_id
+      add_index :payment_profiles, :address_id
+      #add_index :payment_profiles, :payment_cim_id
   end
 
   def self.down

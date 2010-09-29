@@ -19,8 +19,8 @@ Hadean.App = {
     $(IdOrClass).click(function(e) { 
       e.preventDefault();
       jQuery(IdOrClass).attr('disabled', 'disabled');
-      callback;
-    }
+      callback();
+    })
   }
 }
 

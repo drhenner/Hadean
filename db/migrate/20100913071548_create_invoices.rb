@@ -9,7 +9,8 @@ class CreateInvoices < ActiveRecord::Migration
       t.boolean :active,      :default => true,   :null => false
 
       t.timestamps
-    end
+    end  
+      add_index :invoices, :number
     add_index :invoices, :order_id
   end
 

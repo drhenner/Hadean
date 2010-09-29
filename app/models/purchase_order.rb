@@ -73,12 +73,12 @@ class PurchaseOrder < ActiveRecord::Base
     params[:rows] ||= SETTINGS[:admin_grid_rows]
     
     grid = PurchaseOrder.includes(:supplier)
-    grid.where("suppliers.name = ?",                  params[:name])            if params[:name].present?
-    grid.where("purchase_orders.invoice_number = ?",  params[:invoice_number])  if params[:invoice_number].present?
-    grid.where("purchase_orders.tracking_number = ?", params[:tracking_number]) if params[:tracking_number].present?
+    grid = grid.where("suppliers.name = ?",                  params[:name])            if params[:name].present?
+    grid = grid.where("purchase_orders.invoice_number = ?",  params[:invoice_number])  if params[:invoice_number].present?
+    grid = grid.where("purchase_orders.tracking_number = ?", params[:tracking_number]) if params[:tracking_number].present?
     
-    grid.order("#{params[:sidx]} #{params[:sord]}") 
-    grid.limit(params[:rows])
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}") 
+    grid = grid.limit(params[:rows])
     grid.paginate({:page => params[:page]})
   end
   
@@ -88,12 +88,12 @@ class PurchaseOrder < ActiveRecord::Base
     params[:rows] ||= SETTINGS[:admin_grid_rows]
     
     grid = PurchaseOrder.where(['purchase_orders.state != ?', PurchaseOrder::RECEIVED])#.where("suppliers.name = ?", params[:name]) 
-    grid.where("suppliers.name = ?",                  params[:name])            #if params[:name].present?
-    grid.where("purchase_orders.invoice_number = ?",  params[:invoice_number])  if params[:invoice_number].present?
-    grid.where("purchase_orders.tracking_number = ?", params[:tracking_number]) if params[:tracking_number].present?
+    grid = grid.where("suppliers.name = ?",                  params[:name])            #if params[:name].present?
+    grid = grid.where("purchase_orders.invoice_number = ?",  params[:invoice_number])  if params[:invoice_number].present?
+    grid = grid.where("purchase_orders.tracking_number = ?", params[:tracking_number]) if params[:tracking_number].present?
     
-    grid.order("#{params[:sidx]} #{params[:sord]}") 
-    grid.limit(params[:rows])
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}") 
+    grid = grid.limit(params[:rows])
     grid.includes([:supplier, :purchase_order_variants]).paginate({:page => params[:page]})
     
   end
