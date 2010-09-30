@@ -60,7 +60,7 @@ $blueprint-font-size: 12px !default;
     img.left        { @include float-left;  margin: 1.5em 1.5em 1.5em 0; padding: 0; }
     img.right       { @include float-right; margin: 1.5em 0 1.5em 1.5em; padding: 0; }
                   }
-  a               { text-decoration: underline; @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color); }
+  a               { text-decoration: none; @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color); }
   blockquote      { margin: 1.5em; color: #666666; font-style: italic; }
   strong          { font-weight: bold; }
   em              { font-style: italic; }

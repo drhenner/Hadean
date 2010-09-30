@@ -40,9 +40,8 @@ body.bp a img {
 }
 /* line 69, ../../app/stylesheets/blueprint/_print.scss */
 body.bp a:link, body.bp a:visited {
-  background: transparent;
   font-weight: 700;
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* line 73, ../../app/stylesheets/blueprint/_print.scss */
 body.bp p img.top {
