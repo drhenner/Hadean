@@ -82,7 +82,7 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   private
   
   def load_info
-    @order = Order.includes([:shipments, {:order_items => [:shipment, :variant]}])
+    @order = Order.includes([:shipments, {:order_items => [:shipment, :variant]}]).find(params[:order_id])
   end
   
   def form_info

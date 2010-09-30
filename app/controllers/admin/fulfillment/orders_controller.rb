@@ -8,10 +8,10 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
       format.html # index.html.erb
       
       format.json { render :json => @orders.to_jqgrid_json(
-        [ :completed_at, :number, :email, :name, :display_received ],
-        @purchase_orders.per_page,
-        @purchase_orders.current_page, 
-        @purchase_orders.total_entries)
+        [ :display_completed_at, :email, :number, :name ],
+        @orders.per_page,
+        @orders.current_page, 
+        @orders.total_entries)
 
       }
     end

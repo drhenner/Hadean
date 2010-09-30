@@ -13,3 +13,6 @@ en:
       short: "%b %d"
       long: "%B %d, %Y"
       us_date: "%m/%d/%Y"
+  time: 
+    formats: 
+      us_date: "%m/%d/%Y"

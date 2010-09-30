@@ -1,38 +1,17 @@
-<h2>Orders</h2>
-
-<table>
-  <tr>
-    <th>Completed at</th>
-    <th>Email</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @orders.each do |order| %>
-  <tr>
-    <td><%= order.completed_at.strftime(:us_date) if order.completed_at %></td>
-    <td><%= order.email %></td>
-    <td><%= order.name %></td>
-    <td><%= link_to 'Show', admin_fulfillment_order_path(order) %></td>
-    <td><%= link_to 'New Shipment', new_admin_fulfillment_order_path(order) %></td>
-  </tr>
-<% end %>
-</table>
-
 <% content_for :head do -%>
   <%= javascript_include_tag "admin/index_grid" %>
 <% end %>
 <%= render :partial => '/admin/fulfillment/sub_header'%>
 
-<h2> Shipping </h2>
+<h2> Shipping Orders</h2>
 
 <div id="admin_fulfillment_orders_page_wrapper">
   <div id="admin_fulfillment_orders_grid_wrapper" class='column'>
     <%= raw jqgrid("Orders", "admin_fulfillment_orders_grid", admin_fulfillment_orders_path,
       [
-        { :field => "display_completed_at",   :label => "Name",     :width => 100,  :resizable => false },
+        { :field => "display_completed_at",   :label => "Completed",     :width => 100,  :resizable => false },
         { :field => "email", :label => "Email",  :width => 200,   :resizable => false },
+        { :field => "number", :label => "Number",  :width => 100,   :resizable => false },
         { :field => "name", :label => "Name",  :width => 100,   :resizable => false }
       ], 
       {
