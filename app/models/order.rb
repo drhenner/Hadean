@@ -53,6 +53,10 @@ class Order < ActiveRecord::Base
     user.name
   end
   
+  def display_completed_at(format = :us_date)
+    completed_at ? completed_at.strftime(format) : 'Not Finished.'
+  end
+  
   def first_invoice_amount
     return '' if completed_invoices.empty?
     completed_invoices.first.amount

@@ -1,0 +1,33 @@
+<%= form_for(@admin_fulfillment_shipment) do |f| %>
+  <% if @admin_fulfillment_shipment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_fulfillment_shipment.errors.count, "error") %> prohibited this admin_fulfillment_shipment from being saved:</h2>
+
+      <ul>
+      <% @admin_fulfillment_shipment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shipped_at %><br />
+    <%= f.datetime_select :shipped_at %>
+  </div>
+  <div class="field">
+    <%= f.label :tracking %><br />
+    <%= f.text_field :tracking %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

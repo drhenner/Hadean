@@ -16,9 +16,10 @@ Hadean.App = {
     jQuery(window).ready(callback);
   },
   oneClickHandler : function(callback, IdOrClass) {
-    $(IdOrClass).click(function(e) { 
-      e.preventDefault();
-      jQuery(IdOrClass).attr('disabled', 'disabled');
+    jQuery(IdOrClass).click(function(e) { 
+      //e.preventDefault();
+      jQuery(IdOrClass).unbind('click');
+      //jQuery(IdOrClass).attr('disabled', 'disabled');
       callback();
     })
   }

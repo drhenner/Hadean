@@ -16,5 +16,8 @@ Hadean.AdminIndexForm = {
   userSelection : function(id) {
     jQuery('#admin-user_id').val(id);  
     jQuery('#admin-user-form').submit();
+  },
+  newShipmentSelection : function(id) {
+    window.location.href = Hadean.AdminIndexForm.formController+'/'+id+"/shipments/new";
   }
 }

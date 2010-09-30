@@ -1,0 +1,29 @@
+<h1>Listing admin_fulfillment_shipments</h1>
+
+<table>
+  <tr>
+    <th>Shipped at</th>
+    <th>Tracking</th>
+    <th>Number</th>
+    <th>State</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_fulfillment_shipments.each do |admin_fulfillment_shipment| %>
+  <tr>
+    <td><%= admin_fulfillment_shipment.shipped_at %></td>
+    <td><%= admin_fulfillment_shipment.tracking %></td>
+    <td><%= admin_fulfillment_shipment.number %></td>
+    <td><%= admin_fulfillment_shipment.state %></td>
+    <td><%= link_to 'Show', admin_fulfillment_shipment %></td>
+    <td><%= link_to 'Edit', edit_admin_fulfillment_shipment_path(admin_fulfillment_shipment) %></td>
+    <td><%= link_to 'Destroy', admin_fulfillment_shipment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shipment', new_admin_fulfillment_shipment_path %>

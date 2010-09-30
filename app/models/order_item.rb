@@ -21,6 +21,10 @@ class OrderItem < ActiveRecord::Base
    #after_transition :to => 'complete', :do => [:update_inventory]
  end
  
+  def shipped?
+    shipment_id?
+  end
+  
   def self.order_items_in_cart(order_id)
     find(:all, :joins => {:variant => :product },
                :conditions => ['order_items.order_id = ? ', order_id ],

@@ -1,4 +1,4 @@
-class Admin::Fulfillment::OrdersController < Admin::BaseController
+class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
   # GET /admin/fulfillment/orders
   # GET /admin/fulfillment/orders.xml
   def index
