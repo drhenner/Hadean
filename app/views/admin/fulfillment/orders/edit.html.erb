@@ -1,6 +1,81 @@
-<h1>Editing admin_fulfillment_order</h1>
+<h2>New shipment for Order # <%= @order.number %>  </h2>
+<div class='' >
+  Shipment for <%= @order.user.name %>
+</div>
+<div class='clear'></div>
+<div id='order-shipment-items' class='span-7 last float-left'>
+<h4>Order Items</h4>
+  <% @order.order_items.each_with_index do |item,i| %>
+    <div  id='order-shipment-item<%= i %>' 
+          class='span-6 rounded-4 line_item_yellow'>
+          
+        <%= item.variant.product_name %> <%= item.variant.sku %> <%= number_to_currency item.variant.price %> <br/>
+        <% if item.shipped? %>
+          Shipped: <%= item.shipment.display_shipped_at %> => Shipping #: <%= item.shipment.number %>
+        <% else %>
+          Not Shipped Yet.
+          <%= item.shipping_rate.shipping_method.name %>
+        <% end %>
+      
+    </div>
+  <% end %>
+</div>
+<div class='span-7 last float-left' >
+<h4>Shipping address</h4>
+  <div  id='order-ship-address'
+        class='span-6 rounded-4 line_item_yellow'>
+    <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @order.ship_address} %>
+  </div>
+</div>
+<div class='span-7 last float-left'>
+<h4>Shipment Details</h4>
+  <% if @order.shipments.empty? %>
+    No Shipments have been made on this order.
+  <% end %>
+  <% @order.shipments.each do |shipment| %>
+      <div  id='order-shipment-items' 
+            class='span-6 rounded-4 <%= cycle("line_item_yellow", "line_item_gray") %>'>
+          Shipping Method: <%= shipment.shipping_method.name %> <br/>
+          Shipping #: <%= shipment.number %> Tracking:<%= shipment.tracking %> State:<%= shipment.state %>
+      </div>
+  <% end %>
+</div>
+<div class='clear'></div>
+Ask if you want to authorize full amount of partial with reason<br/>
+<div class='span-16 last' style='text-align:left;'>
+  <% @order.invoices.each do |invoice| %>
+    <div style='display:inline-block;' class='line_item_gray'> <%= invoice.state %> Invoice:</div>  
+    <%=  invoice.number %> => <%= number_to_currency invoice.amount %> 
+    <% if invoice.authorized? %>
+      <a id='capture-invoice-button-<%= invoice.id %>' style='display:inline-block;' class='line_item_green'> 
+        Collect
+      </a>
+      <a id='capture-partial-invoice-button-<%= invoice.id %>' style='display:inline-block;' class='line_item_blue'> 
+        Collect Partial
+      </a>
+      <a id='cancel-invoice-button-<%= invoice.id %>' style='display:inline-block;' class='line_item_red'> 
+        CANCEL
+      </a>
+    <% end %>
+    <br/>
+  <% end %>
+</div>
 
-<%= render 'form' %>
+<div id="dialog" title="Cancel Invoice">
+  <p>Are you sure you want to Cancel the Order and Shipment? </p>
 
-<%= link_to 'Show', @admin_fulfillment_order %> |
-<%= link_to 'Back', admin_fulfillment_orders_path %>
+</div>
+
+<% content_for :head do -%>
+  <%= stylesheet_link_tag "cupertino/jquery-ui-1.8.5.custom" %>
+<% end %>
+
+<% content_for :bottom do -%>
+  <%= javascript_include_tag "admin/fulfillment" %>
+  <script>
+    <% @order.invoices.each do |invoice| %>
+      Hadean.Utility.registerOnLoadHandler(Hadean.Fulfillment.initialize(<%= invoice.id %>));
+    <% end %>
+  </script>
+<% end %>
+

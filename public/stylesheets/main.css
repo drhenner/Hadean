@@ -370,6 +370,39 @@ input.text, input.title, input[type="text"], input[type="password"] {
 }
 
 /* line 294, ../../app/stylesheets/main.scss */
+.line_item_green {
+  padding: 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: solid 2px #D0EFD8;
+  background-color: #f0fff8;
+  margin-bottom: 3px;
+}
+
+/* line 302, ../../app/stylesheets/main.scss */
+.line_item_green:hover {
+  background-color: #e0ffe8;
+}
+
+/* line 306, ../../app/stylesheets/main.scss */
+.line_item_red {
+  padding: 3px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  behavior: url(border-radius.htc);
+  border: solid 2px #EFD0D8;
+  background-color: #fff0f8;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+/* line 315, ../../app/stylesheets/main.scss */
+.line_item_red:hover {
+  background-color: #ffe0e8;
+}
+
+/* line 319, ../../app/stylesheets/main.scss */
 .line_item_blue {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -381,7 +414,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 303, ../../app/stylesheets/main.scss */
+/* line 328, ../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -393,7 +426,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 312, ../../app/stylesheets/main.scss */
+/* line 337, ../../app/stylesheets/main.scss */
 .line_item_light_gray {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -405,7 +438,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 321, ../../app/stylesheets/main.scss */
+/* line 346, ../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -417,7 +450,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 330, ../../app/stylesheets/main.scss */
+/* line 355, ../../app/stylesheets/main.scss */
 .top_border td {
   border-top: solid 2px #ddd;
+}
+
+/* line 361, ../../app/stylesheets/main.scss */
+button.ui-button {
+  text-shadow: 0 0 0 #000;
 }

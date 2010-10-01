@@ -1,4 +1,4 @@
-<%= form_for(@admin_fulfillment_shipment) do |f| %>
+
   <% if @admin_fulfillment_shipment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_fulfillment_shipment.errors.count, "error") %> prohibited this admin_fulfillment_shipment from being saved:</h2>
@@ -30,4 +30,3 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>

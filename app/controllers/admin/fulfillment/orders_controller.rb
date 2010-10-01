@@ -41,7 +41,7 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
 
   # GET /admin/fulfillment/orders/1/edit
   def edit
-    @order = Order.find(params[:id])
+    @order = Order.includes([:shipments, {:order_items => [:shipment, :variant]}]).find(params[:id])
   end
 
   # POST /admin/fulfillment/orders

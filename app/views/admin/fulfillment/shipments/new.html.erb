@@ -1,16 +1,16 @@
 
 
 <h2>New shipment for Order # <%= @order.number %>  </h2>
-<div class='prepend-1 span-7'>
+<div class='' >
   Shipment for <%= @order.user.name %>
 </div>
 <div class='clear'></div>
 <div id='order-shipment-items' class='span-7 last float-left'>
-ORDER DETAILS<br/>
+<h4>Order Items</h4>
   <% @order.order_items.each_with_index do |item,i| %>
     <div  id='order-shipment-item<%= i %>' 
           class='span-6 rounded-4 line_item_yellow'>
-      
+          
         <%= item.variant.product_name %> <%= item.variant.sku %> <%= number_to_currency item.variant.price %> <br/>
         <% if item.shipped? %>
           Shipped: <%= item.shipment.display_shipped_at %> => Shipping #: <%= item.shipment.number %>
@@ -22,15 +22,15 @@ ORDER DETAILS<br/>
     </div>
   <% end %>
 </div>
-<div class='span-7 last float-left'>
-Shipping address<br/>
-  <div  id='order-ship-address' 
+<div class='span-7 last float-left' >
+<h4>Shipping address</h4>
+  <div  id='order-ship-address'
         class='span-6 rounded-4 line_item_yellow'>
     <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @order.ship_address} %>
   </div>
 </div>
 <div class='span-7 last float-left'>
-Shipment Details<br/>
+<h4>Shipment Details</h4>
   <% if @order.shipments.empty? %>
     No Shipments have been made on this order.
   <% end %>
@@ -42,12 +42,20 @@ Shipment Details<br/>
       </div>
   <% end %>
 </div>
-<p class='span-7 last'>
-Ask if you want to authorize full amount of partial with reason
-<% @order.invoices.each do |invoice| %>
-  Invoice: <%=  invoice.number %> => <%= number_to_currency invoice.amount %><br/>
-<% end %>
-</p>
+<div class='clear'></div>
+Ask if you want to authorize full amount of partial with reason<br/>
+<div class='span-12 last'>
+  <% @order.invoices.each do |invoice| %>
+    <div style='display:inline-block;' class='line_item_gray'> <%= invoice.state %> Invoice:</div>  
+    <%=  invoice.number %> => <%= number_to_currency invoice.amount %> 
+    <% if invoice.authorized? %>
+      <a id='capture-invoice-button' style='display:inline-block;' class='line_item_blue'> 
+        Collect
+      </a>
+    <% end %>
+    <br/>
+  <% end %>
+</div>
 
 
 AUTHORIZE AND SHIP BUTTON.<br/>  AUTHORIZE PARTIAL AND CANCEL items.<br/>
