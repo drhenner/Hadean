@@ -35,7 +35,6 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @order }
     end
   end
 
@@ -52,10 +51,8 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
     respond_to do |format|
       if @order.save
         format.html { redirect_to(admin_fulfillment_orders_path(@order), :notice => 'Order was successfully created.') }
-        format.xml  { render :xml => @order, :status => :created, :location => @order }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -65,13 +62,37 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
   def update
     @order = Order.find(params[:id])
 
+##  several things happen on this request
+# => Payment is captured
+# => Invoice is updated to log leger transactions
+# => Shipment is marked as ready to send and associated to the order_items
+# => If everything works send the user to the shipment page
+
+
+## TODO 
+# => Allow partial payments
+# => mark only order_items that will be shipped
+
     respond_to do |format|
       if @order.update_attributes(params[:order])
         format.html { redirect_to(admin_fulfillment_orders_path(@order), :notice => 'Order was successfully updated.') }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /admin/fulfillment/shipments/1
+  # DELETE /admin/fulfillment/shipments/1.xml
+  def destroy
+    raise error
+    @order    = Order.find(params[:id])
+    @order.update_attributes(:active => false)
+    @shipment = Shipment.find(params[:id])
+    @shipment.update_attributes(:active => false)
+
+    respond_to do |format|
+      format.html { redirect_to(admin_fulfillment_shipments_url) }
     end
   end
 
