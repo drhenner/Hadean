@@ -44,6 +44,35 @@ class Invoice < ActiveRecord::Base
     Invoice.new(:order_id => order_id, :amount => charge_amount, :number => num)
   end
   
+  def capture_complete_order
+    now = Time.zone.now
+    transaction = CreditCardPayment.find()##  This is a type of transaction
+    if batches.empty?
+      # this means we never authorized just captured payment
+      
+        batch = self.batches.new()
+        transaction = CreditCardCapture.new()##  This is a type of transaction
+        credit = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => 0,     :credit => amount, :period => "#{now.month}-#{now.year}")
+        debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::CASH_ID,   :debit => amount, :credit => 0,      :period => "#{now.month}-#{now.year}")
+        transaction.transaction_ledgers.push(credit)
+        transaction.transaction_ledgers.push(debit)
+        batch.transactions.push(transaction)
+        batch.save
+    else
+      batch       = batches.first
+      transaction = CreditCardReceivePayment.new()
+      
+      debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::CASH_ID,                :debit => amount, :credit => 0,       :period => "#{now.month}-#{now.year}")
+      credit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::ACCOUNTS_RECEIVABLE_ID, :debit => 0,      :credit => amount,  :period => "#{now.month}-#{now.year}")
+      
+      transaction.transaction_ledgers.push(credit)
+      transaction.transaction_ledgers.push(debit)
+      
+      batch.transactions.push(transaction)
+      batch.save
+    end
+  end
+  
   def authorize_complete_order#(amount)
     x = order.complete!
     now = Time.zone.now
@@ -68,6 +97,21 @@ class Invoice < ActiveRecord::Base
     # ReceiveCCPayment.create_transaction(:batch_id => batch.id)
     # 
   end
+  
+  def cancel_authorized_payment
+    batch       = batches.first
+    if batch# if not we never authorized teh payment
+      
+      transaction = CreditCardCancel.new()##  This is a type of transaction
+      debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
+      credit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::ACCOUNTS_RECEIVABLE_ID, :debit => 0, :credit => amount, :period => "#{now.month}-#{now.year}")
+      transaction.transaction_ledgers.push(credit)
+      transaction.transaction_ledgers.push(debit)
+      batch.transactions.push(transaction)
+      batch.save
+    end
+  end
+  
   
   def unique_order_number
     "#{Time.now.to_i}-#{rand(1000000)}"
@@ -109,6 +153,7 @@ class Invoice < ActiveRecord::Base
       payments.push(capture)
       if capture.success?
         payment_captured!
+        capture_complete_order
       else
         transaction_declined!
       end

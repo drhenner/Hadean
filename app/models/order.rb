@@ -98,6 +98,16 @@ class Order < ActiveRecord::Base
     end
   end
   
+  # @order.capture_invoice(@invoice)
+  def capture_invoice(invoice)
+    payment = invoice.capture_payment({})
+    if payment.paid?
+      # 
+    end
+    #payment.params['response_code']
+  end
+  
+  
   ## This method creates the invoice and payment method.  If the payment is not authorized the whole transaction is roled back
   def create_invoice(credit_card, charge_amount, args)
     transaction do 

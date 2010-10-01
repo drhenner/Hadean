@@ -60,8 +60,9 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
   # PUT /admin/fulfillment/orders/1
   # PUT /admin/fulfillment/orders/1.xml
   def update
-    @order = Order.find(params[:id])
-
+    @order    = Order.find(params[:id])
+    @invoice  = Invoice.find(params[:invoice_id])
+    
 ##  several things happen on this request
 # => Payment is captured
 # => Invoice is updated to log leger transactions
@@ -69,18 +70,60 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
 # => If everything works send the user to the shipment page
 
 
-## TODO 
+## TODO
 # => Allow partial payments
 # => mark only order_items that will be shipped
 
     respond_to do |format|
-      if @order.update_attributes(params[:order])
-        format.html { redirect_to(admin_fulfillment_orders_path(@order), :notice => 'Order was successfully updated.') }
+      if response = @order.capture_invoice(@invoice)
+        format.html { redirect_to(admin_fulfillment_shipments_path(@order), :notice => 'Order was successfully updated.') }
       else
         format.html { render :action => "edit" }
       end
     end
   end
+
+=begin
+
+# POST /shopping/orders
+# POST /shopping/orders.xml
+def update
+  @order = find_or_create_order
+  @order.ip_address = request.remote_ip
+  
+  @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
+  #gateway = ActiveMerchant::Billing::PaypalGateway.new(:login=>$PAYPAL_LOGIN, :password=>$PAYPAL_PASSWORD)
+
+  #res = gateway.authorize(amount, credit_card, :ip=>request.remote_ip, :billing_address=>billing_address)
+  address = @order.bill_address.cc_params
+  
+  if @credit_card.valid?
+    if response = @order.create_invoice(@credit_card, @order.find_total, {:email => @order.email, :billing_address=> address, :ip=> @order.ip_address })
+      if response.success?
+        render :action => "success"
+      else
+        render :action => "failure"
+      end
+    else
+      render :action => 'index'
+    end
+  else
+    flash[:error] = "Credit Card is not valid."
+    render :action => 'index'
+  end
+end
+
+=end
+
+
+
+
+
+
+
+
+
+
 
   # DELETE /admin/fulfillment/shipments/1
   # DELETE /admin/fulfillment/shipments/1.xml
