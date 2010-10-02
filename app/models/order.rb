@@ -32,6 +32,9 @@ class Order < ActiveRecord::Base
       transition :to => 'complete', :from => 'in_progress'
     end
     
+    event :pay do
+      transition :to => 'paid', :from => ['in_progress', 'complete']
+    end
     #before_transition :to => 'complete', :do => [:set_completed]
     #after_transition  :to => 'complete', :do => [:update_inventory]
   end
@@ -60,6 +63,21 @@ class Order < ActiveRecord::Base
   def first_invoice_amount
     return '' if completed_invoices.empty?
     completed_invoices.first.amount
+  end
+  
+  
+  
+  #def authorize_complete_order(invoice)
+  #  transaction do
+  #    invoice.authorize_complete_order
+  #  end
+  #end
+  
+  def cancel_unshipped_order(invoice)
+    transaction do
+      self.update_attributes(:active => false)
+      invoice.cancel_authorized_payment
+    end
   end
   
   def status
@@ -101,9 +119,9 @@ class Order < ActiveRecord::Base
   # @order.capture_invoice(@invoice)
   def capture_invoice(invoice)
     payment = invoice.capture_payment({})
-    if payment.paid?
-      # 
-    end
+    #if payment.paid?
+    #  # 
+    #end
     #payment.params['response_code']
   end
   

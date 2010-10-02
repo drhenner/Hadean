@@ -25,6 +25,14 @@ class OrderItem < ActiveRecord::Base
     shipment_id?
   end
   
+  def shipping_method
+    shipping_rate.shipping_method
+  end
+  
+  def shipping_method_id
+    shipping_rate.shipping_method_id
+  end
+  
   def self.order_items_in_cart(order_id)
     find(:all, :joins => {:variant => :product },
                :conditions => ['order_items.order_id = ? ', order_id ],

@@ -47,26 +47,19 @@
 Ask if you want to authorize full amount of partial with reason<br/>
 <div class='span-16 last' style='text-align:left;'>
   <% @order.invoices.each do |invoice| %>
-    <div style='display:inline-block;' class='line_item_gray'> <%= invoice.state %> Invoice:</div>  
-    <%=  invoice.number %> => <%= number_to_currency invoice.amount %> 
-    <% if invoice.authorized? %>
-      <a id='capture-invoice-button-<%= invoice.id %>' style='display:inline-block;' class='line_item_green'> 
-        Collect
-      </a>
-      <a id='capture-partial-invoice-button-<%= invoice.id %>' style='display:inline-block;' class='line_item_blue'> 
-        Collect Partial
-      </a>
-      <a id='cancel-invoice-button-<%= invoice.id %>' style='display:inline-block;' class='line_item_red'> 
-        CANCEL
-      </a>
-    <% end %>
-    <br/>
+    <div id='invoice-line-<%= invoice.id %>'>
+      <% if @order.invoices.last.id == invoice.id %>
+          <%= render :partial => 'invoice_details', :locals => { :invoice => @order.invoices.last } %>
+      <% else %>
+      <% end %>
+    </div>
   <% end %>
 </div>
 
 <div id="dialog" title="Cancel Invoice">
-  <p>Are you sure you want to Cancel the Order and Shipment? </p>
-
+  <div id='dialog-message'>
+    <p>Are you sure you want to Cancel the Order and Shipment? </p>
+  </div>
 </div>
 
 <% content_for :head do -%>
@@ -77,7 +70,7 @@ Ask if you want to authorize full amount of partial with reason<br/>
   <%= javascript_include_tag "admin/fulfillment" %>
   <script>
     <% @order.invoices.each do |invoice| %>
-      Hadean.Utility.registerOnLoadHandler(Hadean.Fulfillment.initialize(<%= invoice.id %>));
+      Hadean.Utility.registerOnLoadHandler(Hadean.Fulfillment.initialize(<%= invoice.id %>, <%= @order.id %> ));
     <% end %>
   </script>
 <% end %>

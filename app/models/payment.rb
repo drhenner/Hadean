@@ -83,7 +83,7 @@ class Payment < ActiveRecord::Base
       
       def process(action, amount = nil)
         result = Payment.new
-        result.amount = amount ? (amount * 100).to_i : amount
+        result.amount = (amount && !amount.integer?) ? (amount * 100).to_i : amount
         result.action = action
           begin
             response          = yield GATEWAY

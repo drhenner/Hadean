@@ -61,8 +61,10 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
   # PUT /admin/fulfillment/orders/1.xml
   def update
     @order    = Order.find(params[:id])
-    @invoice  = Invoice.find(params[:invoice_id])
+    @invoice  = @order.invoices.find(params[:invoice_id])
     
+    payment = @order.capture_invoice(@invoice)
+
 ##  several things happen on this request
 # => Payment is captured
 # => Invoice is updated to log leger transactions
@@ -75,10 +77,14 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
 # => mark only order_items that will be shipped
 
     respond_to do |format|
-      if response = @order.capture_invoice(@invoice)
-        format.html { redirect_to(admin_fulfillment_shipments_path(@order), :notice => 'Order was successfully updated.') }
+      if payment && payment.success?
+        @shipments = Shipment.create_shipments_with_items(@order)
+        # reload order
+        format.html { render :partial => 'success_message' }
+        #format.html { redirect_to(admin_fulfillment_order_path(@order), :notice => 'Shipment was successfully updated.') }
       else
-        format.html { render :action => "edit" }
+        debugger
+        format.html { render :partial => 'failure_message' }
       end
     end
   end
@@ -115,27 +121,17 @@ end
 
 =end
 
-
-
-
-
-
-
-
-
-
-
   # DELETE /admin/fulfillment/shipments/1
   # DELETE /admin/fulfillment/shipments/1.xml
   def destroy
-    raise error
+    
     @order    = Order.find(params[:id])
-    @order.update_attributes(:active => false)
-    @shipment = Shipment.find(params[:id])
-    @shipment.update_attributes(:active => false)
-
+    @invoice  = @order.invoices.find(params[:invoice_id])
+    
+    @order.cancel_unshipped_order(@invoice)
     respond_to do |format|
-      format.html { redirect_to(admin_fulfillment_shipments_url) }
+      format.html { render :partial => 'invoice_details', :locals => {:invoice => @invoice} }
+      format.json { render :json => @order.to_json }
     end
   end
 

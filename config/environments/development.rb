@@ -47,8 +47,8 @@ Hadean::Application.configure do
     
     ::GATEWAY = ActiveMerchant::Billing::AuthorizeNetGateway.new(
       :login    => HADEAN_CONFIG['authnet']['login'],
-      :password => HADEAN_CONFIG['authnet']['password'],
-      :test     => true
+      :password => HADEAN_CONFIG['authnet']['password']#,
+      #:test     => true   #  Make sure this is pointing to the authnet test server.  This needs to be uncommented to test capturing a payment.
     )
     
     #::GATEWAY = ActiveMerchant::Billing::BraintreeGateway.new(

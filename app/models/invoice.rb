@@ -46,7 +46,6 @@ class Invoice < ActiveRecord::Base
   
   def capture_complete_order
     now = Time.zone.now
-    transaction = CreditCardPayment.find()##  This is a type of transaction
     if batches.empty?
       # this means we never authorized just captured payment
       
@@ -88,20 +87,11 @@ class Invoice < ActiveRecord::Base
     else
       raise error ###  something messed up I think
     end
-    # batch.transactions.push(transaction)
-    # Transaction.new(:batch_id => batch.id, )
-    # ledger_params = {:accountable_type => 'User', 
-    #                 :accountable_id => user_id, 
-    #                 :transaction_account_id 
-    #                 :amount => amount, :period => period}
-    # ReceiveCCPayment.create_transaction(:batch_id => batch.id)
-    # 
   end
   
   def cancel_authorized_payment
     batch       = batches.first
-    if batch# if not we never authorized teh payment
-      
+    if batch# if not we never authorized the payment
       transaction = CreditCardCancel.new()##  This is a type of transaction
       debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
       credit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::ACCOUNTS_RECEIVABLE_ID, :debit => 0, :credit => amount, :period => "#{now.month}-#{now.year}")
@@ -119,7 +109,7 @@ class Invoice < ActiveRecord::Base
   
   def authorization_reference
     if authorization = payments.find_by_action_and_success('authorization', true, :order => 'id ASC')
-      authorization.reference
+      authorization.confirmation_id #reference
     end
   end
   
@@ -128,7 +118,8 @@ class Invoice < ActiveRecord::Base
   end
   
   def integer_amount
-    (amount * 100).to_i
+    times_x_amount = amount.integer? ? 1 : 100
+    (amount * times_x_amount).to_i
   end
   
   def authorize_payment(credit_card, options = {})
@@ -140,7 +131,6 @@ class Invoice < ActiveRecord::Base
         payment_authorized!
         authorize_complete_order
       else
-        debugger
         transaction_declined!
       end
       authorization
