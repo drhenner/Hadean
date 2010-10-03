@@ -1,4 +1,8 @@
-<h1>Shipments for Order # <%= @order.number %> </h1>
+<% if @order %>
+  <h2>Shipments for Order # <%= @order.number %> </h2>
+<% else %>
+  <h2>Shipments </h2>
+<% end %>
 
 <table>
   <tr>
@@ -22,12 +26,12 @@
           <%= raw shipment.order_items.collect {|item| item.variant.product_name }.join('<br/>')  %>
 
         </td>
-        <td><%= link_to 'Show', admin_fulfillment_order_shipment_path(@order.id, shipment) %></td>
-        <td><%= link_to 'Edit', edit_admin_fulfillment_order_shipment_path(@order.id, shipment) %></td>
+        <td><%= link_to 'Show', admin_fulfillment_shipment_path(shipment) %></td>
+        <td><%= link_to 'Edit', edit_admin_fulfillment_shipment_path(shipment) %></td>
         <td>
           <% unless shipment.shipped? %>
             <%= button_to 'Mark Shipped', 
-                          ship_admin_fulfillment_order_shipment_path(@order.id, shipment), 
+                          ship_admin_fulfillment_shipment_path(shipment), 
                           :confirm => "Are you sure?", 
                           :method => :put %>
           <% end %>
@@ -37,6 +41,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Shipment', new_admin_fulfillment_order_shipment_path(@order) %>

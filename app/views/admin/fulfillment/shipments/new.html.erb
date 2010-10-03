@@ -62,4 +62,4 @@ AUTHORIZE AND SHIP BUTTON.<br/>  AUTHORIZE PARTIAL AND CANCEL items.<br/>
 CANCEL BUTTON. (put this button in a place not easily clicked.)
 <%#= render 'form' %>
 
-<%= link_to 'All Shipments', admin_fulfillment_order_shipments_path(@order) %>
+<%= link_to 'All Shipments', admin_fulfillment_shipments_path(:order_id => @shipment.order_id) %>

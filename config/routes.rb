@@ -42,12 +42,12 @@ Hadean::Application.routes.draw do # |map|
     resources :overviews
     
     namespace :fulfillment do
-      resources  :orders do
-        resources  :shipments do
-          member do 
-            put :ship
-          end
+      resources  :orders
+      resources  :shipments do
+        member do 
+          put :ship
         end
+        resources  :addresses # This is for editing the shipment address
       end
     end
     namespace :shopping do
