@@ -41,6 +41,11 @@ Hadean::Application.routes.draw do # |map|
     resources :users
     resources :overviews
     
+    namespace :history do
+      resources  :orders
+      #resources  :shipments
+    end
+    
     namespace :fulfillment do
       resources  :orders
       resources  :shipments do

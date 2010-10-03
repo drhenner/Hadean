@@ -1,0 +1,31 @@
+<h1>Listing admin_history_orders</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Completed at</th>
+    <th>Shipped</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_history_orders.each do |admin_history_order| %>
+  <tr>
+    <td><%= admin_history_order.number %></td>
+    <td><%= admin_history_order.name %></td>
+    <td><%= admin_history_order.email %></td>
+    <td><%= admin_history_order.completed_at %></td>
+    <td><%= admin_history_order.shipped %></td>
+    <td><%= link_to 'Show', admin_history_order %></td>
+    <td><%= link_to 'Edit', edit_admin_history_order_path(admin_history_order) %></td>
+    <td><%= link_to 'Destroy', admin_history_order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_admin_history_order_path %>

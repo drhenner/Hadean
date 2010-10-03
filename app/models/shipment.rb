@@ -20,7 +20,7 @@ class Shipment < ActiveRecord::Base
       transition :to => 'shipped', :from => 'ready_to_ship'
     end
     before_transition :to => 'shipped', :do => [:set_to_shipped]
-    after_transition :to => 'shipped', :do => [:ship_inventory]
+    after_transition :to => 'shipped', :do => [:ship_inventory, :mark_order_as_shipped]
   end
   
   def set_to_shipped
@@ -34,6 +34,10 @@ class Shipment < ActiveRecord::Base
   def ship_inventory
     order_items.each{ |item| item.variant.subtract_pending_to_customer(1) }
     order_items.each{ |item| item.variant.subtract_count_on_hand(1) }
+  end
+  
+  def mark_order_as_shipped
+    order.update_attributes(:shipped => true)
   end
   
   def display_shipped_at(format = :us_date)
