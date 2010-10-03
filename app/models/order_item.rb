@@ -5,6 +5,8 @@ class OrderItem < ActiveRecord::Base
   belongs_to :tax_rate
   belongs_to :shipment
   
+  has_many   :return_items
+  
   #after_save :calculate_order
   after_find :set_beginning_values
   after_destroy :set_order_calculated_at_to_nil
