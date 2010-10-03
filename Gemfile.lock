@@ -111,6 +111,7 @@ GEM
       activesupport (= 3.0.0)
       bundler (~> 1.0.0)
       railties (= 3.0.0)
+    rails3-generators (0.14.0)
     railties (3.0.0)
       actionpack (= 3.0.0)
       activesupport (= 3.0.0)
@@ -182,6 +183,7 @@ DEPENDENCIES
   paperclip
   prawn
   rails (= 3.0.0)
+  rails3-generators
   rmagick
   rspec (>= 2.0.0.beta.22)
   rspec-core (>= 2.0.0.beta.22)

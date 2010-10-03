@@ -31,6 +31,7 @@ gem 'ruby-mysql'
 gem 'paperclip'
 gem 'prawn'
 
+gem 'rails3-generators'
 gem 'rmagick',    :require => 'RMagick'
 gem 'sunspot'
 gem 'sunspot_rails' 
@@ -49,6 +50,7 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'rails3-generators'
   gem "rspec-rails",  ">= 2.0.0.beta.22"
   gem "rspec",        ">=  2.0.0.beta.22"
   
