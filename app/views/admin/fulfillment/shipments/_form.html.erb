@@ -1,15 +1,17 @@
 
-  <% if @admin_fulfillment_shipment.errors.any? %>
+  <% if @shipment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_fulfillment_shipment.errors.count, "error") %> prohibited this admin_fulfillment_shipment from being saved:</h2>
+      <h2><%= pluralize(@shipment.errors.count, "error") %> prohibited this shipment from being saved:</h2>
 
       <ul>
-      <% @admin_fulfillment_shipment.errors.full_messages.each do |msg| %>
+      <% @shipment.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+
+Need to add a select to change address, might need to add notes for a shipment. 
 
   <div class="field">
     <%= f.label :shipped_at %><br />
@@ -21,11 +23,11 @@
   </div>
   <div class="field">
     <%= f.label :number %><br />
-    <%= f.text_field :number %>
+    <%= f.object.number %>
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= f.object.state %>
   </div>
   <div class="actions">
     <%= f.submit %>

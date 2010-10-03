@@ -43,7 +43,11 @@ Hadean::Application.routes.draw do # |map|
     
     namespace :fulfillment do
       resources  :orders do
-        resources  :shipments
+        resources  :shipments do
+          member do 
+            put :ship
+          end
+        end
       end
     end
     namespace :shopping do

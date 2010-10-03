@@ -62,9 +62,17 @@ class Variant < ActiveRecord::Base
       ActiveRecord::Base.connection.execute(sql)
   end
   
+  def subtract_count_on_hand(num)
+    add_count_on_hand((num * -1))
+  end
+  
   def add_pending_to_customer(num)
       sql = "UPDATE variants SET count_pending_to_customer = (#{num} + count_pending_to_customer) WHERE id = #{self.id}"
       ActiveRecord::Base.connection.execute(sql)
+  end
+  
+  def subtract_pending_to_customer(num)
+    add_pending_to_customer((num * -1))
   end
   
   def qty_to_add=(num)

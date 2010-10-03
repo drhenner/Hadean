@@ -20,7 +20,7 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
   # GET /admin/fulfillment/orders/1
   # GET /admin/fulfillment/orders/1.xml
   def show
-    @order = Order.find(params[:id])
+    @order = Order.includes([:shipments, {:order_items => [:shipment, :variant]}]).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -50,7 +50,7 @@ class Admin::Fulfillment::OrdersController < Admin::Fulfillment::BaseController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to(admin_fulfillment_orders_path(@order), :notice => 'Order was successfully created.') }
+        format.html { redirect_to(admin_fulfillment_orders_path(@order.id), :notice => 'Order was successfully created.') }
       else
         format.html { render :action => "new" }
       end

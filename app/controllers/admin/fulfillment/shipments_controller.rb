@@ -3,7 +3,7 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   # GET /admin/fulfillment/shipments.xml
   def index
     load_info
-    @shipments = @order.shipments.all
+    @shipments = @order.shipments
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,7 +46,7 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
 
     respond_to do |format|
       if @shipment.save
-        format.html { redirect_to(admin_fulfillment_shipment_path(@shipment), :notice => 'Shipment was successfully created.') }
+        format.html { redirect_to(admin_fulfillment_order_shipments_path(@shipment.order_id), :notice => 'Shipment was successfully created.') }
       else
         format.html { render :action => "new" }
       end
@@ -61,9 +61,24 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
 
     respond_to do |format|
       if @shipment.update_attributes(params[:shipment])
-        format.html { redirect_to(admin_fulfillment_shipment_path(@shipment), :notice => 'Shipment was successfully updated.') }
+        format.html { redirect_to(admin_fulfillment_order_shipments_path(@shipment.order_id), :notice => 'Shipment was successfully updated.') }
       else
         format.html { render :action => "edit" }
+      end
+    end
+  end
+
+  # PUT /admin/fulfillment/shipments/1
+  # PUT /admin/fulfillment/shipments/1.xml
+  def ship
+    load_info
+    @shipment = Shipment.includes({:order_items => :variant}).find(params[:id])
+
+    respond_to do |format|
+      if @shipment.ship!
+        format.html { redirect_to(admin_fulfillment_order_shipments_path(@shipment.order_id), :notice => 'Shipment was successfully updated.') }
+      else
+        format.html { redirect_to(admin_fulfillment_order_shipments_path(@shipment.order_id), :error => 'Shipment could not be shipped!!!') }
       end
     end
   end
@@ -72,17 +87,21 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   # DELETE /admin/fulfillment/shipments/1.xml
   def destroy
     @shipment = Shipment.find(params[:id])
+    raise error
     @shipment.update_attributes(:active => false)
+    
+    
+    # We need to add capability to refund and return to stock in one large destroy form
 
     respond_to do |format|
-      format.html { redirect_to(admin_fulfillment_shipments_url) }
+      format.html { redirect_to(admin_fulfillment_order_shipments_url(@shipment.order_id)) }
     end
   end
   
   private
   
   def load_info
-    @order = Order.includes([:shipments, {:order_items => [:shipment, :variant]}]).find(params[:order_id])
+    @order = Order.includes([:shipments, {:order_items => [:shipment, {:variant => :product}]}]).find(params[:order_id])
   end
   
   def form_info

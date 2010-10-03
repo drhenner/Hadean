@@ -1,24 +1,39 @@
-<h1>Listing shipments</h1>
+<h1>Shipments for Order # <%= @order.number %> </h1>
 
 <table>
   <tr>
+    <th>Number</th>
     <th>Shipped at</th>
     <th>Tracking</th>
-    <th>Number</th>
     <th>State</th>
+    <th>Items</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @shipments.each do |shipment| %>
-  <tr>
-    <td><%= shipment.shipped_at %></td>
-    <td><%= shipment.tracking %></td>
-    <td><%= shipment.number %></td>
-    <td><%= shipment.state %></td>
-    <td><%= link_to 'Show', admin_fulfillment_order_shipment_path(@order, shipment) %></td>
-    <td><%= link_to 'Edit', edit_admin_fulfillment_order_shipment_path(@order, shipment) %></td>
-  </tr>
+  <% if shipment.has_items? %>
+      <tr>
+        <td><%= shipment.number %></td>
+        <td><%= I18n.localize(shipment.shipped_at, :format => :us_time) if shipment.shipped_at %></td>
+        <td><%= shipment.tracking %></td>
+        <td><%= shipment.state %></td>
+        <td>
+          <%= raw shipment.order_items.collect {|item| item.variant.product_name }.join('<br/>')  %>
+
+        </td>
+        <td><%= link_to 'Show', admin_fulfillment_order_shipment_path(@order.id, shipment) %></td>
+        <td><%= link_to 'Edit', edit_admin_fulfillment_order_shipment_path(@order.id, shipment) %></td>
+        <td>
+          <% unless shipment.shipped? %>
+            <%= button_to 'Mark Shipped', 
+                          ship_admin_fulfillment_order_shipment_path(@order.id, shipment), 
+                          :confirm => "Are you sure?", 
+                          :method => :put %>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
 <% end %>
 </table>
 

@@ -19,10 +19,24 @@ class Shipment < ActiveRecord::Base
     event :ship do
       transition :to => 'shipped', :from => 'ready_to_ship'
     end
-    
+    before_transition :to => 'shipped', :do => [:set_to_shipped]
+    after_transition :to => 'shipped', :do => [:ship_inventory]
   end
   
-  def display_shipped_at(format)
+  def set_to_shipped
+    self.shipped_at = Time.zone.now
+  end
+  
+  def has_items?
+    order_items.size > 0
+  end
+  
+  def ship_inventory
+    order_items.each{ |item| item.variant.subtract_pending_to_customer(1) }
+    order_items.each{ |item| item.variant.subtract_count_on_hand(1) }
+  end
+  
+  def display_shipped_at(format = :us_date)
     shipped_at ? shipped_at.strftime(format) : 'Not Shipped.'
   end
   
