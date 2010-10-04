@@ -4,6 +4,7 @@ class CartItem < ActiveRecord::Base
   belongs_to :cart
   belongs_to :variant
   
+  
   def price
     variant.price
   end

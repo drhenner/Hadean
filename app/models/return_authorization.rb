@@ -5,6 +5,30 @@ class ReturnAuthorization < ActiveRecord::Base
   belongs_to :user
   belongs_to :author, :class_name => 'User', :foreign_key => :created_by
   # has_many :transactions
+  has_many    :transaction_ledgers, :as => :accountable
+  
+  
+  ## after you process an RMA you must manually add the variant back into the system!!!
+  state_machine :initial => 'authorized' do
+    #after_transition :to => 'received', :do => :process_receive
+    #after_transition :to => 'cancelled', :do => :process_canceled
+    #before_transition :to => 'complete', :do => :process_ledger_transactions
+    
+    event :receive do
+      transition :to => 'received', :from => 'authorized'
+    end
+    event :cancel do
+      transition :to => 'cancelled', :from => 'authorized'
+    end
+    event :complete do # do this after a payment was returned to the customer
+      transition :to => 'complete', :from => 'authorized'
+    end
+  end
+  
+  def process_ledger_transactions
+    ##  credit => cash
+    ##  debit  => revenue
+  end
   
   def order_number
     order.number

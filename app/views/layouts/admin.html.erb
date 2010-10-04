@@ -40,10 +40,11 @@
     <div id='header_bar' class='float-left'>
       <%= render :partial => '/shared/admin/header_buttons'  %>
     </div>
-    
-    <div id='header_sub_bar'>
-      <%= yield :header_sub_bar %>
-    </div>
+    <% if  yield :header_sub_bar %>
+      <div id='header_sub_bar'>
+        <%= yield :header_sub_bar %>
+      </div>
+    <% end %>
   
     <%= yield %>
   </div>

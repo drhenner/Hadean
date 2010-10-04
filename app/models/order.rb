@@ -26,6 +26,9 @@ class Order < ActiveRecord::Base
   validates :email,       :presence => true,
                           :format   => { :with => CustomValidators::Emails.email_validator }
   
+  NUMBER_SEED     = 1001001001000
+  CHARACTERS_SEED = 21
+  
   state_machine :initial => 'in_progress' do
     
     event :complete do
@@ -65,7 +68,25 @@ class Order < ActiveRecord::Base
     completed_invoices.first.amount
   end
   
+      #def self.decoded_id(id)
+      #  Base64.decode64(id).to_i
+      #end
+      #
+      #def self.find_by_encoded_id(id)
+      #  find(decoded_id(id))
+      #end
+      #
+      #def random_encoded_id
+      #  Base64.encode64('0000000' + '0'*rand(9) + id.to_s)###  this returns the id encoded with a semi random encoding
+      #end
+      #
+      #def encoded_id
+      #  Base64.encode64('000000' + id.to_s)###  this returns the id encoded
+      #end
   
+      #def number
+      #  encoded_id
+      #end
   
   #def authorize_complete_order(invoice)
   #  transaction do
@@ -251,12 +272,20 @@ class Order < ActiveRecord::Base
   end
   
   def set_number
-    self.number = (Time.now.to_i).to_s(21)
+    self.number = (Time.now.to_i).to_s(CHARACTERS_SEED)## fake number for friendly_id validator
   end
   
   def set_order_number
-    self.number = (1001001001000 + id).to_s(21)
+    self.number = (NUMBER_SEED + id).to_s(CHARACTERS_SEED)
     save
+  end
+  
+  def self.id_from_number(num)
+    num.to_i(CHARACTERS_SEED) - NUMBER_SEED
+  end
+  
+  def self.find_by_number(num)
+    find_by_id(id_from_number(num))##  now we can search by id which should be much faster
   end
   
   ## This method is called when the order transitions to paid
