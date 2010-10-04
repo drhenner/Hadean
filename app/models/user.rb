@@ -75,6 +75,9 @@ class User < ActiveRecord::Base
   has_many    :payment_profiles
   has_many    :transaction_ledgers, :as => :accountable
   
+  has_many    :return_authorizations
+  has_many    :authored_return_authorizations, :class_name => 'ReturnAuthorization', :foreign_key => 'author_id'
+  
   validates :first_name,  :presence => true, :if => :registered_user?,
                           :format   => { :with => CustomValidators::Names.name_validator }
   validates :last_name,   :presence => true, :if => :registered_user?,

@@ -2,12 +2,12 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # GET /return_authorizations
   # GET /return_authorizations.xml
   def index
-    @return_authorizations = ReturnAuthorization.admin_grid
+    @return_authorizations = ReturnAuthorization.admin_grid(params)
 
     respond_to do |format|
       format.html
       format.json { render :json => @return_authorizations.to_jqgrid_json(
-        [ :name, :order_number, :amount, :author_name ],
+        [ :user_name, :order_number, :number, :amount, :state ],
         @return_authorizations.per_page, #params[:page],
         @return_authorizations.current_page, #params[:rows],
         @return_authorizations.total_entries)

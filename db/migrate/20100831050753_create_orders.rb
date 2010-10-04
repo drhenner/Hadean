@@ -18,6 +18,7 @@ class CreateOrders < ActiveRecord::Migration
     end
     
     add_index :orders, :number
+    add_index :orders, :email
     add_index :orders, :user_id
     add_index :orders, :bill_address_id
     add_index :orders, :ship_address_id
