@@ -1,5 +1,5 @@
 class Payment < ActiveRecord::Base
-  belongs_to :invoice_id
+  belongs_to :invoice
   
   serialize :params
   # this is initialized to an instance of ActiveMerchant::Billing::Base.gateway

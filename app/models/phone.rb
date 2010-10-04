@@ -1,7 +1,7 @@
 class Phone < ActiveRecord::Base
   
   belongs_to :phone_type
-  belongs_to :phone_priority
+  #belongs_to :phone_priority
   belongs_to :phoneable, :polymorphic => true
   
   validates :number,  :presence => true, 

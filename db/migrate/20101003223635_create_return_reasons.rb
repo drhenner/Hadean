@@ -4,7 +4,6 @@ class CreateReturnReasons < ActiveRecord::Migration
       t.string :label
       t.string :description
 
-      t.timestamps
     end
   end
 

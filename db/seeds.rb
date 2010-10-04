@@ -60,3 +60,17 @@ end
 TransactionAccount::ACCOUNT_TYPES.each do |acc_type|
   TransactionAccount.find_or_create_by_name(acc_type)
 end
+
+ReturnReason::REASONS.each_pair do |value|
+  rr = ReturnReason.find_by_label(value)
+  unless rr
+    ReturnReason.create(:label => value, :description => value )
+  end
+end
+
+ReturnCondition::CONDITIONS.each_pair do |value|
+  rc = ReturnCondition.find_by_label(value)
+  unless rc
+    ReturnCondition.create(:label => value, :description => value )
+  end
+end

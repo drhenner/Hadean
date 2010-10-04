@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100913073138) do
+ActiveRecord::Schema.define(:version => 20101003223635) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name",                                                           :null => false
@@ -90,6 +90,21 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
 
   add_index "carts", ["user_id"], :name => "index_carts_on_user_id"
 
+  create_table "comments", :force => true do |t|
+    t.text     "note"
+    t.string   "commentable_type"
+    t.integer  "commentable_id"
+    t.integer  "created_by"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
+  add_index "comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
+  add_index "comments", ["created_by"], :name => "index_comments_on_created_by"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
   create_table "countries", :force => true do |t|
     t.string "name"
     t.string "abbreviation", :limit => 5
@@ -143,6 +158,7 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
     t.integer  "shipping_rate_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "shipment_id"
   end
 
   add_index "order_items", ["order_id"], :name => "index_order_items_on_order_id"
@@ -159,11 +175,12 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
     t.integer  "bill_address_id"
     t.integer  "ship_address_id"
     t.integer  "coupon_id"
-    t.boolean  "active",          :default => true, :null => false
+    t.boolean  "active",          :default => true,  :null => false
     t.datetime "calculated_at"
     t.datetime "completed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "shipped",         :default => false, :null => false
   end
 
   add_index "orders", ["bill_address_id"], :name => "index_orders_on_bill_address_id"
@@ -302,6 +319,53 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
   add_index "purchase_orders", ["supplier_id"], :name => "index_purchase_orders_on_supplier_id"
   add_index "purchase_orders", ["tracking_number"], :name => "index_purchase_orders_on_tracking_number"
 
+  create_table "return_authorizations", :force => true do |t|
+    t.string   "number"
+    t.decimal  "amount",         :precision => 10, :scale => 0
+    t.decimal  "restocking_fee", :precision => 10, :scale => 0
+    t.integer  "order_id"
+    t.integer  "user_id"
+    t.string   "state"
+    t.integer  "created_by"
+    t.boolean  "active",                                        :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "return_authorizations", ["created_by"], :name => "index_return_authorizations_on_created_by"
+  add_index "return_authorizations", ["number"], :name => "index_return_authorizations_on_number"
+  add_index "return_authorizations", ["order_id"], :name => "index_return_authorizations_on_order_id"
+  add_index "return_authorizations", ["user_id"], :name => "index_return_authorizations_on_user_id"
+
+  create_table "return_conditions", :force => true do |t|
+    t.string   "label"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "return_items", :force => true do |t|
+    t.integer  "order_item_id"
+    t.integer  "return_condition_id"
+    t.integer  "return_reason_id"
+    t.boolean  "returned"
+    t.integer  "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "return_items", ["order_item_id"], :name => "index_return_items_on_order_item_id"
+  add_index "return_items", ["return_condition_id"], :name => "index_return_items_on_return_condition_id"
+  add_index "return_items", ["return_reason_id"], :name => "index_return_items_on_return_reason_id"
+  add_index "return_items", ["updated_by"], :name => "index_return_items_on_updated_by"
+
+  create_table "return_reasons", :force => true do |t|
+    t.string   "label"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", :force => true do |t|
     t.string "name", :limit => 30, :null => false
   end
@@ -326,8 +390,7 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
   add_index "shipments", ["shipping_method_id"], :name => "index_shipments_on_shipping_method_id"
 
   create_table "shipping_categories", :force => true do |t|
-    t.string  "name",             :null => false
-    t.integer "shipping_rate_id", :null => false
+    t.string "name", :null => false
   end
 
   create_table "shipping_methods", :force => true do |t|
@@ -421,9 +484,9 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
     t.integer  "accountable_id"
     t.integer  "transaction_id"
     t.integer  "transaction_account_id"
-    t.decimal  "tax_amount",             :precision => 8, :scale => 2
-    t.decimal  "debit",                  :precision => 8, :scale => 2, :null => false
-    t.decimal  "credit",                 :precision => 8, :scale => 2, :null => false
+    t.decimal  "tax_amount",             :precision => 8, :scale => 2, :default => 0.0
+    t.decimal  "debit",                  :precision => 8, :scale => 2,                  :null => false
+    t.decimal  "credit",                 :precision => 8, :scale => 2,                  :null => false
     t.string   "period"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -465,6 +528,7 @@ ActiveRecord::Schema.define(:version => 20100913073138) do
     t.string   "access_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "comment_counter",   :default => 0
   end
 
   add_index "users", ["access_token"], :name => "index_users_on_access_token", :unique => true

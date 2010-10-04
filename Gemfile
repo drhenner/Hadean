@@ -44,6 +44,7 @@ group :development do
   #gem 'awesome_print'
   gem "autotest-rails-pure"
   gem "autotest-fsevent"
+  gem "rails-erd"
   gem "ruby-debug19"
   #gem "ruby-debug"
 end

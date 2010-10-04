@@ -31,7 +31,8 @@ class User < ActiveRecord::Base
                                           :as => :phoneable
                                           
   has_one     :primary_phone,             :conditions => ['phones.primary = ?', true],
-                                          :as => :phoneable
+                                          :as => :phoneable,
+                                          :class_name => 'Phone'
                                           
   has_many    :addresses,                 :dependent => :destroy, 
                                           :as => :addressable

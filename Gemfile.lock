@@ -111,6 +111,10 @@ GEM
       activesupport (= 3.0.0)
       bundler (~> 1.0.0)
       railties (= 3.0.0)
+    rails-erd (0.3.0)
+      activerecord (~> 3.0.0)
+      activesupport (~> 3.0)
+      ruby-graphviz (~> 0.9.17)
     rails3-generators (0.14.0)
     railties (3.0.0)
       actionpack (= 3.0.0)
@@ -141,6 +145,7 @@ GEM
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
       ruby-debug-base19 (>= 0.11.19)
+    ruby-graphviz (0.9.17)
     ruby-mysql (2.9.3)
     ruby_core_source (0.1.4)
       archive-tar-minitar (>= 0.5.2)
@@ -183,6 +188,7 @@ DEPENDENCIES
   paperclip
   prawn
   rails (= 3.0.0)
+  rails-erd
   rails3-generators
   rmagick
   rspec (>= 2.0.0.beta.22)

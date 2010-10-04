@@ -1,4 +1,4 @@
-<%= form_for(@return_authorization) do |f| %>
+
   <% if @return_authorization.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@return_authorization.errors.count, "error") %> prohibited this return_authorization from being saved:</h2>
@@ -38,4 +38,3 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>

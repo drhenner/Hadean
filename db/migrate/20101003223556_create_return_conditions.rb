@@ -4,7 +4,6 @@ class CreateReturnConditions < ActiveRecord::Migration
       t.string :label
       t.string :description
 
-      t.timestamps
     end
   end
 
