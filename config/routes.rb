@@ -13,7 +13,7 @@ Hadean::Application.routes.draw do # |map|
 
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
-  resources :admins
+  #resources :admins
 
   #devise_for :users
 
@@ -40,6 +40,12 @@ Hadean::Application.routes.draw do # |map|
   namespace :admin do
     resources :users
     resources :overviews
+    
+    
+    namespace :rma do
+      resources  :return_authorizations
+      #resources  :shipments
+    end
     
     namespace :history do
       resources  :orders

@@ -3,12 +3,16 @@ class CreateReturnItems < ActiveRecord::Migration
     create_table :return_items do |t|
       t.integer :order_item_id
       t.integer :return_condition_id
-      t.integer :return_reason
+      t.integer :return_reason_id
       t.boolean :returned
       t.integer :updated_by
 
       t.timestamps
     end
+    add_index :return_items, :order_item_id
+    add_index :return_items, :return_condition_id
+    add_index :return_items, :return_reason_id
+    add_index :return_items, :updated_by
   end
 
   def self.down

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "return_authorizations/show.html.erb" do
+describe "admin/rma/return_authorizations/show.html.erb" do
   before(:each) do
     @return_authorization = assign(:return_authorization, stub_model(ReturnAuthorization,
       :number => "Number",

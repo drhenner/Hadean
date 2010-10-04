@@ -1,12 +1,18 @@
-class ReturnAuthorizationsController < ApplicationController
+class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # GET /return_authorizations
   # GET /return_authorizations.xml
   def index
-    @return_authorizations = ReturnAuthorization.all
+    @return_authorizations = ReturnAuthorization.admin_grid
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @return_authorizations }
+      format.html
+      format.json { render :json => @return_authorizations.to_jqgrid_json(
+        [ :name, :order_number, :amount, :author_name ],
+        @return_authorizations.per_page, #params[:page],
+        @return_authorizations.current_page, #params[:rows],
+        @return_authorizations.total_entries)
+
+      }
     end
   end
 
@@ -17,7 +23,6 @@ class ReturnAuthorizationsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @return_authorization }
     end
   end
 
@@ -28,7 +33,6 @@ class ReturnAuthorizationsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @return_authorization }
     end
   end
 
@@ -44,11 +48,9 @@ class ReturnAuthorizationsController < ApplicationController
 
     respond_to do |format|
       if @return_authorization.save
-        format.html { redirect_to(@return_authorization, :notice => 'Return authorization was successfully created.') }
-        format.xml  { render :xml => @return_authorization, :status => :created, :location => @return_authorization }
+        format.html { redirect_to(admin_rma_return_authorization_url(@return_authorization), :notice => 'Return authorization was successfully created.') }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @return_authorization.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +62,9 @@ class ReturnAuthorizationsController < ApplicationController
 
     respond_to do |format|
       if @return_authorization.update_attributes(params[:return_authorization])
-        format.html { redirect_to(@return_authorization, :notice => 'Return authorization was successfully updated.') }
-        format.xml  { head :ok }
+        format.html { redirect_to(admin_rma_return_authorization_url(@return_authorization), :notice => 'Return authorization was successfully updated.') }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @return_authorization.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -73,11 +73,10 @@ class ReturnAuthorizationsController < ApplicationController
   # DELETE /return_authorizations/1.xml
   def destroy
     @return_authorization = ReturnAuthorization.find(params[:id])
-    @return_authorization.destroy
+    @return_authorization.update_attributes(:active => false)
 
     respond_to do |format|
-      format.html { redirect_to(return_authorizations_url) }
-      format.xml  { head :ok }
+      format.html { redirect_to(admin_rma_return_authorizations_url) }
     end
   end
 end

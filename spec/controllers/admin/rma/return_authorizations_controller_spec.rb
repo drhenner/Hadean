@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ReturnAuthorizationsController do
+describe Admin::Rma::ReturnAuthorizationsController do
 
   def mock_return_authorization(stubs={})
     @mock_return_authorization ||= mock_model(ReturnAuthorization, stubs).as_null_object
