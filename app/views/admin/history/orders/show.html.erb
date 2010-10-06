@@ -2,29 +2,29 @@
 
 <p>
   <b>Number:</b>
-  <%= @admin_history_order.number %>
+  <%= @order.number %>
 </p>
 
 <p>
   <b>Name:</b>
-  <%= @admin_history_order.name %>
+  <%= @order.name %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%= @admin_history_order.email %>
+  <%= @order.email %>
 </p>
 
 <p>
   <b>Completed at:</b>
-  <%= @admin_history_order.completed_at %>
+  <%= @order.completed_at %>
 </p>
 
 <p>
   <b>Shipped:</b>
-  <%= @admin_history_order.shipped %>
+  <%= @order.shipped %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_history_order_path(@admin_history_order) %> |
+<%= link_to 'Edit', edit_admin_history_order_path(@order) %> |
 <%= link_to 'Back', admin_history_orders_path %>

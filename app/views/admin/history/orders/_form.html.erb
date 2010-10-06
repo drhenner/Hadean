@@ -1,10 +1,9 @@
-<%= form_for(@admin_history_order) do |f| %>
-  <% if @admin_history_order.errors.any? %>
+  <% if @order.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_history_order.errors.count, "error") %> prohibited this admin_history_order from being saved:</h2>
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
       <ul>
-      <% @admin_history_order.errors.full_messages.each do |msg| %>
+      <% @order.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -15,10 +14,7 @@
     <%= f.label :number %><br />
     <%= f.text_field :number %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
@@ -34,4 +30,3 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>

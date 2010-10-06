@@ -297,6 +297,24 @@ class Order < ActiveRecord::Base
     order_items.collect{|oi| oi.variant_id }
   end
   
+  def self.find_finished_order_grid(params = {})
+    
+    params[:page] ||= 1
+    params[:rows] ||= 25
+    
+    grid = Order
+    grid = grid.includes([:user])
+    grid = grid.where("active = ?",true)                     unless  params[:show_all].present? && 
+                                                                      params[:show_all] == 'true'
+    grid = grid.where("orders.shipped = ?", true)             if params[:shipped].present? && params[:shipped] == 'true'                                                                  
+    grid = grid.where("orders.shipped = ?", false)            if params[:shipped].present? && params[:shipped] == 'false'
+    grid = grid.where("orders.completed_at IS NOT NULL")
+    grid = grid.where("orders.number LIKE ?", "#{params[:number]}%")  if params[:number].present?                                                     
+    grid = grid.where("orders.email LIKE ?", "#{params[:email]}%")    if params[:email].present?
+    grid = grid.order("#{params[:sidx]} #{params[:sord]}").paginate(:page => params[:page], :per_page => params[:rows])
+    
+  end
+  
   def self.fulfillment_grid(params = {})
     
     params[:page] ||= 1

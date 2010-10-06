@@ -1,6 +1,8 @@
-<h1>Editing admin_history_order</h1>
+<h1>Edit Order</h1>
 
-<%= render 'form' %>
+<%= form_for(@order, :url => admin_history_order_path(@order)) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f } %>
+<% end %>
 
-<%= link_to 'Show', @admin_history_order %> |
+<%= link_to 'Show', admin_history_order_path(@order) %> |
 <%= link_to 'Back', admin_history_orders_path %>
