@@ -12,7 +12,11 @@ class Admin::History::OrdersController < Admin::BaseController
   # GET /admin/history/orders/1
   # GET /admin/history/orders/1.xml
   def show
-    @order = Order.find_by_number(params[:id])
+    @order = Order.includes([:ship_address, 
+                             {:shipments => :shipping_method},
+                             {:order_items => [
+                                                {:variant => :product}]
+                              }]).find_by_number(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
