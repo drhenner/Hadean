@@ -1,14 +1,19 @@
 class Shipment < ActiveRecord::Base
-  belongs_to :order
+  belongs_to :order, :counter_cache => true
   belongs_to :shipping_method
   belongs_to :address#, :polymorphic => true
+  
   has_many   :order_items
   
   before_validation :set_number
+  after_create      :save_shipment_number
   
   validates :order_id,            :presence => true
   validates :address_id,          :presence => true
   validates :shipping_method_id,  :presence => true
+  
+  CHARACTERS_SEED = 20 
+  NUMBER_SEED     = 2002002002000
   
   state_machine :initial => 'pending' do
     
@@ -58,6 +63,24 @@ class Shipment < ActiveRecord::Base
   end
   
   def set_number
-    self.number = [order_id.to_s(20), (Time.now.to_i).to_s(21)].join('-')
+    return set_shipment_number if self.id
+    self.number = (Time.now.to_i).to_s## fake number for friendly_id validator
+  end
+  
+  def set_shipment_number
+    self.number = (NUMBER_SEED + id).to_s(CHARACTERS_SEED)
+  end
+  
+  def save_shipment_number
+    set_shipment_number
+    save
+  end
+  
+  def self.id_from_number(num)
+    num.to_i(CHARACTERS_SEED) - NUMBER_SEED
+  end
+  
+  def self.find_by_number(num)
+    find(id_from_number(num))##  now we can search by id which should be much faster
   end
 end

@@ -13,7 +13,7 @@ class Order < ActiveRecord::Base
   belongs_to   :bill_address, :class_name => 'Address'
   
   before_validation :set_email, :set_number
-  after_create      :set_order_number
+  after_create      :save_order_number
   before_save       :update_tax_rates
     
   
@@ -272,11 +272,16 @@ class Order < ActiveRecord::Base
   end
   
   def set_number
+    return set_order_number if self.id
     self.number = (Time.now.to_i).to_s(CHARACTERS_SEED)## fake number for friendly_id validator
   end
   
   def set_order_number
     self.number = (NUMBER_SEED + id).to_s(CHARACTERS_SEED)
+  end
+  
+  def save_order_number
+    set_order_number
     save
   end
   
@@ -285,7 +290,7 @@ class Order < ActiveRecord::Base
   end
   
   def self.find_by_number(num)
-    find_by_id(id_from_number(num))##  now we can search by id which should be much faster
+    find(id_from_number(num))##  now we can search by id which should be much faster
   end
   
   ## This method is called when the order transitions to paid
@@ -297,6 +302,10 @@ class Order < ActiveRecord::Base
     order_items.collect{|oi| oi.variant_id }
   end
   
+  def has_shipment?
+    shipment_counter > 0
+  end
+  
   def self.find_finished_order_grid(params = {})
     
     params[:page] ||= 1
@@ -306,8 +315,8 @@ class Order < ActiveRecord::Base
     grid = grid.includes([:user])
     grid = grid.where("active = ?",true)                     unless  params[:show_all].present? && 
                                                                       params[:show_all] == 'true'
-    grid = grid.where("orders.shipped = ?", true)             if params[:shipped].present? && params[:shipped] == 'true'                                                                  
-    grid = grid.where("orders.shipped = ?", false)            if params[:shipped].present? && params[:shipped] == 'false'
+    grid = grid.where("orders.shipment_counter = ?", 0)             if params[:shipped].present? && params[:shipped] == 'true'                                                                  
+    grid = grid.where("orders.shipment_counter > ?", 0)            if params[:shipped].present? && params[:shipped] == 'false'
     grid = grid.where("orders.completed_at IS NOT NULL")
     grid = grid.where("orders.number LIKE ?", "#{params[:number]}%")  if params[:number].present?                                                     
     grid = grid.where("orders.email LIKE ?", "#{params[:email]}%")    if params[:email].present?

@@ -12,7 +12,7 @@ class Admin::History::OrdersController < Admin::BaseController
   # GET /admin/history/orders/1
   # GET /admin/history/orders/1.xml
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find_by_number(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -33,7 +33,7 @@ class Admin::History::OrdersController < Admin::BaseController
 
   # GET /admin/history/orders/1/edit
   def edit
-    @order = Order.find(params[:id])
+    @order = Order.find_by_number(params[:id])
   end
 
   # POST /admin/history/orders
