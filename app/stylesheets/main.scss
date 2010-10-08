@@ -169,6 +169,22 @@ a:hover {
 .roman-list li {
   list-style: upper-roman;
 }
+
+textarea.height-20 {
+  height:2em;
+}
+
+textarea.height-30 {
+  height:3em;
+}
+textarea.height-40 {
+  height:4em;
+}
+
+textarea.height-50 {
+  height:5em;
+}
+
 .selectlist-list {
   list-style: none;
   margin:     0;

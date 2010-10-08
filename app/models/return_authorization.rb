@@ -7,6 +7,9 @@ class ReturnAuthorization < ActiveRecord::Base
   # has_many :transactions
   has_many    :transaction_ledgers, :as => :accountable
   
+  accepts_nested_attributes_for :return_items,  :reject_if => proc { |attributes| attributes['return_reason_id'].blank? || 
+                                                                                  attributes['return_condition_id'].blank? }
+  accepts_nested_attributes_for :comments,      :reject_if => proc { |attributes| attributes['note'].blank? }
   
   ## after you process an RMA you must manually add the variant back into the system!!!
   state_machine :initial => 'authorized' do

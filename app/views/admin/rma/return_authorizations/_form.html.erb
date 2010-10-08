@@ -20,10 +20,36 @@
     <%= f.text_field :restocking_fee %>
   </div>
   
-  <div class="field">
+  
+  
+  
+  
+  <div id="return_items" class='span-12'>
+    <% @order.order_items.each do |item| %>
+      <div  id='image_<%= item.id %>' 
+            class="variant_form left span-12 last">
+        <% return_item = @return_authorization.return_items.detect {|p| p.id == item.id } %>    
+        <% return_item = return_item || ReturnItem.new(:order_item => item) %>
+        <%= f.fields_for :return_items, return_item do |item_form|%>
+          <%= render :partial => 'item', :locals => { :item_form    => item_form, 
+                                                      :return_item  => return_item, 
+                                                      :order_item   => item } %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  
+  
+  
+  
+  
+  
+  <div class='column float-left'>
     <%= f.fields_for :comments do |comment_form|%>
+    <div class="field ">
       <%= comment_form.label :note %><br />
-      <%= comment_form.text_area :note, :class => 'span-8' %>
+      <%= comment_form.text_area :note, :class => 'span-8 height-40' %>
+    </div>
       <%= comment_form.hidden_field :user_id %>
       <%= comment_form.hidden_field :created_by %>
     <% end %>

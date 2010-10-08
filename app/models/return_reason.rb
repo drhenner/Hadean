@@ -10,4 +10,7 @@ class ReturnReason < ActiveRecord::Base
   
   REASONS = [DEFECTIVE, POOR_QUALITY, WRONG_ITEM, WRONG_SIZE, ARRIVED_LATE, OTHER]
   
+  def self.select_form
+    all.collect {|r| [r.label, r.id]}
+  end
 end

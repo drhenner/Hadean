@@ -81,7 +81,8 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # DELETE /return_authorizations/1.xml
 private
   def form_info
-    
+    @return_conditions  = ReturnCondition.select_form
+    @return_reasons     = ReturnReason.select_form
   end
   
   def load_info
