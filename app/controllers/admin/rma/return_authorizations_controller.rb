@@ -2,6 +2,7 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # GET /return_authorizations
   # GET /return_authorizations.xml
   def index
+    load_info
     @return_authorizations = ReturnAuthorization.admin_grid(params)
 
     respond_to do |format|
@@ -19,6 +20,7 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # GET /return_authorizations/1
   # GET /return_authorizations/1.xml
   def show
+    load_info
     @return_authorization = ReturnAuthorization.find(params[:id])
 
     respond_to do |format|
@@ -29,8 +31,11 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # GET /return_authorizations/new
   # GET /return_authorizations/new.xml
   def new
+    load_info
+    
     @return_authorization = ReturnAuthorization.new
-
+    @return_authorization.comments.push(Comment.new(:user_id => @order.user_id, :created_by => current_user.id))
+    form_info
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -38,12 +43,14 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
 
   # GET /return_authorizations/1/edit
   def edit
+    load_info
     @return_authorization = ReturnAuthorization.find(params[:id])
   end
 
   # POST /return_authorizations
   # POST /return_authorizations.xml
   def create
+    load_info
     @return_authorization = ReturnAuthorization.new(params[:return_authorization])
 
     respond_to do |format|
@@ -58,6 +65,7 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
   # PUT /return_authorizations/1
   # PUT /return_authorizations/1.xml
   def update
+    load_info
     @return_authorization = ReturnAuthorization.find(params[:id])
 
     respond_to do |format|
@@ -71,12 +79,16 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
 
   # DELETE /return_authorizations/1
   # DELETE /return_authorizations/1.xml
-  def destroy
-    @return_authorization = ReturnAuthorization.find(params[:id])
-    @return_authorization.update_attributes(:active => false)
-
-    respond_to do |format|
-      format.html { redirect_to(admin_rma_return_authorizations_url) }
-    end
+private
+  def form_info
+    
+  end
+  
+  def load_info
+    @order = Order.includes([:ship_address, :invoices, 
+                             {:shipments => :shipping_method},
+                             {:order_items => [
+                                                {:variant => [:product, :variant_properties]}]
+                              }]).find(params[:order_id])
   end
 end

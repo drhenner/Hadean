@@ -12,10 +12,10 @@ class Admin::History::OrdersController < Admin::BaseController
   # GET /admin/history/orders/1
   # GET /admin/history/orders/1.xml
   def show
-    @order = Order.includes([:ship_address, 
+    @order = Order.includes([:ship_address, :invoices, 
                              {:shipments => :shipping_method},
                              {:order_items => [
-                                                {:variant => :product}]
+                                                {:variant => [:product, :variant_properties]}]
                               }]).find_by_number(params[:id])
 
     respond_to do |format|

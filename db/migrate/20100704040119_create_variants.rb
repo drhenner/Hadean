@@ -3,6 +3,7 @@ class CreateVariants < ActiveRecord::Migration
     create_table :variants do |t|
       t.integer         :product_id,                                                :null => false
       t.string          :sku,                                                       :null => false,   :unique => true
+      t.string          :name#,                                                      :null => false
       t.decimal         :price,     :precision => 8, :scale => 2, :default => 0.0,  :null => false
       t.decimal         :cost,      :precision => 8, :scale => 2, :default => 0.0,  :null => false
       t.datetime        :deleted_at

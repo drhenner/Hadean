@@ -37,7 +37,16 @@ class Variant < ActiveRecord::Base
   end
   
   def product_name 
-    product.name
+    name? ? name : product.name + sub_name
+  end
+  
+  def sub_name
+    primary_property ? "(#{primary_property.description})" : ''
+  end
+  
+  def primary_property
+    pp = self.variant_properties.where(["variant_properties.primary = ?", true]).find(:first)
+    pp ? pp : self.variant_properties.find(:first)
   end
   
   def name_with_sku

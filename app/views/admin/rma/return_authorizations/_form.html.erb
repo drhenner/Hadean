@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :number %><br />
-    <%= f.text_field :number %>
-  </div>
-  <div class="field">
     <%= f.label :amount %><br />
     <%= f.text_field :amount %>
   </div>
@@ -23,18 +19,16 @@
     <%= f.label :restocking_fee %><br />
     <%= f.text_field :restocking_fee %>
   </div>
+  
   <div class="field">
-    <%= f.label :order_id %><br />
-    <%= f.text_field :order_id %>
+    <%= f.fields_for :comments do |comment_form|%>
+      <%= comment_form.label :note %><br />
+      <%= comment_form.text_area :note, :class => 'span-8' %>
+      <%= comment_form.hidden_field :user_id %>
+      <%= comment_form.hidden_field :created_by %>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :created_by %><br />
-    <%= f.text_field :created_by %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
