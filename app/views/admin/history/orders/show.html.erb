@@ -28,7 +28,7 @@
       class='span-8 rounded-10 line_item_green float-left'>
           <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @order.ship_address} %>
           <br>
-          <p><%= link_to 'Change Address', admin_history_order_addresses_path(@order) %> <br>
+          <p><%= link_to 'Change Address', admin_history_order_addresses_path(@order), :class => 'button green' %> <br>
           (This will not change the shipments that have already been placed)</p>
 </div>
 
@@ -59,8 +59,12 @@
 
 <div class=' span-7'>
   <b>RMA:</b>
-  <%#= link_to 'View RMAs',  admin_rma_order_return_authorizations_path(@order) %>
-  <%= link_to 'Create RMA', new_admin_rma_order_return_authorization_path(@order) %>
+  <div class=' span-7 rounded-10 line_item_gray'>
+    <% if @order.return_authorizations.size > 0 %>
+       <%= link_to 'View RMAs',  admin_rma_order_return_authorizations_path(@order), :class => 'button heart' %>
+       <br/><br/>
+    <% end %>
+    <%= link_to 'Create RMA', new_admin_rma_order_return_authorization_path(@order),:class => 'button heart' %>
+  </div>
 </div>
 <%#= link_to 'Edit', edit_admin_history_order_path(@order) %> 
-<%= link_to 'Order History', admin_history_orders_path %>

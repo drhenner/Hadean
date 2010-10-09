@@ -15,7 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :perishable_token
       t.string :persistence_token
       t.string :access_token
-      t.integer :comment_counter, :default => 0
+      t.integer :comments_count, :default => 0
       
       #t.database_authenticatable :null => false
       #t.confirmable

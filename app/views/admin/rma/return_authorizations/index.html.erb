@@ -7,7 +7,7 @@
 
 <div id="admin_rma_page_wrapper">
   <div id="admin_rma_grid_wrapper" class='column'>
-    <%= raw jqgrid("RMA`s", "admin_rma_grid", admin_rma_return_authorizations_path,
+    <%= raw jqgrid("RMA`s", "admin_rma_grid", admin_rma_order_return_authorizations_path(@order),
       [
         { :field => "user_name",    :label => "Customer", :width => 140, :resizable => false },
         { :field => "order_number", :label => "Order #",  :width => 90,  :resizable => false },
@@ -39,8 +39,14 @@
 <%= jqgrid_javascripts %>
 
 
+<div class='span-10'>
+
+  <%= link_to 'Order Info', 
+              admin_history_order_path(@order), 
+              :class => 'button heart' %>
+</div>
 <script>
-  Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/rma/return_authorizations'));
+  Hadean.AdminIndexForm.registerOnLoadHandler(Hadean.AdminIndexForm.initialize('/admin/rma/orders/<%=@order.id%>/return_authorizations'));
 </script>
 
 

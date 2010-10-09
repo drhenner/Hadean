@@ -7,6 +7,7 @@ class Order < ActiveRecord::Base
   has_many   :completed_invoices,  :class_name => 'Invoice', :conditions => ['state = ? OR state = ?', 'authorized', 'paid']
   has_many   :authorized_invoices, :class_name => 'Invoice', :conditions => ['state = ?', 'authorized']
   has_many   :paid_invoices      , :class_name => 'Invoice', :conditions => ['state = ?', 'paid']
+  has_many   :return_authorizations
   
   belongs_to :user
   belongs_to   :ship_address, :class_name => 'Address'

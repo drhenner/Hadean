@@ -1,14 +1,14 @@
 class CreateReturnAuthorizations < ActiveRecord::Migration
   def self.up
     create_table :return_authorizations do |t|
-      t.string :number
-      t.decimal :amount
-      t.decimal :restocking_fee
-      t.integer :order_id
-      t.integer :user_id
+      t.string :number#,         :null => false
+      t.decimal :amount,          :precision => 8, :scale => 2, :null => false
+      t.decimal :restocking_fee,  :precision => 8, :scale => 2,                 :default => 0
+      t.integer :order_id,      :null => false
+      t.integer :user_id,       :null => false
       t.string :state
       t.integer :created_by
-      t.boolean :active, :default => true
+      t.boolean :active,                                                        :default => true
       
       t.timestamps
     end

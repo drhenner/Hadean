@@ -1,24 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Number:</b>
-  <%= @return_authorization.number %>
-</p>
+<div class='span-10'>
+  <h3>RMA Details</h3>
+  
+    <b>Number:<%= @return_authorization.number %></b><br/>
+    Amount: <%= @return_authorization.amount %> <br/>
+    Restocking fee: <%= @return_authorization.restocking_fee %> <br/>
+    State: <%= @return_authorization.state %><br/>
+    
+    
+    <div  id='order-items' 
+          class='span-8 rounded-10 line_item_blue float-left'>
+      <% @return_authorization.return_items.each do |item| %>
+        <%= item.order_item.variant.product_name %> <br/>
+      <% end %>
+    </div>  
+</div>
 
-<p>
-  <b>Amount:</b>
-  <%= @return_authorization.amount %>
-</p>
+<div class='span-10'>
+  <h3>Order Details</h3>
+  
+  
+  <div class=' span-8 float-left'>
+  <b>Items</b>
+    <div  id='order-items' 
+          class='span-8 rounded-10 line_item_blue float-left'>
 
-<p>
-  <b>Restocking fee:</b>
-  <%= @return_authorization.restocking_fee %>
-</p>
+            <% @order.order_items.each do |item| %>
+              <%= item.variant.product_name %> <%= number_to_currency item.total %><br/>
+            <% end %>
+    </div>
+  </div>
+</div>
 
-<p>
-  <b>State:</b>
-  <%= @return_authorization.state %>
-</p>
-
-<%= link_to 'Edit', edit_admin_rma_order_return_authorization_path(@order, @return_authorization) %> |
-<%= link_to 'All RMAs for this Order.', admin_rma_order_return_authorizations_path(@order) %>
+<div class='span-24'>
+  <%= link_to 'Edit RMA', 
+              edit_admin_rma_order_return_authorization_path(@order, @return_authorization), 
+              :class => 'button heart'%> 
+  <%= link_to 'All RMAs for this Order.', 
+              admin_rma_order_return_authorizations_path(@order), 
+              :class => 'button heart' %>
+</div>
