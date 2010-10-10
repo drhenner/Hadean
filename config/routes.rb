@@ -44,7 +44,11 @@ Hadean::Application.routes.draw do # |map|
     
     namespace :rma do
       resources  :orders do
-        resources  :return_authorizations
+        resources  :return_authorizations do
+          member do 
+            put :complete
+          end
+        end
       end
       #resources  :shipments
     end

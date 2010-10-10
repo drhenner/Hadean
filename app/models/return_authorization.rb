@@ -13,6 +13,7 @@ class ReturnAuthorization < ActiveRecord::Base
   accepts_nested_attributes_for :comments,      :reject_if => proc { |attributes| attributes['note'].blank? }
   
   #validates :number,      :presence => true
+  validates :amount,      :presence => true
   validates :user_id,     :presence => true
   validates :order_id,    :presence => true
   validates :created_by,  :presence => true
@@ -26,7 +27,7 @@ class ReturnAuthorization < ActiveRecord::Base
   state_machine :initial => 'authorized' do
     #after_transition :to => 'received', :do => :process_receive
     #after_transition :to => 'cancelled', :do => :process_canceled
-    #before_transition :to => 'complete', :do => :process_ledger_transactions
+    before_transition :to => 'complete', :do => :process_ledger_transactions
     
     event :receive do
       transition :to => 'received', :from => 'authorized'
@@ -42,6 +43,7 @@ class ReturnAuthorization < ActiveRecord::Base
   def process_ledger_transactions
     ##  credit => cash
     ##  debit  => revenue
+    Invoice.process_rma(amount - restocking_fee, order)
   end
   
   def order_number

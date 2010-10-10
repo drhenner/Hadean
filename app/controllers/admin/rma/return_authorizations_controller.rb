@@ -80,8 +80,29 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
     end
   end
 
+  def complete
+    load_info
+    debugger
+    @return_authorization = ReturnAuthorization.find(params[:id])
+    
+    
+  end
   # DELETE /return_authorizations/1
   # DELETE /return_authorizations/1.xml
+  def delete
+    load_info
+    @return_authorization = ReturnAuthorization.find(params[:id])
+
+    respond_to do |format|
+      if @return_authorization.cancel!
+        format.html { redirect_to(admin_rma_order_return_authorization_url(@order, @return_authorization), :notice => 'Return authorization was successfully updated.') }
+      else
+        flash[:notice] = 'Return authorization had an error.'
+        form_info
+        format.html { render :action => "edit" }
+      end
+    end
+  end
 private
   def form_info
     @return_conditions  = ReturnCondition.select_form

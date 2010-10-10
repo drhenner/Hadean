@@ -1,12 +1,13 @@
 class CreateInvoices < ActiveRecord::Migration
   def self.up
     create_table :invoices do |t|
-      t.integer :order_id,  :null => false
-      t.string :number,     :null => false
-      t.decimal :amount,      :precision => 8, :scale => 2,  :null => false
+      t.integer   :order_id,      :null => false
+      t.string    :number,        :null => false
+      t.decimal   :amount,        :null => false,             :precision => 8, :scale => 2
       #t.boolean :settled,     :default => false,  :null => false
-      t.string  :state,  :null => false
-      t.boolean :active,      :default => true,   :null => false
+      t.string    :invoice_type,  :null => false, :default => Invoice::PURCHASE
+      t.string    :state,         :null => false
+      t.boolean   :active,        :null => false, :default => true
 
       t.timestamps
     end  

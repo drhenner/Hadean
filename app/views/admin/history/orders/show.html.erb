@@ -17,7 +17,7 @@
           class='span-8 rounded-10 line_item_blue float-left'>
 
             <% @order.order_items.each do |item| %>
-              <%= item.variant.product_name %> <%= number_to_currency item.price %><br/>
+              <%= item.variant.product_name %> <%= number_to_currency item.total %><br/>
             <% end %>
     </div>        
   </div>
@@ -61,10 +61,13 @@
   <b>RMA:</b>
   <div class=' span-7 rounded-10 line_item_gray'>
     <% if @order.return_authorizations.size > 0 %>
-       <%= link_to 'View RMAs',  admin_rma_order_return_authorizations_path(@order), :class => 'button heart' %>
+       <%= link_to 'View RMAs', admin_rma_order_return_authorizations_path(@order), 
+                                :class => 'button heart' %>
        <br/><br/>
+    <% else %>
+      <%= link_to 'Create RMA', new_admin_rma_order_return_authorization_path(@order),
+                                :class => 'button heart' %>
     <% end %>
-    <%= link_to 'Create RMA', new_admin_rma_order_return_authorization_path(@order),:class => 'button heart' %>
   </div>
 </div>
 <%#= link_to 'Edit', edit_admin_history_order_path(@order) %> 

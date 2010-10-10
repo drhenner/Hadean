@@ -6,7 +6,7 @@ class CreateReturnAuthorizations < ActiveRecord::Migration
       t.decimal :restocking_fee,  :precision => 8, :scale => 2,                 :default => 0
       t.integer :order_id,      :null => false
       t.integer :user_id,       :null => false
-      t.string :state
+      t.string :state,          :null => false
       t.integer :created_by
       t.boolean :active,                                                        :default => true
       

@@ -3,7 +3,10 @@ class Invoice < ActiveRecord::Base
   has_many :batches, :as => :batchable#, :polymorphic => true
   belongs_to :order
   
+  PURCHASE  = 'Purchase'
+  RMA       = 'RMA'
   
+  INVOICE_TYPES = [PURCHASE, RMA]
   #cattr_accessor :gateway
   
   # after_create :create_authorized_transaction
@@ -20,6 +23,10 @@ class Invoice < ActiveRecord::Base
     
     #after_transition :on => 'payment_authorized', :do => :authorize_complete_order
     
+    event :payment_rma do
+      transition :from => :pending,
+                  :to   => :refunded
+    end
     event :payment_authorized do
       transition :from => :pending,
                   :to   => :authorized
@@ -41,7 +48,7 @@ class Invoice < ActiveRecord::Base
   end
   
   def Invoice.generate(order_id, charge_amount, num)
-    Invoice.new(:order_id => order_id, :amount => charge_amount, :number => num)
+    Invoice.new(:order_id => order_id, :amount => charge_amount, :number => num, :invoice_type => PURCHASE)
   end
   
   def capture_complete_order
@@ -91,6 +98,7 @@ class Invoice < ActiveRecord::Base
   
   def cancel_authorized_payment
     batch       = batches.first
+    now = Time.zone.now
     if batch# if not we never authorized the payment
       transaction = CreditCardCancel.new()##  This is a type of transaction
       debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
@@ -102,6 +110,28 @@ class Invoice < ActiveRecord::Base
     end
   end
   
+  def self.process_rma(return_amount, order)
+    transaction do
+      this_invoice = Invoice.new(:order => order, :amount = return_amount, :invoice_type => RMA)
+      this_invoice.save
+      this_invoice.complete_rma_return
+      this_invoice.payment_rma!
+    end
+  end
+  
+  def complete_rma_return
+    batch       = batches.first
+    now = Time.zone.now
+    if batch# if not we never authorized the payment
+      transaction = ReturnMerchandiseComplete.new()##  This is a type of transaction
+      debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
+      credit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::CASH_ID, :debit => 0, :credit => amount, :period => "#{now.month}-#{now.year}")
+      transaction.transaction_ledgers.push(credit)
+      transaction.transaction_ledgers.push(debit)
+      batch.transactions.push(transaction)
+      batch.save
+    end
+  end
   
   def unique_order_number
     "#{Time.now.to_i}-#{rand(1000000)}"
