@@ -82,10 +82,14 @@ class Admin::Rma::ReturnAuthorizationsController < Admin::Rma::BaseController
 
   def complete
     load_info
-    debugger
     @return_authorization = ReturnAuthorization.find(params[:id])
+    if @return_authorization.complete!
+      flash[:notice] = 'This RMA is complete.'
+    else
+      flash[:error] = 'Something when wrong!'
+    end
     
-    
+    render :action => 'show'
   end
   # DELETE /return_authorizations/1
   # DELETE /return_authorizations/1.xml

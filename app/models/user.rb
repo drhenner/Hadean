@@ -79,12 +79,16 @@ class User < ActiveRecord::Base
   has_many    :authored_return_authorizations, :class_name => 'ReturnAuthorization', :foreign_key => 'author_id'
   
   validates :first_name,  :presence => true, :if => :registered_user?,
-                          :format   => { :with => CustomValidators::Names.name_validator }
+                          :format   => { :with => CustomValidators::Names.name_validator }, 
+                          :length => { :maximum => 30 }
   validates :last_name,   :presence => true, :if => :registered_user?,
-                          :format   => { :with => CustomValidators::Names.name_validator }
+                          :format   => { :with => CustomValidators::Names.name_validator }, 
+                          :length => { :maximum => 35 }
   validates :email,       :presence => true,
-                          :uniqueness => true,
-                          :format   => { :with => CustomValidators::Emails.email_validator }
+                          :uniqueness => true,##  This should be done at the DB this is too expensive in rails
+                          :format   => { :with => CustomValidators::Emails.email_validator }, 
+                          :length => { :maximum => 255 }
+  validates :password,    :presence => { :if => :password_required? }, :confirmation => true, :length => 6..20
   
   accepts_nested_attributes_for :addresses, :phones, :user_roles
   

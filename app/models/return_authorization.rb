@@ -13,7 +13,11 @@ class ReturnAuthorization < ActiveRecord::Base
   accepts_nested_attributes_for :comments,      :reject_if => proc { |attributes| attributes['note'].blank? }
   
   #validates :number,      :presence => true
-  validates :amount,      :presence => true
+  validates :amount,      :presence     => true, 
+                          :numericality => true
+  
+  validates :restocking_fee, :numericality => true, :allow_nil => true
+  
   validates :user_id,     :presence => true
   validates :order_id,    :presence => true
   validates :created_by,  :presence => true
@@ -40,10 +44,16 @@ class ReturnAuthorization < ActiveRecord::Base
     end
   end
   
+  def validate
+    if restocking_fee && restocking_fee >= amount
+      self.errors.add(:amount, "The amount must be larger than the restocking fee.")
+    end
+  end
+  
   def process_ledger_transactions
     ##  credit => cash
     ##  debit  => revenue
-    Invoice.process_rma(amount - restocking_fee, order)
+    Invoice.process_rma(amount - restocking_fee, order )
   end
   
   def order_number

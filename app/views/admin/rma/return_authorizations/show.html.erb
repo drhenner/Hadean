@@ -50,6 +50,9 @@
                 edit_admin_rma_order_return_authorization_path(@order, @return_authorization), 
                 :class => 'button heart'%> 
   <% end %>
+  <%= link_to 'Order Info', 
+              admin_history_order_path(@order), 
+              :class => 'button spade' %>
   <%= link_to 'All RMAs for this Order.', 
               admin_rma_order_return_authorizations_path(@order), 
               :class => 'button heart' %>

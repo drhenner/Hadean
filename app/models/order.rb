@@ -156,7 +156,7 @@ class Order < ActiveRecord::Base
   end
   
   def create_invoice_transaction(credit_card, charge_amount, args)
-    invoice_statement = Invoice.generate(self.id, charge_amount, "#{Time.now.to_i}-#{number}")
+    invoice_statement = Invoice.generate(self.id, charge_amount)
     invoice_statement.save
     invoice_statement.authorize_payment(credit_card, args)#, options = {})
     invoices.push(invoice_statement)

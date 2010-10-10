@@ -7,13 +7,15 @@ class Invoice < ActiveRecord::Base
   RMA       = 'RMA'
   
   INVOICE_TYPES = [PURCHASE, RMA]
+  NUMBER_SEED     = 3002001004005
+  CHARACTERS_SEED = 20
   #cattr_accessor :gateway
   
   # after_create :create_authorized_transaction
   
-  def create_authorized_transaction
-    
-  end
+  #def create_authorized_transaction
+  #  
+  #end
   state_machine :initial => :pending do
     state :pending
     state :authorized
@@ -47,8 +49,20 @@ class Invoice < ActiveRecord::Base
     end
   end
   
-  def Invoice.generate(order_id, charge_amount, num)
-    Invoice.new(:order_id => order_id, :amount => charge_amount, :number => num, :invoice_type => PURCHASE)
+  def number
+    (NUMBER_SEED + id).to_s(CHARACTERS_SEED)
+  end
+  
+  def self.id_from_number(num)
+    num.to_i(CHARACTERS_SEED) - NUMBER_SEED
+  end
+  
+  def self.find_by_number(num)
+    find(id_from_number(num))##  now we can search by id which should be much faster
+  end
+  
+  def Invoice.generate(order_id, charge_amount)
+    Invoice.new(:order_id => order_id, :amount => charge_amount, :invoice_type => PURCHASE)
   end
   
   def capture_complete_order
@@ -112,7 +126,7 @@ class Invoice < ActiveRecord::Base
   
   def self.process_rma(return_amount, order)
     transaction do
-      this_invoice = Invoice.new(:order => order, :amount = return_amount, :invoice_type => RMA)
+      this_invoice = Invoice.new(:order => order, :amount => return_amount, :invoice_type => RMA)
       this_invoice.save
       this_invoice.complete_rma_return
       this_invoice.payment_rma!
@@ -120,17 +134,15 @@ class Invoice < ActiveRecord::Base
   end
   
   def complete_rma_return
-    batch       = batches.first
+    batch       = batches.first || self.batches.new()
     now = Time.zone.now
-    if batch# if not we never authorized the payment
-      transaction = ReturnMerchandiseComplete.new()##  This is a type of transaction
-      debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
-      credit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::CASH_ID, :debit => 0, :credit => amount, :period => "#{now.month}-#{now.year}")
-      transaction.transaction_ledgers.push(credit)
-      transaction.transaction_ledgers.push(debit)
-      batch.transactions.push(transaction)
-      batch.save
-    end
+    transaction = ReturnMerchandiseComplete.new()##  This is a type of transaction
+    debit   = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::REVENUE_ID, :debit => amount, :credit => 0, :period => "#{now.month}-#{now.year}")
+    credit  = order.user.transaction_ledgers.new(:transaction_account_id => TransactionAccount::CASH_ID, :debit => 0, :credit => amount, :period => "#{now.month}-#{now.year}")
+    transaction.transaction_ledgers.push(credit)
+    transaction.transaction_ledgers.push(debit)
+    batch.transactions.push(transaction)
+    batch.save
   end
   
   def unique_order_number
