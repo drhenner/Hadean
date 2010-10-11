@@ -25,7 +25,11 @@ Hadean::Application.routes.draw do # |map|
   end
   
   namespace :shopping do
-    resources  :cart_items
+    resources  :cart_items do
+      member do 
+        put :move_to
+      end
+    end
     resources  :orders
     resources  :shipping_methods
     resources  :addresses do

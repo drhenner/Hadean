@@ -26,6 +26,9 @@
           <li>
           <% photo_url = item.variant.product.primary_image_url %>
               <%= image_tag(photo_url) if photo_url %>
+              <%#= link_to 'Move to Cart', move_to_shopping_cart_item_path(item, 
+                                                                          :variant_id => item.variant_id),
+                                          :method     => 'put' %>
               (<%= item.quantity %>) 
               <%= item.variant.product_name %> 
               <%= link_to 'remove', shopping_cart_item_path(item, :variant_id => item.variant_id), 

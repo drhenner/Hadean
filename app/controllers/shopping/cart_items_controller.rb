@@ -74,6 +74,14 @@ class Shopping::CartItemsController < Shopping::BaseController
       end
     end
   end
+## TODO
+  ## This method moves saved_cart_items to your shopping_cart_items or saved_cart_items
+  #   this method is called using AJAX and returns json. with the object moved, 
+  #   otherwise false is returned if there is an error
+  #   method => PUT
+  def move_to
+    
+  end
 
   # DELETE /carts/1
   # DELETE /carts/1.xml
