@@ -10,6 +10,7 @@ class CreateImages < ActiveRecord::Migration
     end
     add_index :images, :imageable_id
     add_index :images, :imageable_type
+    add_index :images, :position
   end
 
   def self.down

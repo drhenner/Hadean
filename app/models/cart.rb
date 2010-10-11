@@ -4,7 +4,11 @@ class Cart < ActiveRecord::Base
   has_many    :shopping_cart_items,       :conditions => ['cart_items.active = ? AND
                                                           cart_items.item_type_id = ?', true, ItemType::SHOPPING_CART_ID], 
                                           :class_name => 'CartItem'
-                                                
+          
+          
+  has_many    :saved_cart_items,          :conditions => ['cart_items.active = ? AND
+                                                          cart_items.item_type_id = ?', true, ItemType::SAVE_FOR_LATER_ID], 
+                                          :class_name => 'CartItem'
   has_many    :wish_list_items,           :conditions => ['cart_items.active = ? AND
                                                           cart_items.item_type_id = ?', true, ItemType::WISH_LIST_ID], 
                                           :class_name => 'CartItem'
@@ -71,13 +75,13 @@ class Cart < ActiveRecord::Base
                                     :item_type_id => ItemType::SAVE_FOR_LATER_ID,
                                     :quantity     => 1#,#:price      => variant.price
                                     ) if items.size < 1
-      flash[:notice] = [I18n.t('out_of_stock_notice'), I18n.t('item_saved_for_later')].compact.join(' ')
+      
     end
     cart_item
   end
   
   def remove_variant(variant_id)
-    ci = shopping_cart_items.find_by_variant_id(variant_id)
+    ci = cart_items.find_by_variant_id(variant_id)
     ci.inactivate!
     return ci
   end

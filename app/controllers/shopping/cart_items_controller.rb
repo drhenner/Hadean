@@ -3,7 +3,8 @@ class Shopping::CartItemsController < Shopping::BaseController
   # GET /shopping/cart_items
   # GET /shopping/cart_items.xml
   def index
-    @cart_items = session_cart.shopping_cart_items
+    @cart_items       = session_cart.shopping_cart_items
+    @saved_cart_items = session_cart.saved_cart_items
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,7 +44,8 @@ class Shopping::CartItemsController < Shopping::BaseController
   def create
     @cart_item = get_new_cart_item
     
-      if session_cart.add_variant(params[:cart_item][:variant_id], most_likely_user)
+      if cart_item = session_cart.add_variant(params[:cart_item][:variant_id], most_likely_user)
+        flash[:notice] = [I18n.t('out_of_stock_notice'), I18n.t('item_saved_for_later')].compact.join(' ') unless cart_item.shopping_cart_item?
         session_cart.save_user(most_likely_user)
         redirect_to(shopping_cart_items_url)
       else

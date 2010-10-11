@@ -50,6 +50,10 @@ class Product < ActiveRecord::Base
   def price
     master_variant ? master_variant.price : last_master_variant.price
   end
+  
+  def primary_image_url(image_size = :small)
+    images.first ? images.first.photo.url(image_size) : nil
+  end
 
   def display_price_range(j = ' to ')
     price_range.join(j)
