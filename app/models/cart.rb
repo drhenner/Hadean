@@ -54,15 +54,24 @@ class Cart < ActiveRecord::Base
   def add_variant(variant_id, customer, cart_item_type_id = ItemType::SHOPPING_CART_ID)# customer is a user
     items = shopping_cart_items.find_all_by_variant_id(variant_id)
     variant = Variant.find(variant_id)
-    if items.size < 1
+    unless variant.sold_out?
+      if items.size < 1
+        cart_item = cart_items.create(:variant_id   => variant_id,
+                                      :user         => customer,
+                                      :item_type_id => cart_item_type_id,
+                                      :quantity     => 1#,#:price      => variant.price
+                                      )
+      else
+        cart_item = items.first
+        update_cart(cart_item,customer)
+      end
+    else
       cart_item = cart_items.create(:variant_id   => variant_id,
                                     :user         => customer,
-                                    :item_type_id => cart_item_type_id,
+                                    :item_type_id => ItemType::SAVE_FOR_LATER_ID,
                                     :quantity     => 1#,#:price      => variant.price
-                                    )
-    else
-      cart_item = items.first
-      update_cart(cart_item,customer)
+                                    ) if items.size < 1
+      flash[:notice] = [I18n.t('out_of_stock_notice'), I18n.t('item_saved_for_later')].compact.join(' ')
     end
     cart_item
   end

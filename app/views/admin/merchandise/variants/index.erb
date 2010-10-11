@@ -9,7 +9,7 @@
     <%= raw jqgrid("Variant", "admin_variants_grid", admin_merchandise_product_variants_path(@product),
       [
         { :field => "product_name",   :label => "Name",   :width => 280,  :resizable => false },
-        { :field => "sku",            :label => "SKU",    :width => 170,   :resizable => false },
+        { :field => "sku",            :label => "SKU",    :width => 170,  :resizable => false },
         { :field => "price",          :label => "Price",  :width => 70,   :resizable => false }
       ], 
       {
@@ -26,8 +26,17 @@
   </div>
 
   <div id="admin_new_variant_button" class="admin_new_button last">
-    <%= link_to "New Variant", new_admin_merchandise_product_variant_path(@product), :class => "button", :id => "new_product_button" %>
+    <%= link_to "New Variant", new_admin_merchandise_product_variant_path(@product), 
+                                :class  => "button green", 
+                                :id     => "new_product_button" %>
   </div>
+  
+  <div id="admin_product_button" class="admin_product_button last">
+    <%= link_to "View Product", admin_merchandise_product_path(@product), 
+                                :class  => "button spade", 
+                                :id     => "new_product_button" %>
+  </div>
+  
 </div>
 <%= jqgrid_stylesheets %>
 <%= jqgrid_javascripts %>

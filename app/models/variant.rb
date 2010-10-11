@@ -20,6 +20,22 @@ class Variant < ActiveRecord::Base
   
   accepts_nested_attributes_for :variant_properties
   
+  OUT_OF_STOCK_QTY = 2
+  LOW_STOCK_QTY    = 6
+  def sold_out?
+    (count_on_hand - count_pending_to_customer) <= OUT_OF_STOCK_QTY
+  end
+  
+  def low_stock?
+    (count_on_hand - count_pending_to_customer) <= LOW_STOCK_QTY
+  end
+  
+  def display_stock_status(start = '(', finish = ')')
+    return "#{start}Sold Out#{finish}"  if self.sold_out?
+    return "#{start}Low Stock#{finish}" if self.low_stock?
+    ''
+  end
+  
   def product_tax_rate(state_id, tax_time = Time.now)
     product.tax_rate(state_id, tax_time)
   end
