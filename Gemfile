@@ -52,14 +52,14 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'rails3-generators'
-  gem "rspec-rails",  ">= 2.0.0.beta.22"
-  gem "rspec",        ">=  2.0.0.beta.22"
+  gem "rspec-rails",  ">= 2.0.0"
+  gem "rspec",        ">=  2.0.0"
   
-  gem "rspec-core",         ">=  2.0.0.beta.22"
-  gem "rspec-expectations", ">=  2.0.0.beta.22"
-  gem "rspec-mocks",        ">=  2.0.0.beta.22"
+  gem "rspec-core",         ">=  2.0.0"
+  gem "rspec-expectations", ">=  2.0.0"
+  gem "rspec-mocks",        ">=  2.0.0"
   
-  #gem "rspec-rails",      '>= 2.0.0.beta.10'   #">= 2.0.0.beta"
+  #gem "rspec-rails",      '>= 2.0.0'   #">= 2.0.0.beta"
   #gem "machinist",      '>= 2.0.0.beta1'  #:git => "git://github.com/notahat/machinist.git"
   #gem 'machinist', '2.0.0.head', :git => 'git://github.com/notahat/machinist.git', :branch => 'machinist2'
   gem "faker"

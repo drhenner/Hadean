@@ -56,5 +56,5 @@
 <% @product.images.each do |image| %>
   <%= image.photo_file_name %><%= image_tag image.photo.url(:small) %><br/>
 <% end %>
-<%= link_to 'Edit Images', edit_admin_merchandise_images_product_path(@product)%>
-<%= link_to 'All Products', admin_merchandise_products_path()%>
+<%= link_to 'Edit Images', edit_admin_merchandise_images_product_path(@product), :class => 'button spade'%>
+<%= link_to 'All Products', admin_merchandise_products_path(), :class => 'button yellow'%>

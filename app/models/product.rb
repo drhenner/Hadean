@@ -1,7 +1,25 @@
 class Product < ActiveRecord::Base
   has_friendly_id :permalink, :use_slug => false
   
+  serialize :keywords, Array
+  
   attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
+  
+  searchable do
+    string    :name
+    text      :keywords, :multiple => true
+    text      :description
+    time      :deleted_at
+  end
+  #Sunspot.setup(Rehab) do
+  #  text :addiction
+  #  integer :relapses
+  #  float :relapse_average
+  #  time :admitted_at
+  #  string :cure do
+  #    addiction.gsub(/(darkness|clouds|shadows)/, 'sunshine')
+  #  end
+  #end
   
   belongs_to :product_type
   belongs_to :prototype
@@ -51,6 +69,14 @@ class Product < ActiveRecord::Base
     master_variant ? master_variant.price : last_master_variant.price
   end
   
+  def set_keywords=(value)
+    self.keywords = value ? value.split(',').map(|w| w.strip) : []
+  end
+  
+  def set_keywords
+    self.keywords? ? self.keywords.join(', ') : ''
+  end
+  
   def primary_image_url(image_size = :small)
     images.first ? images.first.photo.url(image_size) : nil
   end
@@ -69,6 +95,18 @@ class Product < ActiveRecord::Base
   
   def last_master_variant
     inactive_master_variants.last
+  end
+  
+  def self.product_find(value)
+    @search = Product.solr_search do 
+      keywords value
+      any_of do
+        with(:deleted_at).greater_than(Time.zone.now)
+        with(:deleted_at, nil)
+      end
+      #without(:deleted_at).less_than(Time.zone.now)
+    end
+    @posts  = @search.results
   end
   
   def self.featured
