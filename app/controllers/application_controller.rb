@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
   
-  helper_method :current_user, :current_user_id, :most_likely_user, :random_user, :session_cart, :is_production_simulation
+  helper_method :current_user, :current_user_id, :most_likely_user, :random_user, :session_cart, :is_production_simulation, :search_product
   before_filter :secure_session
   
   rescue_from CanCan::AccessDenied do |exception|
@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
   end
   
   private
+  
+  def search_product
+    @search_product || Product.new
+  end
   
   def is_production_simulation
     false

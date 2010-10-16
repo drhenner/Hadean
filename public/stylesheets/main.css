@@ -271,7 +271,15 @@ textarea.height-50 {
   text-align: left;
 }
 
-/* line 238, ../../app/stylesheets/main.scss */
+/* line 239, ../../app/stylesheets/main.scss */
+#layout-search {
+  margin-left: 5px;
+  color: #EEE;
+  font-weight: bolder;
+  font-size: large;
+}
+
+/* line 246, ../../app/stylesheets/main.scss */
 #cart_items_button {
   display: inline;
   float: right;
@@ -283,7 +291,7 @@ textarea.height-50 {
   *vertical-align: auto;
 }
 
-/* line 242, ../../app/stylesheets/main.scss */
+/* line 250, ../../app/stylesheets/main.scss */
 #wish_items_button {
   display: inline;
   float: right;
@@ -295,24 +303,24 @@ textarea.height-50 {
   *vertical-align: auto;
 }
 
-/* line 249, ../../app/stylesheets/main.scss */
+/* line 257, ../../app/stylesheets/main.scss */
 li {
   list-style: none;
 }
 
-/* line 252, ../../app/stylesheets/main.scss */
+/* line 260, ../../app/stylesheets/main.scss */
 input.text, input.title, input[type="text"], input[type="password"] {
   background-color: white;
   margin: 0.15em 0;
   padding: 5px;
 }
 
-/* line 258, ../../app/stylesheets/main.scss */
+/* line 266, ../../app/stylesheets/main.scss */
 #content_wrapper {
   padding-top: 4px;
 }
 
-/* line 262, ../../app/stylesheets/main.scss */
+/* line 270, ../../app/stylesheets/main.scss */
 .flash_error {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -326,7 +334,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #8a1f11;
 }
 
-/* line 266, ../../app/stylesheets/main.scss */
+/* line 274, ../../app/stylesheets/main.scss */
 .flash_notice {
   padding: 0.8em;
   margin-bottom: 1em;
@@ -340,17 +348,17 @@ input.text, input.title, input[type="text"], input[type="password"] {
   color: #514721;
 }
 
-/* line 271, ../../app/stylesheets/main.scss */
+/* line 279, ../../app/stylesheets/main.scss */
 #right_side_panel {
   text-align: left;
 }
 
-/* line 277, ../../app/stylesheets/main.scss */
+/* line 285, ../../app/stylesheets/main.scss */
 #submit_add_to_cart {
   cursor: pointer;
 }
 
-/* line 281, ../../app/stylesheets/main.scss */
+/* line 289, ../../app/stylesheets/main.scss */
 .variant_border {
   padding: 3px;
   margin-bottom: 3px;
@@ -362,23 +370,23 @@ input.text, input.title, input[type="text"], input[type="password"] {
   cursor: pointer;
 }
 
-/* line 290, ../../app/stylesheets/main.scss */
+/* line 298, ../../app/stylesheets/main.scss */
 .variant_select {
   text-align: left;
 }
 
-/* line 294, ../../app/stylesheets/main.scss */
+/* line 302, ../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table {
   margin: 0;
 }
 
-/* line 297, ../../app/stylesheets/main.scss */
+/* line 305, ../../app/stylesheets/main.scss */
 .ui-datepicker-calendar table th, .ui-datepicker-calendar table td {
   padding: 0;
   text-align: center;
 }
 
-/* line 302, ../../app/stylesheets/main.scss */
+/* line 310, ../../app/stylesheets/main.scss */
 .line_items_blue {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -389,7 +397,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
-/* line 310, ../../app/stylesheets/main.scss */
+/* line 318, ../../app/stylesheets/main.scss */
 .line_item_green {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -400,12 +408,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
-/* line 318, ../../app/stylesheets/main.scss */
+/* line 326, ../../app/stylesheets/main.scss */
 .line_item_green:hover {
   background-color: #e0ffe8;
 }
 
-/* line 322, ../../app/stylesheets/main.scss */
+/* line 330, ../../app/stylesheets/main.scss */
 .line_item_red {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -417,12 +425,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 331, ../../app/stylesheets/main.scss */
+/* line 339, ../../app/stylesheets/main.scss */
 .line_item_red:hover {
   background-color: #ffe0e8;
 }
 
-/* line 335, ../../app/stylesheets/main.scss */
+/* line 343, ../../app/stylesheets/main.scss */
 .line_item_blue {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -434,7 +442,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 344, ../../app/stylesheets/main.scss */
+/* line 352, ../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -446,7 +454,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 353, ../../app/stylesheets/main.scss */
+/* line 361, ../../app/stylesheets/main.scss */
 .line_item_light_gray {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -458,7 +466,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 362, ../../app/stylesheets/main.scss */
+/* line 370, ../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 10px;
@@ -470,12 +478,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 371, ../../app/stylesheets/main.scss */
+/* line 379, ../../app/stylesheets/main.scss */
 .top_border td {
   border-top: solid 2px #ddd;
 }
 
-/* line 377, ../../app/stylesheets/main.scss */
+/* line 385, ../../app/stylesheets/main.scss */
 button.ui-button {
   text-shadow: 0 0 0 #000;
 }

@@ -235,6 +235,14 @@ textarea.height-50 {
   @include inline-block;
   text-align: left;
 }
+
+#layout-search {
+  margin-left:  5px; 
+  color:        #EEE;
+  font-weight:  bolder;
+  font-size:    large;
+}
+
 #cart_items_button {
   @include float-right;
   @include inline-block;

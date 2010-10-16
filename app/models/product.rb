@@ -6,8 +6,8 @@ class Product < ActiveRecord::Base
   attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
   
   searchable do
-    string    :name#, :default_boost => 2
-    text      :keywords#, :multiple => true
+    text    :name#, :default_boost => 2
+    text      :product_keywords#, :multiple => true
     text      :description
     time      :deleted_at
   end
@@ -55,7 +55,6 @@ class Product < ActiveRecord::Base
   validates :prototype_id,          :presence => true
 
   def tax_rate(state_id, time = Time.zone.now)
-    #tax_status
     self.tax_status.tax_rates.where(["state_id = ? AND 
                            start_date <= ? AND
                            (end_date > ? OR end_date IS NULL) AND
@@ -95,6 +94,13 @@ class Product < ActiveRecord::Base
   
   def last_master_variant
     inactive_master_variants.last
+  end
+  
+  def self.standard_search(args, params)
+    Product.search(:include => [:properties, :images]) do
+      keywords(args)
+      paginate :page => params[:page], :per_page => params[:rows]#params[:page], :per_page => params[:rows]
+    end
   end
   
   def self.product_find(value)

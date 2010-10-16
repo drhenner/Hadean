@@ -54,12 +54,17 @@
     </div>
 
     <div id='header_bar'>
-      <div id='search_bar' class='alt'>
-        <div class='' style='margin-left:5px; color:#EEE;font-weight:bolder;font-size:large;'>
-          Search: 
-          <%= text_field_tag 'search', nil , :class => 'span-11 inline-block' %>
-          <%= link_to 'Go', '/', :class => 'button spade inline-block' %>
-
+      <div id='search_bar' class='alt inline-block'>
+        <div id='layout-search' class='inline-block'>
+            <div class='inline float-left span-2'>
+              Search:
+            </div>
+            <div class='inline float-left'>
+              <%= form_for search_product, :class => 'inline-block' do %>
+                <%= text_field_tag 'q', nil , :class => 'span-11' %>
+                <%= submit_tag 'Go',          :class => 'button spade' %>
+              <% end %>
+            </div>
         </div>
         
       </div>

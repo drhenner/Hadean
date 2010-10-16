@@ -1,20 +1,18 @@
 Hadean::Application.routes.draw do # |map|
 
   resources :user_sessions
-  #match 'shopping_login'   => 'user_sessions#new'
   match 'admin'   => 'admin/overviews#index'
   match 'login'   => 'user_sessions#new'
   match 'logout'  => 'user_sessions#destroy'
   match 'signup'  => 'customer/registrations#new'
   match 'admin/merchandise' => 'admin/merchandise/summary#index'
-  resources :products
+  resources :products, :only => [:show, :create]
   resources :cart_items
   resources :wish_items
 
   #devise_for :admins
   #devise_for :admins, :controllers => { :sessions => "admin/sessions" }
   #resources :admins
-
   #devise_for :users
 
   
