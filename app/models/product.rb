@@ -6,8 +6,8 @@ class Product < ActiveRecord::Base
   attr_accessor :available_shipping_rates # these the the shipping rates per the shipping address on the order
   
   searchable do
-    string    :name
-    text      :keywords, :multiple => true
+    string    :name#, :default_boost => 2
+    text      :keywords#, :multiple => true
     text      :description
     time      :deleted_at
   end

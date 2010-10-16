@@ -87,6 +87,7 @@ GEM
       treetop (>= 1.4.5)
     memcache-client (1.8.5)
     mime-types (1.16)
+    nokogiri (1.4.3.1)
     paperclip (2.3.4)
       activerecord
       activesupport
@@ -187,6 +188,7 @@ DEPENDENCIES
   haml (>= 3.0.13)
   jquery-rails
   memcache-client
+  nokogiri
   paperclip
   prawn
   rails (= 3.0.0)

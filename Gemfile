@@ -24,6 +24,7 @@ gem "jquery-rails"
 
 gem 'dalli'
 
+gem 'nokogiri'
 gem 'memcache-client'
 #gem 'mysql2'
 gem 'ruby-mysql'
