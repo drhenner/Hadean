@@ -11,4 +11,7 @@ class TransactionAccount < ActiveRecord::Base
   CASH_ID                 = 4
   
   ACCOUNT_TYPES = [REVENUE, ACCOUNTS_RECEIVABLE, ACCOUNTS_PAYABLE, CASH_ID]
+  
+  validates :name,              :presence => true
+  
 end

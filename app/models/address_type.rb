@@ -12,4 +12,6 @@ class AddressType < ActiveRecord::Base
   #ORDER_ID    = 3
   
   
+  validates :name, :presence => true
+  
 end

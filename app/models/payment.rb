@@ -6,6 +6,9 @@ class Payment < ActiveRecord::Base
   #cattr_accessor :gateway
   # after_save :mark_invoice_complete
   
+  validates :amount,      :presence => true
+  validates :invoice_id,  :presence => true
+  
   def mark_invoice_complete
     if self.confirmation_id && self.action == 'capture' && !invoice.settled?
       invoice.settled!

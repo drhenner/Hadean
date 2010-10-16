@@ -12,4 +12,7 @@ class ItemType < ActiveRecord::Base
   SAVE_FOR_LATER_ID  = 2
   WISH_LIST_ID       = 3
   PURCHASED_ID       = 4
+  
+  validates :name,        :presence => true
+  
 end

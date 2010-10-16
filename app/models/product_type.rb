@@ -2,6 +2,8 @@ class ProductType < ActiveRecord::Base
   acts_as_tree  :order => "name"
   has_many :products
   
+  validates :name,    :presence => true
+  
   def self.admin_grid(params = {})
     
     params[:page] ||= 1

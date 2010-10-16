@@ -10,6 +10,10 @@ class PaymentProfile < ActiveRecord::Base
   
   before_create :create_payment_profile
   
+  validates :user_id,         :presence => true
+  validates :payment_cim_id,  :presence => true
+  #validates :address_id,      :presence => true
+  
   def create_payment_profile
     if self.payment_cim_id
       return false

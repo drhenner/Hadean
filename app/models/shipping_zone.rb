@@ -11,5 +11,8 @@ class ShippingZone < ActiveRecord::Base
   
   LOCATIONS     = [USA48, ALASKA_HAWAII, CANADA, USA_TERRITORY]
   
+  validates :name,            :presence => true
+  
   accepts_nested_attributes_for :states
+  
 end

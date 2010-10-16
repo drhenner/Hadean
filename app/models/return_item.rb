@@ -8,4 +8,9 @@ class ReturnItem < ActiveRecord::Base
   belongs_to :author, :class_name => 'User', :foreign_key => "created_by"
   
   
+  validates :order_item_id,           :presence => true
+  validates :return_condition_id,     :presence => true
+  validates :return_reason_id,        :presence => true
+  validates :return_authorization_id, :presence => true
+  
 end

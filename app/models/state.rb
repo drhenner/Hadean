@@ -3,7 +3,10 @@ class State < ActiveRecord::Base
   has_many   :addresses
   belongs_to :shipping_zone
   
-  
+  validates :name,              :presence => true
+  validates :abbreviation,      :presence => true
+  validates :country_id,        :presence => true
+  validates :shipping_zone_id,  :presence => true
   
   def abbreviation_name(append_name = "")
     ([abbreviation, name].join(" - ") + " #{append_name}").strip

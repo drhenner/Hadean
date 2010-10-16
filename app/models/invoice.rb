@@ -3,6 +3,10 @@ class Invoice < ActiveRecord::Base
   has_many :batches, :as => :batchable#, :polymorphic => true
   belongs_to :order
   
+  
+  validates :amount,        :presence => true
+  validates :invoice_type,  :presence => true
+  
   PURCHASE  = 'Purchase'
   RMA       = 'RMA'
   

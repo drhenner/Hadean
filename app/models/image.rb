@@ -13,6 +13,9 @@ class Image < ActiveRecord::Base
   validates_attachment_size     :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   
+  validates :imageable_type,  :presence => true
+  validates :imageable_id,    :presence => true
+  
   default_scope :order => 'position'
   
   # save the w,h of the original image (from which others can be calculated)
