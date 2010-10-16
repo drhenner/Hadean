@@ -91,6 +91,7 @@ GEM
       activerecord
       activesupport
     polyglot (0.3.1)
+    pr_geohash (1.0.0)
     prawn (0.8.4)
       prawn-core (>= 0.8.4, < 0.9)
       prawn-layout (>= 0.8.4, < 0.9)
@@ -151,11 +152,12 @@ GEM
       archive-tar-minitar (>= 0.5.2)
     ssl_requirement (0.1.0)
     state_machine (0.9.4)
-    sunspot (1.1.0)
+    sunspot (1.2.rc4)
       escape (= 0.0.4)
+      pr_geohash (~> 1.0)
       rsolr (= 0.12.1)
-    sunspot_rails (1.1.0)
-      sunspot (= 1.1.0)
+    sunspot_rails (1.2.rc4)
+      sunspot (= 1.2.rc4)
     sys-uname (0.8.4)
     thor (0.14.3)
     treetop (1.4.8)
@@ -200,6 +202,5 @@ DEPENDENCIES
   ruby-mysql
   ssl_requirement
   state_machine
-  sunspot
-  sunspot_rails
+  sunspot_rails (= 1.2.rc4)
   will_paginate (~> 3.0.pre2)

@@ -70,7 +70,7 @@ class Product < ActiveRecord::Base
   end
   
   def set_keywords=(value)
-    self.keywords = value ? value.split(',').map(|w| w.strip) : []
+    self.keywords = value ? value.split(',').map{|w| w.strip} : []
   end
   
   def set_keywords
