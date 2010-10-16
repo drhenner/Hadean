@@ -37,7 +37,7 @@ rake sunspot:solr:start
 ## http://github.com/outoftime/sunspot/wiki/adding-sunspot-search-to-rails-in-5-minutes-or-less
 
 memcached --vv  ## you can config many other cache stores but 
-                ## the cookie store will not work and the SQL session store will be a dog
+                ## the cookie store will not work (in the admin) and the DB session store will be a dog
 
 Open config/config.yml and change the encryption key and paypal or auth.net information
 
@@ -50,7 +50,15 @@ write down the username/password and follow the directions.
 
 FYI:
 
-Shipping categories are categoryies based off price:
+Shipping categories are categories based off price:
 
 you might have two shipping categories (light items) & (heavy items)
 Have fun!!!
+
+I personally want to thank some people I don't even know.
+  Ryan Bates and Greg Pollack, I have learned way too much from you 2 
+  it would only be right to give some thanks
+
+I'd also like to Thank one person that I do know. 
+  Umang Chouhan I've learned a lot from you also.
+  (even if I do have to filter out some of what you say. LOL)
