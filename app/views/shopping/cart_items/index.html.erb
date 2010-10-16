@@ -6,8 +6,8 @@
     <div class='span-9 rounded-10 line_item_blue'>
       <h4> Items in your Cart:</h4>
       <ul>
-      <% @cart_items.each do |item| %>
-        <li>
+      <% @cart_items.each_with_index do |item, i| %>
+        <li id='cart-item-<%= i %>' class='individual-cart-item'>
         <% photo_url = item.variant.product.primary_image_url %>
             <%= image_tag(photo_url) if photo_url %>
             (<%= item.quantity %>) 
@@ -22,8 +22,8 @@
       <div class='span-9 rounded-10 line_item_blue'>
         <h4>Saved Items:</h4>
         <ul>
-        <% @saved_cart_items.each do |item| %>
-          <li>
+        <% @saved_cart_items.each_with_index do |item, i| %>
+          <li id='saved-cart-item-<%= i %>' class='individual-cart-item'>
           <% photo_url = item.variant.product.primary_image_url %>
               <%= image_tag(photo_url) if photo_url %>
               <%#= link_to 'Move to Cart', move_to_shopping_cart_item_path(item, 

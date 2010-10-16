@@ -307,6 +307,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: center;
 }
 
+.individual-cart-item {
+  border-bottom:   solid 1px #dcd;
+}
+
+// bordered line items
+
 .line_items_blue {
   padding: 3px;
   @include rounded(4px);

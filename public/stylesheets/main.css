@@ -387,6 +387,11 @@ input.text, input.title, input[type="text"], input[type="password"] {
 }
 
 /* line 310, ../../app/stylesheets/main.scss */
+.individual-cart-item {
+  border-bottom: solid 1px #dcd;
+}
+
+/* line 316, ../../app/stylesheets/main.scss */
 .line_items_blue {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -397,7 +402,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
-/* line 318, ../../app/stylesheets/main.scss */
+/* line 324, ../../app/stylesheets/main.scss */
 .line_item_green {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -408,12 +413,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   margin-bottom: 3px;
 }
 
-/* line 326, ../../app/stylesheets/main.scss */
+/* line 332, ../../app/stylesheets/main.scss */
 .line_item_green:hover {
   background-color: #e0ffe8;
 }
 
-/* line 330, ../../app/stylesheets/main.scss */
+/* line 336, ../../app/stylesheets/main.scss */
 .line_item_red {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -425,12 +430,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 339, ../../app/stylesheets/main.scss */
+/* line 345, ../../app/stylesheets/main.scss */
 .line_item_red:hover {
   background-color: #ffe0e8;
 }
 
-/* line 343, ../../app/stylesheets/main.scss */
+/* line 349, ../../app/stylesheets/main.scss */
 .line_item_blue {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -442,7 +447,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 352, ../../app/stylesheets/main.scss */
+/* line 358, ../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -454,7 +459,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 361, ../../app/stylesheets/main.scss */
+/* line 367, ../../app/stylesheets/main.scss */
 .line_item_light_gray {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -466,7 +471,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 370, ../../app/stylesheets/main.scss */
+/* line 376, ../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
   -moz-border-radius: 4px;
@@ -478,12 +483,12 @@ input.text, input.title, input[type="text"], input[type="password"] {
   text-align: left;
 }
 
-/* line 379, ../../app/stylesheets/main.scss */
+/* line 385, ../../app/stylesheets/main.scss */
 .top_border td {
   border-top: solid 2px #ddd;
 }
 
-/* line 385, ../../app/stylesheets/main.scss */
+/* line 391, ../../app/stylesheets/main.scss */
 button.ui-button {
   text-shadow: 0 0 0 #000;
 }
