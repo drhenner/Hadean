@@ -25,8 +25,6 @@ class Product < ActiveRecord::Base
   belongs_to :prototype
   belongs_to :shipping_category
   belongs_to :tax_status
-  #has_many :shipping_categories
-  #has_many :shipping_rates, :through => :shipping_categories
   
   has_many :product_properties
   has_many :properties,          :through => :product_properties
@@ -99,20 +97,12 @@ class Product < ActiveRecord::Base
   def self.standard_search(args, params)
     Product.search(:include => [:properties, :images]) do
       keywords(args)
-      paginate :page => params[:page], :per_page => params[:rows]#params[:page], :per_page => params[:rows]
-    end
-  end
-  
-  def self.product_find(value)
-    @search = Product.solr_search do 
-      keywords value
       any_of do
         with(:deleted_at).greater_than(Time.zone.now)
         with(:deleted_at, nil)
       end
-      #without(:deleted_at).less_than(Time.zone.now)
+      paginate :page => params[:page], :per_page => params[:rows]#params[:page], :per_page => params[:rows]
     end
-    @posts  = @search.results
   end
   
   def self.featured
