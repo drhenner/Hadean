@@ -44,8 +44,8 @@
 }
 
 @mixin rounded($radius: 4px) {
-  -moz-border-radius:10px;
-  -webkit-border-radius:10px;
+  -moz-border-radius:$radius;
+  -webkit-border-radius:$radius;
   behavior:url(border-radius.htc);
 }
 
@@ -290,7 +290,7 @@ input.text, input.title, input[type="text"], input[type="password"] {
   padding: 3px;
   margin-bottom: 3px;
   border:   solid 2px #ddc;
-  @include rounded(4px);
+  @include rounded(8px);
   background-color: #EED;
   cursor: pointer;
 }

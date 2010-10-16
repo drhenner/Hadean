@@ -38,29 +38,29 @@ a:hover {
 
 /* line 93, ../../app/stylesheets/main.scss */
 .rounded-2 {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   behavior: url(border-radius.htc);
 }
 
 /* line 97, ../../app/stylesheets/main.scss */
 .rounded-4 {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
 }
 
 /* line 100, ../../app/stylesheets/main.scss */
 .rounded-6 {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   behavior: url(border-radius.htc);
 }
 
 /* line 104, ../../app/stylesheets/main.scss */
 .rounded-8 {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
   behavior: url(border-radius.htc);
 }
 
@@ -251,8 +251,8 @@ textarea.height-50 {
   margin-right: 0;
   margin-left: 18px;
   background-color: #8AE;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
   behavior: url(border-radius.htc);
   border: solid 2px #68C;
 }
@@ -363,8 +363,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
   padding: 3px;
   margin-bottom: 3px;
   border: solid 2px #ddc;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
   behavior: url(border-radius.htc);
   background-color: #EED;
   cursor: pointer;
@@ -389,8 +389,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 310, ../../app/stylesheets/main.scss */
 .line_items_blue {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #D0D8EF;
   background-color: #f0f8ff;
@@ -400,8 +400,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 318, ../../app/stylesheets/main.scss */
 .line_item_green {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #D0EFD8;
   background-color: #f0fff8;
@@ -416,8 +416,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 330, ../../app/stylesheets/main.scss */
 .line_item_red {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #EFD0D8;
   background-color: #fff0f8;
@@ -433,8 +433,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 343, ../../app/stylesheets/main.scss */
 .line_item_blue {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #D0D8EF;
   background-color: #f0f8ff;
@@ -445,8 +445,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 352, ../../app/stylesheets/main.scss */
 .line_item_yellow {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #ddc;
   background-color: #EED;
@@ -457,8 +457,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 361, ../../app/stylesheets/main.scss */
 .line_item_light_gray {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #ECECEC;
   background-color: #F6F6F6;
@@ -469,8 +469,8 @@ input.text, input.title, input[type="text"], input[type="password"] {
 /* line 370, ../../app/stylesheets/main.scss */
 .line_item_gray {
   padding: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   behavior: url(border-radius.htc);
   border: solid 2px #ddd;
   background-color: #EEE;
